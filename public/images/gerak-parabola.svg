@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Lintasan gerak parabola dari titik A ke titik B dengan titik tertinggi C. Komponen kecepatan mendatar selalu sama, komponen kecepatan vertikal mengecil saat naik, nol di titik C, lalu membesar ke bawah saat turun">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Inter, Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .lintasan { stroke: #475569; stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 3; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .gravitasi { stroke: #1A1A1A; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Keterangan warna -->
+  <path class="vektor" d="M360,26 H392" marker-end="url(#panah)"/>
+  <text class="kecil" x="400" y="31">kecepatan (v)</text>
+  <path class="komponen" d="M360,50 H392" marker-end="url(#panah-o)"/>
+  <text class="kecil" x="400" y="55">komponen vₓ dan vᵧ</text>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M60,300 V30" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M60,300 H615" marker-end="url(#panah)"/>
+  <text class="label" x="44" y="42" text-anchor="end">y</text>
+  <text class="label" x="620" y="324" text-anchor="end">x</text>
+
+  <!-- Lintasan parabola -->
+  <path class="lintasan" d="M60,300 Q300,-120 540,300"/>
+
+  <!-- Ketinggian maksimum -->
+  <path class="bantu" d="M300,90 V300"/>
+  <text class="label" x="310" y="210">y<tspan font-size="11" dy="4">maks</tspan></text>
+
+  <!-- Titik A: v0 dan komponennya -->
+  <path class="bantu" d="M115,204 H60 M115,204 V300"/>
+  <path class="komponen" d="M60,300 H115" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M60,300 V204" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M60,300 L115,204" marker-end="url(#panah)"/>
+  <path class="sumbu" style="stroke-width:2" d="M90,300 A30,30 0 0 0 75,274"/>
+  <text class="label" x="96" y="288">θ</text>
+  <text class="label" x="118" y="250">v<tspan font-size="11" dy="4">0</tspan></text>
+  <text class="label" x="52" y="258" text-anchor="end">v<tspan font-size="11" dy="4">0y</tspan></text>
+  <text class="label" x="100" y="322" text-anchor="middle">v<tspan font-size="11" dy="4">0x</tspan></text>
+  <circle class="titik" cx="60" cy="300" r="6"/>
+  <text class="label" x="46" y="322" text-anchor="end">A</text>
+
+  <!-- Saat naik -->
+  <path class="komponen" d="M180,142.5 H235" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M180,142.5 V94.5" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M180,142.5 L235,94.5" marker-end="url(#panah)"/>
+  <circle class="titik" cx="180" cy="142.5" r="5"/>
+
+  <!-- Titik C: hanya komponen mendatar -->
+  <path class="komponen" d="M300,90 H355" marker-end="url(#panah-o)"/>
+  <circle class="titik" cx="300" cy="90" r="6"/>
+  <text class="label" x="362" y="95">vₓ</text>
+  <text class="label" x="300" y="66" text-anchor="middle">C (x, y<tspan font-size="11" dy="4">maks</tspan><tspan dy="-4">)</tspan></text>
+  <text class="kecil" x="308" y="122">vᵧ = 0</text>
+
+  <!-- Saat turun -->
+  <path class="komponen" d="M420,142.5 H475" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M420,142.5 V190.5" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M420,142.5 L475,190.5" marker-end="url(#panah)"/>
+  <circle class="titik" cx="420" cy="142.5" r="5"/>
+
+  <!-- Titik B -->
+  <path class="komponen" d="M540,300 H595" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M540,300 V396" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M540,300 L595,396" marker-end="url(#panah)"/>
+  <circle class="titik" cx="540" cy="300" r="6"/>
+  <text class="label" x="528" y="324" text-anchor="end">B (x<tspan font-size="11" dy="4">maks</tspan><tspan dy="-4">, 0)</tspan></text>
+
+  <!-- Gravitasi -->
+  <path class="gravitasi" d="M600,90 V150" marker-end="url(#panah)"/>
+  <text class="label" x="588" y="128" text-anchor="end">g</text>
+</svg>

@@ -16,8 +16,9 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 // ====== ISI URL DAN KEY ANDA DI SINI ======
-const SUPABASE_URL = 'https://uahmcgvmnwxzktqkngsw.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhaG1jZ3Ztbnd4emt0cWtuZ3N3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3NDc5MDIsImV4cCI6MjEwNjMyMzkwMn0.oyPCsHDgK4KuXihCDTiqqkRmpnOKAAs-H5mrughb0Xo';
+// (diberi tipe `string` agar TypeScript tidak protes saat dibandingkan di bawah)
+const SUPABASE_URL: string = 'https://uahmcgvmnwxzktqkngsw.supabase.co';
+const SUPABASE_ANON_KEY: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhaG1jZ3Ztbnd4emt0cWtuZ3N3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3NDc5MDIsImV4cCI6MjEwNjMyMzkwMn0.oyPCsHDgK4KuXihCDTiqqkRmpnOKAAs-H5mrughb0Xo';
 // ============================================
 
 // Validasi konfigurasi

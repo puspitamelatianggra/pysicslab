@@ -1,87 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 320" width="100%" height="100%" style="background: #ffffff; font-family: &#39;Inter&#39;, system-ui, sans-serif; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); padding: 16px;">
-    
-    <!-- STYLING CSS INTERNAL -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 316" role="img" aria-label="Grafik gerak lurus kecepatan konstan: s-t garis lurus naik, v-t garis mendatar, a-t bernilai nol">
+  <defs>
     <style>
-        .card-bg { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1.5; rx: 8px; }
-        .axis { stroke: #64748b; stroke-width: 1.5; stroke-linecap: round; }
-        .grid-line { stroke: #e2e8f0; stroke-width: 0.8; stroke-dasharray: 4 4; }
-        .label-title { font-size: 14px; font-weight: 700; fill: #1e293b; }
-        .label-sub { font-size: 11px; fill: #64748b; }
-        .axis-text { font-size: 10px; fill: #64748b; }
-        
-        /* Warna Garis Grafik */
-        .line-s { stroke: #2563eb; stroke-width: 3; fill: none; stroke-linecap: round; }
-        .line-v { stroke: #16a34a; stroke-width: 3; fill: none; stroke-linecap: round; }
-        .line-a { stroke: #dc2626; stroke-width: 3; fill: none; stroke-linecap: round; }
-        .dot { fill: #ffffff; stroke-width: 2.5; }
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 12.5px Inter, Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4.5; fill: none; stroke-linecap: round; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .luas { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
     </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
 
-    <!-- ================= 1. GRAFIK S - T ================= -->
-    <g transform="translate(10, 10)">
-        <!-- Card Background -->
-        <rect class="card-bg" x="0" y="0" width="300" height="290" />
-        
-        <!-- Judul Grafik -->
-        <text x="20" y="30" class="label-title">Grafik Posisi (s vs t)</text>
-        <text x="20" y="48" class="label-sub">Linear naik (v konstan / positif)</text>
-        
-        <!-- Sumbu & Grid -->
-        <line x1="45" y1="230" x2="270" y2="230" class="axis" /> <!-- Sumbu X -->
-        <line x1="45" y1="70" x2="45" y2="245" class="axis" />  <!-- Sumbu Y -->
-        <line x1="45" y1="150" x2="270" y2="150" class="grid-line" />
-        
-        <text x="255" y="248" class="axis-text">t (s)</text>
-        <text x="22" y="75" class="axis-text">s (m)</text>
+  <!-- ===== 1. Posisi - waktu ===== -->
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Posisi – waktu (s–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">s (m)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
 
-        <!-- Kurva Grafik s-t (Miring ke atas) -->
-        <path d="M 45 220 L 250 90" class="line-s" />
-        <circle cx="45" cy="220" r="4" class="dot" style="stroke: #2563eb;" />
-        <circle cx="250" cy="90" r="4" class="dot" style="stroke: #2563eb;" />
-    </g>
+    <path class="bantu" d="M200,255 V135 H50"/>
+    <path class="grafik" d="M50,255 L250,95"/>
+    <circle class="titik" cx="200" cy="135" r="6"/>
+    <text class="label" x="44" y="140" text-anchor="end">s</text>
+    <text class="label" x="200" y="276" text-anchor="middle">t</text>
+    <text class="kecil" x="145" y="293" text-anchor="middle">Garis lurus naik: v tetap</text>
+  </g>
 
-    <!-- ================= 2. GRAFIK V - T ================= -->
-    <g transform="translate(325, 10)">
-        <!-- Card Background -->
-        <rect class="card-bg" x="0" y="0" width="300" height="290" />
-        
-        <!-- Judul Grafik -->
-        <text x="20" y="30" class="label-title">Grafik Kecepatan (v vs t)</text>
-        <text x="20" y="48" class="label-sub">Konstan / Garis lurus mendatar</text>
-        
-        <!-- Sumbu & Grid -->
-        <line x1="45" y1="230" x2="270" y2="230" class="axis" />
-        <line x1="45" y1="70" x2="45" y2="245" class="axis" />
-        <line x1="45" y1="140" x2="270" y2="140" class="grid-line" />
-        
-        <text x="255" y="248" class="axis-text">t (s)</text>
-        <text x="20" y="75" class="axis-text">v (m/s)</text>
+  <!-- ===== 2. Kecepatan - waktu ===== -->
+  <g transform="translate(322,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Kecepatan – waktu (v–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">v (m/s)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
 
-        <!-- Kurva Grafik v-t (Mendatar) -->
-        <path d="M 45 140 L 250 140" class="line-v" />
-        <circle cx="45" cy="140" r="4" class="dot" style="stroke: #16a34a;" />
-        <circle cx="250" cy="140" r="4" class="dot" style="stroke: #16a34a;" />
-    </g>
+    <rect class="luas" x="50" y="130" width="150" height="125"/>
+    <path class="bantu" d="M200,255 V130"/>
+    <path class="grafik" d="M50,130 H255"/>
+    <text class="label" x="125" y="200" text-anchor="middle">s = v · t</text>
+    <text class="label" x="44" y="135" text-anchor="end">v</text>
+    <text class="label" x="200" y="276" text-anchor="middle">t</text>
+    <text class="kecil" x="145" y="293" text-anchor="middle">Luas di bawah grafik = jarak</text>
+  </g>
 
-    <!-- ================= 3. GRAFIK A - T ================= -->
-    <g transform="translate(640, 10)">
-        <!-- Card Background -->
-        <rect class="card-bg" x="0" y="0" width="300" height="290" />
-        
-        <!-- Judul Grafik -->
-        <text x="20" y="30" class="label-title">Grafik Percepatan (a vs t)</text>
-        <text x="20" y="48" class="label-sub">Nol (a = 0 sepanjang sumbu t)</text>
-        
-        <!-- Sumbu & Grid -->
-        <line x1="45" y1="230" x2="270" y2="230" class="axis" />
-        <line x1="45" y1="70" x2="45" y2="245" class="axis" />
-        
-        <text x="255" y="248" class="axis-text">t (s)</text>
-        <text x="18" y="75" class="axis-text">a (m/s²)</text>
+  <!-- ===== 3. Percepatan - waktu ===== -->
+  <g transform="translate(640,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Percepatan – waktu (a–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">a (m/s²)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
 
-        <!-- Kurva Grafik a-t (Berimpit di sumbu nol / bawah) -->
-        <path d="M 45 230 L 250 230" class="line-a" />
-        <circle cx="45" cy="230" r="4" class="dot" style="stroke: #dc2626;" />
-        <circle cx="250" cy="230" r="4" class="dot" style="stroke: #dc2626;" />
-    </g>
-
+    <path class="grafik" d="M50,252 H255"/>
+    <text class="label" x="150" y="236" text-anchor="middle">a = 0</text>
+    <text class="kecil" x="145" y="293" text-anchor="middle">Tidak ada percepatan</text>
+  </g>
 </svg>

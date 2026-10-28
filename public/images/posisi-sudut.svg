@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" role="img" aria-label="Kiri: posisi benda A pada lintasan melingkar dinyatakan dengan jari-jari r dan sudut theta, dengan proyeksi x dan y. Kanan: benda bergerak dari A ke B menempuh busur s dan membentuk sudut theta">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Inter, Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .lingkaran { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .lingkaran-putus { stroke: #475569; stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+      .jari { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .busur-s { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .komponen { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: koordinat polar ===== -->
+  <path class="sumbu" d="M40,150 H285" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M160,272 V30" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="284" y="140" text-anchor="end">x</text>
+  <text class="label" x="172" y="40">y</text>
+  <circle class="lingkaran-putus" cx="160" cy="150" r="100"/>
+
+  <path class="bantu" d="M224.3,73.4 V150 M224.3,73.4 H160"/>
+  <path class="komponen" d="M160,150 L222.8,75.2" marker-end="url(#panah-o)"/>
+  <path class="sumbu" d="M188,150 A28,28 0 0 0 178,128.6"/>
+  <circle class="titik" cx="224.3" cy="73.4" r="6"/>
+
+  <text class="label" x="236" y="66">A</text>
+  <text class="label" x="178" y="104" text-anchor="end">r</text>
+  <text class="label" x="194" y="143">θ</text>
+  <text class="kecil" x="192" y="168" text-anchor="middle">x</text>
+  <text class="kecil" x="152" y="116" text-anchor="end">y</text>
+  <text class="kecil" x="160" y="300" text-anchor="middle">Koordinat polar (r, θ)</text>
+
+  <!-- ===== Kanan: busur dan sudut ===== -->
+  <circle class="lingkaran" cx="480" cy="150" r="100"/>
+  <path class="busur-s" d="M580,150 A100,100 0 0 0 544.3,73.4"/>
+  <path class="jari" d="M480,150 H580 M480,150 L544.3,73.4"/>
+  <path class="sumbu" d="M508,150 A28,28 0 0 0 498,128.6"/>
+  <circle class="pusat" cx="480" cy="150" r="4"/>
+  <circle class="titik" cx="580" cy="150" r="6"/>
+  <circle class="titik" cx="544.3" cy="73.4" r="6"/>
+
+  <text class="label" x="592" y="156">A</text>
+  <text class="label" x="552" y="62">B</text>
+  <text class="label" x="588" y="104">s</text>
+  <text class="label" x="530" y="170" text-anchor="middle">r</text>
+  <text class="label" x="514" y="143">θ</text>
+  <text class="kecil" x="480" y="300" text-anchor="middle">Busur s membentuk sudut θ</text>
+</svg>

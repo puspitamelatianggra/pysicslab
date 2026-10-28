@@ -46,6 +46,11 @@ export default function MaterialDetail() {
         checkAuth();
     }, []);
 
+    // Saat pindah bab, kembali ke atas halaman agar bab baru dibaca dari awal
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [activeChapter]);
+
     const markAsComplete = async () => {
         if (!material) return;
         const chapter = material.chapters[activeChapter];
@@ -166,8 +171,18 @@ export default function MaterialDetail() {
                         </div>
 
                         {/* Main Content */}
+                        {/* Link daftar isi (#id) di-scroll manual, karena HashRouter
+                            akan menganggap "#id" sebagai alamat halaman baru */}
                         <div
                             className="materi-content mb-8"
+                            onClick={(e) => {
+                                const link = (e.target as HTMLElement).closest('a');
+                                const href = link?.getAttribute('href');
+                                if (!href || !href.startsWith('#')) return;
+                                e.preventDefault();
+                                e.currentTarget.querySelector(`[id="${href.slice(1)}"]`)
+                                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }}
                             dangerouslySetInnerHTML={{ __html: chapter.content }}
                         />
 

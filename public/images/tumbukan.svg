@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" role="img" aria-label="Dua benda bertumbukan. Sebelum tumbukan benda 1 bergerak ke kanan dengan kecepatan v1 dan benda 2 ke kiri dengan kecepatan v2. Sesudah tumbukan benda 1 bergerak dengan kecepatan v1 aksen dan benda 2 dengan kecepatan v2 aksen">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .baris { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .lantai { stroke: #1A1A1A; stroke-width: 3; }
+      .benda-1 { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .benda-2 { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Sebelum ===== -->
+  <text class="baris" x="20" y="90">Sebelum</text>
+  <line class="lantai" x1="110" y1="112" x2="600" y2="112"/>
+  <circle class="benda-1" cx="190" cy="86" r="26"/>
+  <circle class="benda-2" cx="430" cy="80" r="32"/>
+  <text class="label" x="190" y="92" text-anchor="middle">m<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="430" y="86" text-anchor="middle">m<tspan font-size="11" dy="4">2</tspan></text>
+  <path class="vektor" d="M160,40 H230" marker-end="url(#panah)"/>
+  <text class="label" x="240" y="46">v<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="vektor" d="M460,30 H395" marker-end="url(#panah)"/>
+  <text class="label" x="385" y="36" text-anchor="end">v<tspan font-size="11" dy="4">2</tspan></text>
+
+  <line class="pemisah" x1="20" y1="140" x2="600" y2="140"/>
+
+  <!-- ===== Sesudah ===== -->
+  <text class="baris" x="20" y="236">Sesudah</text>
+  <line class="lantai" x1="110" y1="258" x2="600" y2="258"/>
+  <circle class="benda-1" cx="160" cy="232" r="26"/>
+  <circle class="benda-2" cx="480" cy="226" r="32"/>
+  <text class="label" x="160" y="238" text-anchor="middle">m<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="480" y="232" text-anchor="middle">m<tspan font-size="11" dy="4">2</tspan></text>
+  <path class="vektor" d="M185,188 H125" marker-end="url(#panah)"/>
+  <text class="label" x="115" y="194" text-anchor="end">v<tspan font-size="11" dy="4">1</tspan><tspan dy="-4">′</tspan></text>
+  <path class="vektor" d="M455,176 H530" marker-end="url(#panah)"/>
+  <text class="label" x="540" y="182">v<tspan font-size="11" dy="4">2</tspan><tspan dy="-4">′</tspan></text>
+</svg>

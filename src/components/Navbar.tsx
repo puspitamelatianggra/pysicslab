@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Atom, ChevronDown, LogOut } from 'lucide-react';
@@ -12,18 +12,19 @@ export default function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Cek status login
-    useState(() => {
-        if (isSupabaseConfigured()) {
-            supabase.auth.getSession().then(({ data }) => {
-                setIsLoggedIn(!!data.session);
-            });
+    // Cek status login (DIPERBAIKI: pakai useEffect + cleanup agar listener tidak menumpuk)
+    useEffect(() => {
+        if (!isSupabaseConfigured()) return;
 
-            supabase.auth.onAuthStateChange((_event, session) => {
-                setIsLoggedIn(!!session);
-            });
-        }
-    });
+        supabase.auth.getSession().then(({ data }) => {
+            setIsLoggedIn(!!data.session);
+        });
+
+        const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
+            setIsLoggedIn(!!session);
+        });
+        return () => authListener?.subscription.unsubscribe();
+    }, []);
 
     const latihanPerMapelItems = [
         { name: 'Matematika', path: '/practice/math', desc: 'Latihan soal per bab' },

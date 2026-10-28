@@ -47,7 +47,8 @@ export async function registerStudent(email: string, password: string, name: str
             return { error: { message: 'Gagal membuat akun' } };
         }
 
-        return { data: data.user };
+        // Jika "Confirm email" aktif di Supabase, session belum ada sampai email dikonfirmasi
+        return { data: data.user, needsEmailConfirmation: !data.session };
     } catch (err) {
         console.error('Register exception:', err);
         return { error: { message: 'Terjadi kesalahan saat mendaftar' } };
@@ -71,13 +72,8 @@ export async function loginStudent(email: string, password: string) {
             return { error };
         }
 
-        // Update last_active
-        if (data.user) {
-            await supabase
-                .from('students')
-                .update({ last_active: getLocalDate() })
-                .eq('id', data.user.id);
-        }
+        // DIPERBAIKI: last_active TIDAK diupdate di sini. Kalau diupdate saat login,
+        // addXpToStudent() mengira siswa sudah aktif hari ini dan streak tidak pernah naik.
 
         return { data: data.user };
     } catch (err) {
@@ -99,19 +95,44 @@ export async function logoutStudent() {
 
 // ====== FUNGSI DATA STUDENT ======
 
-// DIPERBAIKI: Pakai getUserId() bukan getUser()
+// Ambil baris student milik user yang login. Jika belum ada (misalnya trigger
+// pembuat baris di database belum jalan), baris dibuat dari data pendaftaran.
+async function getOrCreateStudentRow() {
+    const { data: sessionData } = await supabase.auth.getSession();
+    const user = sessionData.session?.user;
+    if (!user) return { data: null, error: null };
+
+    const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('id', user.id)
+        .maybeSingle();
+
+    if (error || data) return { data, error };
+
+    console.warn('Baris student belum ada, membuat baru...');
+    const { data: created, error: insertError } = await supabase
+        .from('students')
+        .insert({
+            id: user.id,
+            email: user.email,
+            name: user.user_metadata?.name || 'Siswa',
+            class_name: user.user_metadata?.class_name || '',
+            level: 1,
+            xp: 0,
+            streak: 0,
+        })
+        .select()
+        .single();
+
+    return { data: created, error: insertError };
+}
+
 export async function getStudentData() {
     if (!isSupabaseConfigured()) return { data: null };
 
     try {
-        const userId = await getUserId();
-        if (!userId) return { data: null };
-
-        const { data, error } = await supabase
-            .from('students')
-            .select('*')
-            .eq('id', userId)
-            .maybeSingle();
+        const { data, error } = await getOrCreateStudentRow();
 
         if (error) {
             console.error('Get student data error:', error);
@@ -133,12 +154,8 @@ export async function addXpToStudent(amount: number, reason: string, icon: strin
         const userId = await getUserId();
         if (!userId) return false;
 
-        // 1. Ambil data student
-        const { data: student, error: selectError } = await supabase
-            .from('students')
-            .select('*')
-            .eq('id', userId)
-            .single();
+        // 1. Ambil data student (dibuat otomatis jika belum ada)
+        const { data: student, error: selectError } = await getOrCreateStudentRow();
 
         if (selectError || !student) {
             console.error('Student not found:', selectError);
@@ -191,6 +208,9 @@ export async function addXpToStudent(amount: number, reason: string, icon: strin
                 icon: icon,
             });
 
+        // Beri tahu Sidebar agar angka XP langsung diperbarui
+        window.dispatchEvent(new Event(XP_UPDATED_EVENT));
+
         return true;
     } catch (err) {
         console.error('Add XP exception:', err);
@@ -214,7 +234,7 @@ export async function completeChapterCloud(chapterId: string) {
             .select('id')
             .eq('student_id', userId)
             .eq('chapter_id', chapterId)
-            .single();
+            .maybeSingle();
 
         if (existing) return { data: null, alreadyCompleted: true };
 
@@ -371,10 +391,72 @@ export async function getRecentActivities(limit: number = 10) {
     }
 }
 
+// ====== FUNGSI GRAFIK XP ======
+
+// XP per hari selama `days` hari terakhir, dihitung dari tabel activities.
+// Hasil: { "2026-10-28": 30, "2026-10-27": 15, ... }
+export async function getXpHistory(days: number = 7) {
+    if (!isSupabaseConfigured()) return { data: {} };
+
+    try {
+        const userId = await getUserId();
+        if (!userId) return { data: {} };
+
+        const since = new Date();
+        since.setHours(0, 0, 0, 0);
+        since.setDate(since.getDate() - (days - 1));
+
+        const { data, error } = await supabase
+            .from('activities')
+            .select('xp, created_at')
+            .eq('student_id', userId)
+            .gte('created_at', since.toISOString());
+
+        if (error) return { error, data: {} };
+
+        const history: { [date: string]: number } = {};
+        for (const row of data || []) {
+            const amount = parseInt(String(row.xp).replace(/[^0-9-]/g, ''), 10) || 0;
+            const date = getLocalDate(new Date(row.created_at));
+            history[date] = (history[date] || 0) + amount;
+        }
+        return { data: history };
+    } catch (err) {
+        console.error('Get XP history exception:', err);
+        return { data: {} };
+    }
+}
+
+// ====== FUNGSI BADGE ======
+
+// Aturan badge sama dengan versi lokal (lihat checkBadges di storage.ts)
+export function calculateBadges(stats: {
+    xp: number;
+    level: number;
+    streak: number;
+    completedChapters: number;
+    quizPercentages: number[];
+}): number[] {
+    const rules: [number, boolean][] = [
+        [1, true],                                   // Pemula
+        [2, stats.completedChapters >= 3],           // Rajin
+        [3, stats.xp >= 200],                        // Jenius
+        [4, stats.streak >= 7],                      // Kilat
+        [5, stats.quizPercentages.some(p => p === 100)], // Sempurna
+        [6, stats.level >= 5],                       // Master
+        [7, stats.xp >= 1000],                       // Legenda
+        [8, stats.completedChapters >= 10],          // Ilmuwan
+    ];
+    return rules.filter(([, earned]) => earned).map(([id]) => id);
+}
+
 // ====== HELPER FUNCTIONS ======
 
+// Nama event yang dikirim setiap kali XP bertambah (didengar oleh Sidebar)
+export const XP_UPDATED_EVENT = 'xp-updated';
+
 // Pakai local timezone, bukan UTC
-function getLocalDate(date: Date = new Date()): string {
+export function getLocalDate(date: Date = new Date()): string {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');

@@ -13,6 +13,8 @@
    - Firebase (gratis): https://firebase.google.com
    ============================================================ */
 
+import { getLocalDate, XP_UPDATED_EVENT } from './supabaseStorage';
+
 export interface UserProgress {
     // Profil
     name: string;
@@ -97,7 +99,7 @@ export function addXP(amount: number, reason: string): UserProgress {
     progress.xp += amount;
 
     // Simpan XP ke history per hari
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDate();
     if (!progress.xpHistory) {
         progress.xpHistory = {};
     }
@@ -110,7 +112,7 @@ export function addXP(amount: number, reason: string): UserProgress {
     const newLevel = Math.floor(progress.xp / 100) + 1;
     if (newLevel > progress.level) {
         progress.level = newLevel;
-        addActivity(progress, `Naik ke Level ${newLevel}! 🎉`, `+${amount} XP`, '🎊');
+        addActivity(progress, `Naik ke Level ${newLevel}! 🎉`, '', '🎊');
     }
 
     // Update streak
@@ -123,6 +125,7 @@ export function addXP(amount: number, reason: string): UserProgress {
     checkBadges(progress);
 
     saveProgress(progress);
+    window.dispatchEvent(new Event(XP_UPDATED_EVENT));
     return progress;
 }
 
@@ -132,8 +135,8 @@ export function completeChapter(chapterId: string): UserProgress {
 
     if (!progress.completedChapters.includes(chapterId)) {
         progress.completedChapters.push(chapterId);
-        addActivity(progress, `Menyelesaikan bab ${chapterId}`, '+10 XP', '📖');
         saveProgress(progress);
+        // addXP() sudah mencatat aktivitas, jadi tidak perlu addActivity() lagi
         return addXP(10, `Bab ${chapterId} selesai`);
     }
 
@@ -151,7 +154,6 @@ export function saveQuizScore(quizId: number, score: number, total: number): Use
     progress.totalWrongAnswers += (total - score);
 
     const xpEarned = score * 5;
-    addActivity(progress, `Skor ${percentage}% di kuis`, `+${xpEarned} XP`, '🎯');
 
     saveProgress(progress);
     return addXP(xpEarned, `Kuis selesai dengan skor ${percentage}%`);
@@ -159,7 +161,7 @@ export function saveQuizScore(quizId: number, score: number, total: number): Use
 
 // ====== FUNGSI UPDATE STREAK ======
 function updateStreak(progress: UserProgress): void {
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDate();
 
     if (progress.lastActiveDate === today) {
         // Sudah aktif hari ini, tidak perlu update streak
@@ -168,7 +170,7 @@ function updateStreak(progress: UserProgress): void {
 
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().split('T')[0];
+    const yesterdayStr = getLocalDate(yesterday);
 
     if (progress.lastActiveDate === yesterdayStr) {
         // Aktif kemarin, streak bertambah

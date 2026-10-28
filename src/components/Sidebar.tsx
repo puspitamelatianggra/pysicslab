@@ -13,7 +13,7 @@ import {
     ChevronRight
 } from 'lucide-react';
 import { getProgress } from '../utils/storage';
-import { getStudentData, logoutStudent, isSupabaseConfigured } from '../utils/supabaseStorage';
+import { getStudentData, getCompletedChapters, getStudentQuizScores, calculateBadges, logoutStudent, isSupabaseConfigured, XP_UPDATED_EVENT } from '../utils/supabaseStorage';
 import { supabase } from '../lib/supabase';
 
 export default function Sidebar() {
@@ -33,20 +33,25 @@ export default function Sidebar() {
 
                 if (sessionData.session) {
                     // Ambil data dari Supabase
-                    const result = await getStudentData();
+                    const [result, chapters, scores] = await Promise.all([
+                        getStudentData(),
+                        getCompletedChapters(),
+                        getStudentQuizScores(),
+                    ]);
                     if (result.data) {
                         setUserXP(result.data.xp || 0);
                         setUserLevel(result.data.level || 1);
                         setUserStreak(result.data.streak || 0);
                         setUserName(result.data.name || 'Siswa');
 
-                        // Hitung badge
-                        let badges = 1;
-                        if (result.data.xp >= 200) badges++;
-                        if (result.data.streak >= 7) badges++;
-                        if (result.data.level >= 5) badges++;
-                        if (result.data.xp >= 1000) badges++;
-                        setUserBadges(badges);
+                        // Hitung badge (aturan sama dengan Dashboard)
+                        setUserBadges(calculateBadges({
+                            xp: result.data.xp || 0,
+                            level: result.data.level || 1,
+                            streak: result.data.streak || 0,
+                            completedChapters: (chapters.data || []).length,
+                            quizPercentages: (scores.data || []).map((s: any) => s.percentage),
+                        }).length);
                     }
                 }
             } else {
@@ -60,6 +65,10 @@ export default function Sidebar() {
         };
 
         loadData();
+
+        // Muat ulang saat XP bertambah (selesai bab / kuis) tanpa pindah halaman
+        window.addEventListener(XP_UPDATED_EVENT, loadData);
+        return () => window.removeEventListener(XP_UPDATED_EVENT, loadData);
     }, [location.pathname]);
 
     const handleLogout = async () => {
@@ -68,7 +77,6 @@ export default function Sidebar() {
         }
         navigate('/');
     };
-
     const levelProgress = userXP % 100;
     const levelNames = ['Pemula', 'Explorer', 'Penjelajah', 'Pelajar', 'Cendekia', 'Ahli', 'Master', 'Expert', 'Genius', 'Legenda'];
     const levelName = levelNames[Math.min(userLevel - 1, levelNames.length - 1)];
@@ -82,7 +90,7 @@ export default function Sidebar() {
                         <Star size={24} className="text-white" fill="white" strokeWidth={3} />
                     </div>
                     <div>
-                        <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>Level {userLevel}</p>
+                        <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{userName} · Level {userLevel}</p>
                         <p className="text-lg font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{levelName}</p>
                     </div>
                 </div>

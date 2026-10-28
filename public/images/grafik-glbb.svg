@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 316" role="img" aria-label="Grafik gerak lurus percepatan konstan: s-t parabola, v-t garis lurus miring, a-t garis mendatar">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 12.5px Inter, Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4.5; fill: none; stroke-linecap: round; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .luas { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== 1. Posisi - waktu: parabola s = v0.t + 1/2.a.t^2 ===== -->
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Posisi – waktu (s–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">s (m)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
+
+    <path class="grafik" d="M50,255 Q150,225 250,95"/>
+    <text class="kecil" x="145" y="293" text-anchor="middle">Parabola: makin lama makin curam</text>
+  </g>
+
+  <!-- ===== 2. Kecepatan - waktu: garis lurus vt = v0 + a.t ===== -->
+  <g transform="translate(322,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Kecepatan – waktu (v–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">v (m/s)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
+
+    <polygon class="luas" points="50,255 50,205 200,122.5 200,255"/>
+    <path class="bantu" d="M200,255 V122.5 H50"/>
+    <path class="grafik" d="M50,205 L250,95"/>
+    <circle class="titik" cx="50" cy="205" r="6"/>
+    <circle class="titik" cx="200" cy="122.5" r="6"/>
+    <text class="label" x="125" y="228" text-anchor="middle">s = luas</text>
+    <text class="label" x="44" y="210" text-anchor="end">v<tspan font-size="11" dy="4">0</tspan></text>
+    <text class="label" x="44" y="127" text-anchor="end">v<tspan font-size="11" dy="4">t</tspan></text>
+    <text class="label" x="200" y="276" text-anchor="middle">t</text>
+    <text class="kecil" x="145" y="293" text-anchor="middle">Garis miring: kemiringan = a</text>
+  </g>
+
+  <!-- ===== 3. Percepatan - waktu: a tetap ===== -->
+  <g transform="translate(640,4)">
+    <rect class="bayang" x="6" y="6" width="290" height="300"/>
+    <rect class="panel" x="0" y="0" width="290" height="300"/>
+    <rect class="kepala" x="0" y="0" width="290" height="42"/>
+    <text class="judul" x="16" y="27">Percepatan – waktu (a–t)</text>
+    <path class="sumbu" d="M50,255 V62" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M50,255 H272" marker-end="url(#panah)"/>
+    <text class="label" x="60" y="74">a (m/s²)</text>
+    <text class="label" x="272" y="280" text-anchor="end">t (s)</text>
+    <text class="label" x="40" y="272" text-anchor="end">0</text>
+
+    <path class="grafik" d="M50,150 H255"/>
+    <text class="label" x="44" y="155" text-anchor="end">a</text>
+    <text class="kecil" x="145" y="293" text-anchor="middle">a tetap (konstan)</text>
+  </g>
+</svg>

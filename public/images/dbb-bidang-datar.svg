@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 330" role="img" aria-label="Diagram benda bebas balok di bidang datar kasar yang ditarik gaya F membentuk sudut theta. Gaya yang bekerja: berat w ke bawah, gaya normal N ke atas, gaya tarik F beserta komponennya, dan gaya gesek f berlawanan arah gerak">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Inter, Arial, sans-serif; fill: #475569; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .balok { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .tanah { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+    <pattern id="arsir" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#1A1A1A" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <!-- Arah gerak -->
+  <path class="vektor" style="stroke-width:2.5" d="M60,70 H140" marker-end="url(#panah)"/>
+  <text class="kecil" x="60" y="56">arah gerak</text>
+
+  <!-- Lantai -->
+  <rect class="tanah" x="40" y="240" width="440" height="16"/>
+  <rect x="40" y="240" width="440" height="16" fill="url(#arsir)"/>
+
+  <!-- Balok -->
+  <rect class="balok" x="190" y="170" width="120" height="70"/>
+
+  <!-- Komponen F -->
+  <path class="komponen" d="M250,205 H352" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M353.9,205 V147" marker-end="url(#panah-o)"/>
+  <text class="label" x="362" y="226">F cos θ</text>
+  <text class="label" x="364" y="184">F sin θ</text>
+
+  <!-- Gaya-gaya -->
+  <path class="vektor" d="M250,205 V305" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,205 V95" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,205 L352.2,146" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,205 H155" marker-end="url(#panah)"/>
+  <path class="busur" d="M285,205 A35,35 0 0 0 280.3,187.5"/>
+  <circle class="pusat" cx="250" cy="205" r="4"/>
+
+  <text class="label" x="262" y="300">w = mg</text>
+  <text class="label" x="262" y="104">N</text>
+  <text class="label" x="360" y="140">F</text>
+  <text class="label" x="160" y="196">f</text>
+  <text class="label" x="290" y="198">θ</text>
+</svg>

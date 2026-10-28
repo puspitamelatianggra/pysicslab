@@ -88,6 +88,10 @@ export default function Login() {
                     } else {
                         setError(result.error.message || 'Gagal membuat akun');
                     }
+                } else if (result.needsEmailConfirmation) {
+                    // Belum ada session: siswa harus klik link konfirmasi di email dulu
+                    setIsLogin(true);
+                    setError('Akun dibuat! Cek email Anda dan klik link konfirmasi, lalu masuk di sini.');
                 } else {
                     console.log('Register successful, redirecting...');
                     // Redirect ke dashboard

@@ -606,6 +606,46 @@ body {
     box-shadow: none;
 }
 
+/* Gambar / Grafik */
+.materi-content .gambar {
+    margin: 1.5rem 0;
+    border: 3px solid #1A1A1A;
+    box-shadow: 6px 6px 0 #1A1A1A;
+    background: #FFF7ED;
+    border-radius: 0;
+}
+
+.materi-content .gambar-isi {
+    padding: 1.25rem 1rem;
+    overflow-x: auto;
+}
+
+.materi-content .gambar img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Grafik lebar (3 panel): tetap terbaca di HP dengan geser horizontal */
+.materi-content .gambar.lebar img {
+    max-width: none;
+    min-width: 640px;
+}
+
+.materi-content .gambar figcaption {
+    border-top: 3px solid #1A1A1A;
+    background: #FFFFFF;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: #1A1A1A;
+}
+
+.materi-content .gambar figcaption strong {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 .materi-content .materi-footer {
     margin-top: 3rem;
     padding-top: 1rem;

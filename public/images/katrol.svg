@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 390" role="img" aria-label="Dua benda bermassa mA dan mB tergantung pada tali yang melewati katrol. Pada tiap benda bekerja tegangan tali T ke atas dan berat ke bawah. Benda B yang lebih berat bergerak turun, benda A naik">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .gerak { stroke: #1A1A1A; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+      .tali { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .katrol { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .balok { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 3; }
+      .atap { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+    <pattern id="arsir" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#1A1A1A" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <!-- Atap dan katrol -->
+  <rect class="atap" x="80" y="16" width="200" height="14"/>
+  <rect x="80" y="16" width="200" height="14" fill="url(#arsir)"/>
+  <path class="tali" d="M180,30 V60"/>
+  <path class="tali" d="M140,90 V220 M220,90 V260"/>
+  <circle class="katrol" cx="180" cy="90" r="40"/>
+  <circle class="pusat" cx="180" cy="90" r="5"/>
+
+  <!-- Benda -->
+  <rect class="balok" x="110" y="220" width="60" height="50"/>
+  <rect class="balok" x="190" y="260" width="60" height="70"/>
+  <text class="label" x="140" y="250" text-anchor="middle">m<tspan font-size="11" dy="4">A</tspan></text>
+  <text class="label" x="220" y="300" text-anchor="middle">m<tspan font-size="11" dy="4">B</tspan></text>
+
+  <!-- Tegangan tali -->
+  <path class="komponen" d="M140,218 V172" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M220,258 V212" marker-end="url(#panah-o)"/>
+  <text class="label" x="128" y="198" text-anchor="end">T</text>
+  <text class="label" x="232" y="238">T</text>
+
+  <!-- Berat -->
+  <path class="vektor" d="M140,270 V318" marker-end="url(#panah)"/>
+  <path class="vektor" d="M220,330 V378" marker-end="url(#panah)"/>
+  <text class="label" x="128" y="310" text-anchor="end">m<tspan font-size="11" dy="4">A</tspan><tspan dy="-4">g</tspan></text>
+  <text class="label" x="232" y="370">m<tspan font-size="11" dy="4">B</tspan><tspan dy="-4">g</tspan></text>
+
+  <!-- Arah percepatan -->
+  <path class="gerak" d="M80,270 V226" marker-end="url(#panah)"/>
+  <text class="label" x="70" y="254" text-anchor="end">a</text>
+  <path class="gerak" d="M285,270 V314" marker-end="url(#panah)"/>
+  <text class="label" x="295" y="298">a</text>
+</svg>

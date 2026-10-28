@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 350" role="img" aria-label="Diagram benda bebas balok di bidang miring bersudut theta. Berat w diuraikan menjadi w sin theta sejajar bidang ke bawah dan w cos theta tegak lurus bidang. Gaya normal N tegak lurus bidang ke atas, gaya gesek f sejajar bidang ke atas">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .balok { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .bidang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Bidang miring -->
+  <polygon class="bidang" points="40,320 480,320 480,66"/>
+  <path class="busur" d="M90,320 A50,50 0 0 0 83.3,295"/>
+  <text class="label" x="98" y="312">θ</text>
+
+  <!-- Balok -->
+  <g transform="translate(239.2,205) rotate(-30)">
+    <rect class="balok" x="-45" y="-56" width="90" height="56"/>
+  </g>
+
+  <!-- Komponen berat -->
+  <path class="bantu" d="M177.6,208.3 L225.2,290.8 L272.8,263.3"/>
+  <path class="komponen" d="M225.2,180.8 L179.3,207.3" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M225.2,180.8 L271.8,261.6" marker-end="url(#panah-o)"/>
+  <text class="label" x="168" y="236" text-anchor="end">w sin θ</text>
+  <text class="label" x="284" y="276">w cos θ</text>
+
+  <!-- Gaya-gaya -->
+  <path class="vektor" d="M225.2,180.8 V290.8" marker-end="url(#panah)"/>
+  <path class="vektor" d="M225.2,180.8 L177.7,98.5" marker-end="url(#panah)"/>
+  <path class="vektor" d="M225.2,180.8 L277.2,150.8" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="225.2" cy="180.8" r="4"/>
+
+  <text class="label" x="234" y="306">w</text>
+  <text class="label" x="168" y="96" text-anchor="end">N</text>
+  <text class="label" x="284" y="146">f</text>
+</svg>

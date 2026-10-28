@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-label="Pada gerak melingkar berubah beraturan, percepatan tangensial menyinggung lintasan dan percepatan sentripetal mengarah ke pusat. Keduanya saling tegak lurus dan resultannya adalah percepatan total a">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .lingkaran { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .benda { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .pusat { fill: #1A1A1A; }
+      .siku { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <circle class="lingkaran" cx="210" cy="170" r="110"/>
+  <circle class="pusat" cx="210" cy="170" r="4"/>
+
+  <!-- Jajaran genjang penjumlahan vektor -->
+  <path class="bantu" d="M130,60 V140 H210"/>
+
+  <path class="komponen" d="M210,60 H132" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M210,60 V138" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M210,60 L131.5,138.5" marker-end="url(#panah)"/>
+  <path class="siku" d="M196,60 V74 H210"/>
+
+  <circle class="benda" cx="210" cy="60" r="12"/>
+
+  <text class="label" x="165" y="46" text-anchor="middle">a<tspan font-size="11" dy="4">t</tspan></text>
+  <text class="label" x="222" y="110">a<tspan font-size="11" dy="4">s</tspan></text>
+  <text class="label" x="150" y="96">a</text>
+</svg>

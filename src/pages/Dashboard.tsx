@@ -6,7 +6,9 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { getProgress, resetProgress } from '../utils/storage';
 import { physicsMaterials } from '../data/physics-materials';
 import { mathMaterials } from '../data/math-materials';
-import { getStudentData, getCompletedChapters, getStudentQuizScores, isSupabaseConfigured, withTimeout } from '../utils/supabaseStorage';
+import { formatDistanceToNow } from 'date-fns';
+import { id as localeId } from 'date-fns/locale';
+import { getStudentData, getCompletedChapters, getStudentQuizScores, getRecentActivities, getXpHistory, calculateBadges, getLocalDate, isSupabaseConfigured, withTimeout } from '../utils/supabaseStorage';
 import { supabase } from '../lib/supabase';
 
 // Combine semua materi untuk dashboard
@@ -15,6 +17,7 @@ const allMaterials = [...physicsMaterials, ...mathMaterials];
 export default function Dashboard() {
     const [progress, setProgress] = useState<any>(null);
     const [weeklyXP, setWeeklyXP] = useState<any[]>([]);
+    const [isCloud, setIsCloud] = useState(false);
 
     useEffect(() => {
         const loadData = async () => {
@@ -39,26 +42,42 @@ export default function Dashboard() {
                         const scoresResult = await withTimeout(getStudentQuizScores());
                         console.log('[Dashboard] 4. selesai');
 
+                        console.log('[Dashboard] 5. ambil aktivitas & riwayat XP...');
+                        const [activitiesResult, historyResult] = await withTimeout(
+                            Promise.all([getRecentActivities(10), getXpHistory(7)])
+                        );
+                        console.log('[Dashboard] 5. selesai');
+
                         if (studentResult.data) {
+                            // Skor diurutkan dari yang terbaru, jadi simpan skor PERTAMA per kuis (= terbaru)
+                            const quizScores: { [quizId: number]: number } = {};
+                            for (const s of scoresResult.data || []) {
+                                if (!(s.quiz_id in quizScores)) quizScores[s.quiz_id] = s.percentage;
+                            }
+                            const completedChapters = chaptersResult.data || [];
+
                             data = {
                                 ...studentResult.data,
-                                completedChapters: chaptersResult.data || [],
-                                quizScores: (scoresResult.data || []).reduce((acc: any, s: any) => {
-                                    acc[s.quiz_id] = s.percentage;
-                                    return acc;
-                                }, {}),
+                                completedChapters,
+                                quizScores,
                                 totalQuizzesTaken: (scoresResult.data || []).length,
-                                earnedBadges: [],
-                                recentActivities: [],
-                                xpHistory: {},
+                                earnedBadges: calculateBadges({
+                                    xp: studentResult.data.xp,
+                                    level: studentResult.data.level,
+                                    streak: studentResult.data.streak,
+                                    completedChapters: completedChapters.length,
+                                    quizPercentages: Object.values(quizScores),
+                                }),
+                                recentActivities: (activitiesResult.data || []).map((a: any) => ({
+                                    id: a.id,
+                                    text: a.text,
+                                    xp: a.xp,
+                                    icon: a.icon,
+                                    time: formatDistanceToNow(new Date(a.created_at), { addSuffix: true, locale: localeId }),
+                                })),
+                                xpHistory: historyResult.data || {},
                             };
-
-                            let badges = 1;
-                            if (data.xp >= 200) badges++;
-                            if (data.streak >= 7) badges++;
-                            if (data.level >= 5) badges++;
-                            if (data.xp >= 1000) badges++;
-                            data.earnedBadges = Array.from({ length: badges }, (_, i) => i + 1);
+                            setIsCloud(true);
                         }
                     }
                 }
@@ -79,7 +98,7 @@ export default function Dashboard() {
             for (let i = 6; i >= 0; i--) {
                 const date = new Date(today);
                 date.setDate(date.getDate() - i);
-                const dateStr = date.toISOString().split('T')[0];
+                const dateStr = getLocalDate(date);
                 weekData.push({
                     day: days[date.getDay()],
                     xp: data.xpHistory?.[dateStr] ?? 0,
@@ -153,7 +172,7 @@ export default function Dashboard() {
                             Dashboard Belajar
                         </h1>
                         <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
-                            Progres belajarmu tersimpan di browser ini
+                            {isCloud ? 'Progres belajarmu tersimpan di akunmu' : 'Progres belajarmu tersimpan di browser ini'}
                         </p>
                     </div>
                     <div className="flex gap-2">
@@ -166,13 +185,14 @@ export default function Dashboard() {
                             Lihat Peringkat
                             <ArrowRight size={16} strokeWidth={3} />
                         </Link>
-                        <button
+                        {/* Reset hanya menghapus data lokal, jadi disembunyikan untuk akun cloud */}
+                        {!isCloud && <button
                             onClick={handleReset}
                             className="px-4 py-2 rounded-lg bg-red-100 border-[3px] border-red-500 text-red-700 text-sm font-bold hover:bg-red-200 transition-colors shadow-[3px_3px_0_#1A1A1A]"
                             style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                         >
                             Reset Progres
-                        </button>
+                        </button>}
                     </div>
                 </motion.div>
 
@@ -183,7 +203,9 @@ export default function Dashboard() {
                     className="mb-6 bg-lime border-[3px] border-dark rounded-xl p-4 shadow-[3px_3px_0_#1A1A1A]"
                 >
                     <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        💡 <strong style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Info:</strong> Data progres tersimpan di browser Anda. Jika Anda ganti browser/komputer atau hapus cache, data akan hilang.
+                        💡 <strong style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Info:</strong> {isCloud
+                            ? 'Data progres tersimpan di cloud dan bisa diakses dari perangkat mana pun.'
+                            : 'Data progres tersimpan di browser Anda. Jika Anda ganti browser/komputer atau hapus cache, data akan hilang.'}
                         Progres Anda: <strong>{progress.completedChapters.length} bab selesai</strong>, <strong>{Object.keys(progress.quizScores).length} kuis dikerjakan</strong>.
                     </p>
                 </motion.div>
