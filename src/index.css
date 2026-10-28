@@ -1,0 +1,635 @@
+@import "tailwindcss";
+
+@theme {
+    /* Neo-Brutalism Color Palette */
+    --color-lime: #C5FA00;
+    --color-cream: #FFF7ED;
+    --color-orange: #FF6B00;
+    --color-dark: #1A1A1A;
+    --color-gray: #475569;
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Neo-Brutalism Borders & Shadows */
+    --nb-border: 3px solid var(--color-dark);
+    --nb-shadow: 6px 6px 0 var(--color-dark);
+    --nb-shadow-sm: 4px 4px 0 var(--color-dark);
+    --nb-shadow-xs: 2px 2px 0 var(--color-dark);
+}
+
+/* Base Styles */
+* {
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+body {
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+}
+
+/* Neo-Brutalism Components */
+.nb-border {
+    border: 3px solid var(--color-dark);
+}
+
+.nb-shadow {
+    box-shadow: 6px 6px 0 var(--color-dark);
+}
+
+.nb-shadow-sm {
+    box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.nb-shadow-xs {
+    box-shadow: 2px 2px 0 var(--color-dark);
+}
+
+.nb-radius {
+    border-radius: 12px;
+}
+
+.nb-hover {
+    transition: all 0.2s ease;
+}
+
+.nb-hover:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.nb-button {
+    border: 3px solid var(--color-dark);
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 var(--color-dark);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.nb-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.nb-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 var(--color-dark);
+}
+
+.nb-card {
+    border: 3px solid var(--color-dark);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 var(--color-dark);
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.nb-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.nb-input {
+    border: 3px solid var(--color-dark);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.nb-input:focus {
+    outline: none;
+    border-color: var(--color-orange);
+    box-shadow: 4px 4px 0 var(--color-orange);
+}
+
+/* Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-orange) var(--color-cream);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-cream);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color-orange);
+    border-radius: 4px;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* ============ MATERI CONTENT STYLES ============ */
+
+.materi-content {
+    max-width: 820px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-dark);
+}
+
+.materi-content h1,
+.materi-content h2,
+.materi-content h3 {
+    font-family: var(--font-heading);
+    line-height: 1.15;
+    margin: 0;
+    color: var(--color-dark);
+}
+
+.materi-content p {
+    margin: 0 0 1rem;
+    max-width: 68ch;
+    color: var(--color-dark);
+}
+
+.materi-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Reset untuk elemen dalam materi-content */
+.materi-content * {
+    box-sizing: border-box;
+}
+
+/* Header Materi */
+.materi-header {
+    background: #C5FA00;
+    border: 3px solid #1A1A1A;
+    box-shadow: 6px 6px 0 #1A1A1A;
+    padding: 2rem 1.75rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0;
+}
+
+.materi-header .mapel {
+    display: inline-block;
+    background: #1A1A1A;
+    color: #C5FA00;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.materi-header h1 {
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    color: #1A1A1A;
+}
+
+.materi-header p {
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+/* Daftar Isi */
+.materi-content .daftar-isi {
+    background: #FFFFFF;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 0;
+}
+
+.materi-content .daftar-isi h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: #1A1A1A;
+}
+
+.materi-content .daftar-isi ol {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.materi-content .daftar-isi li {
+    margin: 0.2rem 0;
+}
+
+.materi-content .daftar-isi a {
+    color: #1A1A1A;
+    font-weight: 600;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.materi-content .daftar-isi a:hover {
+    background: #C5FA00;
+}
+
+/* Bagian Bernomor */
+.materi-content .bagian {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 1.5rem;
+}
+
+.materi-content .bagian-judul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.materi-content .bagian-judul .nomor {
+    flex: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: grid;
+    place-items: center;
+    background: #FF6B00;
+    color: #1A1A1A;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.materi-content .bagian-judul h2 {
+    font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+    color: #1A1A1A;
+}
+
+/* Sub-bagian */
+.materi-content .sub {
+    margin-top: 2.25rem;
+}
+
+.materi-content .sub h3 {
+    font-size: 1.35rem;
+    display: inline-block;
+    border-bottom: 5px solid #C5FA00;
+    padding-bottom: 0.1rem;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.materi-content .sub h3 .no {
+    color: #FF6B00;
+    margin-right: 0.35rem;
+}
+
+/* Kartu Definisi */
+.materi-content .kartu {
+    background: #FFFFFF;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0;
+}
+
+.materi-content .kartu .istilah {
+    display: inline-block;
+    background: #C5FA00;
+    border: 2px solid #1A1A1A;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0 0.6rem;
+    margin-bottom: 0.6rem;
+    color: #1A1A1A;
+}
+
+.materi-content .kartu .tipe {
+    float: right;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 2px solid #1A1A1A;
+    padding: 0 0.5rem;
+    background: #FFF7ED;
+    color: #1A1A1A;
+}
+
+.materi-content .kartu .tipe.vektor {
+    background: #FF6B00;
+}
+
+/* Daftar Poin */
+.materi-content ul.poin {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.materi-content ul.poin li {
+    position: relative;
+    padding-left: 1.7rem;
+    margin-bottom: 0.55rem;
+    max-width: 68ch;
+}
+
+.materi-content ul.poin li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #FF6B00;
+    border: 2px solid #1A1A1A;
+}
+
+/* Daftar Bernomor */
+.materi-content ol.langkah {
+    list-style: none;
+    counter-reset: langkah;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.materi-content ol.langkah li {
+    counter-increment: langkah;
+    position: relative;
+    padding-left: 2.6rem;
+    margin-bottom: 0.7rem;
+}
+
+.materi-content ol.langkah li::before {
+    content: counter(langkah);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    display: grid;
+    place-items: center;
+    background: #C5FA00;
+    border: 2px solid #1A1A1A;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+/* Kotak Rumus */
+.materi-content .rumus {
+    background: #FFFFFF;
+    border: 3px solid #1A1A1A;
+    box-shadow: 6px 6px 0 #1A1A1A;
+    margin: 1.5rem 0;
+    border-radius: 0;
+}
+
+.materi-content .rumus-judul {
+    background: #1A1A1A;
+    color: #C5FA00;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-bottom: 3px solid #1A1A1A;
+}
+
+.materi-content .rumus-isi {
+    padding: 1.4rem 1rem;
+    text-align: center;
+    overflow-x: auto;
+    background: #FFFFFF;
+}
+
+.materi-content .rumus-isi math {
+    font-size: 1.9rem;
+    font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", serif;
+    color: #1A1A1A;
+}
+
+/* Keterangan Rumus */
+.materi-content .keterangan {
+    border-top: 3px solid #1A1A1A;
+    background: #FFF7ED;
+    padding: 0.9rem 1rem 1rem;
+}
+
+.materi-content .keterangan .label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+}
+
+.materi-content .keterangan dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.45rem 0.9rem;
+    margin: 0;
+    align-items: baseline;
+}
+
+.materi-content .keterangan dt {
+    background: #C5FA00;
+    border: 2px solid #1A1A1A;
+    padding: 0 0.55rem;
+    font-weight: 700;
+    text-align: center;
+    min-width: 2.6rem;
+    font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", serif;
+    font-size: 1.1rem;
+    color: #1A1A1A;
+}
+
+.materi-content .keterangan dd {
+    margin: 0;
+    color: #1A1A1A;
+}
+
+.materi-content .keterangan dd .satuan {
+    color: #1A1A1A;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Kotak Catatan */
+.materi-content .catatan {
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+    background: #FF6B00;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0;
+}
+
+.materi-content .catatan strong.judul {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: #1A1A1A;
+}
+
+.materi-content .catatan p {
+    color: #1A1A1A;
+}
+
+.materi-content .catatan.info {
+    background: #C5FA00;
+}
+
+/* Tabel */
+.materi-content .tabel-wrap {
+    overflow-x: auto;
+    border: 3px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+    background: #FFFFFF;
+    margin: 1.25rem 0;
+    border-radius: 0;
+}
+
+.materi-content table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+}
+
+.materi-content th,
+.materi-content td {
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    border-bottom: 2px solid #1A1A1A;
+    vertical-align: top;
+    color: #1A1A1A;
+}
+
+.materi-content tr:last-child td {
+    border-bottom: 0;
+}
+
+.materi-content th {
+    background: #1A1A1A;
+    color: #C5FA00;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.materi-content td+td,
+.materi-content th+th {
+    border-left: 2px solid #1A1A1A;
+}
+
+.materi-content td:first-child {
+    font-weight: 700;
+    background: #FFF7ED;
+}
+
+/* Peta Cabang */
+.materi-content .cabang {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.materi-content .cabang .kartu {
+    margin: 0;
+}
+
+.materi-content .cabang h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+    color: #1A1A1A;
+}
+
+.materi-content .cabang .kartu:nth-child(1) {
+    background: #C5FA00;
+}
+
+/* Ringkasan */
+.materi-content .ringkasan {
+    background: #C5FA00;
+    border: 3px solid #1A1A1A;
+    box-shadow: 6px 6px 0 #1A1A1A;
+    padding: 1.5rem;
+    border-radius: 0;
+}
+
+.materi-content .ringkasan h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.materi-content .ringkasan .tabel-wrap {
+    box-shadow: none;
+}
+
+.materi-content .materi-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 3px solid #1A1A1A;
+    color: #1A1A1A;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .materi-content .keterangan dl {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .materi-content .keterangan dt {
+        justify-self: start;
+    }
+
+    .materi-content .keterangan dd {
+        margin-bottom: 0.5rem;
+    }
+
+    .materi-content .rumus-isi math {
+        font-size: 1.5rem;
+    }
+}
