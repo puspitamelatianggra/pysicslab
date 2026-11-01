@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Lampu digantung dengan dua tali yang diikat pada titik simpul P. Tali kiri membentuk sudut 30 derajat dan tali kanan 60 derajat terhadap garis mendatar. Pada simpul bekerja tegangan T1 ke kiri atas, tegangan T2 ke kanan atas, dan berat lampu w ke bawah">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .tali { stroke: #475569; stroke-width: 2.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .atap { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .lampu { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Atap -->
+  <rect class="atap" x="60" y="20" width="320" height="20"/>
+
+  <!-- Tali -->
+  <path class="tali" d="M89.5,40 L280,150 L343.5,40 M280,150 V255"/>
+
+  <!-- Lampu -->
+  <path class="lampu" d="M255,275 Q255,255 280,255 Q305,255 305,275 Z"/>
+  <circle class="lampu" cx="280" cy="282" r="8"/>
+
+  <!-- Garis mendatar dan sudut -->
+  <path class="bantu" d="M190,150 H370"/>
+  <path class="busur" d="M240,150 A40,40 0 0 1 245.4,130"/>
+  <path class="busur" d="M320,150 A40,40 0 0 0 300,115.4"/>
+  <text class="kecil" x="226" y="143" text-anchor="end">30°</text>
+  <text class="kecil" x="328" y="134">60°</text>
+
+  <!-- Gaya pada simpul P -->
+  <path class="vektor" d="M280,150 L236.7,125" marker-end="url(#panah)"/>
+  <path class="vektor" d="M280,150 L323.3,75" marker-end="url(#panah)"/>
+  <path class="vektor" d="M280,150 V250" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="280" cy="150" r="4"/>
+
+  <text class="label" x="230" y="118" text-anchor="end">T<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="331" y="76">T<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="label" x="290" y="240">w</text>
+  <text class="label" x="268" y="172" text-anchor="end">P</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" role="img" aria-label="Venturimeter tanpa manometer. Fluida mengalir dari pipa lebar berpenampang A1 dengan kecepatan v1 ke pipa sempit berpenampang A2 dengan kecepatan v2. Pada kedua bagian dipasang pipa tegak. Selisih tinggi zat cair pada kedua pipa tegak adalah h">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .air { fill: #A5D8FF; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #FF6B00; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .titik { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Fluida -->
+  <polygon class="air" points="30,130 210,130 250,150 330,150 370,130 530,130 530,200 370,200 330,180 250,180 210,200 30,200"/>
+  <rect class="air" x="112" y="50" width="16" height="80"/>
+  <rect class="air" x="282" y="110" width="16" height="40"/>
+
+  <!-- Dinding -->
+  <path class="dinding" d="M30,130 H112 M128,130 H210 L250,150 H282 M298,150 H330 L370,130 H530
+                           M30,200 H210 L250,180 H330 L370,200 H530
+                           M112,130 V20 M128,130 V20 M282,150 V20 M298,150 V20"/>
+
+  <!-- Selisih tinggi -->
+  <path class="bantu" d="M100,50 H340 M270,110 H340"/>
+  <path class="ukur" d="M330,52 V108" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="338" y="86">h</text>
+
+  <!-- Kecepatan -->
+  <path class="vektor" d="M50,165 H95" marker-end="url(#panah)"/>
+  <text class="label" x="72" y="156" text-anchor="middle">v<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="vektor" d="M300,165 H390" marker-end="url(#panah)"/>
+  <text class="label" x="404" y="170">v<tspan font-size="11" dy="4">2</tspan></text>
+  <circle class="titik" cx="120" cy="165" r="4"/>
+  <circle class="titik" cx="290" cy="165" r="4"/>
+  <text class="label" x="134" y="182">1</text>
+  <text class="label" x="276" y="172" text-anchor="end">2</text>
+
+  <text class="label" x="120" y="226" text-anchor="middle">A<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="290" y="206" text-anchor="middle">A<tspan font-size="11" dy="4">2</tspan></text>
+</svg>

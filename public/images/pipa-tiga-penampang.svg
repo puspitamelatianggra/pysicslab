@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-label="Fluida mengalir mendatar melalui pipa dengan bagian lebar A, bagian sempit B, dan bagian lebar C. Pada setiap bagian dipasang pipa tegak. Air di pipa tegak B paling rendah karena kecepatan fluida di B paling besar sehingga tekanannya paling kecil. Air di pipa tegak A dan C sama tinggi">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .bantu { stroke: #FF6B00; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Fluida -->
+  <polygon class="air" points="30,140 200,140 240,155 320,155 360,140 530,140 530,200 360,200 320,185 240,185 200,200 30,200"/>
+  <rect class="air" x="107" y="60" width="16" height="80"/>
+  <rect class="air" x="272" y="110" width="16" height="45"/>
+  <rect class="air" x="437" y="60" width="16" height="80"/>
+
+  <!-- Dinding -->
+  <path class="dinding" d="M30,140 H105 M125,140 H200 L240,155 H270 M290,155 H320 L360,140 H435 M455,140 H530
+                           M30,200 H200 L240,185 H320 L360,200 H530
+                           M105,140 V30 M125,140 V30 M270,155 V30 M290,155 V30 M435,140 V30 M455,140 V30"/>
+
+  <!-- Perbandingan ketinggian -->
+  <path class="bantu" d="M95,60 H465 M260,110 H300"/>
+
+  <!-- Arah aliran -->
+  <path class="vektor" d="M50,170 H90" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,170 H310" marker-end="url(#panah)"/>
+  <path class="vektor" d="M470,170 H510" marker-end="url(#panah)"/>
+
+  <text class="label" x="115" y="224" text-anchor="middle">A</text>
+  <text class="label" x="280" y="224" text-anchor="middle">B</text>
+  <text class="label" x="445" y="224" text-anchor="middle">C</text>
+  <text class="kecil" x="140" y="54">tekanan besar</text>
+  <text class="kecil" x="300" y="104">tekanan kecil</text>
+</svg>

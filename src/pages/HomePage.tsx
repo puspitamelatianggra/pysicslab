@@ -112,7 +112,7 @@ export default function HomePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                            Kenapa Pilih PhysicsLab?
+                            Kenapa Pilih Fermionsplus?
                         </h2>
                         <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
                             Fitur lengkap untuk belajar efektif dan menyenangkan
@@ -241,7 +241,7 @@ export default function HomePage() {
                                     <Zap size={22} className="text-dark" strokeWidth={3} />
                                 </div>
                                 <span className="text-xl font-bold text-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                                    PhysicsLab
+                                    Fermions+
                                 </span>
                             </div>
                             <p className="text-gray-400 max-w-md" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -277,7 +277,7 @@ export default function HomePage() {
 
                     <div className="border-t-2 border-gray-700 pt-8 text-center">
                         <p className="text-gray-400 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
-                            © 2024 PhysicsLab - Platform Belajar Fisika & Matematika untuk Siswa SMA
+                            © 2024 Fermionsplus - Platform Belajar Fisika & Matematika untuk Siswa SMA
                         </p>
                     </div>
                 </div>

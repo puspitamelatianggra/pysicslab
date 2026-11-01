@@ -9,7 +9,7 @@ export const momentumImpuls: Chapter = {
     <header class="materi-header">
       <span class="mapel">Fisika · Dinamika</span>
       <h1>Momentum dan Impuls</h1>
-      <p>Rangkuman momentum, impuls, hubungan keduanya, hukum kekekalan momentum, dan jenis-jenis tumbukan.</p>
+      <p>Rangkuman momentum dan resultannya, impuls dari gaya tetap maupun berubah, hubungan keduanya, hukum kekekalan momentum, dan jenis-jenis tumbukan.</p>
     </header>
 
     <nav class="daftar-isi" aria-label="Daftar isi">
@@ -55,6 +55,50 @@ export const momentumImpuls: Chapter = {
       </div>
 
       <p>Truk yang melaju pelan bisa memiliki momentum lebih besar daripada sepeda yang melaju kencang, karena massanya jauh lebih besar.</p>
+
+      <div class="sub">
+        <h3><span class="no">1.1</span>Resultan momentum</h3>
+        <p>Karena momentum adalah besaran vektor, momentum total dua benda dihitung dengan <strong>penjumlahan vektor</strong>, bukan penjumlahan biasa: <strong>p</strong> = <strong>p</strong><sub>1</sub> + <strong>p</strong><sub>2</sub>.</p>
+        <ul class="poin">
+          <li>Jika <em>p</em><sub>1</sub> dan <em>p</em><sub>2</sub> <strong>searah</strong> (θ = 0°), maka <em>p</em> = <em>p</em><sub>1</sub> + <em>p</em><sub>2</sub>.</li>
+          <li>Jika <em>p</em><sub>1</sub> dan <em>p</em><sub>2</sub> <strong>berlawanan arah</strong> (θ = 180°), maka <em>p</em> = |<em>p</em><sub>1</sub> − <em>p</em><sub>2</sub>|.</li>
+          <li>Jika <em>p</em><sub>1</sub> dan <em>p</em><sub>2</sub> membentuk sudut θ, besar momentum totalnya dihitung dengan aturan jajargenjang.</li>
+        </ul>
+
+        <figure class="gambar">
+          <div class="gambar-isi">
+            <img src="/images/resultan-momentum.svg" alt="Resultan dua momentum p1 dan p2 yang membentuk sudut theta. Kedua vektor berpangkal di titik yang sama, lalu dilengkapi menjadi jajargenjang. Diagonal jajargenjang adalah momentum total p." />
+          </div>
+          <figcaption><strong>Gambar 1.</strong> Momentum total <em>p</em> adalah diagonal jajargenjang yang dibentuk oleh <em>p</em><sub>1</sub> dan <em>p</em><sub>2</sub>.</figcaption>
+        </figure>
+
+        <div class="rumus">
+          <div class="rumus-judul">Resultan dua momentum</div>
+          <div class="rumus-isi">
+            <math display="block" aria-label="p sama dengan akar dari p 1 kuadrat ditambah p 2 kuadrat ditambah 2 p 1 p 2 cos theta">
+              <mi>p</mi><mo>=</mo>
+              <msqrt>
+                <msubsup><mi>p</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo>
+                <msubsup><mi>p</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo>
+                <mn>2</mn><msub><mi>p</mi><mn>1</mn></msub><msub><mi>p</mi><mn>2</mn></msub><mi>cos</mi><mi>θ</mi>
+              </msqrt>
+            </math>
+          </div>
+          <div class="keterangan">
+            <div class="label">Keterangan</div>
+            <dl>
+              <dt>p</dt><dd>besar momentum total <span class="satuan">(kg·m/s)</span></dd>
+              <dt>p<sub>1</sub>, p<sub>2</sub></dt><dd>besar momentum benda 1 dan 2 <span class="satuan">(kg·m/s)</span></dd>
+              <dt>θ</dt><dd>sudut antara arah <em>p</em><sub>1</sub> dan <em>p</em><sub>2</sub></dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="catatan info">
+          <strong class="judul">Kasus tegak lurus</strong>
+          Jika θ = 90°, maka cos θ = 0 sehingga <em>p</em> = √(<em>p</em><sub>1</sub><sup>2</sup> + <em>p</em><sub>2</sub><sup>2</sup>), sama seperti teorema Pythagoras.
+        </div>
+      </div>
     </section>
 
     <!-- ============ 2. IMPULS ============ -->
@@ -87,9 +131,39 @@ export const momentumImpuls: Chapter = {
         </div>
       </div>
 
-      <div class="catatan info">
-        <strong class="judul">Dari grafik F–t</strong>
-        Jika gaya berubah-ubah, impuls sama dengan <strong>luas daerah di bawah grafik</strong> gaya terhadap waktu.
+      <div class="sub">
+        <h3><span class="no">2.1</span>Impuls dari gaya yang berubah</h3>
+        <p>Pada peristiwa nyata, misalnya bola ditendang, gaya tidak tetap: gaya naik dengan cepat, mencapai puncak, lalu turun lagi. Jika gaya merupakan fungsi waktu, impuls dari <em>t</em><sub>1</sub> sampai <em>t</em><sub>2</sub> dihitung dengan integral.</p>
+
+        <div class="rumus">
+          <div class="rumus-judul">Impuls dari gaya yang berubah</div>
+          <div class="rumus-isi">
+            <math display="block" aria-label="I sama dengan integral dari t 1 sampai t 2 F d t">
+              <mi>I</mi><mo>=</mo>
+              <msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup>
+              <mi>F</mi><mspace width="0.2em"/><mi>d</mi><mi>t</mi>
+            </math>
+          </div>
+          <div class="keterangan">
+            <div class="label">Keterangan</div>
+            <dl>
+              <dt>t<sub>1</sub>, t<sub>2</sub></dt><dd>waktu awal dan akhir gaya bekerja <span class="satuan">(s)</span></dd>
+              <dt>F</dt><dd>gaya sebagai fungsi waktu <span class="satuan">(N)</span></dd>
+            </dl>
+          </div>
+        </div>
+
+        <figure class="gambar">
+          <div class="gambar-isi">
+            <img src="/images/grafik-impuls.svg" alt="Grafik gaya F terhadap waktu t. Gaya naik dari nol pada t1, mencapai puncak, lalu turun lagi ke nol pada t2. Luas daerah di bawah kurva sama dengan impuls. Persegi panjang setinggi F rata-rata selebar delta t memiliki luas yang sama." />
+          </div>
+          <figcaption><strong>Gambar 2.</strong> Grafik gaya terhadap waktu. Impuls sama dengan luas daerah di bawah kurva.</figcaption>
+        </figure>
+
+        <div class="catatan info">
+          <strong class="judul">Membaca grafik F–t</strong>
+          Impuls sama dengan <strong>luas daerah di bawah grafik</strong> gaya terhadap waktu. Persegi panjang setinggi <em>F</em><sub>rata-rata</sub> dan selebar Δ<em>t</em> memiliki luas yang sama dengan luas di bawah kurva, sehingga <em>I</em> = <em>F</em><sub>rata-rata</sub> Δ<em>t</em>.
+        </div>
       </div>
     </section>
 
@@ -152,7 +226,7 @@ export const momentumImpuls: Chapter = {
         <div class="gambar-isi">
           <img src="/images/tumbukan.svg" alt="Dua benda bertumbukan. Sebelum tumbukan, benda 1 bermassa m1 bergerak ke kanan dengan kecepatan v1 dan benda 2 bermassa m2 bergerak ke kiri dengan kecepatan v2. Sesudah tumbukan, benda 1 bergerak ke kiri dengan kecepatan v1 aksen dan benda 2 ke kanan dengan kecepatan v2 aksen." />
         </div>
-        <figcaption><strong>Gambar 1.</strong> Kecepatan dua benda sebelum dan sesudah tumbukan.</figcaption>
+        <figcaption><strong>Gambar 3.</strong> Kecepatan dua benda sebelum dan sesudah tumbukan.</figcaption>
       </figure>
 
       <div class="rumus">
@@ -262,6 +336,10 @@ export const momentumImpuls: Chapter = {
             <tr>
               <td>Momentum</td><td>kg·m/s</td>
               <td><math><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></math></td>
+            </tr>
+            <tr>
+              <td>Resultan momentum</td><td>kg·m/s</td>
+              <td><math><mi>p</mi><mo>=</mo><msqrt><msubsup><mi>p</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mn>2</mn><msub><mi>p</mi><mn>1</mn></msub><msub><mi>p</mi><mn>2</mn></msub><mi>cos</mi><mi>θ</mi></msqrt></math></td>
             </tr>
             <tr>
               <td>Impuls</td><td>N·s</td>

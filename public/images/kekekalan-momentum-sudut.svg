@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Penari es dilihat dari atas. Kiri: lengan direntangkan, massa tangan jauh dari sumbu putar, momen inersia besar, dan putaran lambat. Kanan: lengan dilipat, massa tangan dekat sumbu putar, momen inersia kecil, dan putaran cepat. Momentum sudut I omega tetap sama">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .ket { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .badan { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .lengan { stroke: #1A1A1A; stroke-width: 4; stroke-linecap: round; fill: none; }
+      .tangan { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .putar-tipis { stroke: #FF6B00; stroke-width: 2; fill: none; }
+      .putar-tebal { stroke: #FF6B00; stroke-width: 4.5; fill: none; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+    <marker id="panah-o2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: lengan direntangkan ===== -->
+  <text class="judul" x="140" y="24" text-anchor="middle">Lengan direntangkan</text>
+  <path class="putar-tipis" d="M60,72 A95,40 0 0 1 220,72" marker-end="url(#panah-o)"/>
+  <path class="lengan" d="M40,125 H240"/>
+  <circle class="tangan" cx="40" cy="125" r="11"/>
+  <circle class="tangan" cx="240" cy="125" r="11"/>
+  <circle class="badan" cx="140" cy="125" r="26"/>
+  <circle class="pusat" cx="140" cy="125" r="4"/>
+  <text class="ket" x="140" y="200" text-anchor="middle">I besar → ω kecil</text>
+  <text class="judul" x="140" y="224" text-anchor="middle">berputar lambat</text>
+
+  <path class="pemisah" d="M280,20 V240"/>
+
+  <!-- ===== Kanan: lengan dilipat ===== -->
+  <text class="judul" x="420" y="24" text-anchor="middle">Lengan dilipat</text>
+  <path class="putar-tebal" d="M372,82 A55,30 0 0 1 468,82" marker-end="url(#panah-o2)"/>
+  <path class="putar-tebal" d="M468,168 A55,30 0 0 1 372,168" marker-end="url(#panah-o2)"/>
+  <path class="lengan" d="M380,125 H460"/>
+  <circle class="badan" cx="420" cy="125" r="26"/>
+  <circle class="tangan" cx="388" cy="125" r="11"/>
+  <circle class="tangan" cx="452" cy="125" r="11"/>
+  <circle class="pusat" cx="420" cy="125" r="4"/>
+  <text class="ket" x="420" y="200" text-anchor="middle">I kecil → ω besar</text>
+  <text class="judul" x="420" y="224" text-anchor="middle">berputar cepat</text>
+
+  <text class="label" x="280" y="260" text-anchor="middle">I₁ω₁ = I₂ω₂</text>
+</svg>

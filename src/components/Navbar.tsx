@@ -26,6 +26,18 @@ export default function Navbar() {
         return () => authListener?.subscription.unsubscribe();
     }, []);
 
+    const materiItems = [
+        { name: 'Fisika', path: '/materials/physics', desc: 'Materi fisika SMA' },
+        { name: 'Matematika', path: '/materials/math', desc: 'Materi matematika SMA' },
+    ];
+
+    // Dashboard hanya muncul setelah masuk (menggantikan Peringkat)
+    const extraLinks = [
+        { name: 'Artikel', path: '/artikel' },
+        { name: 'Untuk Guru', path: '/guru' },
+        ...(isLoggedIn ? [{ name: 'Dashboard', path: '/dashboard' }] : []),
+    ];
+
     const latihanPerMapelItems = [
         { name: 'Matematika', path: '/practice/math', desc: 'Latihan soal per bab' },
         { name: 'Fisika', path: '/practice/physics', desc: 'Latihan soal per bab' },
@@ -67,7 +79,7 @@ export default function Navbar() {
                             <Atom size={22} className="text-dark" strokeWidth={3} />
                         </div>
                         <span className="text-xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                            PhysicsLab
+                            Fermions+
                         </span>
                     </Link>
 
@@ -85,17 +97,52 @@ export default function Navbar() {
                             Home
                         </Link>
 
-                        {/* Materi */}
-                        <Link
-                            to="/materials"
-                            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${location.pathname === '/materials'
-                                ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
-                                : 'hover:bg-lime/50 border-[3px] border-transparent'
-                                }`}
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
-                        >
-                            Materi
-                        </Link>
+                        {/* Materi Dropdown */}
+                        <div className="relative">
+                            <button
+                                onClick={() => toggleDropdown('materi')}
+                                onMouseEnter={() => setActiveDropdown('materi')}
+                                className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-all ${isActive('/materials')
+                                    ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
+                                    : 'hover:bg-lime/50 border-[3px] border-transparent'
+                                    }`}
+                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            >
+                                Materi
+                                <ChevronDown
+                                    size={16}
+                                    className={`transition-transform ${activeDropdown === 'materi' ? 'rotate-180' : ''}`}
+                                />
+                            </button>
+
+                            <AnimatePresence>
+                                {activeDropdown === 'materi' && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -5 }}
+                                        onMouseLeave={() => setActiveDropdown(null)}
+                                        className="absolute top-full left-0 mt-2 w-64 bg-white border-[3px] border-dark rounded-xl shadow-[4px_4px_0_#1A1A1A] overflow-hidden"
+                                    >
+                                        {materiItems.map((item) => (
+                                            <Link
+                                                key={item.path}
+                                                to={item.path}
+                                                onClick={() => setActiveDropdown(null)}
+                                                className="block px-4 py-3 hover:bg-lime/30 border-b-[2px] border-dark last:border-b-0 transition-colors"
+                                            >
+                                                <div className="font-semibold text-dark text-sm" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                                    {item.name}
+                                                </div>
+                                                <div className="text-xs text-gray-600" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                                    {item.desc}
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
 
                         {/* Latihan Soal Dropdown */}
                         <div className="relative">
@@ -238,17 +285,20 @@ export default function Navbar() {
                             </AnimatePresence>
                         </div>
 
-                        {/* Peringkat */}
-                        <Link
-                            to="/leaderboard"
-                            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${isActive('/leaderboard')
-                                ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
-                                : 'hover:bg-lime/50 border-[3px] border-transparent'
-                                }`}
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
-                        >
-                            Peringkat
-                        </Link>
+                        {/* Artikel, Untuk Guru, dan Dashboard (hanya saat masuk) */}
+                        {extraLinks.map((item) => (
+                            <Link
+                                key={item.path}
+                                to={item.path}
+                                className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${isActive(item.path)
+                                    ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
+                                    : 'hover:bg-lime/50 border-[3px] border-transparent'
+                                    }`}
+                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
 
                         {/* Login/Logout Button */}
                         {isLoggedIn ? (
@@ -294,14 +344,40 @@ export default function Navbar() {
                             Home
                         </Link>
 
-                        <Link
-                            to="/materials"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-4 py-3 text-sm font-semibold rounded-lg hover:bg-lime/50 border-[3px] border-transparent"
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
-                        >
-                            Materi
-                        </Link>
+                        {/* Materi Mobile */}
+                        <div>
+                            <button
+                                onClick={() => toggleDropdown('materi-mobile')}
+                                className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold rounded-lg hover:bg-lime/50 border-[3px] border-transparent"
+                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            >
+                                Materi
+                                <ChevronDown size={16} className={`transition-transform ${activeDropdown === 'materi-mobile' ? 'rotate-180' : ''}`} />
+                            </button>
+                            <AnimatePresence>
+                                {activeDropdown === 'materi-mobile' && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: 'auto' }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        className="ml-4 mt-1 space-y-1"
+                                    >
+                                        {materiItems.map((item) => (
+                                            <Link
+                                                key={item.path}
+                                                to={item.path}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="block px-4 py-2 text-sm hover:bg-lime/30 rounded-lg"
+                                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                            >
+                                                <div className="font-semibold text-dark">{item.name}</div>
+                                                <div className="text-xs text-gray-600">{item.desc}</div>
+                                            </Link>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
 
                         {/* Latihan Soal Mobile */}
                         <div>
@@ -408,14 +484,17 @@ export default function Navbar() {
                             </AnimatePresence>
                         </div>
 
-                        <Link
-                            to="/leaderboard"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-4 py-3 text-sm font-semibold rounded-lg hover:bg-lime/50 border-[3px] border-transparent"
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
-                        >
-                            Peringkat
-                        </Link>
+                        {extraLinks.map((item) => (
+                            <Link
+                                key={item.path}
+                                to={item.path}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="block px-4 py-3 text-sm font-semibold rounded-lg hover:bg-lime/50 border-[3px] border-transparent"
+                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
 
                         {isLoggedIn ? (
                             <button

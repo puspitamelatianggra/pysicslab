@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Jungkat-jungkit seimbang. Papan ditumpu di titik O. Beban w1 yang lebih berat diletakkan sejauh l1 di kiri tumpuan, dan beban w2 yang lebih ringan sejauh l2 yang lebih panjang di kanan tumpuan. Gaya normal N bekerja ke atas di titik tumpu">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .normal { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .papan { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .tumpu { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .beban-1 { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .beban-2 { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .lantai { stroke: #1A1A1A; stroke-width: 3; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Lantai dan tumpuan -->
+  <line class="lantai" x1="40" y1="200" x2="520" y2="200"/>
+  <polygon class="tumpu" points="280,154 256,200 304,200"/>
+
+  <!-- Papan -->
+  <rect class="papan" x="60" y="140" width="440" height="14"/>
+
+  <!-- Beban -->
+  <rect class="beban-1" x="130" y="90" width="60" height="50"/>
+  <rect class="beban-2" x="440" y="108" width="40" height="32"/>
+
+  <!-- Gaya -->
+  <path class="vektor" d="M160,115 V195" marker-end="url(#panah)"/>
+  <path class="vektor" d="M460,124 V177" marker-end="url(#panah)"/>
+  <path class="normal" d="M280,140 V62" marker-end="url(#panah-o)"/>
+  <text class="label" x="170" y="190">w<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="470" y="176">w<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="label" x="290" y="70">N</text>
+  <text class="label" x="280" y="190" text-anchor="middle">O</text>
+
+  <!-- Lengan -->
+  <path class="bantu" d="M160,202 V236 M280,202 V236 M460,202 V236"/>
+  <path class="ukur" d="M160,226 H280" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <path class="ukur" d="M280,226 H460" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="220" y="250" text-anchor="middle">l<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="370" y="250" text-anchor="middle">l<tspan font-size="11" dy="4">2</tspan></text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Venturimeter dengan manometer. Fluida bermassa jenis rho mengalir dari pipa lebar A1 ke pipa sempit A2. Di bawah pipa dipasang tabung U berisi raksa bermassa jenis rho aksen. Permukaan raksa di kaki kiri, di bawah pipa lebar, lebih rendah daripada di kaki kanan, di bawah pipa sempit. Selisih tinggi raksa adalah h">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .raksa { fill: #94A3B8; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #FF6B00; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Fluida dalam pipa -->
+  <polygon class="air" points="30,130 210,130 250,150 330,150 370,130 530,130 530,200 370,200 330,180 250,180 210,200 30,200"/>
+  <!-- Fluida di atas raksa pada kedua kaki -->
+  <rect class="air" x="112" y="200" width="16" height="40"/>
+  <rect class="air" x="282" y="180" width="16" height="20"/>
+  <!-- Raksa -->
+  <path class="raksa" d="M112,240 H128 V250 A77,77 0 0 0 282,250 V200 H298 V250 A93,93 0 0 1 112,250 Z"/>
+
+  <!-- Dinding pipa dan tabung U -->
+  <path class="dinding" d="M30,130 H210 L250,150 H330 L370,130 H530
+                           M30,200 H112 M128,200 H210 L250,180 H282 M298,180 H330 L370,200 H530
+                           M112,200 V250 A93,93 0 0 0 298,250 V180
+                           M128,200 V250 A77,77 0 0 0 282,250 V180"/>
+
+  <!-- Selisih tinggi raksa -->
+  <path class="bantu" d="M100,240 H340 M298,200 H340"/>
+  <path class="ukur" d="M330,202 V238" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="338" y="226">h</text>
+
+  <!-- Kecepatan -->
+  <path class="vektor" d="M50,165 H95" marker-end="url(#panah)"/>
+  <text class="label" x="72" y="156" text-anchor="middle">v<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="vektor" d="M300,165 H390" marker-end="url(#panah)"/>
+  <text class="label" x="404" y="170">v<tspan font-size="11" dy="4">2</tspan></text>
+
+  <text class="label" x="120" y="120" text-anchor="middle">A<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="290" y="140" text-anchor="middle">A<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="label" x="460" y="170" text-anchor="middle">ρ</text>
+  <text class="label" x="205" y="356" text-anchor="middle">ρ′ (raksa)</text>
+</svg>

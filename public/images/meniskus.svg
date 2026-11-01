@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Dua tabung kaca. Tabung A berisi air dengan permukaan cekung, sudut kontak theta kurang dari 90 derajat, karena adhesi lebih besar daripada kohesi. Tabung B berisi raksa dengan permukaan cembung, sudut kontak theta lebih dari 90 derajat, karena kohesi lebih besar daripada adhesi">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .syarat { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .air { fill: #A5D8FF; }
+      .raksa { fill: #94A3B8; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .singgung { stroke: #FF6B00; stroke-width: 2; stroke-dasharray: 5 3; fill: none; }
+      .busur { stroke: #FF6B00; stroke-width: 2.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- ===== Tabung A: air ===== -->
+  <path class="air" d="M110,96 Q150,135 190,96 V210 A40,40 0 0 1 110,210 Z"/>
+  <path class="dinding" d="M110,30 V210 A40,40 0 0 0 190,210 V30"/>
+  <path class="singgung" d="M211.5,75 L161.4,123.9"/>
+  <path class="busur" d="M190,118 A22,22 0 0 1 174.3,111.4"/>
+  <text class="label" x="176" y="140" text-anchor="middle">θ</text>
+  <text class="label" x="150" y="22" text-anchor="middle">A</text>
+  <text class="judul" x="150" y="272" text-anchor="middle">air: cekung</text>
+  <text class="syarat" x="150" y="294" text-anchor="middle">θ &lt; 90°</text>
+
+  <!-- ===== Tabung B: raksa ===== -->
+  <path class="raksa" d="M330,120 Q370,80 410,120 V210 A40,40 0 0 1 330,210 Z"/>
+  <path class="dinding" d="M330,30 V210 A40,40 0 0 0 410,210 V30"/>
+  <path class="singgung" d="M428,138 L382,92"/>
+  <path class="busur" d="M410,142 A22,22 0 0 1 394.4,104.4"/>
+  <text class="label" x="378" y="140" text-anchor="middle">θ</text>
+  <text class="label" x="370" y="22" text-anchor="middle">B</text>
+  <text class="judul" x="370" y="272" text-anchor="middle">raksa: cembung</text>
+  <text class="syarat" x="370" y="294" text-anchor="middle">θ &gt; 90°</text>
+</svg>

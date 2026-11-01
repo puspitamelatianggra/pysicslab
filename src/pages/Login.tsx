@@ -119,7 +119,7 @@ export default function Login() {
                         <Atom size={32} className="text-dark" strokeWidth={3} />
                     </div>
                     <h1 className="text-3xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                        PhysicsLab
+                        Fermions+
                     </h1>
                     <p className="text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
                         {isLogin ? 'Masuk ke akun Anda' : 'Buat akun baru untuk mulai belajar'}

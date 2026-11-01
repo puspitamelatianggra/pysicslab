@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 290" role="img" aria-label="Grafik gaya F terhadap pertambahan panjang delta l pada kawat yang ditarik. Dari O ke A grafiknya lurus, yaitu daerah berlakunya hukum Hooke, dengan A sebagai batas linearitas. Titik B adalah batas elastisitas. Setelah melewati B, benda berubah bentuk secara permanen atau plastis, hingga patah di titik C">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .daerah { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .kurva { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .ukur { stroke: #475569; stroke-width: 1.5; fill: none; }
+      .titik { fill: #1A1A1A; }
+      .elastis { fill: #C5FA00; fill-opacity: 0.35; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Daerah elastis -->
+  <rect class="elastis" x="70" y="30" width="135" height="200"/>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M70,230 H480" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M70,230 V20" marker-end="url(#panah)"/>
+  <text class="label" x="60" y="30" text-anchor="end">F</text>
+  <text class="label" x="478" y="254" text-anchor="end">Δl</text>
+  <text class="label" x="60" y="246" text-anchor="end">O</text>
+
+  <!-- Garis bantu -->
+  <path class="bantu" d="M150,150 V230 M205,115 V230 M395,95 V230"/>
+
+  <!-- Kurva -->
+  <path class="kurva" d="M70,230 L150,150 Q175,122 205,115 C250,112 260,125 300,105 C340,85 370,80 395,95"/>
+  <circle class="titik" cx="150" cy="150" r="5"/>
+  <circle class="titik" cx="205" cy="115" r="5"/>
+  <circle class="titik" cx="395" cy="95" r="5"/>
+
+  <text class="label" x="140" y="146" text-anchor="end">A</text>
+  <text class="label" x="200" y="104" text-anchor="end">B</text>
+  <text class="label" x="404" y="90">C</text>
+  <text class="kecil" x="225" y="172">A = batas linearitas</text>
+  <text class="kecil" x="225" y="192">B = batas elastisitas</text>
+  <text class="kecil" x="225" y="212">C = titik patah</text>
+
+  <!-- Daerah -->
+  <path class="ukur" d="M72,270 H203" marker-start="url(#panah-g)" marker-end="url(#panah-g)"/>
+  <path class="ukur" d="M207,270 H393" marker-start="url(#panah-g)" marker-end="url(#panah-g)"/>
+  <text class="daerah" x="137" y="264" text-anchor="middle">elastis</text>
+  <text class="daerah" x="300" y="264" text-anchor="middle">plastis</text>
+</svg>

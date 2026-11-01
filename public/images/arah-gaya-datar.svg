@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Arah gaya pada balok di bidang datar yang ditarik tali mendatar ke kanan. Berat w vertikal ke bawah, gaya normal N tegak lurus lantai ke atas, tegangan tali T ke kanan sepanjang tali, dan gaya gesek f ke kiri berlawanan arah gerak">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .gerak { stroke: #FF6B00; stroke-width: 3; fill: none; }
+      .tali { stroke: #475569; stroke-width: 2.5; fill: none; }
+      .balok { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .bidang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Lantai -->
+  <rect class="bidang" x="30" y="220" width="460" height="70"/>
+
+  <!-- Tali -->
+  <path class="tali" d="M310,185 H480"/>
+
+  <!-- Balok -->
+  <rect class="balok" x="190" y="150" width="120" height="70"/>
+
+  <!-- Arah gerak -->
+  <path class="gerak" d="M330,120 H410" marker-end="url(#panah-o)"/>
+  <text class="kecil" x="370" y="108" text-anchor="middle">arah gerak</text>
+
+  <!-- Gaya-gaya -->
+  <path class="vektor" d="M250,185 V75" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,185 V278" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,185 H385" marker-end="url(#panah)"/>
+  <path class="vektor" d="M250,185 H135" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="250" cy="185" r="4"/>
+
+  <text class="label" x="262" y="82">N</text>
+  <text class="label" x="262" y="276">w</text>
+  <text class="label" x="380" y="174">T</text>
+  <text class="label" x="126" y="190" text-anchor="end">f</text>
+</svg>

@@ -14,7 +14,12 @@
    │   ├── gerak-melingkar-berubah-beraturan.ts  (Bab 1-5)
    │   ├── hukum-newton.ts                       (Bab 1-6)
    │   ├── penerapan-hukum-newton.ts             (Bab 1-7)
-   │   └── momentum-impuls.ts                    (Bab 1-8)
+   │   ├── momentum-impuls.ts                    (Bab 1-8)
+   │   ├── dinamika-rotasi.ts                    (Bab 1-9)
+   │   ├── keseimbangan-benda-tegar.ts           (Bab 1-10)
+   │   ├── elastisitas-zat-padat.ts              (Bab 1-11)
+   │   ├── fluida-statis.ts                      (Bab 1-12)
+   │   └── fluida-dinamis.ts                     (Bab 1-13)
    └── listrik-magnet/
        └── listrik-statis.ts                     (Bab 2-1)
 
@@ -36,6 +41,11 @@ import { gerakMelingkarBerubahBeraturan } from './physics/mekanika/gerak-melingk
 import { hukumNewton } from './physics/mekanika/hukum-newton';
 import { penerapanHukumNewton } from './physics/mekanika/penerapan-hukum-newton';
 import { momentumImpuls } from './physics/mekanika/momentum-impuls';
+import { dinamikaRotasi } from './physics/mekanika/dinamika-rotasi';
+import { keseimbanganBendaTegar } from './physics/mekanika/keseimbangan-benda-tegar';
+import { elastisitasZatPadat } from './physics/mekanika/elastisitas-zat-padat';
+import { fluidaStatis } from './physics/mekanika/fluida-statis';
+import { fluidaDinamis } from './physics/mekanika/fluida-dinamis';
 
 // ====== Listrik & Magnet ======
 import { listrikStatis } from './physics/listrik-magnet/listrik-statis';
@@ -44,7 +54,7 @@ export const physicsMaterials: Material[] = [
   {
     id: 1,
     title: "Mekanika",
-    description: "Pelajari gerak benda, gaya, energi, dan momentum dari dasar hingga mahir.",
+    description: "Pelajari gerak benda, gaya, momentum, rotasi, keseimbangan, elastisitas, dan fluida dari dasar hingga mahir.",
     icon: "🚀",
     color: "from-blue-500 to-cyan-400",
     chapters: [
@@ -56,6 +66,11 @@ export const physicsMaterials: Material[] = [
       hukumNewton,
       penerapanHukumNewton,
       momentumImpuls,
+      dinamikaRotasi,
+      keseimbanganBendaTegar,
+      elastisitasZatPadat,
+      fluidaStatis,
+      fluidaDinamis,
     ]
   },
   {

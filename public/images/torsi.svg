@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Batang berporos di titik O dengan panjang lengan l. Gaya F bekerja di ujung batang dan membentuk sudut theta terhadap batang. Gaya F diuraikan menjadi F cos theta searah batang dan F sin theta tegak lurus batang. Hanya F sin theta yang memutar batang">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label-o { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .komponen { stroke: #FF6B00; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .batang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .poros { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .putar { stroke: #475569; stroke-width: 2.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+    <marker id="panah-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Batang dan poros -->
+  <rect class="batang" x="90" y="160" width="320" height="20" rx="4"/>
+  <circle class="poros" cx="100" cy="170" r="8"/>
+  <text class="label" x="100" y="140" text-anchor="middle">O</text>
+
+  <!-- Arah putaran berlawanan arah jarum jam -->
+  <path class="putar" d="M140,120 A60,60 0 0 0 52,128" marker-end="url(#panah-g)"/>
+
+  <!-- Panjang lengan -->
+  <path class="ukur" d="M100,210 H400" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <path class="bantu" d="M100,182 V220 M400,182 V220"/>
+  <text class="label" x="250" y="236" text-anchor="middle">l</text>
+
+  <!-- Komponen gaya -->
+  <path class="bantu" d="M499.6,86.4 V170 M400,86.4 H499.6"/>
+  <path class="komponen" d="M400,170 V88" marker-end="url(#panah-o)"/>
+  <path class="komponen" d="M400,170 H497" marker-end="url(#panah-o)"/>
+  <text class="label-o" x="392" y="80" text-anchor="end">F sin θ</text>
+  <text class="label-o" x="505" y="196" text-anchor="middle">F cos θ</text>
+
+  <!-- Gaya F -->
+  <path class="vektor" d="M400,170 L499.6,86.4" marker-end="url(#panah)"/>
+  <text class="label" x="508" y="82">F</text>
+  <path class="busur" d="M440,170 A40,40 0 0 0 430.6,144.3"/>
+  <text class="label" x="446" y="158">θ</text>
+</svg>

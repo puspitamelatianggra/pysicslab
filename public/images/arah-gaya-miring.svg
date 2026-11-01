@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 350" role="img" aria-label="Arah gaya pada balok di bidang miring bersudut theta yang ditarik tali sejajar bidang ke atas. Berat w tetap vertikal ke bawah, gaya normal N tegak lurus bidang miring, tegangan tali T sejajar bidang ke atas, dan gaya gesek f sejajar bidang ke bawah berlawanan arah gerak">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .gerak { stroke: #FF6B00; stroke-width: 3; fill: none; }
+      .tali { stroke: #475569; stroke-width: 2.5; fill: none; }
+      .balok { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .bidang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Bidang miring 30° -->
+  <polygon class="bidang" points="40,320 480,320 480,66"/>
+  <path class="busur" d="M90,320 A50,50 0 0 0 83.3,295"/>
+  <text class="label" x="98" y="312">θ</text>
+
+  <!-- Tali sejajar bidang -->
+  <path class="tali" d="M264.2,158.3 L437.4,58.3"/>
+
+  <!-- Balok -->
+  <g transform="translate(239.2,205) rotate(-30)">
+    <rect class="balok" x="-45" y="-56" width="90" height="56"/>
+  </g>
+
+  <!-- Arah gerak -->
+  <path class="gerak" d="M335.8,82.3 L396.4,47.3" marker-end="url(#panah-o)"/>
+  <text class="kecil" x="359" y="52.7" text-anchor="middle" transform="rotate(-30 359 52.7)">arah gerak</text>
+
+  <!-- Gaya-gaya -->
+  <path class="vektor" d="M225.2,180.8 V290.8" marker-end="url(#panah)"/>
+  <path class="vektor" d="M225.2,180.8 L177.7,98.5" marker-end="url(#panah)"/>
+  <path class="vektor" d="M225.2,180.8 L320.5,125.8" marker-end="url(#panah)"/>
+  <path class="vektor" d="M225.2,180.8 L147.3,225.8" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="225.2" cy="180.8" r="4"/>
+
+  <text class="label" x="234" y="300">w</text>
+  <text class="label" x="168" y="96" text-anchor="end">N</text>
+  <text class="label" x="300" y="112" text-anchor="middle">T</text>
+  <text class="label" x="138" y="234" text-anchor="end">f</text>
+</svg>

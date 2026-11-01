@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Fluida mengalir dalam pipa dari bagian sempit yang rendah ke bagian lebar yang tinggi. Di titik 1 pada ketinggian h1, tekanannya P1 dan kecepatannya v1. Di titik 2 pada ketinggian h2, tekanannya P2 dan kecepatannya v2. Ketinggian diukur dari garis acuan">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .penampang { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .tekan { stroke: #FF6B00; stroke-width: 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .acuan { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
+      .titik { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Fluida -->
+  <path class="air" d="M40,185 H180 C270,185 270,55 360,55 H520 V125 H360 C270,125 290,215 180,215 H40 Z"/>
+  <ellipse class="penampang" cx="90" cy="200" rx="5" ry="15"/>
+  <ellipse class="penampang" cx="460" cy="90" rx="10" ry="35"/>
+
+  <!-- Dinding pipa -->
+  <path class="dinding" d="M40,185 H180 C270,185 270,55 360,55 H520 M40,215 H180 C290,215 270,125 360,125 H520"/>
+
+  <!-- Tekanan dan kecepatan -->
+  <path class="tekan" d="M8,200 H36" marker-end="url(#panah-o)"/>
+  <text class="label" x="22" y="180" text-anchor="middle">P<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="tekan" d="M552,90 H524" marker-end="url(#panah-o)"/>
+  <text class="label" x="538" y="45" text-anchor="middle">P<tspan font-size="11" dy="4">2</tspan></text>
+  <path class="vektor" d="M100,200 H165" marker-end="url(#panah)"/>
+  <text class="label" x="132" y="178" text-anchor="middle">v<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="vektor" d="M470,90 H500" marker-end="url(#panah)"/>
+  <text class="label" x="485" y="80" text-anchor="middle">v<tspan font-size="11" dy="4">2</tspan></text>
+  <circle class="titik" cx="90" cy="200" r="4"/>
+  <circle class="titik" cx="460" cy="90" r="4"/>
+  <text class="label" x="84" y="236" text-anchor="middle">1</text>
+  <text class="label" x="460" y="146" text-anchor="middle">2</text>
+
+  <!-- Ketinggian -->
+  <path class="acuan" d="M20,250 H540"/>
+  <text class="kecil" x="540" y="266" text-anchor="end">garis acuan</text>
+  <path class="ukur" d="M60,202 V248" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="52" y="232" text-anchor="end">h<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="ukur" d="M420,92 V248" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="412" y="180" text-anchor="end">h<tspan font-size="11" dy="4">2</tspan></text>
+</svg>

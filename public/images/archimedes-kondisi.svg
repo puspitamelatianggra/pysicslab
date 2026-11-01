@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-label="Tiga keadaan benda di dalam zat cair. Terapung: sebagian benda tercelup, gaya apung sama dengan berat, massa jenis benda lebih kecil daripada massa jenis zat cair. Melayang: seluruh benda tercelup dan diam di tengah, gaya apung sama dengan berat, massa jenis benda sama dengan massa jenis zat cair. Tenggelam: benda berada di dasar, gaya apung lebih kecil daripada berat, massa jenis benda lebih besar daripada massa jenis zat cair">
+  <defs>
+    <style>
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .syarat { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .air { fill: #A5D8FF; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .benda { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .apung { stroke: #FF6B00; stroke-width: 3; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Terapung ===== -->
+  <text class="judul" x="100" y="22" text-anchor="middle">Terapung</text>
+  <text class="syarat" x="100" y="44" text-anchor="middle">ρ<tspan font-size="10" dy="3">b</tspan><tspan dy="-3"> &lt; ρ</tspan><tspan font-size="10" dy="3">f</tspan></text>
+  <rect class="air" x="30" y="100" width="140" height="150"/>
+  <path class="dinding" d="M30,60 V250 H170 V60"/>
+  <rect class="benda" x="75" y="80" width="50" height="40"/>
+  <path class="apung" d="M100,100 V58" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M100,100 V142" marker-end="url(#panah)"/>
+  <text class="label" x="110" y="68">F<tspan font-size="10" dy="3">a</tspan></text>
+  <text class="label" x="110" y="146">w</text>
+
+  <!-- ===== Melayang ===== -->
+  <text class="judul" x="280" y="22" text-anchor="middle">Melayang</text>
+  <text class="syarat" x="280" y="44" text-anchor="middle">ρ<tspan font-size="10" dy="3">b</tspan><tspan dy="-3"> = ρ</tspan><tspan font-size="10" dy="3">f</tspan></text>
+  <rect class="air" x="210" y="100" width="140" height="150"/>
+  <path class="dinding" d="M210,60 V250 H350 V60"/>
+  <rect class="benda" x="255" y="150" width="50" height="40"/>
+  <path class="apung" d="M280,170 V128" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M280,170 V212" marker-end="url(#panah)"/>
+  <text class="label" x="290" y="138">F<tspan font-size="10" dy="3">a</tspan></text>
+  <text class="label" x="290" y="216">w</text>
+
+  <!-- ===== Tenggelam ===== -->
+  <text class="judul" x="460" y="22" text-anchor="middle">Tenggelam</text>
+  <text class="syarat" x="460" y="44" text-anchor="middle">ρ<tspan font-size="10" dy="3">b</tspan><tspan dy="-3"> &gt; ρ</tspan><tspan font-size="10" dy="3">f</tspan></text>
+  <rect class="air" x="390" y="100" width="140" height="150"/>
+  <path class="dinding" d="M390,60 V250 H530 V60"/>
+  <rect class="benda" x="435" y="208" width="50" height="40"/>
+  <path class="apung" d="M460,228 V202" marker-end="url(#panah-o)"/>
+  <path class="vektor" d="M460,228 V286" marker-end="url(#panah)"/>
+  <text class="label" x="470" y="200">F<tspan font-size="10" dy="3">a</tspan></text>
+  <text class="label" x="470" y="284">w</text>
+</svg>

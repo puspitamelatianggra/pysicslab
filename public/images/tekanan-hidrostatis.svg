@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Tangki air dengan tiga lubang di dinding kanan pada kedalaman berbeda. Tekanan udara luar P0 menekan permukaan air. Air dari lubang paling dalam memancar paling kencang karena tekanan hidrostatisnya paling besar. Titik X berada pada kedalaman h dari permukaan">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .pancaran { stroke: #3B9AE1; stroke-width: 5; fill: none; stroke-linecap: round; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 1.5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Air dan tangki -->
+  <rect class="air" x="140" y="70" width="140" height="180"/>
+  <path class="dinding" d="M140,40 V250 H280 V40"/>
+
+  <!-- Tekanan udara luar -->
+  <path class="vektor" d="M210,14 V62" marker-end="url(#panah)"/>
+  <text class="label" x="222" y="36">P<tspan font-size="11" dy="4">0</tspan></text>
+
+  <!-- Pancaran: makin dalam, makin kencang (jarak datar diukur pada jarak jatuh yang sama) -->
+  <path class="pancaran" d="M282,110 Q312,110 342,150"/>
+  <path class="pancaran" d="M282,170 Q330,170 377,210"/>
+  <path class="pancaran" d="M282,230 Q342,230 402,270"/>
+  <text class="kecil" x="350" y="150">pelan</text>
+  <text class="kecil" x="410" y="276">kencang</text>
+
+  <!-- Kedalaman titik X -->
+  <path class="bantu" d="M120,70 H140 M120,230 H210"/>
+  <path class="ukur" d="M126,72 V228" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="116" y="155" text-anchor="end">h</text>
+  <circle class="titik" cx="210" cy="230" r="6"/>
+  <text class="label" x="210" y="216" text-anchor="middle">X</text>
+</svg>

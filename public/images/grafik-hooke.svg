@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 270" role="img" aria-label="Grafik gaya F terhadap pertambahan panjang delta x pada pegas berupa garis lurus melalui titik asal. Kemiringan garis sama dengan konstanta pegas k. Luas segitiga di bawah garis sama dengan energi potensial pegas, yaitu setengah F delta x">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .garis { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .luas { fill: #FF6B00; fill-opacity: 0.3; stroke: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Luas = energi potensial -->
+  <polygon class="luas" points="70,230 370,230 370,67.1"/>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M70,230 H480" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M70,230 V20" marker-end="url(#panah)"/>
+  <text class="label" x="60" y="30" text-anchor="end">F</text>
+  <text class="label" x="478" y="254" text-anchor="end">Δx</text>
+  <text class="label" x="60" y="246" text-anchor="end">0</text>
+
+  <!-- Garis F = kΔx -->
+  <path class="garis" d="M70,230 L420,40"/>
+  <path class="bantu" d="M70,67.1 H370 V230"/>
+  <text class="label" x="62" y="72" text-anchor="end">F</text>
+  <text class="label" x="370" y="250" text-anchor="middle">Δx</text>
+  <text class="kecil" x="250" y="88" text-anchor="end">kemiringan = k</text>
+
+  <text class="rumus" x="300" y="205" text-anchor="middle">Eₚ = ½ F Δx</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" role="img" aria-label="Resultan dua momentum p1 dan p2 yang membentuk sudut theta. Kedua vektor berpangkal di titik yang sama, lalu dilengkapi menjadi jajargenjang. Diagonal jajargenjang adalah momentum total p">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label-o { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .resultan { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 5; fill: none; }
+      .busur { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Garis bantu jajargenjang -->
+  <path class="bantu" d="M330,200 L439,70 L189,70"/>
+
+  <!-- Vektor -->
+  <path class="vektor" d="M80,200 H330" marker-end="url(#panah)"/>
+  <path class="vektor" d="M80,200 L189,70" marker-end="url(#panah)"/>
+  <path class="resultan" d="M80,200 L439,70" marker-end="url(#panah-o)"/>
+  <circle class="pusat" cx="80" cy="200" r="4"/>
+
+  <!-- Sudut -->
+  <path class="busur" d="M125,200 A45,45 0 0 0 108.9,165.5"/>
+  <text class="label" x="132" y="190">θ</text>
+
+  <text class="label" x="205" y="226" text-anchor="middle">p<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="122" y="116" text-anchor="end">p<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="label-o" x="286" y="110">p</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-label="Dua batang identik bermassa M dan panjang L. Batang kiri berputar pada poros di tengah dengan momen inersia satu per dua belas M L kuadrat. Batang kanan berputar pada poros di ujung dengan momen inersia sepertiga M L kuadrat, empat kali lebih besar">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .batang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; stroke-dasharray: 7 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .putar { stroke: #FF6B00; stroke-width: 2.5; fill: none; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: poros di tengah ===== -->
+  <text class="judul" x="140" y="24" text-anchor="middle">Poros di tengah</text>
+  <path class="putar" d="M118,52 A22,8 0 1 0 162,52" marker-end="url(#panah-o)"/>
+  <path class="sumbu" d="M140,38 V170"/>
+  <rect class="batang" x="40" y="96" width="200" height="16" rx="3"/>
+  <path class="ukur" d="M40,136 H240" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="190" y="130" text-anchor="middle">L</text>
+  <text class="rumus" x="140" y="205" text-anchor="middle">I = (1/12) ML²</text>
+
+  <path class="pemisah" d="M280,20 V220"/>
+
+  <!-- ===== Kanan: poros di ujung ===== -->
+  <text class="judul" x="420" y="24" text-anchor="middle">Poros di ujung</text>
+  <path class="putar" d="M298,52 A22,8 0 1 0 342,52" marker-end="url(#panah-o)"/>
+  <path class="sumbu" d="M320,38 V170"/>
+  <rect class="batang" x="320" y="96" width="200" height="16" rx="3"/>
+  <path class="ukur" d="M320,136 H520" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="420" y="130" text-anchor="middle">L</text>
+  <text class="rumus" x="420" y="205" text-anchor="middle">I = (1/3) ML²</text>
+</svg>

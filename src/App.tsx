@@ -12,6 +12,7 @@ import Lab from './pages/Lab';
 import Quiz from './pages/Quiz';
 import Leaderboard from './pages/Leaderboard';
 import Login from './pages/Login';
+import ComingSoon from './pages/ComingSoon';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
                 <div className="text-center">
                     <div className="text-6xl mb-4 animate-bounce">⚛️</div>
                     <p className="text-2xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                        Memuat PhysicsLab...
+                        Memuat Fermionsplus...
                     </p>
                 </div>
             </div>
@@ -89,6 +90,8 @@ function App() {
                             <Route path="/lab" element={<Lab />} />
                             <Route path="/quiz" element={<Quiz />} />
                             <Route path="/leaderboard" element={<Leaderboard />} />
+                            <Route path="/artikel" element={<ComingSoon title="Artikel" description="Artikel belajar sedang disiapkan. Segera hadir!" />} />
+                            <Route path="/guru" element={<ComingSoon title="Untuk Guru" description="Fitur untuk guru sedang disiapkan. Segera hadir!" />} />
                             <Route path="/login" element={<LoginPageLocal />} />
                         </Routes>
                     </main>
@@ -123,6 +126,8 @@ function App() {
                         <Route path="/leaderboard" element={
                             isLoggedIn ? <Leaderboard /> : <Navigate to="/login" replace />
                         } />
+                        <Route path="/artikel" element={<ComingSoon title="Artikel" description="Artikel belajar sedang disiapkan. Segera hadir!" />} />
+                        <Route path="/guru" element={<ComingSoon title="Untuk Guru" description="Fitur untuk guru sedang disiapkan. Segera hadir!" />} />
                     </Routes>
                 </main>
                 {isLoggedIn && <Sidebar />}

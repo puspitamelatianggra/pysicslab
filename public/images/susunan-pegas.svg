@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 370" role="img" aria-label="Dua susunan pegas yang menahan beban m. Kiri, susunan seri: pegas k1 dan k2 disambung berurutan, sehingga gaya pada setiap pegas sama dan pertambahan panjangnya dijumlahkan. Kanan, susunan paralel: pegas k1 dan k2 berdampingan dan bersama-sama menahan satu batang, sehingga pertambahan panjangnya sama dan gayanya dijumlahkan">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .pegas { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .atap { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .pelat { fill: #475569; stroke: #1A1A1A; stroke-width: 1.5; }
+      .beban { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .tali { stroke: #1A1A1A; stroke-width: 2.5; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Seri ===== -->
+  <rect class="atap" x="60" y="20" width="100" height="20"/>
+  <path class="pegas" d="M110,40 V50 L122,51.9 L98,55.6 L122,59.4 L98,63.1 L122,66.9 L98,70.6 L122,74.4 L98,78.1 L122,81.9 L98,85.6 L122,89.4 L98,93.1 L122,96.9 L98,100.6 L122,104.4 L98,108.1 L110,110 V120"/>
+  <rect class="pelat" x="95" y="120" width="30" height="10"/>
+  <path class="pegas" d="M110,130 V140 L122,141.9 L98,145.6 L122,149.4 L98,153.1 L122,156.9 L98,160.6 L122,164.4 L98,168.1 L122,171.9 L98,175.6 L122,179.4 L98,183.1 L122,186.9 L98,190.6 L122,194.4 L98,198.1 L110,200 V210"/>
+  <rect class="pelat" x="90" y="210" width="40" height="8"/>
+  <line class="tali" x1="110" y1="218" x2="110" y2="236"/>
+  <rect class="beban" x="85" y="236" width="50" height="40" rx="4"/>
+  <text class="label" x="110" y="262" text-anchor="middle">m</text>
+  <path class="vektor" d="M110,276 V312" marker-end="url(#panah)"/>
+  <text class="label" x="120" y="306">F</text>
+  <text class="label" x="132" y="85">k<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="132" y="175">k<tspan font-size="11" dy="4">2</tspan></text>
+
+  <text class="judul" x="110" y="336" text-anchor="middle">Seri</text>
+  <text class="rumus" x="110" y="360" text-anchor="middle">1/k<tspan font-size="11" dy="4">s</tspan><tspan dy="-4"> = 1/k</tspan><tspan font-size="11" dy="4">1</tspan><tspan dy="-4"> + 1/k</tspan><tspan font-size="11" dy="4">2</tspan></text>
+
+  <path class="pemisah" d="M260,20 V350"/>
+
+  <!-- ===== Paralel ===== -->
+  <rect class="atap" x="330" y="20" width="160" height="20"/>
+  <path class="pegas" d="M370,40 V50 L382,53.1 L358,59.4 L382,65.6 L358,71.9 L382,78.1 L358,84.4 L382,90.6 L358,96.9 L382,103.1 L358,109.4 L382,115.6 L358,121.9 L382,128.1 L358,134.4 L382,140.6 L358,146.9 L370,150 V160"/>
+  <path class="pegas" d="M450,40 V50 L462,53.1 L438,59.4 L462,65.6 L438,71.9 L462,78.1 L438,84.4 L462,90.6 L438,96.9 L462,103.1 L438,109.4 L462,115.6 L438,121.9 L462,128.1 L438,134.4 L462,140.6 L438,146.9 L450,150 V160"/>
+  <rect class="pelat" x="350" y="160" width="120" height="10"/>
+  <line class="tali" x1="410" y1="170" x2="410" y2="196"/>
+  <rect class="beban" x="385" y="196" width="50" height="40" rx="4"/>
+  <text class="label" x="410" y="222" text-anchor="middle">m</text>
+  <path class="vektor" d="M410,236 V272" marker-end="url(#panah)"/>
+  <text class="label" x="420" y="266">F</text>
+  <text class="label" x="352" y="105" text-anchor="end">k<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="470" y="105">k<tspan font-size="11" dy="4">2</tspan></text>
+
+  <text class="judul" x="410" y="336" text-anchor="middle">Paralel</text>
+  <text class="rumus" x="410" y="360" text-anchor="middle">k<tspan font-size="11" dy="4">p</tspan><tspan dy="-4"> = k</tspan><tspan font-size="11" dy="4">1</tspan><tspan dy="-4"> + k</tspan><tspan font-size="11" dy="4">2</tspan></text>
+</svg>

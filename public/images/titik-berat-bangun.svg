@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Letak titik berat Z empat benda homogen, diukur dari alasnya. Segitiga: sepertiga tinggi. Bidang setengah lingkaran: empat R per tiga pi. Kerucut pejal: seperempat tinggi. Setengah bola pejal: tiga per delapan R">
+  <defs>
+    <style>
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .label { font: 700 14px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .bangun { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .tutup { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- Segitiga -->
+  <text class="judul" x="70" y="30" text-anchor="middle">Segitiga</text>
+  <polygon class="bangun" points="20,200 120,200 70,60"/>
+  <path class="bantu" d="M70,153.3 V200"/>
+  <circle class="titik" cx="70" cy="153.3" r="5"/>
+  <text class="label" x="80" y="150">Z</text>
+  <text class="rumus" x="70" y="235" text-anchor="middle">y₀ = t/3</text>
+
+  <!-- Bidang setengah lingkaran -->
+  <text class="judul" x="210" y="30" text-anchor="middle">Bidang ½ lingkaran</text>
+  <path class="bangun" d="M155,200 A55,55 0 0 1 265,200 Z"/>
+  <path class="bantu" d="M210,176.7 V200"/>
+  <circle class="titik" cx="210" cy="176.7" r="5"/>
+  <text class="label" x="220" y="172">Z</text>
+  <text class="rumus" x="210" y="235" text-anchor="middle">y₀ = 4R/(3π)</text>
+
+  <!-- Kerucut pejal -->
+  <text class="judul" x="350" y="30" text-anchor="middle">Kerucut pejal</text>
+  <path class="bangun" d="M300,200 L350,60 L400,200 A50,12 0 0 1 300,200 Z"/>
+  <path class="bantu" d="M300,200 A50,12 0 0 1 400,200"/>
+  <path class="bantu" d="M350,165 V200"/>
+  <circle class="titik" cx="350" cy="165" r="5"/>
+  <text class="label" x="360" y="162">Z</text>
+  <text class="rumus" x="350" y="235" text-anchor="middle">y₀ = t/4</text>
+
+  <!-- Setengah bola pejal -->
+  <text class="judul" x="490" y="30" text-anchor="middle">½ bola pejal</text>
+  <path class="bangun" d="M435,200 A55,55 0 0 1 545,200 A55,12 0 0 1 435,200 Z"/>
+  <path class="bantu" d="M435,200 A55,12 0 0 1 545,200"/>
+  <path class="bantu" d="M490,179.4 V200"/>
+  <circle class="titik" cx="490" cy="179.4" r="5"/>
+  <text class="label" x="500" y="176">Z</text>
+  <text class="rumus" x="490" y="235" text-anchor="middle">y₀ = 3R/8</text>
+</svg>

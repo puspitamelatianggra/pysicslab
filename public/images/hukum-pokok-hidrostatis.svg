@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-label="Kiri: bejana berhubungan dengan bentuk berbeda-beda. Permukaan air di semua bejana sama tinggi. Kanan: pipa U berisi air dan minyak. Titik A di batas minyak dan air sejajar dengan titik B di dalam air pada kaki kanan, sehingga tekanannya sama. Tinggi kolom minyak h1 lebih besar daripada tinggi kolom air h2 di atas garis A B">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kecil { font: 600 12px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .minyak { fill: #FFD166; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .bantu { stroke: #FF6B00; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 1.5; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: bejana berhubungan ===== -->
+  <text class="judul" x="145" y="20" text-anchor="middle">Bejana berhubungan</text>
+  <!-- Air -->
+  <rect class="air" x="30" y="210" width="230" height="30"/>
+  <rect class="air" x="45" y="100" width="20" height="112"/>
+  <rect class="air" x="95" y="100" width="50" height="112"/>
+  <polygon class="air" points="169,100 209.9,100 196,212 180,212"/>
+  <polygon class="air" points="242.7,100 260.7,100 246,212 228,212"/>
+  <!-- Dinding -->
+  <path class="dinding" d="M45,60 V210 H30 V240 H260 V210 H246 L266,60
+                           M248,60 L228,210 H196 L215,60
+                           M165,60 L180,210 H145 V60
+                           M95,60 V210 H65 V60"/>
+  <path class="bantu" d="M25,100 H274"/>
+  <text class="kecil" x="145" y="266" text-anchor="middle">permukaan air sama tinggi</text>
+
+  <path class="pemisah" d="M280,20 V285"/>
+
+  <!-- ===== Kanan: pipa U ===== -->
+  <text class="judul" x="420" y="20" text-anchor="middle">Pipa U berisi dua zat cair</text>
+  <!-- Air -->
+  <path class="air" d="M345,160 H375 V230 A30,30 0 0 0 435,230 V120 H465 V230 A60,60 0 0 1 345,230 Z"/>
+  <!-- Minyak -->
+  <rect class="minyak" x="345" y="110" width="30" height="50"/>
+  <!-- Dinding pipa -->
+  <path class="dinding" d="M345,50 V230 A60,60 0 0 0 465,230 V50 M375,50 V230 A30,30 0 0 0 435,230 V50"/>
+
+  <!-- Garis A-B -->
+  <path class="bantu" d="M325,160 H485"/>
+  <circle class="titik" cx="360" cy="160" r="5"/>
+  <circle class="titik" cx="450" cy="160" r="5"/>
+  <text class="label" x="330" y="178" text-anchor="end">A</text>
+  <text class="label" x="492" y="178">B</text>
+
+  <!-- Tinggi kolom -->
+  <path class="ukur" d="M318,112 V158" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="312" y="140" text-anchor="end">h<tspan font-size="11" dy="4">1</tspan></text>
+  <path class="ukur" d="M492,122 V158" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="498" y="145">h<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="kecil" x="360" y="44" text-anchor="middle">minyak</text>
+  <text class="kecil" x="450" y="44" text-anchor="middle">air</text>
+</svg>

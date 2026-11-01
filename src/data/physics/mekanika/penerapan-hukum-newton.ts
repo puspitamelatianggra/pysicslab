@@ -51,6 +51,34 @@ export const penerapanHukumNewton: Chapter = {
         <span class="istilah">Gaya gesek (f)</span>
         <p>Gaya yang muncul antara dua permukaan yang bersentuhan. Arahnya <strong>sejajar</strong> bidang sentuh dan <strong>berlawanan</strong> dengan arah gerak (atau kecenderungan gerak) benda.</p>
       </div>
+
+      <p>Gambar berikut menunjukkan arah setiap gaya pada tiga keadaan yang sering muncul di soal: permukaan datar, permukaan miring, dan posisi vertikal.</p>
+
+      <figure class="gambar">
+        <div class="gambar-isi">
+          <img src="/images/arah-gaya-datar.svg" alt="Arah gaya pada balok di bidang datar yang ditarik tali mendatar ke kanan. Berat w vertikal ke bawah, gaya normal N tegak lurus lantai ke atas, tegangan tali T ke kanan sepanjang tali, dan gaya gesek f ke kiri berlawanan arah gerak." />
+        </div>
+        <figcaption><strong>Gambar 1.</strong> Permukaan datar. <em>N</em> tegak lurus lantai (ke atas), <em>w</em> ke bawah, <em>T</em> sepanjang tali, dan <em>f</em> berlawanan arah gerak.</figcaption>
+      </figure>
+
+      <figure class="gambar">
+        <div class="gambar-isi">
+          <img src="/images/arah-gaya-miring.svg" alt="Arah gaya pada balok di bidang miring bersudut theta yang ditarik tali sejajar bidang ke atas. Berat w tetap vertikal ke bawah, gaya normal N tegak lurus bidang miring, tegangan tali T sejajar bidang ke atas, dan gaya gesek f sejajar bidang ke bawah berlawanan arah gerak." />
+        </div>
+        <figcaption><strong>Gambar 2.</strong> Permukaan miring. <em>w</em> tetap vertikal ke bawah, tetapi <em>N</em> ikut miring karena tegak lurus bidang. Benda bergerak naik, jadi <em>f</em> mengarah turun sejajar bidang.</figcaption>
+      </figure>
+
+      <figure class="gambar">
+        <div class="gambar-isi">
+          <img src="/images/arah-gaya-vertikal.svg" alt="Arah gaya pada posisi vertikal. Kiri: balok ditekan gaya F ke dinding tegak. Gaya normal N tegak lurus dinding ke kanan, gaya gesek f sejajar dinding ke atas, dan berat w ke bawah. Kanan: benda digantung tali. Tegangan tali T ke atas sepanjang tali dan berat w ke bawah." />
+        </div>
+        <figcaption><strong>Gambar 3.</strong> Posisi vertikal. Pada dinding tegak, <em>N</em> mendatar (tegak lurus dinding) dan <em>f</em> ke atas menahan benda agar tidak jatuh. Pada benda yang digantung, <em>T</em> ke atas sepanjang tali.</figcaption>
+      </figure>
+
+      <div class="catatan info">
+        <strong class="judul">Cara mudah mengingat</strong>
+        Arah <em>w</em> <strong>tidak pernah berubah</strong>, selalu vertikal ke bawah menuju pusat bumi. Arah <em>N</em> dan <em>f</em> <strong>mengikuti permukaan</strong>: <em>N</em> tegak lurus permukaan, sedangkan <em>f</em> sejajar permukaan. Arah <em>T</em> mengikuti tali.
+      </div>
     </section>
 
     <!-- ============ 2. GAYA GESEK ============ -->
@@ -116,7 +144,7 @@ export const penerapanHukumNewton: Chapter = {
           <div class="gambar-isi">
             <img src="/images/grafik-gaya-gesek.svg" alt="Grafik gaya gesek f terhadap gaya tarik F. Selama benda diam, f sama dengan F dan naik lurus hingga mencapai fs maks sama dengan mu s N. Setelah benda bergerak, gaya gesek turun ke fk sama dengan mu k N dan nilainya tetap." />
           </div>
-          <figcaption><strong>Gambar 1.</strong> Gaya gesek terhadap gaya tarik. Benda mulai bergerak saat F melebihi <em>f</em><sub>s,maks</sub>.</figcaption>
+          <figcaption><strong>Gambar 4.</strong> Gaya gesek terhadap gaya tarik. Benda mulai bergerak saat F melebihi <em>f</em><sub>s,maks</sub>.</figcaption>
         </figure>
 
         <p>Langkah menentukan gaya gesek yang bekerja:</p>
@@ -161,7 +189,7 @@ export const penerapanHukumNewton: Chapter = {
         <div class="gambar-isi">
           <img src="/images/dbb-bidang-datar.svg" alt="Diagram benda bebas balok di lantai kasar. Gaya tarik F membentuk sudut theta dan diuraikan menjadi F cos theta mendatar dan F sin theta ke atas. Gaya normal N ke atas, berat w sama dengan mg ke bawah, dan gaya gesek f ke kiri berlawanan arah gerak." />
         </div>
-        <figcaption><strong>Gambar 2.</strong> Diagram benda bebas balok yang ditarik gaya miring di bidang datar.</figcaption>
+        <figcaption><strong>Gambar 5.</strong> Diagram benda bebas balok yang ditarik gaya miring di bidang datar.</figcaption>
       </figure>
 
       <div class="rumus">
@@ -210,7 +238,7 @@ export const penerapanHukumNewton: Chapter = {
         <div class="gambar-isi">
           <img src="/images/dbb-bidang-miring.svg" alt="Diagram benda bebas balok di bidang miring bersudut theta. Berat w diuraikan menjadi w sin theta sejajar bidang ke bawah dan w cos theta tegak lurus bidang ke dalam. Gaya normal N tegak lurus bidang ke luar, dan gaya gesek f sejajar bidang ke atas." />
         </div>
-        <figcaption><strong>Gambar 3.</strong> Diagram benda bebas balok yang meluncur turun di bidang miring kasar.</figcaption>
+        <figcaption><strong>Gambar 6.</strong> Diagram benda bebas balok yang meluncur turun di bidang miring kasar.</figcaption>
       </figure>
 
       <div class="rumus">
@@ -299,7 +327,7 @@ export const penerapanHukumNewton: Chapter = {
         <div class="gambar-isi">
           <img src="/images/katrol.svg" alt="Dua benda tergantung pada tali yang melewati katrol. Pada benda A dan B bekerja tegangan tali T ke atas serta berat mA g dan mB g ke bawah. Benda B yang lebih berat bergerak turun dengan percepatan a, sedangkan benda A naik dengan percepatan a." />
         </div>
-        <figcaption><strong>Gambar 4.</strong> Dua benda tergantung pada katrol. Benda yang lebih berat bergerak turun.</figcaption>
+        <figcaption><strong>Gambar 7.</strong> Dua benda tergantung pada katrol. Benda yang lebih berat bergerak turun.</figcaption>
       </figure>
 
       <div class="rumus">

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 290" role="img" aria-label="Bidang berbentuk huruf L pada koordinat XY, dibagi menjadi dua persegi panjang. Bidang 1 berukuran 2 kali 6 dengan titik berat Z1 di 1 koma 3. Bidang 2 berukuran 4 kali 2 dengan titik berat Z2 di 4 koma 1. Titik berat gabungan Z berada di 2,2 koma 2,2, pada garis yang menghubungkan Z1 dan Z2, dan terletak di luar bidang">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label-o { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .kisi { stroke: #475569; stroke-width: 0.75; stroke-opacity: 0.35; fill: none; }
+      .bidang-1 { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .bidang-2 { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2.5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .titik { fill: #1A1A1A; }
+      .titik-o { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 1.5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Kisi (1 kotak = 1 satuan = 30 px) -->
+  <path class="kisi" d="M110,20 V250 M140,20 V250 M170,20 V250 M200,20 V250 M230,20 V250 M260,20 V250 M290,20 V250
+                        M80,200 H320 M80,170 H320 M80,140 H320 M80,110 H320 M80,80 H320 M80,50 H320"/>
+
+  <!-- Bidang -->
+  <rect class="bidang-1" x="80" y="50" width="60" height="180"/>
+  <rect class="bidang-2" x="140" y="170" width="120" height="60"/>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M80,230 H335" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M80,230 V15" marker-end="url(#panah)"/>
+  <text class="label" x="342" y="236">x</text>
+  <text class="label" x="74" y="20" text-anchor="end">y</text>
+  <text class="angka" x="74" y="235" text-anchor="end">0</text>
+  <text class="angka" x="140" y="250" text-anchor="middle">2</text>
+  <text class="angka" x="200" y="250" text-anchor="middle">4</text>
+  <text class="angka" x="260" y="250" text-anchor="middle">6</text>
+  <text class="angka" x="72" y="175" text-anchor="end">2</text>
+  <text class="angka" x="72" y="115" text-anchor="end">4</text>
+  <text class="angka" x="72" y="55" text-anchor="end">6</text>
+
+  <!-- Titik berat -->
+  <path class="bantu" d="M110,140 L200,200"/>
+  <circle class="titik" cx="110" cy="140" r="4.5"/>
+  <circle class="titik" cx="200" cy="200" r="4.5"/>
+  <circle class="titik-o" cx="146" cy="164" r="6"/>
+  <text class="label" x="104" y="132" text-anchor="end">Z<tspan font-size="11" dy="4">1</tspan></text>
+  <text class="label" x="208" y="196">Z<tspan font-size="11" dy="4">2</tspan></text>
+  <text class="label-o" x="156" y="156">Z</text>
+
+  <text class="angka" x="110" y="276" text-anchor="middle">bidang 1</text>
+  <text class="angka" x="215" y="276" text-anchor="middle">bidang 2</text>
+</svg>

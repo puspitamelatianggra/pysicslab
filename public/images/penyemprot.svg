@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-label="Alat penyemprot. Pengisap pompa didorong sehingga udara keluar dengan cepat melalui ujung pompa yang sempit. Udara yang bergerak cepat di atas ujung pipa tandon membuat tekanan di sana kecil. Tekanan udara luar yang lebih besar mendorong cairan dari tandon naik melalui pipa, lalu cairan ikut tersembur bersama udara">
+  <defs>
+    <style>
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .oranye { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #FF6B00; }
+      .tabung { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; stroke-linejoin: round; }
+      .cairan { fill: #A5D8FF; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linejoin: round; }
+      .pipa { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .batang { stroke: #1A1A1A; stroke-width: 4; stroke-linecap: round; }
+      .pengisap { fill: #475569; stroke: #1A1A1A; stroke-width: 2; }
+      .udara { stroke: #475569; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+      .semburan { stroke: #3B9AE1; stroke-width: 2; stroke-dasharray: 3 4; fill: none; stroke-linecap: round; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .naik { stroke: #FF6B00; stroke-width: 3; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- Tabung pompa dan ujung sempit -->
+  <path class="tabung" d="M80,60 H330 L370,76 H388 V84 H370 L330,100 H80 Z"/>
+
+  <!-- Batang dan pengisap -->
+  <line class="batang" x1="30" y1="80" x2="150" y2="80"/>
+  <line class="batang" x1="30" y1="58" x2="30" y2="102"/>
+  <rect class="pengisap" x="150" y="62" width="10" height="36"/>
+  <path class="vektor" d="M40,40 H90" marker-end="url(#panah)"/>
+  <text class="kecil" x="65" y="30" text-anchor="middle">ditekan</text>
+
+  <!-- Aliran udara dalam pompa -->
+  <path class="udara" d="M180,80 H320" marker-end="url(#panah-g)"/>
+  <text class="label" x="240" y="52" text-anchor="middle">pompa</text>
+
+  <!-- Tandon dan pipa -->
+  <rect class="cairan" x="340" y="165" width="100" height="45"/>
+  <path class="dinding" d="M340,140 V210 H440 V140 H340"/>
+  <rect class="cairan" x="396" y="92" width="6" height="118"/>
+  <path class="pipa" d="M395,92 V200 M403,92 V200"/>
+  <path class="naik" d="M420,190 V120" marker-end="url(#panah-o)"/>
+  <text class="kecil" x="390" y="232" text-anchor="middle">tandon cairan</text>
+
+  <!-- Semburan -->
+  <path class="semburan" d="M392,80 L520,60 M392,80 L530,80 M392,80 L520,100 M410,83 L525,70 M410,83 L525,92"/>
+
+  <!-- Keterangan -->
+  <text class="oranye" x="420" y="40" text-anchor="middle">udara cepat, tekanan kecil</text>
+  <text class="oranye" x="430" y="132">cairan naik</text>
+</svg>

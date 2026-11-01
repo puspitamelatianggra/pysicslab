@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 350" role="img" aria-label="Arah gaya pada posisi vertikal. Kiri: balok ditekan gaya F ke dinding tegak. Gaya normal N tegak lurus dinding ke kanan, gaya gesek f sejajar dinding ke atas, dan berat w ke bawah. Kanan: benda digantung tali. Tegangan tali T ke atas sepanjang tali dan berat w ke bawah">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .dorong { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .tali { stroke: #475569; stroke-width: 2.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .balok { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 3; }
+      .bidang { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .pusat { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: balok ditekan ke dinding ===== -->
+  <rect class="bidang" x="30" y="30" width="30" height="270"/>
+  <rect class="balok" x="60" y="140" width="90" height="70"/>
+
+  <path class="dorong" d="M225,197 H154" marker-end="url(#panah-o)"/>
+  <text class="label" x="232" y="202">F</text>
+
+  <path class="vektor" d="M105,175 H200" marker-end="url(#panah)"/>
+  <path class="vektor" d="M105,175 V82" marker-end="url(#panah)"/>
+  <path class="vektor" d="M105,175 V270" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="105" cy="175" r="4"/>
+
+  <text class="label" x="206" y="172">N</text>
+  <text class="label" x="117" y="88">f</text>
+  <text class="label" x="117" y="268">w</text>
+  <text class="judul" x="140" y="332" text-anchor="middle">Balok ditekan ke dinding</text>
+
+  <!-- Pemisah -->
+  <path class="bantu" d="M275,30 V310"/>
+
+  <!-- ===== Kanan: benda digantung tali ===== -->
+  <rect class="bidang" x="315" y="30" width="150" height="20"/>
+  <path class="tali" d="M390,50 V170"/>
+  <rect class="balok" x="350" y="170" width="80" height="60"/>
+
+  <path class="vektor" d="M390,200 V95" marker-end="url(#panah)"/>
+  <path class="vektor" d="M390,200 V295" marker-end="url(#panah)"/>
+  <circle class="pusat" cx="390" cy="200" r="4"/>
+
+  <text class="label" x="402" y="102">T</text>
+  <text class="label" x="402" y="293">w</text>
+  <text class="judul" x="390" y="332" text-anchor="middle">Benda digantung tali</text>
+</svg>

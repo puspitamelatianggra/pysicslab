@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 270" role="img" aria-label="Kerangka kawat berbentuk huruf U terbalik dengan kawat geser sepanjang l di bagian bawah. Di antara kerangka dan kawat geser terdapat lapisan sabun. Lapisan sabun menarik kawat geser ke atas dengan gaya tegangan permukaan F gamma, sedangkan gaya F menarik kawat ke bawah. Saat seimbang, kedua gaya sama besar">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .lapisan { fill: #A5D8FF; fill-opacity: 0.7; }
+      .kerangka { stroke: #1A1A1A; stroke-width: 4; fill: none; stroke-linejoin: round; }
+      .geser { stroke: #FF6B00; stroke-width: 5; stroke-linecap: round; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Lapisan sabun -->
+  <rect class="lapisan" x="160" y="40" width="200" height="100"/>
+  <text class="kecil" x="260" y="70" text-anchor="middle">lapisan sabun</text>
+
+  <!-- Kerangka -->
+  <path class="kerangka" d="M160,220 V40 H360 V220"/>
+
+  <!-- Kawat geser -->
+  <line class="geser" x1="156" y1="140" x2="364" y2="140"/>
+  <text class="kecil" x="372" y="145">kawat geser</text>
+
+  <!-- Gaya -->
+  <path class="vektor" d="M260,140 V92" marker-end="url(#panah)"/>
+  <path class="vektor" d="M260,140 V196" marker-end="url(#panah)"/>
+  <text class="label" x="270" y="104">F<tspan font-size="11" dy="4">γ</tspan></text>
+  <text class="label" x="270" y="194">F</text>
+
+  <!-- Panjang kawat -->
+  <path class="ukur" d="M162,244 H358" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="260" y="264" text-anchor="middle">l</text>
+</svg>

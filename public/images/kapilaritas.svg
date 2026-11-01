@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" role="img" aria-label="Kiri: pipa kapiler kaca dicelupkan ke air. Air di dalam pipa naik setinggi h di atas permukaan air di luar dan permukaannya cekung. Kanan: pipa kapiler kaca dicelupkan ke raksa. Raksa di dalam pipa turun sedalam h di bawah permukaan raksa di luar dan permukaannya cembung">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .air { fill: #A5D8FF; }
+      .raksa { fill: #94A3B8; }
+      .latar { fill: #FFF7ED; }
+      .dinding { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .pipa { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .bantu { stroke: #FF6B00; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .pemisah { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: air naik ===== -->
+  <rect class="air" x="40" y="170" width="220" height="80"/>
+  <path class="air" d="M150,88 Q158,102 166,88 V170 H150 Z"/>
+  <path class="dinding" d="M40,140 V250 H260 V140"/>
+  <path class="pipa" d="M148,40 V230 M168,40 V230"/>
+  <path class="bantu" d="M120,170 H200 M150,95 H200"/>
+  <path class="ukur" d="M192,97 V168" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="200" y="136">h</text>
+  <text class="judul" x="150" y="276" text-anchor="middle">air naik (θ &lt; 90°)</text>
+
+  <path class="pemisah" d="M280,20 V280"/>
+
+  <!-- ===== Kanan: raksa turun ===== -->
+  <rect class="raksa" x="300" y="170" width="220" height="80"/>
+  <rect class="latar" x="410" y="150" width="16" height="70"/>
+  <path class="raksa" d="M410,212 Q418,198 426,212 V250 H410 Z"/>
+  <path class="dinding" d="M300,140 V250 H520 V140"/>
+  <path class="pipa" d="M408,40 V230 M428,40 V230"/>
+  <path class="bantu" d="M380,170 H460 M428,206 H460"/>
+  <path class="ukur" d="M452,172 V204" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="460" y="194">h</text>
+  <text class="judul" x="410" y="276" text-anchor="middle">raksa turun (θ &gt; 90°)</text>
+</svg>

@@ -53,7 +53,7 @@ export interface Activity {
     timestamp: number;
 }
 
-const STORAGE_KEY = 'physicslab_progress';
+const STORAGE_KEY = 'fermionsplus_progress';
 
 // Default progress untuk siswa baru
 const defaultProgress: UserProgress = {
