@@ -17,27 +17,26 @@ export default function Login() {
     // Cek apakah Supabase sudah dikonfigurasi
     if (!isSupabaseConfigured()) {
         return (
-            <div className="min-h-screen flex items-center justify-center p-4 bg-cream">
+            <div className="min-h-screen flex items-center justify-center p-4">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-white border-[3px] border-dark rounded-xl p-8 max-w-lg w-full text-center shadow-[6px_6px_0_#1A1A1A]"
+                    className="bg-secondary-background border-2 border-border rounded-base p-8 max-w-lg w-full text-center shadow-shadow"
                 >
                     <div className="text-6xl mb-4">⚠️</div>
-                    <h2 className="text-2xl font-bold text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                    <h2 className="text-2xl font-bold text-foreground mb-4">
                         Supabase Belum Dikonfigurasi
                     </h2>
-                    <p className="text-gray mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-muted mb-6">
                         Website ini memerlukan koneksi ke Supabase untuk fitur login dan leaderboard.
                         Silakan hubungi admin untuk setup, atau ikuti panduan di file{' '}
-                        <code className="bg-cream px-2 py-1 rounded border-[2px] border-dark text-orange font-mono text-sm">
+                        <code className="bg-background px-2 py-1 rounded border-2 border-border text-foreground font-mono text-sm">
                             src/lib/supabase.ts
                         </code>
                     </p>
                     <button
                         onClick={() => navigate('/')}
-                        className="px-6 py-3 rounded-xl bg-orange text-white font-bold border-[3px] border-dark shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all"
-                        style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                        className="px-6 py-3 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all"
                     >
                         Kembali ke Beranda
                     </button>
@@ -107,7 +106,7 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4 bg-cream">
+        <div className="min-h-screen flex items-center justify-center p-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -115,35 +114,34 @@ export default function Login() {
             >
                 {/* Logo */}
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-lime border-[3px] border-dark shadow-[4px_4px_0_#1A1A1A] mb-4">
-                        <Atom size={32} className="text-dark" strokeWidth={3} />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-base bg-main border-2 border-border shadow-shadow mb-4">
+                        <Atom size={32} className="text-foreground" strokeWidth={3} />
                     </div>
-                    <h1 className="text-3xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                    <h1 className="text-3xl font-bold text-foreground mb-2">
                         Fermions+
                     </h1>
-                    <p className="text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-muted">
                         {isLogin ? 'Masuk ke akun Anda' : 'Buat akun baru untuk mulai belajar'}
                     </p>
                 </div>
 
                 {/* Form Card */}
-                <div className="bg-white border-[3px] border-dark rounded-xl p-8 shadow-[6px_6px_0_#1A1A1A]">
+                <div className="bg-secondary-background border-2 border-border rounded-base p-8 shadow-shadow">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         {/* Name (hanya muncul saat register) */}
                         {!isLogin && (
                             <div>
-                                <label className="block text-sm text-dark mb-2 font-semibold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                <label className="block text-sm text-foreground mb-2 font-semibold">
                                     Nama Lengkap
                                 </label>
                                 <div className="relative">
-                                    <User size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray" strokeWidth={3} />
+                                    <User size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" strokeWidth={3} />
                                     <input
                                         type="text"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         placeholder="Contoh: Budi Santoso"
-                                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-cream border-[3px] border-dark text-dark placeholder-gray focus:border-orange focus:outline-none transition-colors"
-                                        style={{ fontFamily: 'Inter, sans-serif' }}
+                                        className="w-full pl-10 pr-4 py-3 rounded-base bg-background border-2 border-border text-foreground placeholder-muted focus:shadow-shadow-sm focus:outline-none transition-colors"
                                         required
                                     />
                                 </div>
@@ -153,18 +151,17 @@ export default function Login() {
                         {/* Class Name (hanya muncul saat register) */}
                         {!isLogin && (
                             <div>
-                                <label className="block text-sm text-dark mb-2 font-semibold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                <label className="block text-sm text-foreground mb-2 font-semibold">
                                     Kelas (Opsional)
                                 </label>
                                 <div className="relative">
-                                    <School size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray" strokeWidth={3} />
+                                    <School size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" strokeWidth={3} />
                                     <input
                                         type="text"
                                         value={className}
                                         onChange={(e) => setClassName(e.target.value)}
                                         placeholder="Contoh: X IPA 1"
-                                        className="w-full pl-10 pr-4 py-3 rounded-lg bg-cream border-[3px] border-dark text-dark placeholder-gray focus:border-orange focus:outline-none transition-colors"
-                                        style={{ fontFamily: 'Inter, sans-serif' }}
+                                        className="w-full pl-10 pr-4 py-3 rounded-base bg-background border-2 border-border text-foreground placeholder-muted focus:shadow-shadow-sm focus:outline-none transition-colors"
                                     />
                                 </div>
                             </div>
@@ -172,18 +169,17 @@ export default function Login() {
 
                         {/* Email */}
                         <div>
-                            <label className="block text-sm text-dark mb-2 font-semibold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <label className="block text-sm text-foreground mb-2 font-semibold">
                                 Email
                             </label>
                             <div className="relative">
-                                <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray" strokeWidth={3} />
+                                <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" strokeWidth={3} />
                                 <input
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="nama@email.com"
-                                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-cream border-[3px] border-dark text-dark placeholder-gray focus:border-orange focus:outline-none transition-colors"
-                                    style={{ fontFamily: 'Inter, sans-serif' }}
+                                    className="w-full pl-10 pr-4 py-3 rounded-base bg-background border-2 border-border text-foreground placeholder-muted focus:shadow-shadow-sm focus:outline-none transition-colors"
                                     required
                                 />
                             </div>
@@ -191,18 +187,17 @@ export default function Login() {
 
                         {/* Password */}
                         <div>
-                            <label className="block text-sm text-dark mb-2 font-semibold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <label className="block text-sm text-foreground mb-2 font-semibold">
                                 Password
                             </label>
                             <div className="relative">
-                                <Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray" strokeWidth={3} />
+                                <Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" strokeWidth={3} />
                                 <input
                                     type="password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder="Minimal 6 karakter"
-                                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-cream border-[3px] border-dark text-dark placeholder-gray focus:border-orange focus:outline-none transition-colors"
-                                    style={{ fontFamily: 'Inter, sans-serif' }}
+                                    className="w-full pl-10 pr-4 py-3 rounded-base bg-background border-2 border-border text-foreground placeholder-muted focus:shadow-shadow-sm focus:outline-none transition-colors"
                                     required
                                     minLength={6}
                                 />
@@ -214,8 +209,7 @@ export default function Login() {
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="p-3 rounded-lg bg-red-100 border-[3px] border-red-500 text-red-700 text-sm font-semibold"
-                                style={{ fontFamily: 'Inter, sans-serif' }}
+                                className="p-3 rounded-base bg-red-100 border-2 border-red-500 text-red-700 text-sm font-semibold"
                             >
                                 {error}
                             </motion.div>
@@ -225,8 +219,7 @@ export default function Login() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3 rounded-xl bg-orange text-white font-bold border-[3px] border-dark shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            className="w-full py-3 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         >
                             {loading ? (
                                 <>
@@ -241,15 +234,14 @@ export default function Login() {
 
                     {/* Toggle Login/Register */}
                     <div className="mt-6 text-center">
-                        <p className="text-gray text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <p className="text-muted text-sm">
                             {isLogin ? 'Belum punya akun?' : 'Sudah punya akun?'}
                             <button
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError('');
                                 }}
-                                className="ml-2 text-orange hover:underline font-bold"
-                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                className="ml-2 text-foreground hover:underline font-bold"
                             >
                                 {isLogin ? 'Daftar di sini' : 'Masuk di sini'}
                             </button>
@@ -259,7 +251,7 @@ export default function Login() {
 
                 {/* Info */}
                 <div className="mt-6 text-center">
-                    <p className="text-xs text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-xs text-muted">
                         Dengan mendaftar, Anda setuju bahwa data progres belajar akan tersimpan di cloud.
                     </p>
                 </div>

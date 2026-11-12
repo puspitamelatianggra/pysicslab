@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Diagram suhu pada asas Black. Air panas bersuhu T1 turun ke suhu campuran Tc sambil melepas kalor, Q lepas sama dengan m1 c1 kali T1 dikurangi Tc. Air dingin bersuhu T2 naik ke suhu campuran Tc sambil menerima kalor, Q terima sama dengan m2 c2 kali Tc dikurangi T2">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .rumus { font: 700 14px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .panas { stroke: #FF6B00; stroke-width: 5; fill: none; }
+      .dingin { stroke: #1A1A1A; stroke-width: 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Sumbu suhu -->
+  <path class="sumbu" d="M70,250 V20" marker-end="url(#panah)"/>
+  <text class="label" x="60" y="30" text-anchor="end">T</text>
+
+  <!-- Tingkat suhu -->
+  <path class="bantu" d="M70,60 H520"/>
+  <path class="bantu" d="M70,140 H520"/>
+  <path class="bantu" d="M70,220 H520"/>
+  <text class="label" x="60" y="65" text-anchor="end">T<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="60" y="145" text-anchor="end">T<tspan class="sub" dy="5">c</tspan></text>
+  <text class="label" x="60" y="225" text-anchor="end">T<tspan class="sub" dy="5">2</tspan></text>
+  <text class="kecil" x="520" y="132" text-anchor="end">suhu akhir (setimbang)</text>
+
+  <!-- Air panas turun -->
+  <path class="panas" d="M170,64 V130" marker-end="url(#panah-oranye)"/>
+  <text class="label" x="188" y="92">Air panas melepas kalor</text>
+  <text class="rumus" x="188" y="114">Q<tspan class="sub" dy="4">lepas</tspan><tspan dy="-4"> = m</tspan><tspan class="sub" dy="4">1</tspan><tspan dy="-4">c</tspan><tspan class="sub" dy="4">1</tspan><tspan dy="-4">(T</tspan><tspan class="sub" dy="4">1</tspan><tspan dy="-4"> − T</tspan><tspan class="sub" dy="4">c</tspan><tspan dy="-4">)</tspan></text>
+
+  <!-- Air dingin naik -->
+  <path class="dingin" d="M320,216 V150" marker-end="url(#panah)"/>
+  <text class="label" x="338" y="176">Air dingin menerima kalor</text>
+  <text class="rumus" x="338" y="198">Q<tspan class="sub" dy="4">terima</tspan><tspan dy="-4"> = m</tspan><tspan class="sub" dy="4">2</tspan><tspan dy="-4">c</tspan><tspan class="sub" dy="4">2</tspan><tspan dy="-4">(T</tspan><tspan class="sub" dy="4">c</tspan><tspan dy="-4"> − T</tspan><tspan class="sub" dy="4">2</tspan><tspan dy="-4">)</tspan></text>
+</svg>

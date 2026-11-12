@@ -37,7 +37,7 @@ export const mathMaterials: Material[] = [
     title: "Persamaan Linear",
     description: "Pelajari persamaan linear satu dan dua variabel",
     icon: "📐",
-    color: "from-green-500 to-emerald-400",
+    color: "bg-main",
     chapters: [
       pengertianPersamaanLinear,
     ]
@@ -47,7 +47,7 @@ export const mathMaterials: Material[] = [
     title: "Persamaan Kuadrat",
     description: "Pelajari persamaan kuadrat dan cara penyelesaiannya",
     icon: "📊",
-    color: "from-blue-500 to-cyan-400",
+    color: "bg-main",
     chapters: [
       bentukUmumPersamaanKuadrat,
     ]
@@ -57,7 +57,7 @@ export const mathMaterials: Material[] = [
     title: "Trigonometri",
     description: "Pelajari sin, cos, tan dan penerapannya",
     icon: "📏",
-    color: "from-purple-500 to-pink-400",
+    color: "bg-main",
     chapters: [
       perbandinganTrigonometri,
     ]

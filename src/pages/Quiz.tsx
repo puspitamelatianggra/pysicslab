@@ -71,17 +71,17 @@ export default function QuizPage() {
     // Quiz Selection Screen
     if (quizState === 'select') {
         return (
-            <div className="min-h-screen bg-cream p-4 md:p-8">
+            <div className="min-h-screen p-4 md:p-8">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="mb-8"
                     >
-                        <h1 className="text-3xl md:text-4xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                             Ruang Kuis 🎯
                         </h1>
-                        <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <p className="text-lg text-muted">
                             Uji pemahamanmu dengan kuis interaktif dan dapatkan XP!
                         </p>
                     </motion.div>
@@ -95,23 +95,23 @@ export default function QuizPage() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all"
+                                    className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all"
                                 >
                                     <div className="flex items-center gap-3 mb-4">
-                                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${material?.color || 'from-lime to-orange'} border-[3px] border-dark flex items-center justify-center text-xl shadow-[3px_3px_0_#1A1A1A]`}>
+                                        <div className={`w-12 h-12 rounded-base ${material?.color || 'bg-main'} border-2 border-border flex items-center justify-center text-xl shadow-shadow-sm`}>
                                             {material?.icon || '📝'}
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                            <h3 className="text-lg font-bold text-foreground">
                                                 {quiz.title}
                                             </h3>
-                                            <p className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                            <p className="text-sm text-muted">
                                                 {material?.title}
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-4 mb-4 text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    <div className="flex items-center gap-4 mb-4 text-sm text-muted">
                                         <span className="flex items-center gap-1">
                                             <Target size={14} />
                                             {quiz.questions.length} Soal
@@ -132,7 +132,7 @@ export default function QuizPage() {
                                                 sulit: 'bg-red-100 text-red-700 border-red-500'
                                             };
                                             return (
-                                                <span key={diff} className={`px-2 py-0.5 rounded-lg text-xs font-bold border-[2px] ${colors[diff as keyof typeof colors]}`} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                                <span key={diff} className={`px-2 py-0.5 rounded-base text-xs font-bold border-2 ${colors[diff as keyof typeof colors]}`}>
                                                     {diff} ({count})
                                                 </span>
                                             );
@@ -141,8 +141,7 @@ export default function QuizPage() {
 
                                     <button
                                         onClick={() => startQuiz(quiz)}
-                                        className="w-full py-3 rounded-xl bg-orange text-white font-bold border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_#1A1A1A] transition-all"
-                                        style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                        className="w-full py-3 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
                                     >
                                         Mulai Kuis
                                     </button>
@@ -161,22 +160,22 @@ export default function QuizPage() {
         const progress = ((currentQuestion + 1) / selectedQuiz.questions.length) * 100;
 
         return (
-            <div className="min-h-screen bg-cream p-4 md:p-8">
+            <div className="min-h-screen p-4 md:p-8">
                 <div className="max-w-3xl mx-auto">
                     {/* Progress Bar */}
                     <div className="mb-6">
                         <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                            <span className="text-sm text-muted">
                                 Soal {currentQuestion + 1} dari {selectedQuiz.questions.length}
                             </span>
-                            <span className="text-sm text-orange font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <span className="px-2 py-0.5 text-sm text-foreground font-bold bg-accent border-2 border-border rounded-base">
                                 Skor: {score}/{currentQuestion + (showExplanation ? 1 : 0)}
                             </span>
                         </div>
-                        <div className="h-3 bg-white border-[3px] border-dark rounded-full overflow-hidden">
+                        <div className="h-3 bg-secondary-background border-2 border-border rounded-full overflow-hidden">
                             <motion.div
                                 animate={{ width: `${progress}%` }}
-                                className="h-full bg-gradient-to-r from-lime to-orange"
+                                className="h-full bg-accent"
                             />
                         </div>
                     </div>
@@ -188,20 +187,20 @@ export default function QuizPage() {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
-                            className="bg-white border-[3px] border-dark rounded-xl p-6 md:p-8 shadow-[4px_4px_0_#1A1A1A]"
+                            className="bg-secondary-background border-2 border-border rounded-base p-6 md:p-8 shadow-shadow"
                         >
                             {/* Difficulty Badge */}
                             <div className="mb-4">
-                                <span className={`px-3 py-1 rounded-lg text-xs font-bold border-[2px] ${question.difficulty === 'mudah' ? 'bg-green-100 text-green-700 border-green-500' :
+                                <span className={`px-3 py-1 rounded-base text-xs font-bold border-2 ${question.difficulty === 'mudah' ? 'bg-green-100 text-green-700 border-green-500' :
                                     question.difficulty === 'sedang' ? 'bg-yellow-100 text-yellow-700 border-yellow-500' :
                                         'bg-red-100 text-red-700 border-red-500'
-                                    }`} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    }`}>
                                     {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
                                 </span>
                             </div>
 
                             {/* Question */}
-                            <h2 className="text-xl md:text-2xl font-bold text-dark mb-6" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
                                 {question.question}
                             </h2>
 
@@ -212,17 +211,17 @@ export default function QuizPage() {
                                     const isCorrect = index === question.correctAnswer;
                                     const showResult = showExplanation;
 
-                                    let optionClass = 'bg-cream border-[3px] border-dark hover:border-orange';
+                                    let optionClass = 'bg-background border-2 border-border hover:bg-main';
                                     if (showResult) {
                                         if (isCorrect) {
-                                            optionClass = 'bg-green-100 border-[3px] border-green-500';
+                                            optionClass = 'bg-green-100 border-2 border-green-500';
                                         } else if (isSelected && !isCorrect) {
-                                            optionClass = 'bg-red-100 border-[3px] border-red-500';
+                                            optionClass = 'bg-red-100 border-2 border-red-500';
                                         } else {
-                                            optionClass = 'bg-cream border-[3px] border-dark opacity-50';
+                                            optionClass = 'bg-background border-2 border-border opacity-50';
                                         }
                                     } else if (isSelected) {
-                                        optionClass = 'bg-lime border-[3px] border-dark';
+                                        optionClass = 'bg-main border-2 border-border';
                                     }
 
                                     return (
@@ -230,13 +229,13 @@ export default function QuizPage() {
                                             key={index}
                                             onClick={() => handleAnswer(index)}
                                             disabled={showExplanation}
-                                            className={`w-full text-left p-4 rounded-xl transition-all shadow-[3px_3px_0_#1A1A1A] ${optionClass}`}
+                                            className={`w-full text-left p-4 rounded-base transition-all shadow-shadow-sm ${optionClass}`}
                                         >
                                             <div className="flex items-center gap-3">
-                                                <span className="w-8 h-8 rounded-lg bg-white border-[2px] border-dark flex items-center justify-center text-sm font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                                <span className="w-8 h-8 rounded-base bg-secondary-background border-2 border-border flex items-center justify-center text-sm font-bold text-foreground">
                                                     {String.fromCharCode(65 + index)}
                                                 </span>
-                                                <span className="text-dark flex-1" style={{ fontFamily: 'Inter, sans-serif' }}>{option}</span>
+                                                <span className="text-foreground flex-1">{option}</span>
                                                 {showResult && isCorrect && (
                                                     <CheckCircle size={20} className="text-green-600" />
                                                 )}
@@ -254,12 +253,12 @@ export default function QuizPage() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="bg-lime border-[3px] border-dark rounded-xl p-4 mb-6 shadow-[3px_3px_0_#1A1A1A]"
+                                    className="bg-main border-2 border-border rounded-base p-4 mb-6 shadow-shadow-sm"
                                 >
-                                    <h4 className="text-dark font-bold mb-2 flex items-center gap-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <h4 className="text-foreground font-bold mb-2 flex items-center gap-2">
                                         <Zap size={16} /> Pembahasan
                                     </h4>
-                                    <p className="text-gray text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>{question.explanation}</p>
+                                    <p className="text-muted text-sm">{question.explanation}</p>
                                 </motion.div>
                             )}
 
@@ -269,8 +268,7 @@ export default function QuizPage() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     onClick={nextQuestion}
-                                    className="w-full py-3 rounded-xl bg-orange text-white font-bold border-[3px] border-dark shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all flex items-center justify-center gap-2"
-                                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                    className="w-full py-3 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all flex items-center justify-center gap-2"
                                 >
                                     {currentQuestion < selectedQuiz.questions.length - 1 ? (
                                         <>Soal Berikutnya <ArrowRight size={18} /></>
@@ -292,12 +290,12 @@ export default function QuizPage() {
         const xpEarned = score * 5;
 
         return (
-            <div className="min-h-screen bg-cream p-4 md:p-8 flex items-center justify-center">
+            <div className="min-h-screen p-4 md:p-8 flex items-center justify-center">
                 <div className="max-w-lg w-full">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-8 text-center shadow-[6px_6px_0_#1A1A1A]"
+                        className="bg-secondary-background border-2 border-border rounded-base p-8 text-center shadow-shadow"
                     >
                         {/* Score Circle */}
                         <div className="relative w-40 h-40 mx-auto mb-6">
@@ -317,17 +315,17 @@ export default function QuizPage() {
                             </svg>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div>
-                                    <p className="text-3xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{percentage}%</p>
-                                    <p className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>{score}/{selectedQuiz.questions.length}</p>
+                                    <p className="font-display text-3xl font-bold text-foreground">{percentage}%</p>
+                                    <p className="text-sm text-muted">{score}/{selectedQuiz.questions.length}</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Result Message */}
-                        <h2 className="text-2xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <h2 className="text-2xl font-bold text-foreground mb-2">
                             {percentage >= 80 ? '🎉 Luar Biasa!' : percentage >= 60 ? '👍 Bagus!' : '💪 Terus Belajar!'}
                         </h2>
-                        <p className="text-gray mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <p className="text-muted mb-6">
                             {percentage >= 80
                                 ? 'Kamu menguasai materi ini dengan sangat baik!'
                                 : percentage >= 60
@@ -336,12 +334,12 @@ export default function QuizPage() {
                         </p>
 
                         {/* XP Earned */}
-                        <div className="bg-lime border-[3px] border-dark rounded-xl p-4 mb-6 shadow-[3px_3px_0_#1A1A1A]">
+                        <div className="bg-main border-2 border-border rounded-base p-4 mb-6 shadow-shadow-sm">
                             <div className="flex items-center justify-center gap-2">
-                                <Zap className="text-dark" size={20} />
-                                <span className="text-xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>+{xpEarned} XP</span>
+                                <Zap className="text-foreground" size={20} />
+                                <span className="text-xl font-bold text-foreground">+{xpEarned} XP</span>
                             </div>
-                            <p className="text-xs text-gray mt-1" style={{ fontFamily: 'Inter, sans-serif' }}>diperoleh dari kuis ini</p>
+                            <p className="text-xs text-muted mt-1">diperoleh dari kuis ini</p>
                         </div>
 
                         {/* Answer Summary */}
@@ -349,11 +347,10 @@ export default function QuizPage() {
                             {selectedQuiz.questions.map((_, index) => (
                                 <div
                                     key={index}
-                                    className={`w-full aspect-square rounded-lg flex items-center justify-center text-sm font-bold border-[2px] ${answers[index] === selectedQuiz.questions[index].correctAnswer
+                                    className={`w-full aspect-square rounded-base flex items-center justify-center text-sm font-bold border-2 ${answers[index] === selectedQuiz.questions[index].correctAnswer
                                         ? 'bg-green-100 text-green-700 border-green-500'
                                         : 'bg-red-100 text-red-700 border-red-500'
                                         }`}
-                                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                                 >
                                     {index + 1}
                                 </div>
@@ -364,15 +361,13 @@ export default function QuizPage() {
                         <div className="flex gap-3">
                             <button
                                 onClick={() => startQuiz(selectedQuiz)}
-                                className="flex-1 py-3 rounded-xl bg-white border-[3px] border-dark text-dark font-bold hover:bg-lime/50 transition-colors flex items-center justify-center gap-2 shadow-[3px_3px_0_#1A1A1A]"
-                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                className="flex-1 py-3 rounded-base bg-secondary-background border-2 border-border text-foreground font-bold hover:bg-main/50 transition-colors flex items-center justify-center gap-2 shadow-shadow-sm"
                             >
                                 <RotateCcw size={16} /> Ulangi
                             </button>
                             <button
                                 onClick={resetQuiz}
-                                className="flex-1 py-3 rounded-xl bg-orange text-white font-bold border-[3px] border-dark hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all shadow-[3px_3px_0_#1A1A1A]"
-                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                className="flex-1 py-3 rounded-base bg-accent text-foreground font-bold border-2 border-border hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all shadow-shadow-sm"
                             >
                                 Kuis Lainnya
                             </button>

@@ -62,4 +62,34 @@ Older or stub chapters (for example [listrik-statis.ts](src/data/physics/listrik
 
 ## Styling
 
-The site uses a neo-brutalist look. Theme tokens live in `@theme` in [src/index.css](src/index.css): `lime #C5FA00`, `cream #FFF7ED`, `orange #FF6B00`, `dark #1A1A1A`, `gray #475569`. Components use them as Tailwind classes (`bg-cream`, `text-orange`, `border-[3px] border-dark`, `rounded-xl`, `shadow-[4px_4px_0_#1A1A1A]`), and buttons move on hover with `hover:translate-x-[2px] hover:translate-y-[2px]`. Headings use Space Grotesk, often set inline (`style={{ fontFamily: 'Space Grotesk, sans-serif' }}`), and body text uses Inter. Both fonts load from Google Fonts in [index.html](index.html).
+The site uses a neo-brutalist look that follows the token system of [neobrutalism.dev/styling](https://www.neobrutalism.dev/styling). The token names are identical, so components copied from neobrutalism.dev work without changes. Color values live in `:root` in [src/index.css](src/index.css) and are mapped to Tailwind classes through `@theme inline`:
+
+| Token / class | Value | Use |
+|---|---|---|
+| `bg-main` | lime `#C5FA00` | identity color 1: active states, tags, secondary buttons, the homepage feature band, formula boxes |
+| `bg-background` | cream `#FFF7ED` | page background (set on `body`), tinted surfaces inside cards |
+| `bg-secondary-background` | white | cards, navbar, sections |
+| `text-foreground`, `border-border` | `#1A1A1A` | text and borders (also `text-main-foreground`) |
+| `text-muted` | `#475569` | secondary text |
+| `bg-accent` / `bg-accent-soft` | orange `#FF6B00` / `#FFE8D6` | identity color 2: main action buttons (quiz, register, mark complete), the quiz card, the closing homepage CTA band, XP/progress bars, XP chips, chapter section numbers, `.catatan` |
+| `shadow-shadow` / `shadow-shadow-sm` | 4px / 2px hard shadow | |
+| `rounded-base` | 5px | |
+
+Rules:
+- Use `border-2` for borders.
+- Buttons move on hover with `hover:translate-x-[2px] hover:translate-y-[2px]` and drop one shadow step (`shadow-shadow` → `hover:shadow-shadow-sm`, `shadow-shadow-sm` → `hover:shadow-none`).
+- Lime and orange are both meant to be visible. Full-width bands are fine (the homepage feature band is lime, the closing CTA band is orange), but cards inside them stay `bg-secondary-background`.
+- Physics is paired with orange and math with lime (homepage headline highlights, subject tiles, list bullets).
+- Text on lime or orange is always `text-foreground` (never white, never `text-muted` on orange), and orange is never used for text: white on orange is about 2.9:1 and orange on cream about 2.7:1, both below WCAG AA. To make a word or number stand out, give it an orange or lime block behind dark text. Orange icons use `text-foreground fill-accent` so the dark stroke carries the contrast.
+- Page wrappers (`min-h-screen`) get no background color of their own. They inherit it from `body`, so the page background only has to change in `--background`.
+- Don't reintroduce color names such as `bg-lime` or `text-dark`.
+
+Fonts:
+- `font-display` is the heading font family (Space Grotesk). `h1`–`h6` get it from the base CSS, and other elements opt in with `font-display` (logo, large stat numbers).
+- The body font is Plus Jakarta Sans (`--font-sans`).
+- As on neobrutalism.dev, `font-base` (500) and `font-heading` (700) are font **weights**, not families. `body` uses 500, and `.materi-content` uses 400 so long paragraphs stay light.
+- Don't set fonts inline with `style={{ fontFamily }}`. Both fonts load from Google Fonts in [index.html](index.html). The background color there is set on `body` only, not on `html`, so the background from `index.css` covers the whole page.
+
+`Material.color` holds a flat background class (usually `"bg-main"`), not a gradient.
+
+Dark mode is not implemented yet. To add it, add a `.dark { --background: …; … }` block next to `:root`, and keep `.materi-content .gambar` white, because the chapter SVGs use dark strokes and have no background of their own.

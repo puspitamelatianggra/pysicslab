@@ -7,14 +7,17 @@
     <meta name="description" content="Platform belajar fisika dan matematika mandiri dengan materi interaktif, laboratorium virtual, dan sistem gamifikasi untuk siswa SMA." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
       html, body {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
-        background-color: #FFF7ED !important;
+      }
+      /* Latar hanya di body (bukan html) agar latar dari index.css menutupi seluruh halaman */
+      body {
+        background-color: #FFF7ED;
         color: #1A1A1A;
       }
       #root:empty {
@@ -25,7 +28,7 @@
       }
       #root:empty::after {
         content: '⚛️ Memuat Fermionsplus...';
-        color: #FF6B00;
+        color: #1A1A1A;
         font-size: 1.2rem;
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;

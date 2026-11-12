@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, BookOpen, Lightbulb, Calculator, Play, CheckCircle, ArrowLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight, BookOpen, Lightbulb, Calculator, Play, CheckCircle, ArrowLeft, ExternalLink } from 'lucide-react';
 import { physicsMaterials } from '../data/physics-materials';
 import { mathMaterials } from '../data/math-materials';
 import { completeChapter, getProgress } from '../utils/storage';
@@ -15,10 +15,10 @@ export default function MaterialDetail() {
     const materials = isPhysics ? physicsMaterials : mathMaterials;
     const subjectName = isPhysics ? 'Fisika' : 'Matematika';
     const subjectPath = isPhysics ? '/materials/physics' : '/materials/math';
-    const subjectColor = isPhysics ? 'from-blue-500 to-cyan-400' : 'from-green-500 to-emerald-400';
 
     const material = materials.find(m => m.id === Number(id));
     const [activeChapter, setActiveChapter] = useState(0);
+    const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
     const [completedChapters, setCompletedChapters] = useState<string[]>([]);
     const [showCompleteMessage, setShowCompleteMessage] = useState(false);
     const [useSupabase, setUseSupabase] = useState(false);
@@ -46,9 +46,11 @@ export default function MaterialDetail() {
         checkAuth();
     }, []);
 
-    // Saat pindah bab, kembali ke atas halaman agar bab baru dibaca dari awal
+    // Saat pindah bab, langsung kembali ke atas (tanpa scroll smooth yang berebut dengan animasi)
+    // dan geser tab bab aktif ke area yang terlihat
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
+        tabRefs.current[activeChapter]?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }, [activeChapter]);
 
     const markAsComplete = async () => {
@@ -82,12 +84,12 @@ export default function MaterialDetail() {
 
     if (!material) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-cream">
+            <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
-                    <p className="text-2xl text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                    <p className="text-2xl text-foreground mb-4">
                         Materi tidak ditemukan
                     </p>
-                    <Link to={subjectPath} className="text-orange hover:underline font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <Link to={subjectPath} className="text-foreground underline underline-offset-4 decoration-2 font-semibold">
                         Kembali ke Daftar Materi
                     </Link>
                 </div>
@@ -98,47 +100,46 @@ export default function MaterialDetail() {
     const chapter = material.chapters[activeChapter];
 
     return (
-        <div className="min-h-screen bg-cream p-4 md:p-8">
+        <div className="min-h-screen p-4 md:p-8">
             <div className="max-w-5xl mx-auto">
                 {/* Breadcrumb */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="flex items-center gap-2 text-sm text-gray mb-6"
-                    style={{ fontFamily: 'Inter, sans-serif' }}
+                    className="flex items-center gap-2 text-sm text-muted mb-6"
                 >
-                    <Link to="/materials" className="hover:text-orange transition-colors font-semibold">
+                    <Link to="/materials" className="hover:text-foreground hover:underline underline-offset-4 transition-colors font-semibold">
                         Materi
                     </Link>
                     <ChevronRight size={14} />
-                    <Link to={subjectPath} className="hover:text-orange transition-colors font-semibold">
+                    <Link to={subjectPath} className="hover:text-foreground hover:underline underline-offset-4 transition-colors font-semibold">
                         {subjectName}
                     </Link>
                     <ChevronRight size={14} />
-                    <span className="text-dark font-semibold">{material.title}</span>
+                    <span className="text-foreground font-semibold">{material.title}</span>
                 </motion.div>
 
                 {/* Back Button */}
                 <Link
                     to={subjectPath}
-                    className="inline-flex items-center gap-2 text-orange hover:underline font-semibold mb-4"
-                    style={{ fontFamily: 'Inter, sans-serif' }}
+                    className="inline-flex items-center gap-2 text-foreground hover:underline underline-offset-4 decoration-2 font-semibold mb-4"
                 >
                     <ArrowLeft size={16} />
                     Kembali ke Daftar Materi {subjectName}
                 </Link>
 
                 {/* Chapter Navigation */}
-                <div className="flex gap-2 overflow-x-auto pb-4 mb-6">
+                <div className="flex gap-2 overflow-x-auto pb-3 mb-6">
                     {material.chapters.map((ch, index) => (
                         <button
                             key={ch.chapterId}
+                            ref={(el) => { tabRefs.current[index] = el; }}
                             onClick={() => setActiveChapter(index)}
-                            className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${index === activeChapter
-                                ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
-                                : 'bg-white border-[3px] border-dark text-gray hover:bg-lime/50'
+                            aria-current={index === activeChapter ? 'step' : undefined}
+                            className={`flex-shrink-0 px-4 py-2 rounded-base border-2 border-border text-sm font-semibold transition-colors ${index === activeChapter
+                                ? 'bg-main text-foreground shadow-shadow-sm'
+                                : 'bg-secondary-background text-foreground/70 hover:bg-background hover:text-foreground'
                                 }`}
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                         >
                             {index + 1}. {ch.title}
                         </button>
@@ -149,22 +150,22 @@ export default function MaterialDetail() {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={chapter.chapterId}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-6 md:p-8 shadow-[4px_4px_0_#1A1A1A]"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="bg-secondary-background border-2 border-border rounded-base p-5 md:p-8 shadow-shadow"
                     >
                         {/* Chapter Title */}
                         <div className="flex items-center gap-3 mb-6">
-                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${material.color} border-[3px] border-dark flex items-center justify-center shadow-[3px_3px_0_#1A1A1A]`}>
-                                <BookOpen size={24} className="text-dark" strokeWidth={3} />
+                            <div className={`w-12 h-12 rounded-base ${material.color} border-2 border-border flex items-center justify-center shadow-shadow-sm`}>
+                                <BookOpen size={24} className="text-foreground" strokeWidth={3} />
                             </div>
                             <div>
-                                <h2 className="text-xl md:text-2xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                <h2 className="text-xl md:text-2xl font-bold text-foreground">
                                     {chapter.title}
                                 </h2>
-                                <p className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                <p className="text-sm text-muted">
                                     Bab {activeChapter + 1} dari {material.chapters.length}
                                 </p>
                             </div>
@@ -188,14 +189,14 @@ export default function MaterialDetail() {
 
                         {/* Formula Box */}
                         {chapter.formula && (
-                            <div className="bg-lime border-[3px] border-dark rounded-xl p-6 mb-6 shadow-[3px_3px_0_#1A1A1A]">
+                            <div className="bg-main border-2 border-border rounded-base p-6 mb-6 shadow-shadow-sm">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Calculator size={20} className="text-dark" strokeWidth={3} />
-                                    <h4 className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <Calculator size={20} className="text-foreground" strokeWidth={3} />
+                                    <h4 className="text-foreground font-bold">
                                         Rumus Penting
                                     </h4>
                                 </div>
-                                <pre className="text-dark font-mono text-sm whitespace-pre-wrap" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                <pre className="text-foreground font-mono text-sm whitespace-pre-wrap">
                                     {chapter.formula}
                                 </pre>
                             </div>
@@ -203,14 +204,14 @@ export default function MaterialDetail() {
 
                         {/* Example Box */}
                         {chapter.example && (
-                            <div className="bg-orange border-[3px] border-dark rounded-xl p-6 mb-6 shadow-[3px_3px_0_#1A1A1A]">
+                            <div className="bg-accent border-2 border-border rounded-base p-6 mb-6 shadow-shadow-sm">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Lightbulb size={20} className="text-white" strokeWidth={3} />
-                                    <h4 className="text-white font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <Lightbulb size={20} className="text-foreground" strokeWidth={3} />
+                                    <h4 className="text-foreground font-bold">
                                         Contoh Soal & Pembahasan
                                     </h4>
                                 </div>
-                                <pre className="text-white text-sm whitespace-pre-wrap" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                <pre className="text-foreground text-sm whitespace-pre-wrap font-[inherit]">
                                     {chapter.example}
                                 </pre>
                             </div>
@@ -218,10 +219,10 @@ export default function MaterialDetail() {
 
                         {/* Video Link */}
                         {chapter.videoUrl && (
-                            <div className="bg-cream border-[3px] border-dark rounded-xl p-6 mb-6 shadow-[3px_3px_0_#1A1A1A]">
+                            <div className="bg-background border-2 border-border rounded-base p-6 mb-6">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Play size={20} className="text-dark" strokeWidth={3} />
-                                    <h4 className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <Play size={20} className="text-foreground" strokeWidth={3} />
+                                    <h4 className="text-foreground font-bold">
                                         Video Pembelajaran
                                     </h4>
                                 </div>
@@ -229,29 +230,28 @@ export default function MaterialDetail() {
                                     href={chapter.videoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-orange hover:underline font-semibold text-sm"
-                                    style={{ fontFamily: 'Inter, sans-serif' }}
+                                    className="inline-flex items-center gap-1.5 text-foreground underline underline-offset-4 decoration-2 decoration-main font-semibold text-sm"
                                 >
-                                    Tonton Video →
+                                    Tonton Video <ExternalLink size={14} />
                                 </a>
                             </div>
                         )}
 
                         {/* Complete Button */}
                         {completedChapters.includes(chapter.chapterId) ? (
-                            <div className="flex items-center gap-2 mb-4 p-4 rounded-xl bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A] mt-8">
-                                <CheckCircle size={20} className="text-dark" strokeWidth={3} />
-                                <span className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <div className="flex items-center gap-2 mb-4 p-4 rounded-base bg-background border-2 border-border mt-8">
+                                <CheckCircle size={20} className="text-foreground" strokeWidth={3} />
+                                <span className="text-foreground font-bold">
                                     Bab ini sudah selesai! +10 XP {useSupabase ? '(tersimpan di cloud)' : '(tersimpan lokal)'}
                                 </span>
                             </div>
                         ) : (
                             <button
                                 onClick={markAsComplete}
-                                className="w-full mb-4 py-4 rounded-xl bg-orange text-white font-bold border-[3px] border-dark shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all mt-8"
-                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                className="w-full mb-4 py-4 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all mt-8 flex items-center justify-center gap-2"
                             >
-                                ✓ Tandai Bab Ini Selesai (+10 XP)
+                                <CheckCircle size={20} strokeWidth={2.5} />
+                                Tandai Bab Ini Selesai (+10 XP)
                             </button>
                         )}
 
@@ -260,21 +260,20 @@ export default function MaterialDetail() {
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="mb-4 p-4 rounded-xl bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A] text-center"
+                                className="mb-4 p-4 rounded-base bg-background border-2 border-border text-center"
                             >
-                                <span className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                                    🎉 +10 XP! Progres {useSupabase ? 'tersimpan di cloud' : 'tersimpan lokal'}.
+                                <span className="text-foreground font-bold">
+                                    +10 XP! Progres {useSupabase ? 'tersimpan di cloud' : 'tersimpan lokal'}.
                                 </span>
                             </motion.div>
                         )}
 
                         {/* Navigation Buttons */}
-                        <div className="flex items-center justify-between pt-6 border-t-[2px] border-dark">
+                        <div className="flex items-center justify-between pt-6 border-t-2 border-border">
                             <button
                                 onClick={() => setActiveChapter(Math.max(0, activeChapter - 1))}
                                 disabled={activeChapter === 0}
-                                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border-[3px] border-dark text-gray hover:bg-lime/50 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-[3px_3px_0_#1A1A1A] hover:shadow-[2px_2px_0_#1A1A1A]"
-                                style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                className="flex items-center gap-2 px-4 py-2 rounded-base bg-secondary-background border-2 border-border text-foreground font-semibold hover:bg-background disabled:opacity-30 disabled:cursor-not-allowed transition-colors shadow-shadow-sm"
                             >
                                 <ChevronLeft size={16} /> Sebelumnya
                             </button>
@@ -282,16 +281,14 @@ export default function MaterialDetail() {
                             {activeChapter === material.chapters.length - 1 ? (
                                 <Link
                                     to="/quiz"
-                                    className="flex items-center gap-2 px-6 py-2 rounded-lg bg-orange text-white font-bold border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_#1A1A1A] transition-all"
-                                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                    className="flex items-center gap-2 px-6 py-2 rounded-base bg-accent text-foreground font-bold border-2 border-border shadow-shadow-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
                                 >
-                                    Kerjakan Kuis 🎯
+                                    Kerjakan Kuis
                                 </Link>
                             ) : (
                                 <button
                                     onClick={() => setActiveChapter(activeChapter + 1)}
-                                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-lime border-[3px] border-dark text-dark font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all shadow-[3px_3px_0_#1A1A1A]"
-                                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                    className="flex items-center gap-2 px-4 py-2 rounded-base bg-main border-2 border-border text-foreground font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all shadow-shadow-sm"
                                 >
                                     Selanjutnya <ChevronRight size={16} />
                                 </button>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" role="img" aria-label="Grafik suhu terhadap kalor yang diserap saat es dipanaskan dari minus 10 derajat Celsius hingga menjadi uap. Bagian miring: es naik suhu, air naik suhu dari 0 sampai 100 derajat, dan uap naik suhu, dengan Q sama dengan m c delta T. Bagian datar: es melebur pada 0 derajat dan air menguap pada 100 derajat, dengan Q sama dengan m L, sehingga suhu tetap selama perubahan wujud. Bagian datar menguap jauh lebih panjang daripada bagian datar melebur">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .fase { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 12px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .miring { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .datar { stroke: #FF6B00; stroke-width: 6; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M70,250 H530" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M70,250 V20" marker-end="url(#panah)"/>
+  <text class="label" x="60" y="30" text-anchor="end">T (°C)</text>
+  <text class="label" x="528" y="275" text-anchor="end">Q</text>
+
+  <!-- Garis bantu suhu -->
+  <path class="bantu" d="M70,190 H120"/>
+  <path class="bantu" d="M70,70 H300"/>
+  <text class="label" x="60" y="235" text-anchor="end">−10</text>
+  <text class="label" x="60" y="195" text-anchor="end">0</text>
+  <text class="label" x="60" y="75" text-anchor="end">100</text>
+
+  <!-- Kurva pemanasan -->
+  <path class="miring" d="M70,230 L120,190"/>
+  <path class="datar" d="M120,190 H200"/>
+  <path class="miring" d="M200,190 L300,70"/>
+  <path class="datar" d="M300,70 H460"/>
+  <path class="miring" d="M460,70 L500,38"/>
+
+  <!-- Keterangan fase -->
+  <text class="fase" x="104" y="226">es</text>
+  <text class="fase" x="160" y="180" text-anchor="middle">melebur</text>
+  <text class="kecil" x="160" y="212" text-anchor="middle">Q = mL</text>
+  <text class="fase" x="258" y="150">air</text>
+  <text class="kecil" x="258" y="166">Q = mcΔT</text>
+  <text class="fase" x="380" y="60" text-anchor="middle">menguap</text>
+  <text class="kecil" x="380" y="92" text-anchor="middle">Q = mL</text>
+  <text class="fase" x="508" y="46">uap</text>
+</svg>

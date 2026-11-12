@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" role="img" aria-label="Keping bimetal dari kuningan di atas dan baja di bawah, dijepit pada ujung kirinya. Pada suhu normal keping lurus. Setelah dipanaskan, kuningan memuai lebih panjang daripada baja, sehingga keping melengkung ke bawah, ke arah baja yang koefisien muainya lebih kecil">
+  <defs>
+    <style>
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kecil { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .penjepit { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .kuningan { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .baja { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2; }
+      .api { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .pembakar { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- ===== Suhu normal ===== -->
+  <text class="judul" x="145" y="34" text-anchor="middle">Suhu normal</text>
+  <rect class="penjepit" x="30" y="70" width="20" height="50"/>
+  <rect class="kuningan" x="50" y="85" width="190" height="10"/>
+  <rect class="baja" x="50" y="95" width="190" height="10"/>
+  <text class="kecil" x="145" y="76" text-anchor="middle">kuningan (α besar)</text>
+  <text class="kecil" x="145" y="124" text-anchor="middle">baja (α kecil)</text>
+
+  <!-- ===== Setelah dipanaskan ===== -->
+  <text class="judul" x="410" y="34" text-anchor="middle">Setelah dipanaskan</text>
+  <rect class="penjepit" x="300" y="70" width="20" height="50"/>
+  <path class="kuningan" d="M320,85 A200,200 0 0 1 485.8,173.2 L477.5,178.8 A190,190 0 0 0 320,95 Z"/>
+  <path class="baja" d="M320,95 A190,190 0 0 1 477.5,178.8 L469.2,184.4 A180,180 0 0 0 320,105 Z"/>
+
+  <!-- Api -->
+  <path class="api" d="M400,200 C386,186 390,170 400,150 C410,170 414,186 400,200 Z"/>
+  <rect class="pembakar" x="386" y="200" width="28" height="30"/>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 310" role="img" aria-label="Termometer raksa. Panjang kolom raksa diukur dari pangkal pipa: X nol pada titik lebur es 0 derajat Celsius, X seratus pada titik didih air 100 derajat Celsius, dan X theta pada suhu theta yang dicari, yang terletak di antara keduanya">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .tabung { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .cairan { fill: #FF6B00; stroke: none; }
+      .bola { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+      .tanda { stroke: #1A1A1A; stroke-width: 2.5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Termometer -->
+  <rect class="tabung" x="152" y="30" width="20" height="240" rx="10"/>
+  <rect class="cairan" x="157" y="160" width="10" height="110"/>
+  <circle class="bola" cx="162" cy="275" r="17"/>
+
+  <!-- Tanda skala -->
+  <path class="tanda" d="M152,70 H140 M152,160 H140 M152,215 H140"/>
+  <text class="label" x="134" y="75" text-anchor="end">100 °C</text>
+  <text class="label" x="134" y="165" text-anchor="end">θ</text>
+  <text class="label" x="134" y="220" text-anchor="end">0 °C</text>
+
+  <!-- Garis bantu ke penggaris -->
+  <path class="bantu" d="M172,70 H310 M172,160 H270 M172,215 H230 M172,255 H310"/>
+
+  <!-- Panjang kolom raksa -->
+  <path class="ukur" d="M220,253 V217" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="228" y="241">X<tspan class="sub" dy="5">0</tspan></text>
+
+  <path class="ukur" d="M260,253 V162" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="268" y="212">X<tspan class="sub" dy="5">θ</tspan></text>
+
+  <path class="ukur" d="M300,253 V72" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="308" y="167">X<tspan class="sub" dy="5">100</tspan></text>
+</svg>

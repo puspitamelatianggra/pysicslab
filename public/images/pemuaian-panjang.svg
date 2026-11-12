@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" role="img" aria-label="Batang logam yang salah satu ujungnya menempel pada dinding. Pada suhu awal panjangnya l nol. Setelah suhunya naik sebesar delta T, panjangnya menjadi l t, yaitu bertambah sebesar delta l">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .dinding { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .batang { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2.5; }
+      .bertambah { fill: #FF6B00; fill-opacity: 0.35; stroke: #1A1A1A; stroke-width: 2.5; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <rect class="dinding" x="40" y="25" width="16" height="190"/>
+
+  <!-- Sebelum dipanaskan -->
+  <path class="ukur" d="M58,46 H358" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="208" y="40" text-anchor="middle">l<tspan class="sub" dy="5">0</tspan></text>
+  <rect class="batang" x="56" y="58" width="304" height="20"/>
+  <text class="kecil" x="372" y="73">suhu awal T<tspan dy="4" font-size="10">0</tspan></text>
+
+  <!-- Sesudah dipanaskan -->
+  <rect class="batang" x="56" y="140" width="304" height="20"/>
+  <rect class="bertambah" x="360" y="140" width="70" height="20"/>
+  <path class="bantu" d="M360,78 V186"/>
+  <text class="kecil" x="442" y="155">suhu T<tspan dy="4" font-size="10">0</tspan><tspan dy="-4"> + ΔT</tspan></text>
+
+  <path class="ukur" d="M362,180 H428" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="395" y="200" text-anchor="middle">Δl</text>
+
+  <path class="ukur" d="M58,212 H428" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="208" y="232" text-anchor="middle">l<tspan class="sub" dy="5">t</tspan></text>
+</svg>

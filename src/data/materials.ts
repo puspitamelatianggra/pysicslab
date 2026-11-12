@@ -23,6 +23,6 @@ export interface Material {
   title: string;
   description: string;
   icon: string;
-  color: string;
+  color: string; // kelas warna latar ikon (datar, tanpa gradien), biasanya "bg-main" (warna utama lime)
   chapters: Chapter[];
 }

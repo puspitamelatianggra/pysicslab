@@ -5,14 +5,14 @@ import { physicsMaterials } from '../data/physics-materials';
 
 export default function PhysicsMaterials() {
     return (
-        <div className="min-h-screen bg-cream p-4 md:p-8">
+        <div className="min-h-screen p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
-                <div className="flex items-center gap-2 text-sm text-gray mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <Link to="/materials" className="hover:text-orange transition-colors font-semibold">
+                <div className="flex items-center gap-2 text-sm text-muted mb-4">
+                    <Link to="/materials" className="hover:text-foreground hover:underline underline-offset-4 transition-colors font-semibold">
                         Materi
                     </Link>
                     <ChevronRight size={14} />
-                    <span className="text-dark font-semibold">Fisika</span>
+                    <span className="text-foreground font-semibold">Fisika</span>
                 </div>
 
                 <motion.div
@@ -22,16 +22,15 @@ export default function PhysicsMaterials() {
                 >
                     <Link
                         to="/materials"
-                        className="inline-flex items-center gap-2 text-orange hover:underline font-semibold mb-4"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
+                        className="inline-flex items-center gap-2 text-foreground hover:underline underline-offset-4 decoration-2 font-semibold mb-4"
                     >
                         <ArrowLeft size={16} />
                         Kembali
                     </Link>
-                    <h1 className="text-3xl md:text-4xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                        Materi Fisika 🚀
+                    <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                        Materi Fisika
                     </h1>
-                    <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-lg text-muted">
                         Pelajari konsep fisika dari dasar hingga mahir
                     </p>
                 </motion.div>
@@ -45,39 +44,39 @@ export default function PhysicsMaterials() {
                             transition={{ delay: index * 0.1 }}
                         >
                             <Link to={`/materials/physics/${material.id}`}>
-                                <div className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all h-full">
+                                <div className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all h-full">
                                     <div className="flex items-start justify-between mb-4">
-                                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${material.color} border-[3px] border-dark flex items-center justify-center text-2xl shadow-[3px_3px_0_#1A1A1A]`}>
+                                        <div className={`w-14 h-14 rounded-base ${material.color} border-2 border-border flex items-center justify-center text-2xl shadow-shadow-sm`}>
                                             {material.icon}
                                         </div>
-                                        <span className="px-3 py-1 rounded-lg bg-cream border-[2px] border-dark text-xs font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                        <span className="px-3 py-1 rounded-base bg-background border-2 border-border text-xs font-bold text-foreground">
                                             {material.chapters.length} Bab
                                         </span>
                                     </div>
 
-                                    <h3 className="text-xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <h3 className="text-xl font-bold text-foreground mb-2">
                                         {material.title}
                                     </h3>
-                                    <p className="text-gray text-sm mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    <p className="text-muted text-sm mb-4">
                                         {material.description}
                                     </p>
 
                                     <div className="space-y-2 mb-4">
                                         {material.chapters.slice(0, 3).map((chapter) => (
-                                            <div key={chapter.chapterId} className="flex items-center gap-2 text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                                <div className="w-1.5 h-1.5 rounded-full bg-orange" />
+                                            <div key={chapter.chapterId} className="flex items-center gap-2 text-sm text-muted">
+                                                <div className="w-2 h-2 rounded-full bg-accent border border-border" />
                                                 <span className="truncate">{chapter.title}</span>
                                             </div>
                                         ))}
                                         {material.chapters.length > 3 && (
-                                            <p className="text-xs text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                            <p className="text-xs text-muted">
                                                 +{material.chapters.length - 3} bab lainnya
                                             </p>
                                         )}
                                     </div>
 
-                                    <div className="flex items-center justify-between pt-4 border-t-[2px] border-dark">
-                                        <div className="flex items-center gap-3 text-xs text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    <div className="flex items-center justify-between pt-4 border-t-2 border-border">
+                                        <div className="flex items-center gap-3 text-xs text-muted">
                                             <span className="flex items-center gap-1">
                                                 <Clock size={12} />
                                                 ~{material.chapters.length * 15} min
@@ -87,7 +86,7 @@ export default function PhysicsMaterials() {
                                                 +{material.chapters.length * 10} XP
                                             </span>
                                         </div>
-                                        <span className="flex items-center gap-1 text-orange text-sm font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                        <span className="flex items-center gap-1 text-foreground text-sm font-bold">
                                             Mulai <ChevronRight size={14} />
                                         </span>
                                     </div>

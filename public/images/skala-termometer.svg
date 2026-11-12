@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 330" role="img" aria-label="Empat termometer berskala Celsius, Reamur, Fahrenheit, dan Kelvin. Titik tetap atas, yaitu titik didih air, bernilai 100, 80, 212, dan 373. Titik tetap bawah, yaitu titik lebur es, bernilai 0, 0, 32, dan 273. Rentang antara kedua titik tetap berturut-turut 100, 80, 180, dan 100 skala">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .nama { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .tabung { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .cairan { fill: #FF6B00; stroke: none; }
+      .bola { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Garis titik tetap -->
+  <path class="bantu" d="M30,80 H420"/>
+  <path class="bantu" d="M30,220 H420"/>
+  <text class="label" x="428" y="78">Titik tetap atas</text>
+  <text class="kecil" x="428" y="96">(air mendidih)</text>
+  <text class="label" x="428" y="218">Titik tetap bawah</text>
+  <text class="kecil" x="428" y="236">(es mencair)</text>
+
+  <!-- Celsius -->
+  <text class="nama" x="90" y="36" text-anchor="middle">Celsius</text>
+  <rect class="tabung" x="82" y="50" width="16" height="225" rx="8"/>
+  <rect class="cairan" x="86" y="150" width="8" height="125"/>
+  <circle class="bola" cx="90" cy="280" r="15"/>
+  <text class="label" x="74" y="76" text-anchor="end">100</text>
+  <text class="label" x="74" y="216" text-anchor="end">0</text>
+  <text class="kecil" x="90" y="318" text-anchor="middle">100 skala</text>
+
+  <!-- Reamur -->
+  <text class="nama" x="190" y="36" text-anchor="middle">Reamur</text>
+  <rect class="tabung" x="182" y="50" width="16" height="225" rx="8"/>
+  <rect class="cairan" x="186" y="150" width="8" height="125"/>
+  <circle class="bola" cx="190" cy="280" r="15"/>
+  <text class="label" x="174" y="76" text-anchor="end">80</text>
+  <text class="label" x="174" y="216" text-anchor="end">0</text>
+  <text class="kecil" x="190" y="318" text-anchor="middle">80 skala</text>
+
+  <!-- Fahrenheit -->
+  <text class="nama" x="290" y="36" text-anchor="middle">Fahrenheit</text>
+  <rect class="tabung" x="282" y="50" width="16" height="225" rx="8"/>
+  <rect class="cairan" x="286" y="150" width="8" height="125"/>
+  <circle class="bola" cx="290" cy="280" r="15"/>
+  <text class="label" x="274" y="76" text-anchor="end">212</text>
+  <text class="label" x="274" y="216" text-anchor="end">32</text>
+  <text class="kecil" x="290" y="318" text-anchor="middle">180 skala</text>
+
+  <!-- Kelvin -->
+  <text class="nama" x="390" y="36" text-anchor="middle">Kelvin</text>
+  <rect class="tabung" x="382" y="50" width="16" height="225" rx="8"/>
+  <rect class="cairan" x="386" y="150" width="8" height="125"/>
+  <circle class="bola" cx="390" cy="280" r="15"/>
+  <text class="label" x="374" y="76" text-anchor="end">373</text>
+  <text class="label" x="374" y="216" text-anchor="end">273</text>
+  <text class="kecil" x="390" y="318" text-anchor="middle">100 skala</text>
+</svg>

@@ -82,76 +82,75 @@ export default function Sidebar() {
     const levelName = levelNames[Math.min(userLevel - 1, levelNames.length - 1)];
 
     return (
-        <aside className="w-80 bg-white border-[3px] border-dark rounded-xl shadow-[6px_6px_0_#1A1A1A] hidden lg:block fixed right-8 top-24 z-40">
+        <aside className="w-80 bg-secondary-background border-2 border-border rounded-base shadow-shadow hidden lg:block fixed right-8 top-24 z-40">
             {/* Header */}
-            <div className="p-6 border-b-[3px] border-dark bg-lime rounded-t-xl">
+            <div className="p-6 border-b-2 border-border bg-background rounded-t-base">
                 <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-orange border-[3px] border-dark rounded-xl flex items-center justify-center shadow-[3px_3px_0_#1A1A1A]">
-                        <Star size={24} className="text-white" fill="white" strokeWidth={3} />
+                    <div className="w-12 h-12 bg-accent border-2 border-border rounded-base flex items-center justify-center shadow-shadow-sm">
+                        <Star size={24} className="text-foreground" fill="#1A1A1A" strokeWidth={3} />
                     </div>
                     <div>
-                        <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{userName} · Level {userLevel}</p>
-                        <p className="text-lg font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{levelName}</p>
+                        <p className="text-sm text-foreground">{userName} · Level {userLevel}</p>
+                        <p className="text-lg font-bold text-foreground">{levelName}</p>
                     </div>
                 </div>
 
                 {/* XP Progress */}
                 <div>
                     <div className="flex justify-between text-sm mb-2">
-                        <span className="text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{userXP} XP</span>
-                        <span className="text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{userLevel * 100} XP</span>
+                        <span className="text-foreground">{userXP} XP</span>
+                        <span className="text-foreground">{userLevel * 100} XP</span>
                     </div>
-                    <div className="w-full h-3 bg-cream border-[3px] border-dark rounded-full overflow-hidden">
+                    <div className="w-full h-3 bg-background border-2 border-border rounded-full overflow-hidden">
                         <div
-                            className="h-full bg-orange transition-all duration-500"
+                            className="h-full bg-accent transition-all duration-500"
                             style={{ width: `${levelProgress}%` }}
                         />
                     </div>
-                    <p className="text-xs text-dark mt-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-xs text-foreground mt-2">
                         {100 - levelProgress} XP lagi ke Level {userLevel + 1}
                     </p>
                 </div>
             </div>
 
             {/* Stats */}
-            <div className="p-6 border-b-[3px] border-dark">
-                <h3 className="text-sm font-bold text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+            <div className="p-6 border-b-2 border-border">
+                <h3 className="text-sm font-bold text-foreground mb-4">
                     STATISTIK
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-cream border-[3px] border-dark rounded-xl p-3 shadow-[3px_3px_0_#1A1A1A]">
+                    <div className="bg-background border-2 border-border rounded-base p-3 shadow-shadow-sm">
                         <div className="flex items-center gap-2 mb-1">
-                            <Flame size={16} className="text-orange" strokeWidth={3} />
-                            <span className="text-xs text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>Streak</span>
+                            <Flame size={16} className="text-foreground fill-accent" strokeWidth={3} />
+                            <span className="text-xs text-foreground">Streak</span>
                         </div>
-                        <p className="text-2xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <p className="font-display text-2xl font-bold text-foreground">
                             {userStreak}
                         </p>
-                        <p className="text-xs text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>hari</p>
+                        <p className="text-xs text-foreground">hari</p>
                     </div>
-                    <div className="bg-cream border-[3px] border-dark rounded-xl p-3 shadow-[3px_3px_0_#1A1A1A]">
+                    <div className="bg-background border-2 border-border rounded-base p-3 shadow-shadow-sm">
                         <div className="flex items-center gap-2 mb-1">
-                            <Award size={16} className="text-orange" strokeWidth={3} />
-                            <span className="text-xs text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>Badge</span>
+                            <Award size={16} className="text-foreground fill-accent" strokeWidth={3} />
+                            <span className="text-xs text-foreground">Badge</span>
                         </div>
-                        <p className="text-2xl font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <p className="font-display text-2xl font-bold text-foreground">
                             {userBadges}
                         </p>
-                        <p className="text-xs text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>dari 8</p>
+                        <p className="text-xs text-foreground">dari 8</p>
                     </div>
                 </div>
             </div>
 
             {/* Menu */}
-            <div className="p-6 border-b-[3px] border-dark">
-                <h3 className="text-sm font-bold text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+            <div className="p-6 border-b-2 border-border">
+                <h3 className="text-sm font-bold text-foreground mb-4">
                     MENU
                 </h3>
                 <nav className="space-y-2">
                     <Link
                         to="/dashboard"
-                        className="flex items-center justify-between px-4 py-3 text-dark hover:bg-lime rounded-lg transition-colors"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
+                        className="flex items-center justify-between px-4 py-3 text-foreground hover:bg-main rounded-base transition-colors"
                     >
                         <div className="flex items-center gap-3">
                             <LayoutDashboard size={20} strokeWidth={3} />
@@ -161,8 +160,7 @@ export default function Sidebar() {
                     </Link>
                     <Link
                         to="/leaderboard"
-                        className="flex items-center justify-between px-4 py-3 text-dark hover:bg-lime rounded-lg transition-colors"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
+                        className="flex items-center justify-between px-4 py-3 text-foreground hover:bg-main rounded-base transition-colors"
                     >
                         <div className="flex items-center gap-3">
                             <Trophy size={20} strokeWidth={3} />
@@ -177,8 +175,7 @@ export default function Sidebar() {
             <div className="p-6">
                 <button
                     onClick={handleLogout}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-cream text-dark border-[3px] border-dark rounded-xl shadow-[3px_3px_0_#1A1A1A] hover:bg-red-100 hover:border-red-500 transition-colors"
-                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-background text-foreground border-2 border-border rounded-base shadow-shadow-sm hover:bg-red-100 hover:border-red-500 transition-colors"
                 >
                     <LogOut size={18} strokeWidth={3} />
                     <span>Keluar</span>

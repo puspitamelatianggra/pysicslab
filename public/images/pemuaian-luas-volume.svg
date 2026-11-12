@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Kiri, pemuaian luas: lempeng persegi dengan luas awal A nol membesar ke dua arah, panjang dan lebar, menjadi luas akhir A t. Kanan, pemuaian volume: kubus dengan volume awal V nol membesar ke tiga arah, panjang, lebar, dan tinggi, menjadi volume akhir V t">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .akhir { fill: #FF6B00; fill-opacity: 0.25; stroke: #1A1A1A; stroke-width: 2; stroke-dasharray: 6 4; }
+      .awal { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2.5; }
+      .atas { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .samping { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .vektor { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Pemuaian luas ===== -->
+  <text class="judul" x="150" y="28" text-anchor="middle">Pemuaian luas (lempeng)</text>
+  <rect class="akhir" x="60" y="50" width="180" height="180"/>
+  <rect class="awal" x="60" y="90" width="140" height="140"/>
+  <text class="label" x="130" y="170" text-anchor="middle">A<tspan class="sub" dy="5">0</tspan></text>
+  <text class="label" x="222" y="76" text-anchor="middle">A<tspan class="sub" dy="5">t</tspan></text>
+  <path class="vektor" d="M204,195 H234" marker-end="url(#panah)"/>
+  <path class="vektor" d="M100,86 V56" marker-end="url(#panah)"/>
+
+  <!-- ===== Pemuaian volume ===== -->
+  <text class="judul" x="420" y="28" text-anchor="middle">Pemuaian volume (kubus)</text>
+  <!-- Kubus akhir -->
+  <polygon class="akhir" points="340,98 380,58 502,58 462,98"/>
+  <polygon class="akhir" points="462,98 502,58 502,180 462,220"/>
+  <rect class="akhir" x="340" y="98" width="122" height="122"/>
+  <!-- Kubus awal -->
+  <polygon class="atas" points="340,130 370,100 460,100 430,130"/>
+  <polygon class="samping" points="430,130 460,100 460,190 430,220"/>
+  <rect class="awal" x="340" y="130" width="90" height="90"/>
+  <text class="label" x="385" y="181" text-anchor="middle">V<tspan class="sub" dy="5">0</tspan></text>
+  <text class="label" x="512" y="64">V<tspan class="sub" dy="5">t</tspan></text>
+  <path class="vektor" d="M465,165 H490" marker-end="url(#panah)"/>
+  <path class="vektor" d="M400,96 V70" marker-end="url(#panah)"/>
+</svg>

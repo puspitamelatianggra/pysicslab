@@ -20,8 +20,11 @@
    │   ├── elastisitas-zat-padat.ts              (Bab 1-11)
    │   ├── fluida-statis.ts                      (Bab 1-12)
    │   └── fluida-dinamis.ts                     (Bab 1-13)
-   └── listrik-magnet/
-       └── listrik-statis.ts                     (Bab 2-1)
+   ├── listrik-magnet/
+   │   └── listrik-statis.ts                     (Bab 2-1)
+   └── termodinamika/
+       ├── suhu-pemuaian.ts                      (Bab 3-1)
+       └── kalor-perubahan-wujud.ts              (Bab 3-2)
 
    Menambah bab baru:
    1. Salin salah satu file bab, ganti nama file & nama variabelnya.
@@ -50,13 +53,17 @@ import { fluidaDinamis } from './physics/mekanika/fluida-dinamis';
 // ====== Listrik & Magnet ======
 import { listrikStatis } from './physics/listrik-magnet/listrik-statis';
 
+// ====== Termodinamika ======
+import { suhuPemuaian } from './physics/termodinamika/suhu-pemuaian';
+import { kalorPerubahanWujud } from './physics/termodinamika/kalor-perubahan-wujud';
+
 export const physicsMaterials: Material[] = [
   {
     id: 1,
     title: "Mekanika",
     description: "Pelajari gerak benda, gaya, momentum, rotasi, keseimbangan, elastisitas, dan fluida dari dasar hingga mahir.",
     icon: "🚀",
-    color: "from-blue-500 to-cyan-400",
+    color: "bg-main",
     chapters: [
       besaranGerak,
       gerakLurus,
@@ -78,9 +85,20 @@ export const physicsMaterials: Material[] = [
     title: "Listrik & Magnet",
     description: "Pelajari muatan listrik, arus, tegangan, rangkaian, dan medan magnet.",
     icon: "⚡",
-    color: "from-yellow-400 to-orange-500",
+    color: "bg-main",
     chapters: [
       listrikStatis,
+    ]
+  },
+  {
+    id: 3,
+    title: "Termodinamika",
+    description: "Pelajari suhu, pemuaian, kalor, perubahan wujud zat, hingga teori kinetik gas dan hukum termodinamika.",
+    icon: "🌡️",
+    color: "bg-main",
+    chapters: [
+      suhuPemuaian,
+      kalorPerubahanWujud,
     ]
   }
 ];

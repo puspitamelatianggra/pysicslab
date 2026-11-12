@@ -120,8 +120,8 @@ export default function Dashboard() {
 
     if (!progress) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-cream">
-                <p className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Memuat...</p>
+            <div className="min-h-screen flex items-center justify-center">
+                <p className="text-foreground font-bold">Memuat...</p>
             </div>
         );
     }
@@ -159,7 +159,7 @@ export default function Dashboard() {
     const levelProgress = progress.xp % 100;
 
     return (
-        <div className="min-h-screen bg-cream p-4 md:p-8">
+        <div className="min-h-screen p-4 md:p-8">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -168,18 +168,17 @@ export default function Dashboard() {
                     className="mb-8 flex items-center justify-between flex-wrap gap-4"
                 >
                     <div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                             Dashboard Belajar
                         </h1>
-                        <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <p className="text-lg text-muted">
                             {isCloud ? 'Progres belajarmu tersimpan di akunmu' : 'Progres belajarmu tersimpan di browser ini'}
                         </p>
                     </div>
                     <div className="flex gap-2">
                         <Link
                             to="/leaderboard"
-                            className="px-4 py-2 rounded-lg bg-orange text-white border-[3px] border-dark text-sm font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all shadow-[4px_4px_0_#1A1A1A] flex items-center gap-2"
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            className="px-4 py-2 rounded-base bg-accent text-foreground border-2 border-border text-sm font-bold hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all shadow-shadow flex items-center gap-2"
                         >
                             <Trophy size={16} strokeWidth={3} />
                             Lihat Peringkat
@@ -188,8 +187,7 @@ export default function Dashboard() {
                         {/* Reset hanya menghapus data lokal, jadi disembunyikan untuk akun cloud */}
                         {!isCloud && <button
                             onClick={handleReset}
-                            className="px-4 py-2 rounded-lg bg-red-100 border-[3px] border-red-500 text-red-700 text-sm font-bold hover:bg-red-200 transition-colors shadow-[3px_3px_0_#1A1A1A]"
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                            className="px-4 py-2 rounded-base bg-red-100 border-2 border-red-500 text-red-700 text-sm font-bold hover:bg-red-200 transition-colors shadow-shadow-sm"
                         >
                             Reset Progres
                         </button>}
@@ -200,10 +198,10 @@ export default function Dashboard() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="mb-6 bg-lime border-[3px] border-dark rounded-xl p-4 shadow-[3px_3px_0_#1A1A1A]"
+                    className="mb-6 bg-main border-2 border-border rounded-base p-4 shadow-shadow-sm"
                 >
-                    <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        💡 <strong style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Info:</strong> {isCloud
+                    <p className="text-sm text-foreground">
+                        💡 <strong>Info:</strong> {isCloud
                             ? 'Data progres tersimpan di cloud dan bisa diakses dari perangkat mana pun.'
                             : 'Data progres tersimpan di browser Anda. Jika Anda ganti browser/komputer atau hapus cache, data akan hilang.'}
                         Progres Anda: <strong>{progress.completedChapters.length} bab selesai</strong>, <strong>{Object.keys(progress.quizScores).length} kuis dikerjakan</strong>.
@@ -213,25 +211,25 @@ export default function Dashboard() {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     {[
-                        { label: "Total XP", value: progress.xp.toString(), icon: Star, color: "bg-orange", textColor: "text-white" },
-                        { label: "Streak", value: progress.streak + " hari", icon: Flame, color: "bg-lime", textColor: "text-dark" },
-                        { label: "Kuis Selesai", value: progress.totalQuizzesTaken.toString(), icon: Target, color: "bg-white", textColor: "text-dark" },
-                        { label: "Rata-rata Skor", value: avgScore + "%", icon: TrendingUp, color: "bg-orange", textColor: "text-white" },
+                        { label: "Total XP", value: progress.xp.toString(), icon: Star, color: "bg-accent", textColor: "text-foreground" },
+                        { label: "Streak", value: progress.streak + " hari", icon: Flame, color: "bg-main", textColor: "text-foreground" },
+                        { label: "Kuis Selesai", value: progress.totalQuizzesTaken.toString(), icon: Target, color: "bg-secondary-background", textColor: "text-foreground" },
+                        { label: "Rata-rata Skor", value: avgScore + "%", icon: TrendingUp, color: "bg-accent", textColor: "text-foreground" },
                     ].map((stat, index) => (
                         <motion.div
                             key={stat.label}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className={`${stat.color} border-[3px] border-dark rounded-xl p-5 shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all`}
+                            className={`${stat.color} border-2 border-border rounded-base p-5 shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all`}
                         >
-                            <div className="w-10 h-10 rounded-lg bg-white border-[2px] border-dark flex items-center justify-center mb-3 shadow-[2px_2px_0_#1A1A1A]">
-                                <stat.icon className="text-dark" size={20} strokeWidth={3} />
+                            <div className="w-10 h-10 rounded-base bg-secondary-background border-2 border-border flex items-center justify-center mb-3 shadow-shadow-sm">
+                                <stat.icon className="text-foreground" size={20} strokeWidth={3} />
                             </div>
-                            <p className={`text-2xl font-bold ${stat.textColor} mb-1`} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <p className={`font-display text-2xl font-bold ${stat.textColor} mb-1`}>
                                 {stat.value}
                             </p>
-                            <p className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                            <p className="text-sm text-foreground">
                                 {stat.label}
                             </p>
                         </motion.div>
@@ -245,13 +243,13 @@ export default function Dashboard() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                        className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow"
                     >
                         <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-lg font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <h3 className="text-lg font-bold text-foreground">
                                 XP 7 Hari Terakhir
                             </h3>
-                            <span className="text-sm text-orange font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <span className="px-2 py-0.5 text-sm text-foreground font-bold bg-accent border-2 border-border rounded-base">
                                 Total: {progress.xp} XP
                             </span>
                         </div>
@@ -261,14 +259,14 @@ export default function Dashboard() {
                                 <XAxis dataKey="day" stroke="#1A1A1A" />
                                 <YAxis stroke="#1A1A1A" />
                                 <Tooltip
-                                    contentStyle={{ backgroundColor: '#FFF7ED', border: '3px solid #1A1A1A', borderRadius: '8px' }}
+                                    contentStyle={{ backgroundColor: '#FFFFFF', border: '2px solid #1A1A1A', borderRadius: '8px' }}
                                     labelStyle={{ color: '#1A1A1A' }}
                                     formatter={(value: any) => [value + ' XP', 'XP']}
                                 />
-                                <Bar dataKey="xp" fill="#FF6B00" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="xp" fill="#FF6B00" stroke="#1A1A1A" strokeWidth={2} radius={[4, 4, 0, 0]} />
                             </BarChart>
                         </ResponsiveContainer>
-                        <p className="text-xs text-gray mt-2 text-center" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <p className="text-xs text-muted mt-2 text-center">
                             Grafik menampilkan XP yang didapat per hari
                         </p>
                     </motion.div>
@@ -278,13 +276,13 @@ export default function Dashboard() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                        className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow"
                     >
                         <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-lg font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <h3 className="text-lg font-bold text-foreground">
                                 Skor Kuis
                             </h3>
-                            <span className="text-sm text-orange font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <span className="px-2 py-0.5 text-sm text-foreground font-bold bg-accent border-2 border-border rounded-base">
                                 Rata-rata: {avgScore}%
                             </span>
                         </div>
@@ -295,14 +293,14 @@ export default function Dashboard() {
                                     <XAxis dataKey="quiz" stroke="#1A1A1A" />
                                     <YAxis stroke="#1A1A1A" domain={[0, 100]} />
                                     <Tooltip
-                                        contentStyle={{ backgroundColor: '#FFF7ED', border: '3px solid #1A1A1A', borderRadius: '8px' }}
+                                        contentStyle={{ backgroundColor: '#FFFFFF', border: '2px solid #1A1A1A', borderRadius: '8px' }}
                                         labelStyle={{ color: '#1A1A1A' }}
                                     />
-                                    <Bar dataKey="score" fill="#C5FA00" radius={[4, 4, 0, 0]} />
+                                    <Bar dataKey="score" fill="#C5FA00" stroke="#1A1A1A" strokeWidth={2} radius={[4, 4, 0, 0]} />
                                 </BarChart>
                             </ResponsiveContainer>
                         ) : (
-                            <div className="h-[200px] flex items-center justify-center text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                            <div className="h-[200px] flex items-center justify-center text-muted">
                                 <p>Belum ada kuis yang dikerjakan</p>
                             </div>
                         )}
@@ -316,22 +314,22 @@ export default function Dashboard() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                        className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow"
                     >
-                        <h3 className="text-lg font-bold text-dark mb-6 flex items-center gap-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                            <BookOpen size={20} className="text-dark" strokeWidth={3} />
+                        <h3 className="text-lg font-bold text-foreground mb-6 flex items-center gap-2">
+                            <BookOpen size={20} className="text-foreground" strokeWidth={3} />
                             Progres per Materi
                         </h3>
                         <div className="space-y-4">
                             {subjectProgress.map((subject: any) => (
                                 <div key={subject.name}>
                                     <div className="flex justify-between mb-1">
-                                        <span className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{subject.name}</span>
-                                        <span className="text-sm font-bold" style={{ color: subject.color, fontFamily: 'Space Grotesk, sans-serif' }}>
+                                        <span className="text-sm text-foreground">{subject.name}</span>
+                                        <span className="text-sm font-bold text-foreground">
                                             {subject.progress}%
                                         </span>
                                     </div>
-                                    <div className="h-3 bg-cream border-[2px] border-dark rounded-full overflow-hidden">
+                                    <div className="h-3 bg-background border-2 border-border rounded-full overflow-hidden">
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: subject.progress + '%' }}
@@ -350,10 +348,10 @@ export default function Dashboard() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                        className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow"
                     >
-                        <h3 className="text-lg font-bold text-dark mb-6 flex items-center gap-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                            <Award size={20} className="text-dark" strokeWidth={3} />
+                        <h3 className="text-lg font-bold text-foreground mb-6 flex items-center gap-2">
+                            <Award size={20} className="text-foreground" strokeWidth={3} />
                             Badge Pencapaian ({progress.earnedBadges.length}/{badges.length})
                         </h3>
                         <div className="grid grid-cols-4 gap-3">
@@ -363,13 +361,13 @@ export default function Dashboard() {
                                     <motion.div
                                         key={badge.id}
                                         whileHover={{ scale: 1.1 }}
-                                        className={`flex flex-col items-center p-3 rounded-xl border-[3px] ${earned
-                                            ? 'bg-lime border-dark shadow-[3px_3px_0_#1A1A1A]'
-                                            : 'bg-cream border-dark opacity-40'
+                                        className={`flex flex-col items-center p-3 rounded-base border-2 ${earned
+                                            ? 'bg-main border-border shadow-shadow-sm'
+                                            : 'bg-background border-border opacity-40'
                                             }`}
                                     >
                                         <span className="text-2xl mb-1">{badge.icon}</span>
-                                        <span className="text-xs text-dark text-center" style={{ fontFamily: 'Inter, sans-serif' }}>{badge.name}</span>
+                                        <span className="text-xs text-foreground text-center">{badge.name}</span>
                                     </motion.div>
                                 );
                             })}
@@ -382,29 +380,29 @@ export default function Dashboard() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.65 }}
-                    className="bg-white border-[3px] border-dark rounded-xl p-6 mb-8 shadow-[4px_4px_0_#1A1A1A]"
+                    className="bg-secondary-background border-2 border-border rounded-base p-6 mb-8 shadow-shadow"
                 >
-                    <h3 className="text-lg font-bold text-dark mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                    <h3 className="text-lg font-bold text-foreground mb-4">
                         Level Progress
                     </h3>
                     <div className="flex items-center gap-4">
-                        <div className="text-4xl font-bold text-orange" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                        <div className="font-display text-4xl font-bold text-foreground bg-accent px-3 border-2 border-border rounded-base shadow-shadow-sm">
                             Lv.{progress.level}
                         </div>
                         <div className="flex-1">
                             <div className="flex justify-between mb-1">
-                                <span className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>{progress.xp} XP</span>
-                                <span className="text-sm text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>{(progress.level) * 100} XP</span>
+                                <span className="text-sm text-muted">{progress.xp} XP</span>
+                                <span className="text-sm text-muted">{(progress.level) * 100} XP</span>
                             </div>
-                            <div className="h-4 bg-cream border-[3px] border-dark rounded-full overflow-hidden">
+                            <div className="h-4 bg-background border-2 border-border rounded-full overflow-hidden">
                                 <motion.div
                                     initial={{ width: 0 }}
                                     animate={{ width: levelProgress + '%' }}
                                     transition={{ duration: 1 }}
-                                    className="h-full bg-gradient-to-r from-lime to-orange"
+                                    className="h-full bg-accent"
                                 />
                             </div>
-                            <p className="text-xs text-gray mt-1" style={{ fontFamily: 'Inter, sans-serif' }}>
+                            <p className="text-xs text-muted mt-1">
                                 {100 - levelProgress} XP lagi untuk naik level
                             </p>
                         </div>
@@ -416,27 +414,27 @@ export default function Dashboard() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="bg-white border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                    className="bg-secondary-background border-2 border-border rounded-base p-6 shadow-shadow"
                 >
-                    <h3 className="text-lg font-bold text-dark mb-6 flex items-center gap-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                        <Clock size={20} className="text-dark" strokeWidth={3} />
+                    <h3 className="text-lg font-bold text-foreground mb-6 flex items-center gap-2">
+                        <Clock size={20} className="text-foreground" strokeWidth={3} />
                         Aktivitas Terbaru
                     </h3>
                     {progress.recentActivities.length > 0 ? (
                         <div className="space-y-3">
                             {progress.recentActivities.map((activity: any) => (
-                                <div key={activity.id} className="flex items-center gap-4 p-3 rounded-lg bg-cream border-[2px] border-dark hover:bg-lime/30 transition-colors">
+                                <div key={activity.id} className="flex items-center gap-4 p-3 rounded-base bg-background border-2 border-border hover:bg-main/30 transition-colors">
                                     <span className="text-2xl">{activity.icon}</span>
                                     <div className="flex-1">
-                                        <p className="text-sm text-dark" style={{ fontFamily: 'Inter, sans-serif' }}>{activity.text}</p>
-                                        <p className="text-xs text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>{activity.time}</p>
+                                        <p className="text-sm text-foreground">{activity.text}</p>
+                                        <p className="text-xs text-muted">{activity.time}</p>
                                     </div>
-                                    <span className="text-sm font-bold text-orange" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{activity.xp}</span>
+                                    <span className="px-2 py-0.5 text-sm font-bold text-foreground bg-accent border-2 border-border rounded-base">{activity.xp}</span>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div className="text-center py-8 text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        <div className="text-center py-8 text-muted">
                             <p className="text-lg mb-2">Belum ada aktivitas</p>
                             <p className="text-sm">Mulai belajar untuk melihat aktivitas di sini!</p>
                         </div>

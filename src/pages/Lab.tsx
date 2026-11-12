@@ -15,7 +15,7 @@ export default function Lab() {
     const selectedSimulation = simulations.find(s => s.id === selectedSim);
 
     return (
-        <div className="min-h-screen bg-cream p-4 md:p-8">
+        <div className="min-h-screen p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -23,26 +23,25 @@ export default function Lab() {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-8"
                 >
-                    <h1 className="text-3xl md:text-4xl font-bold text-dark mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                    <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                         Laboratorium Virtual 🔬
                     </h1>
-                    <p className="text-lg text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <p className="text-lg text-muted">
                         Eksplorasi konsep fisika melalui simulasi interaktif
                     </p>
                 </motion.div>
 
                 {/* Filter */}
                 <div className="flex items-center gap-3 mb-6 overflow-x-auto pb-2">
-                    <Filter size={18} className="text-dark flex-shrink-0" strokeWidth={3} />
+                    <Filter size={18} className="text-foreground flex-shrink-0" strokeWidth={3} />
                     {categories.map(cat => (
                         <button
                             key={cat}
                             onClick={() => setFilterCategory(cat)}
-                            className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${filterCategory === cat
-                                ? 'bg-lime border-[3px] border-dark shadow-[3px_3px_0_#1A1A1A]'
-                                : 'bg-white border-[3px] border-dark text-gray hover:bg-lime/50'
+                            className={`flex-shrink-0 px-4 py-2 rounded-base text-sm font-semibold transition-all ${filterCategory === cat
+                                ? 'bg-main border-2 border-border shadow-shadow-sm'
+                                : 'bg-secondary-background border-2 border-border text-muted hover:bg-main/50'
                                 }`}
-                            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                         >
                             {cat === 'all' ? 'Semua' : cat}
                         </button>
@@ -58,17 +57,17 @@ export default function Lab() {
                         onClick={() => setSelectedSim(null)}
                     >
                         <div
-                            className="bg-white border-[3px] border-dark rounded-xl w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-[6px_6px_0_#1A1A1A]"
+                            className="bg-secondary-background border-2 border-border rounded-base w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-shadow"
                             onClick={e => e.stopPropagation()}
                         >
-                            <div className="flex items-center justify-between p-4 border-b-[3px] border-dark bg-lime">
+                            <div className="flex items-center justify-between p-4 border-b-2 border-border bg-main">
                                 <div className="flex items-center gap-3">
                                     <span className="text-2xl">{selectedSimulation.icon}</span>
                                     <div>
-                                        <h3 className="text-dark font-bold" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                        <h3 className="text-foreground font-bold">
                                             {selectedSimulation.title}
                                         </h3>
-                                        <p className="text-xs text-gray" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                        <p className="text-xs text-muted">
                                             {selectedSimulation.category}
                                         </p>
                                     </div>
@@ -78,21 +77,20 @@ export default function Lab() {
                                         href={selectedSimulation.fallbackUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-orange text-white text-sm font-semibold border-[2px] border-dark shadow-[2px_2px_0_#1A1A1A] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0_#1A1A1A] transition-all"
-                                        style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                        className="flex items-center gap-1 px-3 py-1.5 rounded-base bg-accent text-foreground text-sm font-semibold border-2 border-border shadow-shadow-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
                                     >
                                         <ExternalLink size={14} />
                                         Buka di Tab Baru
                                     </a>
                                     <button
                                         onClick={() => setSelectedSim(null)}
-                                        className="p-2 rounded-lg hover:bg-white border-[2px] border-dark transition-colors"
+                                        className="p-2 rounded-base hover:bg-secondary-background border-2 border-border transition-colors"
                                     >
-                                        <X size={20} className="text-dark" />
+                                        <X size={20} className="text-foreground" />
                                     </button>
                                 </div>
                             </div>
-                            <div className="aspect-video bg-cream">
+                            <div className="aspect-video bg-background">
                                 <iframe
                                     src={selectedSimulation.iframeUrl}
                                     className="w-full h-full"
@@ -113,10 +111,10 @@ export default function Lab() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white border-[3px] border-dark rounded-xl overflow-hidden shadow-[4px_4px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#1A1A1A] transition-all group"
+                            className="bg-secondary-background border-2 border-border rounded-base overflow-hidden shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all group"
                         >
                             {/* Preview Area */}
-                            <div className="aspect-video bg-lime relative overflow-hidden">
+                            <div className="aspect-video bg-main relative overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <span className="text-6xl group-hover:scale-110 transition-transform">{sim.icon}</span>
                                 </div>
@@ -124,7 +122,7 @@ export default function Lab() {
                                     onClick={() => setSelectedSim(sim.id)}
                                     className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"
                                 >
-                                    <span className="px-4 py-2 rounded-lg bg-orange text-white font-bold text-sm border-[2px] border-dark shadow-[2px_2px_0_#1A1A1A]" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <span className="px-4 py-2 rounded-base bg-accent text-foreground font-bold text-sm border-2 border-border shadow-shadow-sm">
                                         Jalankan Simulasi
                                     </span>
                                 </button>
@@ -133,21 +131,20 @@ export default function Lab() {
                             {/* Info */}
                             <div className="p-5">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="px-2 py-0.5 rounded-lg bg-cream border-[2px] border-dark text-xs font-bold text-dark" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                    <span className="px-2 py-0.5 rounded-base bg-background border-2 border-border text-xs font-bold text-foreground">
                                         {sim.category}
                                     </span>
                                 </div>
-                                <h3 className="text-lg font-bold text-dark mb-1" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                                <h3 className="text-lg font-bold text-foreground mb-1">
                                     {sim.title}
                                 </h3>
-                                <p className="text-sm text-gray mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                <p className="text-sm text-muted mb-4">
                                     {sim.description}
                                 </p>
                                 <div className="flex items-center gap-2">
                                     <button
                                         onClick={() => setSelectedSim(sim.id)}
-                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-lime border-[3px] border-dark text-dark text-sm font-bold shadow-[3px_3px_0_#1A1A1A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_#1A1A1A] transition-all"
-                                        style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-base bg-main border-2 border-border text-foreground text-sm font-bold shadow-shadow-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
                                     >
                                         <FlaskConical size={14} />
                                         Buka Simulasi
@@ -156,7 +153,7 @@ export default function Lab() {
                                         href={sim.fallbackUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-2 rounded-lg border-[3px] border-dark text-gray hover:text-orange hover:border-orange transition-colors shadow-[3px_3px_0_#1A1A1A]"
+                                        className="p-2 rounded-base border-2 border-border text-muted hover:text-foreground hover:bg-main transition-colors shadow-shadow-sm"
                                     >
                                         <ExternalLink size={16} />
                                     </a>
@@ -171,15 +168,15 @@ export default function Lab() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="mt-8 bg-orange border-[3px] border-dark rounded-xl p-6 shadow-[4px_4px_0_#1A1A1A]"
+                    className="mt-8 bg-accent border-2 border-border rounded-base p-6 shadow-shadow"
                 >
                     <div className="flex items-start gap-4">
-                        <FlaskConical className="text-white flex-shrink-0 mt-1" size={24} strokeWidth={3} />
+                        <FlaskConical className="text-foreground flex-shrink-0 mt-1" size={24} strokeWidth={3} />
                         <div>
-                            <h4 className="text-white font-bold mb-1" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+                            <h4 className="text-foreground font-bold mb-1">
                                 Tentang Simulasi
                             </h4>
-                            <p className="text-white/90 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                            <p className="text-foreground text-sm">
                                 Simulasi di atas disediakan oleh PhET Interactive Simulations (Universitas Colorado Boulder).
                                 Jika simulasi tidak dapat dimuat langsung, klik tombol "Buka di Tab Baru" untuk mengaksesnya.
                                 Semua simulasi bersifat gratis dan open-source.
