@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" role="img" aria-label="Dua lingkaran. Kiri: sudut pusat AOB dan sudut keliling ACB sama-sama menghadap busur AB yang digaris tebal. Sudut pusat besarnya 2 alfa, dua kali sudut keliling yang besarnya alfa. Kanan: sudut keliling ACB yang menghadap diameter AB selalu siku-siku, 90 derajat.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <text class="judul" x="150" y="36" text-anchor="middle">Sudut pusat = 2 × sudut keliling</text>
+    <circle class="isi-putih" cx="150" cy="190" r="110"/>
+    <path class="tebal" d="M46.6,227.6 A110,110 0 0 0 253.4,227.6"/>
+    <path class="isi-krem" d="M150,190 L121.8,200.3 A30,30 0 0 0 178.2,200.3 Z"/>
+    <path class="isi-lime" d="M150,80 L132.8,104.6 A30,30 0 0 0 167.2,104.6 Z"/>
+    <path class="garis" d="M46.6,227.6 L150,190 L253.4,227.6 M46.6,227.6 L150,80 L253.4,227.6"/>
+    <circle class="titik-hitam" cx="150" cy="190" r="4"/>
+    <text class="label" x="150" y="182" text-anchor="middle">O</text>
+    <text class="label" x="150" y="242" text-anchor="middle">2α</text>
+    <text class="label" x="150" y="130" text-anchor="middle">α</text>
+    <text class="label" x="38.6" y="233.6" text-anchor="end">A</text>
+    <text class="label" x="261.4" y="233.6">B</text>
+    <text class="label" x="150" y="70" text-anchor="middle">C</text>
+    <text class="judul" x="470" y="36" text-anchor="middle">Menghadap diameter = 90°</text>
+    <circle class="isi-putih" cx="470" cy="190" r="110"/>
+    <path class="tebal" d="M360,190 L580,190"/>
+    <path class="garis" d="M360,190 L525,94.7 L580,190"/>
+    <path class="garis" d="M512.9,101.7 L519.9,113.9 L532,106.9"/>
+    <circle class="titik-hitam" cx="470" cy="190" r="4"/>
+    <text class="label" x="470" y="210" text-anchor="middle">O</text>
+    <text class="label" x="352" y="196" text-anchor="end">A</text>
+    <text class="label" x="588" y="196">B</text>
+    <text class="label" x="531" y="86.7">C</text>
+    <text class="angka" x="470" y="260" text-anchor="middle">diameter AB</text>
+    <text class="angka" x="517" y="136.7" text-anchor="end">90°</text>
+</svg>

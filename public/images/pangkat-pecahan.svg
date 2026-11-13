@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Tiga tahap menghitung 8 pangkat dua per tiga. Kubus bervolume 8 tersusun dari 2 kali 2 kali 2 kubus satuan. Akar pangkat tiga dari 8 adalah rusuknya, yaitu 2. Rusuk 2 dikuadratkan menjadi persegi berluas 4. Jadi 8 pangkat dua per tiga sama dengan 4.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <polygon class="isi-lime" points="50,95 84,65 168,65 134,95"/>
+    <polygon class="isi-krem" points="134,95 168,65 168,149 134,179"/>
+    <rect class="isi-putih" x="50" y="95" width="84" height="84"/>
+    <path class="garis" d="M92,95 V179 M50,137 H134
+      M92,95 L126,65 M67,80 L151,80
+      M151,80 L151,164 M134,137 L168,107"/>
+    <text class="label" x="110" y="225" text-anchor="middle">Volume = 8</text>
+    <text class="kecil" x="110" y="245" text-anchor="middle">2 × 2 × 2 = 8</text>
+    <path class="garis" d="M180,140 H232" marker-end="url(#panah)"/>
+    <text class="label" x="206" y="128" text-anchor="middle">∛</text>
+    <path class="tebal" d="M250,140 H334"/>
+    <path class="garis" d="M250,130 V150 M292,132 V148 M334,130 V150"/>
+    <text class="angka" x="271" y="124" text-anchor="middle">1</text>
+    <text class="angka" x="313" y="124" text-anchor="middle">1</text>
+    <text class="label" x="292" y="225" text-anchor="middle">Rusuk = ∛8 = 2</text>
+    <text class="kecil" x="292" y="245" text-anchor="middle">akar pangkat tiga</text>
+    <path class="garis" d="M352,140 H432" marker-end="url(#panah)"/>
+    <text class="kecil" x="392" y="128" text-anchor="middle">pangkat 2</text>
+    <rect class="isi-lime" x="450" y="95" width="84" height="84"/>
+    <path class="garis" d="M492,95 V179 M450,137 H534"/>
+    <text class="label" x="492" y="225" text-anchor="middle">Luas = 2² = 4</text>
+    <text class="kecil" x="492" y="245" text-anchor="middle">dikuadratkan</text>
+    <rect class="isi-krem" x="150" y="268" width="300" height="40" rx="5"/>
+    <text class="label" x="300" y="294" text-anchor="middle">8<tspan font-size="11" dy="-7">2/3</tspan><tspan dy="7"> = (∛8)² = 2² = 4</tspan></text>
+</svg>

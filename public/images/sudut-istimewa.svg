@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" role="img" aria-label="Dua segitiga siku-siku istimewa. Kiri, segitiga dengan sudut 30, 60, dan 90 derajat: sisi di depan sudut 30 derajat panjangnya 1, sisi di depan sudut 60 derajat panjangnya akar 3, dan sisi miringnya 2. Kanan, segitiga siku-siku sama kaki dengan sudut 45, 45, dan 90 derajat: kedua sisi siku-sikunya 1 dan sisi miringnya akar 2.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="296"/>
+    <rect class="panel" x="0" y="0" width="300" height="296"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Segitiga 30° – 60° – 90°</text>
+    <polygon class="isi-putih" points="40,250 247.8,250 247.8,130"/>
+    <path class="garis" d="M231.8,250 V234 H247.8"/>
+    <path class="isi-lime" d="M40,250 L86,250 A46,46 0 0 0 79.8,227 Z"/>
+    <path class="isi-krem" d="M247.8,130 L247.8,160 A30,30 0 0 1 221.8,145 Z"/>
+    <text class="angka" x="92" y="242">30°</text>
+    <text class="angka" x="231.8" y="180" text-anchor="end">60°</text>
+    <text class="label" x="143.9" y="274" text-anchor="middle">√3</text>
+    <text class="label" x="257.8" y="196">1</text>
+    <text class="label" x="135.9" y="182" text-anchor="end">2</text>
+  </g>
+  <g transform="translate(326,4)">
+    <rect class="bayang" x="6" y="6" width="260" height="296"/>
+    <rect class="panel" x="0" y="0" width="260" height="296"/>
+    <rect class="kepala" x="0" y="0" width="260" height="42"/>
+    <text class="judul" x="16" y="27">Segitiga 45° – 45° – 90°</text>
+    <polygon class="isi-putih" points="40,250 196,250 196,94"/>
+    <path class="garis" d="M180,250 V234 H196"/>
+    <path class="isi-lime" d="M40,250 L86,250 A46,46 0 0 0 72.5,217.5 Z"/>
+    <path class="isi-lime" d="M196,94 L196,128 A34,34 0 0 1 172,118 Z"/>
+    <text class="angka" x="92" y="240">45°</text>
+    <text class="angka" x="186" y="150" text-anchor="end">45°</text>
+    <text class="label" x="118" y="274" text-anchor="middle">1</text>
+    <text class="label" x="206" y="172">1</text>
+    <text class="label" x="108" y="166" text-anchor="end">√2</text>
+  </g>
+</svg>

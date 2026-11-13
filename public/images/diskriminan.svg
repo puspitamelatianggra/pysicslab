@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 342" role="img" aria-label="Tiga grafik parabola terbuka ke atas. Kiri, D lebih dari 0: parabola y = x² − 2x − 3 memotong sumbu x di dua titik, x = −1 dan x = 3. Tengah, D sama dengan 0: parabola y = x² − 2x + 1 menyinggung sumbu x di satu titik, x = 1. Kanan, D kurang dari 0: parabola y = x² − 2x + 3 tidak memotong sumbu x, sehingga akarnya imajiner.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="328"/>
+    <rect class="panel" x="0" y="0" width="300" height="328"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">D &gt; 0</text>
+    <path class="sumbu" d="M24,176.2 H286" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M109.9,258 V46" marker-end="url(#panah)"/>
+    <text class="label" x="282" y="196.2" text-anchor="end">x</text>
+    <text class="label" x="118.9" y="56">y</text>
+    <path class="grafik" d="M24,62.7 L26.1,68.9 L28.2,74.9 L30.3,80.9 L32.3,86.7 L34.4,92.5 L36.5,98.1 L38.6,103.6 L40.7,109.1 L42.8,114.4 L44.8,119.6 L46.9,124.7 L49,129.8 L51.1,134.7 L53.2,139.5 L55.3,144.2 L57.3,148.8 L59.4,153.3 L61.5,157.7 L63.6,162 L65.7,166.2 L67.8,170.2 L69.8,174.2 L71.9,178.1 L74,181.9 L76.1,185.6 L78.2,189.1 L80.3,192.6 L82.3,196 L84.4,199.2 L86.5,202.4 L88.6,205.4 L90.7,208.4 L92.8,211.2 L94.8,213.9 L96.9,216.6 L99,219.1 L101.1,221.6 L103.2,223.9 L105.3,226.1 L107.3,228.2 L109.4,230.2 L111.5,232.2 L113.6,234 L115.7,235.7 L117.7,237.3 L119.8,238.8 L121.9,240.2 L124,241.5 L126.1,242.7 L128.2,243.7 L130.3,244.7 L132.3,245.6 L134.4,246.4 L136.5,247 L138.6,247.6 L140.7,248.1 L142.8,248.4 L144.8,248.7 L146.9,248.9 L149,248.9 L151.1,248.9 L153.2,248.7 L155.3,248.4 L157.3,248.1 L159.4,247.6 L161.5,247 L163.6,246.4 L165.7,245.6 L167.8,244.7 L169.8,243.7 L171.9,242.7 L174,241.5 L176.1,240.2 L178.2,238.8 L180.3,237.3 L182.3,235.7 L184.4,234 L186.5,232.2 L188.6,230.2 L190.7,228.2 L192.7,226.1 L194.8,223.9 L196.9,221.6 L199,219.1 L201.1,216.6 L203.2,213.9 L205.3,211.2 L207.3,208.4 L209.4,205.4 L211.5,202.4 L213.6,199.2 L215.7,196 L217.7,192.6 L219.8,189.1 L221.9,185.6 L224,181.9 L226.1,178.1 L228.2,174.2 L230.3,170.2 L232.3,166.2 L234.4,162 L236.5,157.7 L238.6,153.3 L240.7,148.8 L242.7,144.2 L244.8,139.5 L246.9,134.7 L249,129.8 L251.1,124.7 L253.2,119.6 L255.3,114.4 L257.3,109.1 L259.4,103.6 L261.5,98.1 L263.6,92.5 L265.7,86.7 L267.8,80.9 L269.8,74.9 L271.9,68.9 L274,62.7"/>
+    <circle class="titik" cx="70.9" cy="176.2" r="6"/>    <circle class="titik" cx="227.1" cy="176.2" r="6"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">Dua akar real berbeda</text>
+    <text class="angka" x="150" y="312" text-anchor="middle">y = x² − 2x − 3</text>
+  </g>
+  <g transform="translate(322,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="328"/>
+    <rect class="panel" x="0" y="0" width="300" height="328"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">D = 0</text>
+    <path class="sumbu" d="M24,176.2 H286" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M109.9,258 V46" marker-end="url(#panah)"/>
+    <text class="label" x="282" y="196.2" text-anchor="end">x</text>
+    <text class="label" x="118.9" y="56">y</text>
+    <path class="grafik" d="M51,61.6 L52.6,65.4 L54.2,69.1 L55.9,72.8 L57.5,76.4 L59.1,79.9 L60.8,83.4 L62.4,86.8 L64,90.1 L65.7,93.4 L67.3,96.6 L68.9,99.8 L70.6,102.9 L72.2,105.9 L73.8,108.9 L75.5,111.8 L77.1,114.6 L78.7,117.4 L80.4,120.1 L82,122.7 L83.6,125.3 L85.3,127.8 L86.9,130.2 L88.5,132.6 L90.2,134.9 L91.8,137.2 L93.4,139.4 L95.1,141.5 L96.7,143.6 L98.3,145.6 L100,147.5 L101.6,149.4 L103.2,151.2 L104.9,153 L106.5,154.7 L108.1,156.3 L109.8,157.9 L111.4,159.4 L113,160.8 L114.7,162.1 L116.3,163.5 L118,164.7 L119.6,165.9 L121.2,167 L122.9,168 L124.5,169 L126.1,169.9 L127.8,170.8 L129.4,171.6 L131,172.3 L132.7,173 L134.3,173.6 L135.9,174.1 L137.6,174.6 L139.2,175 L140.8,175.4 L142.5,175.7 L144.1,175.9 L145.7,176.1 L147.4,176.1 L149,176.2 L150.6,176.2 L152.3,176.1 L153.9,175.9 L155.5,175.7 L157.2,175.4 L158.8,175 L160.4,174.6 L162.1,174.1 L163.7,173.6 L165.3,173 L167,172.3 L168.6,171.6 L170.2,170.8 L171.9,169.9 L173.5,169 L175.1,168 L176.8,167 L178.4,165.9 L180,164.7 L181.7,163.5 L183.3,162.1 L185,160.8 L186.6,159.3 L188.2,157.9 L189.9,156.3 L191.5,154.7 L193.1,153 L194.8,151.2 L196.4,149.4 L198,147.5 L199.7,145.6 L201.3,143.6 L202.9,141.5 L204.6,139.4 L206.2,137.2 L207.8,134.9 L209.5,132.6 L211.1,130.2 L212.7,127.8 L214.4,125.3 L216,122.7 L217.6,120.1 L219.3,117.3 L220.9,114.6 L222.5,111.8 L224.2,108.9 L225.8,105.9 L227.4,102.9 L229.1,99.8 L230.7,96.6 L232.3,93.4 L234,90.1 L235.6,86.8 L237.2,83.4 L238.9,79.9 L240.5,76.4 L242.1,72.8 L243.8,69.1 L245.4,65.4 L247,61.6"/>
+    <circle class="titik" cx="149" cy="176.2" r="6"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">Satu akar real (kembar)</text>
+    <text class="angka" x="150" y="312" text-anchor="middle">y = x² − 2x + 1</text>
+  </g>
+  <g transform="translate(640,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="328"/>
+    <rect class="panel" x="0" y="0" width="300" height="328"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">D &lt; 0</text>
+    <path class="sumbu" d="M24,176.2 H286" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M109.9,258 V46" marker-end="url(#panah)"/>
+    <text class="label" x="282" y="196.2" text-anchor="end">x</text>
+    <text class="label" x="118.9" y="56">y</text>
+    <path class="grafik" d="M68,61.6 L69.3,64.2 L70.7,66.8 L72,69.3 L73.4,71.7 L74.7,74.1 L76.1,76.5 L77.4,78.8 L78.8,81.1 L80.1,83.3 L81.5,85.5 L82.8,87.7 L84.2,89.8 L85.5,91.8 L86.9,93.9 L88.2,95.8 L89.6,97.8 L90.9,99.7 L92.3,101.5 L93.6,103.3 L95,105.1 L96.3,106.8 L97.7,108.5 L99,110.1 L100.4,111.7 L101.7,113.2 L103.1,114.7 L104.4,116.2 L105.8,117.6 L107.1,118.9 L108.5,120.3 L109.8,121.6 L111.2,122.8 L112.5,124 L113.9,125.1 L115.2,126.2 L116.6,127.3 L117.9,128.3 L119.3,129.3 L120.6,130.2 L122,131.1 L123.3,132 L124.7,132.8 L126,133.5 L127.4,134.3 L128.7,134.9 L130.1,135.6 L131.4,136.1 L132.8,136.7 L134.1,137.2 L135.5,137.6 L136.8,138.1 L138.2,138.4 L139.5,138.8 L140.9,139 L142.2,139.3 L143.6,139.5 L144.9,139.6 L146.3,139.7 L147.6,139.8 L149,139.8 L150.4,139.8 L151.7,139.7 L153.1,139.6 L154.4,139.5 L155.8,139.3 L157.1,139 L158.5,138.8 L159.8,138.4 L161.2,138.1 L162.5,137.6 L163.9,137.2 L165.2,136.7 L166.6,136.1 L167.9,135.6 L169.3,134.9 L170.6,134.3 L172,133.5 L173.3,132.8 L174.7,132 L176,131.1 L177.4,130.2 L178.7,129.3 L180.1,128.3 L181.4,127.3 L182.8,126.2 L184.1,125.1 L185.5,124 L186.8,122.8 L188.2,121.6 L189.5,120.3 L190.9,118.9 L192.2,117.6 L193.6,116.2 L194.9,114.7 L196.3,113.2 L197.6,111.7 L199,110.1 L200.3,108.5 L201.7,106.8 L203,105.1 L204.4,103.3 L205.7,101.5 L207.1,99.7 L208.4,97.8 L209.8,95.8 L211.1,93.9 L212.5,91.8 L213.8,89.8 L215.2,87.7 L216.5,85.5 L217.9,83.3 L219.2,81.1 L220.6,78.8 L221.9,76.5 L223.3,74.1 L224.6,71.7 L226,69.3 L227.3,66.8 L228.7,64.2 L230,61.6"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">Tidak memotong sumbu x</text>
+    <text class="angka" x="150" y="312" text-anchor="middle">y = x² − 2x + 3</text>
+  </g>
+
+</svg>

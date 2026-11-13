@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-label="Tiga diagram pencar. Kiri, asosiasi positif: titik-titik mengumpul di sekitar garis yang naik. Tengah, asosiasi negatif: titik-titik mengumpul di sekitar garis yang turun. Kanan, tidak ada asosiasi: titik-titik tersebar acak tanpa pola.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="306"/>
+    <rect class="panel" x="0" y="0" width="300" height="306"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Asosiasi positif</text>
+    <path class="sumbu" d="M30,260 H276" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M30,260 V54" marker-end="url(#panah)"/>
+    <circle class="titik" cx="148" cy="158.4" r="5"/>
+    <circle class="titik" cx="68.8" cy="226.4" r="5"/>
+    <circle class="titik" cx="138" cy="167.7" r="5"/>
+    <circle class="titik" cx="61" cy="201.2" r="5"/>
+    <circle class="titik" cx="168.9" cy="151.7" r="5"/>
+    <circle class="titik" cx="104.5" cy="176.9" r="5"/>
+    <circle class="titik" cx="183.3" cy="158.2" r="5"/>
+    <circle class="titik" cx="149.7" cy="172.9" r="5"/>
+    <circle class="titik" cx="186.3" cy="152.2" r="5"/>
+    <circle class="titik" cx="162.8" cy="152.1" r="5"/>
+    <circle class="titik" cx="81.6" cy="227.2" r="5"/>
+    <circle class="titik" cx="242.7" cy="75.6" r="5"/>
+    <circle class="titik" cx="69.9" cy="216.1" r="5"/>
+    <circle class="titik" cx="246.2" cy="110.8" r="5"/>
+    <circle class="titik" cx="132.9" cy="169" r="5"/>
+    <circle class="titik" cx="186.3" cy="146.3" r="5"/>
+    <circle class="titik" cx="80.4" cy="183.1" r="5"/>
+    <circle class="titik" cx="138.5" cy="180.5" r="5"/>
+    <path class="putus" d="M37.2,235.2 L262.8,84.8"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">x naik, y cenderung naik</text>
+  </g>
+  <g transform="translate(322,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="306"/>
+    <rect class="panel" x="0" y="0" width="300" height="306"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Asosiasi negatif</text>
+    <path class="sumbu" d="M30,260 H276" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M30,260 V54" marker-end="url(#panah)"/>
+    <circle class="titik" cx="159.9" cy="174.8" r="5"/>
+    <circle class="titik" cx="76.8" cy="98.1" r="5"/>
+    <circle class="titik" cx="118.7" cy="146.3" r="5"/>
+    <circle class="titik" cx="61.2" cy="80.4" r="5"/>
+    <circle class="titik" cx="94.8" cy="104.8" r="5"/>
+    <circle class="titik" cx="143.8" cy="168.5" r="5"/>
+    <circle class="titik" cx="171.7" cy="179.2" r="5"/>
+    <circle class="titik" cx="204.7" cy="189.1" r="5"/>
+    <circle class="titik" cx="73.1" cy="122" r="5"/>
+    <circle class="titik" cx="139.5" cy="172.7" r="5"/>
+    <circle class="titik" cx="54.5" cy="100.5" r="5"/>
+    <circle class="titik" cx="188.2" cy="178.4" r="5"/>
+    <circle class="titik" cx="246.1" cy="232.5" r="5"/>
+    <circle class="titik" cx="137" cy="151.5" r="5"/>
+    <circle class="titik" cx="137.1" cy="135.1" r="5"/>
+    <circle class="titik" cx="139.6" cy="156" r="5"/>
+    <circle class="titik" cx="100.2" cy="139.4" r="5"/>
+    <circle class="titik" cx="201.3" cy="211.9" r="5"/>
+    <path class="putus" d="M37.2,84.8 L262.8,235.2"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">x naik, y cenderung turun</text>
+  </g>
+  <g transform="translate(640,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="306"/>
+    <rect class="panel" x="0" y="0" width="300" height="306"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Tidak ada asosiasi</text>
+    <path class="sumbu" d="M30,260 H276" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M30,260 V54" marker-end="url(#panah)"/>
+    <circle class="titik" cx="101.5" cy="117.3" r="5"/>
+    <circle class="titik" cx="225.7" cy="85.1" r="5"/>
+    <circle class="titik" cx="240.2" cy="102.3" r="5"/>
+    <circle class="titik" cx="202.2" cy="137.6" r="5"/>
+    <circle class="titik" cx="161.5" cy="236.1" r="5"/>
+    <circle class="titik" cx="112.8" cy="182.8" r="5"/>
+    <circle class="titik" cx="89.8" cy="177" r="5"/>
+    <circle class="titik" cx="189.3" cy="122" r="5"/>
+    <circle class="titik" cx="100.7" cy="87" r="5"/>
+    <circle class="titik" cx="45.9" cy="182.4" r="5"/>
+    <circle class="titik" cx="168.1" cy="169.4" r="5"/>
+    <circle class="titik" cx="63.3" cy="81.5" r="5"/>
+    <circle class="titik" cx="140.8" cy="100.4" r="5"/>
+    <circle class="titik" cx="168.5" cy="164.9" r="5"/>
+    <circle class="titik" cx="70.8" cy="113.1" r="5"/>
+    <circle class="titik" cx="233.7" cy="197.7" r="5"/>
+    <circle class="titik" cx="49.6" cy="215.3" r="5"/>
+    <circle class="titik" cx="193.7" cy="128.4" r="5"/>
+    <text class="kecil" x="150" y="290" text-anchor="middle">tidak ada pola</text>
+  </g>
+
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" role="img" aria-label="Diagram pohon memilih pakaian. Cabang pertama memilih kaos: putih atau hitam, 2 cara. Dari tiap kaos bercabang tiga pilihan celana: jin, kain, atau pendek. Hasilnya 6 pasangan: putih–jin, putih–kain, putih–pendek, hitam–jin, hitam–kain, hitam–pendek. Jadi banyak pasangan 2 kali 3 sama dengan 6.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <circle class="titik-hitam" cx="40" cy="210" r="7"/>
+    <path class="garis" d="M46,210 L150,120"/>
+    <rect class="isi-lime" x="150" y="102" width="120" height="36" rx="4"/>
+    <text class="angka" x="210" y="125" text-anchor="middle">Kaos putih</text>
+    <path class="garis" d="M270,120 L360,64"/>
+    <rect class="isi-putih" x="360" y="48" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="69" text-anchor="middle">Jin</text>
+    <text class="kecil" x="470" y="69">1. putih – jin</text>
+    <path class="garis" d="M270,120 L360,120"/>
+    <rect class="isi-putih" x="360" y="104" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="125" text-anchor="middle">Kain</text>
+    <text class="kecil" x="470" y="125">2. putih – kain</text>
+    <path class="garis" d="M270,120 L360,176"/>
+    <rect class="isi-putih" x="360" y="160" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="181" text-anchor="middle">Pendek</text>
+    <text class="kecil" x="470" y="181">3. putih – pendek</text>
+    <path class="garis" d="M46,210 L150,300"/>
+    <rect class="isi-lime" x="150" y="282" width="120" height="36" rx="4"/>
+    <text class="angka" x="210" y="305" text-anchor="middle">Kaos hitam</text>
+    <path class="garis" d="M270,300 L360,244"/>
+    <rect class="isi-putih" x="360" y="228" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="249" text-anchor="middle">Jin</text>
+    <text class="kecil" x="470" y="249">4. hitam – jin</text>
+    <path class="garis" d="M270,300 L360,300"/>
+    <rect class="isi-putih" x="360" y="284" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="305" text-anchor="middle">Kain</text>
+    <text class="kecil" x="470" y="305">5. hitam – kain</text>
+    <path class="garis" d="M270,300 L360,356"/>
+    <rect class="isi-putih" x="360" y="340" width="90" height="32" rx="4"/>
+    <text class="angka" x="405" y="361" text-anchor="middle">Pendek</text>
+    <text class="kecil" x="470" y="361">6. hitam – pendek</text>
+    <text class="label" x="210" y="26" text-anchor="middle">Pilih kaos (2 cara)</text>
+    <text class="label" x="405" y="26" text-anchor="middle">Pilih celana (3 cara)</text>
+    <rect class="isi-krem" x="150" y="392" width="300" height="34" rx="5"/>
+    <text class="label" x="300" y="414" text-anchor="middle">Banyak pasangan = 2 × 3 = 6</text>
+</svg>

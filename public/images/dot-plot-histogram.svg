@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-label="Kiri, dot plot banyak buku yang dibaca 15 siswa dalam sebulan: 1 buku 2 siswa, 2 buku 4 siswa, 3 buku 5 siswa, 4 buku 2 siswa, 5 buku 1 siswa, dan 6 buku 1 siswa. Kanan, histogram tinggi badan 40 siswa dengan tepi kelas 149,5 sampai 174,5 cm. Frekuensi tiap kelas berturut-turut 4, 10, 14, 8, dan 4; batang-batangnya saling menempel.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="360" height="316"/>
+    <rect class="panel" x="0" y="0" width="360" height="316"/>
+    <rect class="kepala" x="0" y="0" width="360" height="42"/>
+    <text class="judul" x="16" y="27">Dot plot</text>
+    <path class="sumbu" d="M30,250 H330"/>
+    <path class="sumbu" d="M40,245 V255"/>
+    <text class="angka" x="40" y="274" text-anchor="middle">0</text>
+    <path class="sumbu" d="M80,245 V255"/>
+    <text class="angka" x="80" y="274" text-anchor="middle">1</text>
+    <circle class="titik" cx="80" cy="232" r="10"/>
+    <circle class="titik" cx="80" cy="206" r="10"/>
+    <path class="sumbu" d="M120,245 V255"/>
+    <text class="angka" x="120" y="274" text-anchor="middle">2</text>
+    <circle class="titik" cx="120" cy="232" r="10"/>
+    <circle class="titik" cx="120" cy="206" r="10"/>
+    <circle class="titik" cx="120" cy="180" r="10"/>
+    <circle class="titik" cx="120" cy="154" r="10"/>
+    <path class="sumbu" d="M160,245 V255"/>
+    <text class="angka" x="160" y="274" text-anchor="middle">3</text>
+    <circle class="titik" cx="160" cy="232" r="10"/>
+    <circle class="titik" cx="160" cy="206" r="10"/>
+    <circle class="titik" cx="160" cy="180" r="10"/>
+    <circle class="titik" cx="160" cy="154" r="10"/>
+    <circle class="titik" cx="160" cy="128" r="10"/>
+    <path class="sumbu" d="M200,245 V255"/>
+    <text class="angka" x="200" y="274" text-anchor="middle">4</text>
+    <circle class="titik" cx="200" cy="232" r="10"/>
+    <circle class="titik" cx="200" cy="206" r="10"/>
+    <path class="sumbu" d="M240,245 V255"/>
+    <text class="angka" x="240" y="274" text-anchor="middle">5</text>
+    <circle class="titik" cx="240" cy="232" r="10"/>
+    <path class="sumbu" d="M280,245 V255"/>
+    <text class="angka" x="280" y="274" text-anchor="middle">6</text>
+    <circle class="titik" cx="280" cy="232" r="10"/>
+    <path class="sumbu" d="M320,245 V255"/>
+    <text class="angka" x="320" y="274" text-anchor="middle">7</text>
+    <text class="kecil" x="180" y="300" text-anchor="middle">Banyak buku dibaca (sebulan)</text>
+  </g>
+  <g transform="translate(386,4)">
+    <rect class="bayang" x="6" y="6" width="360" height="316"/>
+    <rect class="panel" x="0" y="0" width="360" height="316"/>
+    <rect class="kepala" x="0" y="0" width="360" height="42"/>
+    <text class="judul" x="16" y="27">Histogram</text>
+    <path class="sumbu" d="M30,250 H340"/>
+    <path class="sumbu" d="M40,250 V60"/>
+    <path class="kisi" d="M40,226 H330"/>
+    <text class="angka" x="34" y="230" text-anchor="end">2</text>
+    <path class="kisi" d="M40,178 H330"/>
+    <text class="angka" x="34" y="182" text-anchor="end">6</text>
+    <path class="kisi" d="M40,130 H330"/>
+    <text class="angka" x="34" y="134" text-anchor="end">10</text>
+    <path class="kisi" d="M40,82 H330"/>
+    <text class="angka" x="34" y="86" text-anchor="end">14</text>
+    <rect class="isi-lime" x="50" y="202" width="54" height="48"/>
+    <text class="angka" x="77" y="196" text-anchor="middle">4</text>
+    <text class="angka" x="50" y="268" text-anchor="middle">149,5</text>
+    <rect class="isi-lime" x="104" y="130" width="54" height="120"/>
+    <text class="angka" x="131" y="124" text-anchor="middle">10</text>
+    <text class="angka" x="104" y="268" text-anchor="middle">154,5</text>
+    <rect class="isi-lime" x="158" y="82" width="54" height="168"/>
+    <text class="angka" x="185" y="76" text-anchor="middle">14</text>
+    <text class="angka" x="158" y="268" text-anchor="middle">159,5</text>
+    <rect class="isi-lime" x="212" y="154" width="54" height="96"/>
+    <text class="angka" x="239" y="148" text-anchor="middle">8</text>
+    <text class="angka" x="212" y="268" text-anchor="middle">164,5</text>
+    <rect class="isi-lime" x="266" y="202" width="54" height="48"/>
+    <text class="angka" x="293" y="196" text-anchor="middle">4</text>
+    <text class="angka" x="266" y="268" text-anchor="middle">169,5</text>
+    <text class="angka" x="320" y="268" text-anchor="middle">174,5</text>
+    <text class="kecil" x="185" y="300" text-anchor="middle">Tinggi badan (cm), tepi kelas</text>
+  </g>
+</svg>

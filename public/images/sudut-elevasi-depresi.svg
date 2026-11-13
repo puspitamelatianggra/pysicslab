@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Pengamat di puncak gedung melihat ke bawah ke arah mobil di tanah. Sudut antara garis mendatar dan garis pandang ke bawah disebut sudut depresi. Dari mobil, sudut antara tanah dan garis pandang ke atas menuju pengamat disebut sudut elevasi. Kedua sudut itu sama besar karena garis mendatar sejajar dengan tanah.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="sumbu" d="M20,270 H580"/>
+    <rect class="isi-krem" x="60" y="80" width="60" height="190"/>
+    <path class="garis" d="M72,104 h14 v14 h-14 z M96,104 h14 v14 h-14 z M72,140 h14 v14 h-14 z M96,140 h14 v14 h-14 z M72,176 h14 v14 h-14 z M96,176 h14 v14 h-14 z M72,212 h14 v14 h-14 z M96,212 h14 v14 h-14 z"/>
+    <circle class="titik" cx="110" cy="80" r="7"/>
+    <path class="putus" d="M110,80 H560"/>
+    <text class="kecil" x="556" y="72" text-anchor="end">garis mendatar</text>
+    <path class="tebal" d="M110,80 L480,270"/>
+    <path class="isi-lime" d="M110,80 L166,80 A56,56 0 0 1 159.8,105.6 Z"/>
+    <path class="isi-lime" d="M480,270 L424,270 A56,56 0 0 1 430.2,244.4 Z"/>
+    <rect class="isi-oranye" x="474" y="248" width="56" height="18" rx="4"/>
+    <circle class="titik-hitam" cx="486" cy="267" r="5"/>
+    <circle class="titik-hitam" cx="518" cy="267" r="5"/>
+    <text class="label" x="174" y="104">sudut depresi</text>
+    <text class="label" x="440" y="292" text-anchor="end">sudut elevasi</text>
+    <text class="kecil" x="330" y="160" text-anchor="middle">garis pandang</text>
+    <text class="label" x="106" y="66" text-anchor="middle">Pengamat</text>
+    <text class="label" x="502" y="292" text-anchor="middle">Mobil</text>
+</svg>

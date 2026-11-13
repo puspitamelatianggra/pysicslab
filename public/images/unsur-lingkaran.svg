@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" role="img" aria-label="Dua lingkaran berpusat di O. Kiri menunjukkan garis-garis pada lingkaran: diameter melalui pusat, jari-jari dari pusat ke tepi, tali busur yang menghubungkan dua titik pada lingkaran, dan apotema, yaitu garis tegak lurus dari pusat ke tali busur. Kanan menunjukkan daerah pada lingkaran: juring berwarna lime yang dibatasi dua jari-jari dan busur, busur yang digaris tebal oranye, serta tembereng berwarna krem yang dibatasi tali busur dan busur.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <text class="judul" x="170" y="30" text-anchor="middle">Garis pada lingkaran</text>
+    <circle class="isi-putih" cx="170" cy="185" r="110"/>
+    <path class="garis" d="M60,185 H280"/>
+    <path class="tebal" d="M170,185 L115,89.7"/>
+    <path class="garis" d="M85.7,255.7 L254.3,255.7"/>
+    <path class="putus" d="M170,185 V255.7"/>
+    <path class="garis" d="M170,243.7 h12 v12"/>
+    <circle class="titik-hitam" cx="170" cy="185" r="5"/>
+    <text class="label" x="178" y="205">O</text>
+    <text class="angka" x="230" y="177" text-anchor="middle">diameter</text>
+    <text class="angka" x="146" y="127">jari-jari</text>
+    <text class="angka" x="178" y="234.4">apotema</text>
+    <text class="angka" x="170" y="275.7" text-anchor="middle">tali busur</text>
+    <text class="judul" x="470" y="30" text-anchor="middle">Daerah pada lingkaran</text>
+    <circle class="isi-putih" cx="470" cy="185" r="110"/>
+    <path class="isi-lime" d="M470,185 L573.4,147.4 A110,110 0 0 0 450.9,76.7 Z"/>
+    <path class="isi-krem" d="M366.6,222.6 A110,110 0 0 0 507.6,288.4 Z"/>
+    <path class="tebal" d="M573.4,147.4 A110,110 0 0 0 450.9,76.7"/>
+    <circle class="titik-hitam" cx="470" cy="185" r="5"/>
+    <text class="label" x="462" y="205" text-anchor="end">O</text>
+    <text class="label" x="510" y="145" text-anchor="middle">juring</text>
+    <text class="label" x="534" y="74.1">busur</text>
+    <text class="angka" x="395" y="314" text-anchor="end">tembereng</text>
+    <path class="garis" d="M398,306 L428,273"/>
+</svg>

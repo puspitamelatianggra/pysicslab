@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 290" role="img" aria-label="Box plot data 4, 5, 6, 6, 7, 8, 9, 9, 10, 12, 20 di atas garis bilangan 0 sampai 22. Kotak membentang dari kuartil bawah Q1 = 6 sampai kuartil atas Q3 = 10, dengan garis median Q2 = 8 di dalamnya. Garis kumis memanjang dari nilai minimum 4 sampai 12. Nilai 20 berada di luar pagar atas 16, sehingga digambar sebagai titik pencilan. Jangkauan interkuartil sama dengan 4.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="sumbu" d="M30,200 H578"/>
+    <path class="sumbu" d="M40,195 V205"/>
+    <text class="angka" x="40" y="224" text-anchor="middle">0</text>
+    <path class="sumbu" d="M88,195 V205"/>
+    <text class="angka" x="88" y="224" text-anchor="middle">2</text>
+    <path class="sumbu" d="M136,195 V205"/>
+    <text class="angka" x="136" y="224" text-anchor="middle">4</text>
+    <path class="sumbu" d="M184,195 V205"/>
+    <text class="angka" x="184" y="224" text-anchor="middle">6</text>
+    <path class="sumbu" d="M232,195 V205"/>
+    <text class="angka" x="232" y="224" text-anchor="middle">8</text>
+    <path class="sumbu" d="M280,195 V205"/>
+    <text class="angka" x="280" y="224" text-anchor="middle">10</text>
+    <path class="sumbu" d="M328,195 V205"/>
+    <text class="angka" x="328" y="224" text-anchor="middle">12</text>
+    <path class="sumbu" d="M376,195 V205"/>
+    <text class="angka" x="376" y="224" text-anchor="middle">14</text>
+    <path class="sumbu" d="M424,195 V205"/>
+    <text class="angka" x="424" y="224" text-anchor="middle">16</text>
+    <path class="sumbu" d="M472,195 V205"/>
+    <text class="angka" x="472" y="224" text-anchor="middle">18</text>
+    <path class="sumbu" d="M520,195 V205"/>
+    <text class="angka" x="520" y="224" text-anchor="middle">20</text>
+    <path class="sumbu" d="M568,195 V205"/>
+    <text class="angka" x="568" y="224" text-anchor="middle">22</text>
+    <path class="garis" d="M136,110 H184 M280,110 H328 M136,94 V126 M328,94 V126"/>
+    <rect class="isi-lime" x="184" y="78" width="96" height="64"/>
+    <path class="garis" d="M232,78 V142" stroke-width="4"/>
+    <circle class="titik" cx="520" cy="110" r="7"/>
+    <path class="bantu" d="M424,60 V185"/>
+    <text class="kecil" x="424" y="52" text-anchor="middle">pagar atas = 16</text>
+    <text class="angka" x="136" y="84" text-anchor="middle">min</text>
+    <text class="label" x="136" y="66" text-anchor="middle">4</text>
+    <text class="label" x="184" y="162" text-anchor="middle">Q<tspan font-size="11" dy="4">1</tspan><tspan dy="-4"> = 6</tspan></text>
+    <text class="label" x="232" y="68" text-anchor="middle">Q<tspan font-size="11" dy="4">2</tspan><tspan dy="-4"> = 8</tspan></text>
+    <text class="label" x="280" y="162" text-anchor="middle">Q<tspan font-size="11" dy="4">3</tspan><tspan dy="-4"> = 10</tspan></text>
+    <text class="angka" x="328" y="84" text-anchor="middle">maks</text>
+    <text class="label" x="328" y="66" text-anchor="middle">12</text>
+    <text class="angka" x="520" y="92" text-anchor="middle">pencilan</text>
+    <text class="label" x="520" y="140" text-anchor="middle">20</text>
+    <path class="garis" d="M184,248 V256 H280 V248"/>
+    <text class="label" x="232" y="276" text-anchor="middle">Jangkauan interkuartil = 10 − 6 = 4</text>
+</svg>

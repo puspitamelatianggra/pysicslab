@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" role="img" aria-label="Grafik fungsi eksponensial y = 2 pangkat x yang naik dari kiri ke kanan dan y = (1/2) pangkat x yang turun dari kiri ke kanan. Keduanya melalui titik (0, 1), selalu berada di atas sumbu x, dan makin mendekati sumbu x tanpa pernah menyentuhnya. Grafik y = 2 pangkat x melalui (2, 4), sedangkan y = (1/2) pangkat x melalui (−2, 4); keduanya saling mencerminkan terhadap sumbu y.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="kisi" d="M70,30 V330 M136.7,30 V330 M203.3,30 V330 M336.7,30 V330 M403.3,30 V330 M470,30 V330 M50,330 H490 M50,266.8 H490 M50,235.3 H490 M50,203.7 H490 M50,172.1 H490 M50,140.5 H490 M50,108.9 H490 M50,77.4 H490 M50,45.8 H490"/>
+    <path class="sumbu" d="M50,298.4 H502" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M270,330 V18" marker-end="url(#panah)"/>
+    <text class="label" x="498" y="318.4" text-anchor="end">x</text>
+    <text class="label" x="279" y="28">y</text>
+    <path class="sumbu" d="M70,294.4 V302.4"/>
+    <text class="angka" x="70" y="316.4" text-anchor="middle">−3</text>
+    <path class="sumbu" d="M136.7,294.4 V302.4"/>
+    <text class="angka" x="136.7" y="316.4" text-anchor="middle">−2</text>
+    <path class="sumbu" d="M203.3,294.4 V302.4"/>
+    <text class="angka" x="203.3" y="316.4" text-anchor="middle">−1</text>
+    <path class="sumbu" d="M336.7,294.4 V302.4"/>
+    <text class="angka" x="336.7" y="316.4" text-anchor="middle">1</text>
+    <path class="sumbu" d="M403.3,294.4 V302.4"/>
+    <text class="angka" x="403.3" y="316.4" text-anchor="middle">2</text>
+    <path class="sumbu" d="M470,294.4 V302.4"/>
+    <text class="angka" x="470" y="316.4" text-anchor="middle">3</text>
+    <path class="sumbu" d="M266,266.8 H274"/>
+    <text class="angka" x="262" y="270.8" text-anchor="end">1</text>
+    <path class="sumbu" d="M266,235.3 H274"/>
+    <text class="angka" x="262" y="239.3" text-anchor="end">2</text>
+    <path class="sumbu" d="M266,172.1 H274"/>
+    <text class="angka" x="262" y="176.1" text-anchor="end">4</text>
+    <path class="sumbu" d="M266,108.9 H274"/>
+    <text class="angka" x="262" y="112.9" text-anchor="end">6</text>
+    <path class="sumbu" d="M266,45.8 H274"/>
+    <text class="angka" x="262" y="49.8" text-anchor="end">8</text>
+    <text class="angka" x="263" y="314.4" text-anchor="end">O</text>
+    <path class="grafik" d="M50,295.2 L53.5,295.1 L57.1,295 L60.6,294.8 L64.1,294.7 L67.6,294.6 L71.2,294.4 L74.7,294.3 L78.2,294.1 L81.8,294 L85.3,293.8 L88.8,293.6 L92.3,293.4 L95.9,293.3 L99.4,293.1 L102.9,292.9 L106.4,292.7 L110,292.4 L113.5,292.2 L117,292 L120.6,291.7 L124.1,291.5 L127.6,291.2 L131.1,291 L134.7,290.7 L138.2,290.4 L141.7,290.1 L145.3,289.8 L148.8,289.5 L152.3,289.1 L155.8,288.8 L159.4,288.4 L162.9,288.1 L166.4,287.7 L169.9,287.3 L173.5,286.8 L177,286.4 L180.5,286 L184.1,285.5 L187.6,285 L191.1,284.5 L194.6,284 L198.2,283.5 L201.7,282.9 L205.2,282.3 L208.8,281.7 L212.3,281.1 L215.8,280.4 L219.3,279.8 L222.9,279.1 L226.4,278.4 L229.9,277.6 L233.4,276.8 L237,276 L240.5,275.2 L244,274.3 L247.6,273.4 L251.1,272.5 L254.6,271.5 L258.1,270.5 L261.7,269.5 L265.2,268.4 L268.7,267.3 L272.3,266.1 L275.8,264.9 L279.3,263.6 L282.8,262.3 L286.4,261 L289.9,259.6 L293.4,258.1 L296.9,256.6 L300.5,255.1 L304,253.5 L307.5,251.8 L311.1,250 L314.6,248.2 L318.1,246.3 L321.6,244.4 L325.2,242.4 L328.7,240.3 L332.2,238.1 L335.8,235.9 L339.3,233.5 L342.8,231.1 L346.3,228.6 L349.9,226 L353.4,223.3 L356.9,220.5 L360.4,217.5 L364,214.5 L367.5,211.4 L371,208.1 L374.6,204.8 L378.1,201.3 L381.6,197.6 L385.1,193.9 L388.7,190 L392.2,185.9 L395.7,181.7 L399.3,177.4 L402.8,172.8 L406.3,168.1 L409.8,163.3 L413.4,158.2 L416.9,153 L420.4,147.6 L423.9,141.9 L427.5,136.1 L431,130 L434.5,123.7 L438.1,117.2 L441.6,110.4 L445.1,103.4 L448.6,96.1 L452.2,88.5 L455.7,80.7 L459.2,72.6 L462.7,64.1 L466.3,55.4 L469.8,46.3 L473.3,36.9"/>
+    <path class="grafik2" d="M66.7,36.9 L70.2,46.3 L73.7,55.4 L77.3,64.1 L80.8,72.6 L84.3,80.7 L87.8,88.5 L91.4,96.1 L94.9,103.4 L98.4,110.4 L101.9,117.2 L105.5,123.7 L109,130 L112.5,136.1 L116.1,141.9 L119.6,147.6 L123.1,153 L126.6,158.2 L130.2,163.3 L133.7,168.1 L137.2,172.8 L140.8,177.4 L144.3,181.7 L147.8,185.9 L151.3,190 L154.9,193.9 L158.4,197.6 L161.9,201.3 L165.4,204.8 L169,208.1 L172.5,211.4 L176,214.5 L179.6,217.5 L183.1,220.5 L186.6,223.3 L190.1,226 L193.7,228.6 L197.2,231.1 L200.7,233.5 L204.2,235.9 L207.8,238.1 L211.3,240.3 L214.8,242.4 L218.4,244.4 L221.9,246.3 L225.4,248.2 L228.9,250 L232.5,251.8 L236,253.5 L239.5,255.1 L243.1,256.6 L246.6,258.1 L250.1,259.6 L253.6,261 L257.2,262.3 L260.7,263.6 L264.2,264.9 L267.8,266.1 L271.3,267.3 L274.8,268.4 L278.3,269.5 L281.9,270.5 L285.4,271.5 L288.9,272.5 L292.4,273.4 L296,274.3 L299.5,275.2 L303,276 L306.6,276.8 L310.1,277.6 L313.6,278.4 L317.1,279.1 L320.7,279.8 L324.2,280.4 L327.7,281.1 L331.3,281.7 L334.8,282.3 L338.3,282.9 L341.8,283.5 L345.4,284 L348.9,284.5 L352.4,285 L355.9,285.5 L359.5,286 L363,286.4 L366.5,286.8 L370.1,287.3 L373.6,287.7 L377.1,288.1 L380.6,288.4 L384.2,288.8 L387.7,289.1 L391.2,289.5 L394.8,289.8 L398.3,290.1 L401.8,290.4 L405.3,290.7 L408.9,291 L412.4,291.2 L415.9,291.5 L419.4,291.7 L423,292 L426.5,292.2 L430,292.4 L433.6,292.7 L437.1,292.9 L440.6,293.1 L444.1,293.3 L447.7,293.4 L451.2,293.6 L454.7,293.8 L458.2,294 L461.8,294.1 L465.3,294.3 L468.8,294.4 L472.4,294.6 L475.9,294.7 L479.4,294.8 L482.9,295 L486.5,295.1 L490,295.2"/>
+    <circle class="titik" cx="270" cy="266.8" r="6"/>    <circle class="titik" cx="336.7" cy="235.3" r="6"/>    <circle class="titik" cx="403.3" cy="172.1" r="6"/>    <circle class="titik-hitam" cx="203.3" cy="235.3" r="5"/>    <circle class="titik-hitam" cx="136.7" cy="172.1" r="5"/>
+    <text class="label" x="280" y="286.8">(0, 1)</text>
+    <text class="label" x="415.3" y="176.1">(2, 4)</text>
+    <text class="label" x="124.7" y="176.1" text-anchor="end">(−2, 4)</text>
+    <text class="label" x="453.3" y="58.4" text-anchor="end">y = 2<tspan font-size="11" dy="-7">x</tspan></text>
+    <text class="label" x="86.7" y="58.4">y = (1/2)<tspan font-size="11" dy="-7">x</tspan></text>
+    <text class="kecil" x="483.3" y="290.4" text-anchor="end">asimtot y = 0</text>
+</svg>

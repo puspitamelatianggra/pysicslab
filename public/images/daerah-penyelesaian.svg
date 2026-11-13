@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" role="img" aria-label="Daerah penyelesaian sistem pertidaksamaan x + y ≤ 6, 2x + y ≤ 8, x ≥ 0, y ≥ 0 diarsir lime. Daerah itu berbentuk segi empat dengan titik pojok (0, 0), (4, 0), (2, 4), dan (0, 6). Titik (2, 4) adalah perpotongan garis x + y = 6 dan 2x + y = 8.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="kisi" d="M124.6,30 V350 M168,30 V350 M211.5,30 V350 M255,30 V350 M298.5,30 V350 M342,30 V350 M385.4,30 V350 M428.9,30 V350 M55,296.7 H455 M55,263.3 H455 M55,230 H455 M55,196.7 H455 M55,163.3 H455 M55,130 H455 M55,96.7 H455 M55,63.3 H455 M55,30 H455"/>
+    <polygon class="daerah" points="81.1,330 255,330 168,196.7 81.1,130"/>
+    <path class="sumbu" d="M55,330 H467" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M81.1,350 V18" marker-end="url(#panah)"/>
+    <text class="label" x="463" y="350" text-anchor="end">x</text>
+    <text class="label" x="90.1" y="28">y</text>
+    <path class="sumbu" d="M168,326 V334"/>
+    <text class="angka" x="168" y="348" text-anchor="middle">2</text>
+    <path class="sumbu" d="M255,326 V334"/>
+    <text class="angka" x="255" y="348" text-anchor="middle">4</text>
+    <path class="sumbu" d="M342,326 V334"/>
+    <text class="angka" x="342" y="348" text-anchor="middle">6</text>
+    <path class="sumbu" d="M428.9,326 V334"/>
+    <text class="angka" x="428.9" y="348" text-anchor="middle">8</text>
+    <path class="sumbu" d="M77.1,263.3 H85.1"/>
+    <text class="angka" x="73.1" y="267.3" text-anchor="end">2</text>
+    <path class="sumbu" d="M77.1,196.7 H85.1"/>
+    <text class="angka" x="73.1" y="200.7" text-anchor="end">4</text>
+    <path class="sumbu" d="M77.1,63.3 H85.1"/>
+    <text class="angka" x="73.1" y="67.3" text-anchor="end">8</text>
+    <text class="angka" x="74.1" y="346" text-anchor="end">O</text>
+    <path class="grafik" d="M59.3,113.3 L385.4,363.3"/>
+    <path class="grafik2" d="M68,43.3 L276.7,363.3"/>
+    <circle class="titik" cx="81.1" cy="330" r="6"/>    <circle class="titik" cx="255" cy="330" r="6"/>    <circle class="titik" cx="168" cy="196.7" r="6"/>    <circle class="titik" cx="81.1" cy="130" r="6"/>
+    <text class="label" x="180" y="188.7">(2, 4)</text>
+    <text class="label" x="259" y="320">(4, 0)</text>
+    <text class="label" x="71.1" y="135" text-anchor="end">(0, 6)</text>
+    <text class="label" x="307.2" y="276.7">x + y = 6</text>
+    <text class="label" x="111.5" y="86.7">2x + y = 8</text>
+    <text class="besar" x="133.3" y="260" text-anchor="middle">DP</text>
+</svg>

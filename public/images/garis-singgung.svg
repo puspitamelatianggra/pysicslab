@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 340" role="img" aria-label="Lingkaran berpusat O dengan jari-jari r dan titik P di luar lingkaran. Dari P ditarik dua garis singgung yang menyinggung lingkaran di A dan B. Jari-jari OA tegak lurus PA dan jari-jari OB tegak lurus PB, sehingga segitiga OAP dan OBP siku-siku. Panjang PA sama dengan PB.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <circle class="isi-putih" cx="170" cy="175" r="90"/>
+    <path class="tebal" d="M470,175 L149.3,74.1 M470,175 L149.3,275.9"/>
+    <path class="garis" d="M170,175 L197,89.1 M170,175 L197,260.9"/>
+    <path class="putus" d="M170,175 L470,175"/>
+    <path class="garis" d="M192.8,102.5 L206.2,106.7 L210.4,93.3 M192.8,247.5 L206.2,243.3 L210.4,256.7"/>
+    <circle class="titik-hitam" cx="170" cy="175" r="5"/>
+    <circle class="titik" cx="470" cy="175" r="6"/>
+    <circle class="titik-hitam" cx="197" cy="89.1" r="5"/>
+    <circle class="titik-hitam" cx="197" cy="260.9" r="5"/>
+    <text class="label" x="160" y="181" text-anchor="end">O</text>
+    <text class="label" x="482" y="181">P</text>
+    <text class="label" x="191" y="77.1" text-anchor="middle">A</text>
+    <text class="label" x="191" y="286.9" text-anchor="middle">B</text>
+    <text class="label" x="175.5" y="132.1" text-anchor="end">r</text>
+    <text class="label" x="175.5" y="227.9" text-anchor="end">r</text>
+    <text class="angka" x="330" y="168" text-anchor="middle">OP</text>
+    <text class="label" x="360" y="110">garis singgung</text>
+    <text class="angka" x="368" y="128">PA = PB</text>
+</svg>

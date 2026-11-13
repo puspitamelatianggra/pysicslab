@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 362" role="img" aria-label="Diagram pencar lama belajar per hari dalam jam terhadap nilai ujian untuk 10 siswa. Titik-titik naik dari kiri bawah ke kanan atas, menunjukkan asosiasi positif yang kuat. Garis lurus kecocokan terbaik y topi = 50,79 + 5,29x melewati tengah-tengah titik.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="kisi" d="M60,276.7 H500"/>
+    <text class="angka" x="52" y="280.7" text-anchor="end">55</text>
+    <path class="kisi" d="M60,243.3 H500"/>
+    <text class="angka" x="52" y="247.3" text-anchor="end">60</text>
+    <path class="kisi" d="M60,210 H500"/>
+    <text class="angka" x="52" y="214" text-anchor="end">65</text>
+    <path class="kisi" d="M60,176.7 H500"/>
+    <text class="angka" x="52" y="180.7" text-anchor="end">70</text>
+    <path class="kisi" d="M60,143.3 H500"/>
+    <text class="angka" x="52" y="147.3" text-anchor="end">75</text>
+    <path class="kisi" d="M60,110 H500"/>
+    <text class="angka" x="52" y="114" text-anchor="end">80</text>
+    <path class="kisi" d="M60,76.7 H500"/>
+    <text class="angka" x="52" y="80.7" text-anchor="end">85</text>
+    <path class="kisi" d="M60,43.3 H500"/>
+    <text class="angka" x="52" y="47.3" text-anchor="end">90</text>
+    <path class="sumbu" d="M115,306 V314"/>
+    <text class="angka" x="115" y="330" text-anchor="middle">1</text>
+    <path class="sumbu" d="M170,306 V314"/>
+    <text class="angka" x="170" y="330" text-anchor="middle">2</text>
+    <path class="sumbu" d="M225,306 V314"/>
+    <text class="angka" x="225" y="330" text-anchor="middle">3</text>
+    <path class="sumbu" d="M280,306 V314"/>
+    <text class="angka" x="280" y="330" text-anchor="middle">4</text>
+    <path class="sumbu" d="M335,306 V314"/>
+    <text class="angka" x="335" y="330" text-anchor="middle">5</text>
+    <path class="sumbu" d="M390,306 V314"/>
+    <text class="angka" x="390" y="330" text-anchor="middle">6</text>
+    <path class="sumbu" d="M445,306 V314"/>
+    <text class="angka" x="445" y="330" text-anchor="middle">7</text>
+    <path class="sumbu" d="M500,306 V314"/>
+    <text class="angka" x="500" y="330" text-anchor="middle">8</text>
+    <path class="sumbu" d="M60,310 H512" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M60,310 V22" marker-end="url(#panah)"/>
+    <text class="label" x="70" y="22">Nilai ujian (y)</text>
+    <text class="label" x="500" y="352" text-anchor="end">Lama belajar per hari, jam (x)</text>
+    <path class="grafik2" d="M82,290.6 L489,29.6"/>
+    <circle class="titik" cx="115" cy="276.7" r="6"/>
+    <circle class="titik" cx="170" cy="243.3" r="6"/>
+    <circle class="titik" cx="170" cy="210" r="6"/>
+    <circle class="titik" cx="225" cy="230" r="6"/>
+    <circle class="titik" cx="225" cy="176.7" r="6"/>
+    <circle class="titik" cx="280" cy="163.3" r="6"/>
+    <circle class="titik" cx="335" cy="143.3" r="6"/>
+    <circle class="titik" cx="335" cy="110" r="6"/>
+    <circle class="titik" cx="390" cy="96.7" r="6"/>
+    <circle class="titik" cx="445" cy="56.7" r="6"/>
+    <rect class="isi-krem" x="76.5" y="46.7" width="190" height="30" rx="4"/>
+    <text class="label" x="171.5" y="66.7" text-anchor="middle">ŷ = 50,79 + 5,29x</text>
+</svg>

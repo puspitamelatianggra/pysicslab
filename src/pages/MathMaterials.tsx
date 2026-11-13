@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronRight, Clock, Star, ArrowLeft } from 'lucide-react';
-import { mathMaterials } from '../data/math-materials';
+import { mathElements } from '../data/math-materials';
 
 export default function MathMaterials() {
   return (
@@ -33,13 +33,24 @@ export default function MathMaterials() {
             Materi Matematika
           </h1>
           <p className="text-lg text-muted">
-            Pelajari konsep matematika dari aljabar hingga statistika
+            Rangkuman matematika SMA kelas X–XII, disusun menurut empat elemen Capaian Pembelajaran.
           </p>
         </motion.div>
 
-        {/* Materials Grid */}
+        {/* Materi dikelompokkan per elemen Capaian Pembelajaran */}
+        {mathElements.map((elemen, elemenIndex) => (
+        <section key={elemen.nama} className="mb-10" aria-labelledby={`elemen-${elemenIndex}`}>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-4">
+            <span className="px-2 py-0.5 rounded-base bg-main border-2 border-border text-xs font-bold text-foreground">
+              Elemen {elemenIndex + 1}
+            </span>
+            <h2 id={`elemen-${elemenIndex}`} className="text-2xl font-bold text-foreground">
+              {elemen.nama}
+            </h2>
+            <p className="w-full text-sm text-muted">{elemen.deskripsi}</p>
+          </div>
         <div className="grid md:grid-cols-2 gap-6">
-          {mathMaterials.map((material, index) => (
+          {elemen.materi.map((material, index) => (
             <motion.div
               key={material.id}
               initial={{ opacity: 0, y: 20 }}
@@ -102,6 +113,8 @@ export default function MathMaterials() {
             </motion.div>
           ))}
         </div>
+        </section>
+        ))}
 
         {/* Info Box */}
         <motion.div

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 320" role="img" aria-label="Dua diagram Venn dalam ruang sampel S. Kiri, kejadian A dan B beririsan; daerah irisan A∩B diarsir lime, sehingga P(A∪B) = P(A) + P(B) − P(A∩B). Kanan, kejadian A dan B saling lepas karena lingkarannya tidak bersentuhan, sehingga P(A∩B) = 0 dan P(A∪B) = P(A) + P(B).">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="310" height="306"/>
+    <rect class="panel" x="0" y="0" width="310" height="306"/>
+    <rect class="kepala" x="0" y="0" width="310" height="42"/>
+    <text class="judul" x="16" y="27">Kejadian beririsan</text>
+    <rect class="isi-putih" x="20" y="58" width="270" height="180"/>
+    <text class="label" x="30" y="80">S</text>
+    <clipPath id="klipA"><circle cx="120" cy="150" r="62"/></clipPath>
+    <circle class="isi-krem" cx="120" cy="150" r="62"/>
+    <circle class="isi-krem" cx="190" cy="150" r="62"/>
+    <circle cx="190" cy="150" r="62" fill="#C5FA00" clip-path="url(#klipA)"/>
+    <circle cx="120" cy="150" r="62" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+    <circle cx="190" cy="150" r="62" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+    <text class="angka" x="155" y="156" text-anchor="middle">A∩B</text>
+    <text class="label" x="96" y="156" text-anchor="middle">A</text>
+    <text class="label" x="214" y="156" text-anchor="middle">B</text>
+    <text class="angka" x="155" y="266" text-anchor="middle">P(A∪B) = P(A) + P(B) − P(A∩B)</text>
+    <text class="kecil" x="155" y="288" text-anchor="middle">A dan B dapat terjadi bersamaan</text>
+  </g>
+  <g transform="translate(336,4)">
+    <rect class="bayang" x="6" y="6" width="310" height="306"/>
+    <rect class="panel" x="0" y="0" width="310" height="306"/>
+    <rect class="kepala" x="0" y="0" width="310" height="42"/>
+    <text class="judul" x="16" y="27">Kejadian saling lepas</text>
+    <rect class="isi-putih" x="20" y="58" width="270" height="180"/>
+    <text class="label" x="30" y="80">S</text>
+    <circle class="isi-krem" cx="95" cy="150" r="52"/>
+    <circle class="isi-krem" cx="215" cy="150" r="52"/>
+    <text class="label" x="95" y="156" text-anchor="middle">A</text>
+    <text class="label" x="215" y="156" text-anchor="middle">B</text>
+    <text class="angka" x="155" y="266" text-anchor="middle">P(A∩B) = 0</text>
+    <text class="kecil" x="155" y="288" text-anchor="middle">P(A∪B) = P(A) + P(B)</text>
+  </g>
+</svg>
