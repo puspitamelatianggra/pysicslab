@@ -37,14 +37,26 @@
    │   ├── penyajian-data-pemusatan.ts       (Bab 108-1)
    │   ├── ukuran-letak-penyebaran.ts        (Bab 108-2)
    │   └── data-dua-variabel.ts              (Bab 108-3)
-   └── peluang/                              (Elemen Analisis Data dan Peluang)
-       ├── kaidah-pencacahan.ts              (Bab 109-1)
-       └── peluang-kejadian.ts               (Bab 109-2)
+   ├── peluang/                              (Elemen Analisis Data dan Peluang)
+   │   ├── kaidah-pencacahan.ts              (Bab 109-1)
+   │   └── peluang-kejadian.ts               (Bab 109-2)
+   │
+   │   ---- Matematika Tingkat Lanjut (mapel pilihan kelas XI–XII) ----
+   ├── matriks/                              (Elemen Aljabar dan Fungsi)
+   │   ├── matriks-operasi.ts                (Bab 110-1)
+   │   └── determinan-invers.ts              (Bab 110-2)
+   ├── vektor/                               (Elemen Geometri)
+   │   ├── vektor-operasi.ts                 (Bab 111-1)
+   │   └── perkalian-skalar-proyeksi.ts      (Bab 111-2)
+   └── transformasi-geometri/                (Elemen Geometri)
+       ├── translasi-refleksi.ts             (Bab 112-1)
+       └── rotasi-dilatasi-komposisi.ts      (Bab 112-2)
 
    Catatan ID: nomor materi (101, 102, …) dan ID bab ("101-1", …)
    dipakai untuk menyimpan progres siswa, jadi JANGAN diubah urutannya.
-   Urutan tampil diatur oleh array `mathElements` di bawah, bukan oleh ID.
-   Materi baru memakai ID berikutnya (110, 111, …).
+   Urutan tampil diatur oleh array `mathElements` (Matematika umum) dan
+   `mathLanjutElements` (Matematika Tingkat Lanjut) di bawah, bukan oleh ID.
+   Materi baru memakai ID berikutnya (113, 114, …).
 
    Menambah bab baru:
    1. Salin salah satu file bab, ganti nama file & nama variabelnya.
@@ -83,6 +95,14 @@ import { ukuranLetakPenyebaran } from './math/statistika/ukuran-letak-penyebaran
 import { dataDuaVariabel } from './math/statistika/data-dua-variabel';
 import { kaidahPencacahan } from './math/peluang/kaidah-pencacahan';
 import { peluangKejadian } from './math/peluang/peluang-kejadian';
+
+// ====== Tingkat Lanjut ======
+import { matriksOperasi } from './math/matriks/matriks-operasi';
+import { determinanInvers } from './math/matriks/determinan-invers';
+import { vektorOperasi } from './math/vektor/vektor-operasi';
+import { perkalianSkalarProyeksi } from './math/vektor/perkalian-skalar-proyeksi';
+import { translasiRefleksi } from './math/transformasi-geometri/translasi-refleksi';
+import { rotasiDilatasiKomposisi } from './math/transformasi-geometri/rotasi-dilatasi-komposisi';
 
 // Satu elemen Capaian Pembelajaran beserta materi-materinya
 export interface ElemenMatematika {
@@ -220,5 +240,54 @@ export const mathElements: ElemenMatematika[] = [
   },
 ];
 
+// Matematika Tingkat Lanjut: mata pelajaran pilihan kelas XI–XII
+export const mathLanjutElements: ElemenMatematika[] = [
+  {
+    nama: "Aljabar dan Fungsi",
+    deskripsi: "Operasi matriks, determinan, invers, dan penyelesaian sistem persamaan linear.",
+    materi: [
+      {
+        id: 110,
+        title: "Matriks",
+        description: "Kelas XI · Ordo, transpose, operasi matriks, determinan, invers, dan aturan Cramer.",
+        icon: "🧮",
+        color: "bg-main",
+        chapters: [
+          matriksOperasi,
+          determinanInvers,
+        ]
+      },
+    ]
+  },
+  {
+    nama: "Geometri",
+    deskripsi: "Vektor di bidang dan transformasi geometri dengan matriks.",
+    materi: [
+      {
+        id: 111,
+        title: "Vektor",
+        description: "Kelas XI–XII · Komponen, operasi vektor, titik pembagi, perkalian skalar, proyeksi, dan pembuktian geometri.",
+        icon: "➡️",
+        color: "bg-main",
+        chapters: [
+          vektorOperasi,
+          perkalianSkalarProyeksi,
+        ]
+      },
+      {
+        id: 112,
+        title: "Transformasi Geometri",
+        description: "Kelas XI–XII · Translasi, refleksi, rotasi, dilatasi, dan komposisinya dengan matriks.",
+        icon: "🔄",
+        color: "bg-main",
+        chapters: [
+          translasiRefleksi,
+          rotasiDilatasiKomposisi,
+        ]
+      },
+    ]
+  },
+];
+
 // Daftar datar semua materi matematika (dipakai Dashboard, Quiz, MaterialDetail)
-export const mathMaterials: Material[] = mathElements.flatMap((elemen) => elemen.materi);
+export const mathMaterials: Material[] = [...mathElements, ...mathLanjutElements].flatMap((elemen) => elemen.materi);

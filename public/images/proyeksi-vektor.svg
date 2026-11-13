@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380" role="img" aria-label="Vektor a = (3, 4) berwarna oranye dan vektor b = (2, 1) berwarna hitam berpangkal di titik asal dan membentuk sudut θ. Dari ujung a ditarik garis putus-putus tegak lurus ke perpanjangan b, jatuh di titik (4, 2). Vektor c = (4, 2) dari titik asal ke titik itu, yang digaris tebal, adalah proyeksi ortogonal a pada b.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <path class="kisi" d="M158.2,30 V350 M230.3,30 V350 M302.5,30 V350 M374.6,30 V350 M446.7,30 V350 M50,259.4 H490 M50,199.1 H490 M50,138.7 H490 M50,78.3 H490"/>
+    <path class="sumbu" d="M50,319.8 H502" marker-end="url(#panah)"/>
+    <path class="sumbu" d="M86.1,350 V18" marker-end="url(#panah)"/>
+    <text class="label" x="498" y="339.8" text-anchor="end">x</text>
+    <text class="label" x="95.1" y="28">y</text>
+    <path class="sumbu" d="M158.2,315.8 V323.8"/>
+    <text class="angka" x="158.2" y="337.8" text-anchor="middle">1</text>
+    <path class="sumbu" d="M230.3,315.8 V323.8"/>
+    <text class="angka" x="230.3" y="337.8" text-anchor="middle">2</text>
+    <path class="sumbu" d="M302.5,315.8 V323.8"/>
+    <text class="angka" x="302.5" y="337.8" text-anchor="middle">3</text>
+    <path class="sumbu" d="M374.6,315.8 V323.8"/>
+    <text class="angka" x="374.6" y="337.8" text-anchor="middle">4</text>
+    <path class="sumbu" d="M446.7,315.8 V323.8"/>
+    <text class="angka" x="446.7" y="337.8" text-anchor="middle">5</text>
+    <path class="sumbu" d="M82.1,259.4 H90.1"/>
+    <text class="angka" x="78.1" y="263.4" text-anchor="end">1</text>
+    <path class="sumbu" d="M82.1,199.1 H90.1"/>
+    <text class="angka" x="78.1" y="203.1" text-anchor="end">2</text>
+    <path class="sumbu" d="M82.1,138.7 H90.1"/>
+    <text class="angka" x="78.1" y="142.7" text-anchor="end">3</text>
+    <path class="sumbu" d="M82.1,78.3 H90.1"/>
+    <text class="angka" x="78.1" y="82.3" text-anchor="end">4</text>
+    <text class="angka" x="79.1" y="335.8" text-anchor="end">O</text>
+    <path class="putus" d="M86.1,319.8 L475.6,156.8"/>
+    <path class="isi-lime" d="M86.1,319.8 L128.5,302.1 A46,46 0 0 0 116.8,285.6 Z"/>
+    <path class="tebal" d="M86.1,319.8 L374.6,199.1" stroke-width="9" opacity="0.5"/>
+    <path class="bantu" d="M302.5,78.3 L374.6,199.1" stroke-width="2"/>
+    <path class="garis" d="M367.9,187.9 L355.9,192.9 L362.6,204.1" stroke-width="2"/>
+    <path d="M86.1,319.8 L292.4,89.5" stroke="#FF6B00" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="302.5,78.3 287.2,84.8 297.7,94.1" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M86.1,319.8 L216.5,265.2" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="230.3,259.4 213.8,258.8 219.2,271.7" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <text class="label" x="138.1" y="293.8">θ</text>
+    <text class="label" x="272.5" y="108.3" text-anchor="end">a = (3, 4)</text>
+    <text class="label" x="234.3" y="285.4">b = (2, 1)</text>
+    <text class="label" x="388.6" y="205.1">c = (4, 2)</text>
+    <text class="kecil" x="388.6" y="223.1">proyeksi a pada b</text>
+</svg>

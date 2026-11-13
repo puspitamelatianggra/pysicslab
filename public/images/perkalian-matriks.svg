@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" role="img" aria-label="Perkalian matriks A = [1 2; 3 4] dengan B = [5 6; 7 8] menghasilkan AB = [19 22; 43 50]. Baris pertama A dan kolom kedua B disorot. Elemen baris 1 kolom 2 pada hasil diperoleh dari 1 kali 6 ditambah 2 kali 8, yaitu 22.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+    <rect class="isi-lime" x="40" y="70" width="46" height="46"/>
+    <text class="label" x="63" y="99" text-anchor="middle">1</text>
+    <rect class="isi-lime" x="86" y="70" width="46" height="46"/>
+    <text class="label" x="109" y="99" text-anchor="middle">2</text>
+    <rect class="isi-putih" x="40" y="116" width="46" height="46"/>
+    <text class="label" x="63" y="145" text-anchor="middle">3</text>
+    <rect class="isi-putih" x="86" y="116" width="46" height="46"/>
+    <text class="label" x="109" y="145" text-anchor="middle">4</text>
+    <path class="garis" d="M34,64 h-6 v104 h6 M138,64 h6 v104 h-6" stroke-width="3"/>
+    <text class="besar" x="86" y="52" text-anchor="middle">A</text>
+    <text class="besar" x="160" y="124" text-anchor="middle">×</text>
+    <rect class="isi-putih" x="200" y="70" width="46" height="46"/>
+    <text class="label" x="223" y="99" text-anchor="middle">5</text>
+    <rect class="isi-lime" x="246" y="70" width="46" height="46"/>
+    <text class="label" x="269" y="99" text-anchor="middle">6</text>
+    <rect class="isi-putih" x="200" y="116" width="46" height="46"/>
+    <text class="label" x="223" y="145" text-anchor="middle">7</text>
+    <rect class="isi-lime" x="246" y="116" width="46" height="46"/>
+    <text class="label" x="269" y="145" text-anchor="middle">8</text>
+    <path class="garis" d="M194,64 h-6 v104 h6 M298,64 h6 v104 h-6" stroke-width="3"/>
+    <text class="besar" x="246" y="52" text-anchor="middle">B</text>
+    <text class="besar" x="320" y="124" text-anchor="middle">=</text>
+    <rect class="isi-putih" x="360" y="70" width="46" height="46"/>
+    <text class="label" x="383" y="99" text-anchor="middle">19</text>
+    <rect class="isi-lime" x="406" y="70" width="46" height="46"/>
+    <text class="label" x="429" y="99" text-anchor="middle">22</text>
+    <rect class="isi-putih" x="360" y="116" width="46" height="46"/>
+    <text class="label" x="383" y="145" text-anchor="middle">43</text>
+    <rect class="isi-putih" x="406" y="116" width="46" height="46"/>
+    <text class="label" x="429" y="145" text-anchor="middle">50</text>
+    <path class="garis" d="M354,64 h-6 v104 h6 M458,64 h6 v104 h-6" stroke-width="3"/>
+    <text class="besar" x="406" y="52" text-anchor="middle">AB</text>
+    <rect class="isi-krem" x="40" y="200" width="412" height="64" rx="5"/>
+    <text class="label" x="246" y="226" text-anchor="middle">Baris 1 dari A × kolom 2 dari B</text>
+    <text class="angka" x="246" y="250" text-anchor="middle">1 × 6 + 2 × 8 = 22  →  elemen baris 1 kolom 2</text>
+</svg>

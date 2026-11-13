@@ -461,6 +461,21 @@ h6 {
     color: var(--foreground);
 }
 
+/* Matriks dan vektor kolom: beri jarak antarelemen agar angkanya tidak dempet */
+.materi-content math mtable {
+    margin: 0 0.15em;
+}
+
+.materi-content math mtd {
+    padding: 0.45em 0.8em;
+    text-align: center;
+}
+
+/* Matriks yang disisipkan di tengah kalimat dan tabel: lebih ringkas, tetap terbaca */
+.materi-content math:not([display="block"]) mtd {
+    padding: 0.2em 0.45em;
+}
+
 /* Keterangan Rumus */
 .materi-content .keterangan {
     border-top: 2px solid var(--border);

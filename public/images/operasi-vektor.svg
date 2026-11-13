@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-label="Tiga panel operasi vektor dengan a = (3, 1) berwarna oranye dan b = (1, 2) berwarna hitam. Kiri, aturan segitiga: pangkal b diletakkan di ujung a, dan a + b adalah panah dari pangkal a ke ujung b. Tengah, aturan jajargenjang: a dan b berpangkal di titik yang sama, dan a + b adalah diagonal jajargenjang yang dibentuk keduanya. Kanan, pengurangan: a − b adalah panah dari ujung b ke ujung a.">
+  <defs>
+    <style>
+      .bayang { fill: #1A1A1A; }
+      .panel { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 3; }
+      .kepala { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 3; }
+      .judul { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .besar { font: 700 22px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .angka { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 500 13px Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kisi { stroke: #E2E2E2; stroke-width: 1; fill: none; }
+      .grafik { stroke: #FF6B00; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .grafik2 { stroke: #1A1A1A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .putus { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-dasharray: 7 5; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+      .garis { stroke: #1A1A1A; stroke-width: 2.5; fill: none; stroke-linejoin: round; }
+      .tebal { stroke: #FF6B00; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .isi-lime { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-oranye { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-krem { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .isi-putih { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .daerah { fill: #C5FA00; opacity: 0.75; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .titik-hitam { fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <g transform="translate(4,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="316"/>
+    <rect class="panel" x="0" y="0" width="300" height="316"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Aturan segitiga</text>
+    <path d="M52.6,245.6 L174.4,201.8" stroke="#FF6B00" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="188.5,196.7 172,195.2 176.7,208.4" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M188.5,196.7 L227.5,112.7" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="233.8,99.1 221.1,109.7 233.8,115.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M52.6,245.6 L222.1,108.5" stroke="#1A1A1A" stroke-width="8.5" fill="none" stroke-linecap="round"/>
+    <path d="M52.6,245.6 L222.1,108.5" stroke="#C5FA00" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <polygon points="233.8,99.1 217.7,103.1 226.5,113.9" fill="#C5FA00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <text class="besar" x="120.6" y="243.2" text-anchor="middle">a</text>
+    <text class="besar" x="225.1" y="153.9">b</text>
+    <text class="label" x="133.2" y="166.3" text-anchor="end">a + b</text>
+    <text class="kecil" x="150" y="300" text-anchor="middle">ujung a disambung pangkal b</text>
+  </g>
+  <g transform="translate(322,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="316"/>
+    <rect class="panel" x="0" y="0" width="300" height="316"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Aturan jajargenjang</text>
+    <path class="bantu" d="M188.5,196.7 L233.8,99.1 L97.9,147.9"/>
+    <path d="M52.6,245.6 L174.4,201.8" stroke="#FF6B00" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="188.5,196.7 172,195.2 176.7,208.4" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M52.6,245.6 L91.6,161.5" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="97.9,147.9 85.3,158.6 98,164.5" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M52.6,245.6 L222.1,108.5" stroke="#1A1A1A" stroke-width="8.5" fill="none" stroke-linecap="round"/>
+    <path d="M52.6,245.6 L222.1,108.5" stroke="#C5FA00" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <polygon points="233.8,99.1 217.7,103.1 226.5,113.9" fill="#C5FA00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <text class="besar" x="120.6" y="243.2" text-anchor="middle">a</text>
+    <text class="besar" x="63.3" y="196.7" text-anchor="end">b</text>
+    <text class="label" x="229.8" y="87.1" text-anchor="middle">a + b</text>
+    <text class="kecil" x="150" y="300" text-anchor="middle">pangkal a dan b berimpit</text>
+  </g>
+  <g transform="translate(640,4)">
+    <rect class="bayang" x="6" y="6" width="300" height="316"/>
+    <rect class="panel" x="0" y="0" width="300" height="316"/>
+    <rect class="kepala" x="0" y="0" width="300" height="42"/>
+    <text class="judul" x="16" y="27">Pengurangan a − b</text>
+    <path d="M52.6,245.6 L174.4,201.8" stroke="#FF6B00" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="188.5,196.7 172,195.2 176.7,208.4" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M52.6,245.6 L91.6,161.5" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="97.9,147.9 85.3,158.6 98,164.5" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M97.9,147.9 L175.3,189.6" stroke="#1A1A1A" stroke-width="8.5" fill="none" stroke-linecap="round"/>
+    <path d="M97.9,147.9 L175.3,189.6" stroke="#C5FA00" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <polygon points="188.5,196.7 178.6,183.5 172,195.8" fill="#C5FA00" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/>
+    <text class="besar" x="126.6" y="245.2" text-anchor="middle">a</text>
+    <text class="besar" x="63.3" y="196.7" text-anchor="end">b</text>
+    <text class="label" x="153.2" y="162.3">a − b</text>
+    <text class="kecil" x="150" y="300" text-anchor="middle">dari ujung b ke ujung a</text>
+  </g>
+
+</svg>
