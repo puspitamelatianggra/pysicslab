@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Kiri, kawat lurus vertikal dengan arus I ke atas dikelilingi garis medan magnet berbentuk lingkaran. Titik P berjarak a dari kawat. Kanan, kawat yang sama dilihat dari atas, dengan arus keluar bidang gambar. Garis medan magnet berupa lingkaran-lingkaran sepusat yang arahnya berlawanan arah jarum jam, sesuai kaidah tangan kanan">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kawat { stroke: #1A1A1A; stroke-width: 6; fill: none; }
+      .medan { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .medan-depan { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .penampang { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-kecil" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Tampak samping ===== -->
+  <text class="judul" x="150" y="22" text-anchor="middle">Tampak samping</text>
+  <!-- bagian belakang lingkaran medan -->
+  <path class="medan" d="M80,100 A70,18 0 0 1 220,100"/>
+  <path class="medan" d="M80,170 A70,18 0 0 1 220,170"/>
+  <!-- kawat -->
+  <path class="kawat" d="M150,255 V45" marker-end="url(#panah)"/>
+  <text class="label" x="164" y="58">I</text>
+  <!-- bagian depan lingkaran medan -->
+  <path class="medan-depan" d="M80,100 A70,18 0 0 0 220,100"/>
+  <path class="medan-depan" d="M80,170 A70,18 0 0 0 220,170"/>
+  <path class="medan" d="M176,117 L190,115.5" marker-end="url(#panah-kecil)"/>
+  <path class="medan" d="M176,187 L190,185.5" marker-end="url(#panah-kecil)"/>
+  <text class="label" x="236" y="104">B</text>
+  <!-- titik P -->
+  <path class="ukur" d="M153,230 H248" marker-end="url(#panah)"/>
+  <circle cx="254" cy="230" r="5" fill="#1A1A1A"/>
+  <text class="label" x="264" y="235">P</text>
+  <text class="label" x="200" y="250" text-anchor="middle">a</text>
+
+  <!-- ===== Tampak atas ===== -->
+  <text class="judul" x="420" y="22" text-anchor="middle">Dilihat dari atas</text>
+  <circle class="medan" cx="420" cy="150" r="42"/>
+  <circle class="medan" cx="420" cy="150" r="72"/>
+  <circle class="medan" cx="420" cy="150" r="100"/>
+  <path class="medan" d="M428,108 H412" marker-end="url(#panah-kecil)"/>
+  <path class="medan" d="M428,78 H412" marker-end="url(#panah-kecil)"/>
+  <path class="medan" d="M428,50 H412" marker-end="url(#panah-kecil)"/>
+  <circle class="penampang" cx="420" cy="150" r="13"/>
+  <circle cx="420" cy="150" r="4" fill="#1A1A1A"/>
+  <text class="kecil" x="420" y="272" text-anchor="middle">⊙ arus keluar bidang gambar</text>
+</svg>

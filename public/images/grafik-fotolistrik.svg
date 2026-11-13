@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 270" role="img" aria-label="Grafik energi kinetik maksimum elektron foto terhadap frekuensi cahaya. Grafiknya berupa garis lurus yang memotong sumbu frekuensi di frekuensi ambang f nol. Di bawah f nol tidak ada elektron yang terlepas. Kemiringan garis sama dengan tetapan Planck h, dan perpanjangan garis memotong sumbu energi di minus W nol, yaitu fungsi kerja logam">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .garis { stroke: #FF6B00; stroke-width: 4; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M90,180 H495" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M90,255 V20" marker-end="url(#panah)"/>
+  <text class="label" x="82" y="32" text-anchor="end">E<tspan class="sub" dy="5">k maks</tspan></text>
+  <text class="label" x="495" y="204" text-anchor="end">f</text>
+
+  <!-- Garis -->
+  <path class="bantu" d="M90,237 L200,180"/>
+  <path class="garis" d="M200,180 L470,40"/>
+  <circle cx="200" cy="180" r="5" fill="#1A1A1A"/>
+  <text class="label" x="200" y="204" text-anchor="middle">f<tspan class="sub" dy="5">0</tspan></text>
+  <text class="label" x="82" y="242" text-anchor="end">−W<tspan class="sub" dy="5">0</tspan></text>
+
+  <!-- Keterangan -->
+  <text class="kecil" x="345" y="96" text-anchor="end">kemiringan = h</text>
+  <text class="kecil" x="145" y="155" text-anchor="middle">tidak ada</text>
+  <text class="kecil" x="145" y="170" text-anchor="middle">elektron</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Dua pasang muatan berjarak r. Atas, dua muatan positif saling tolak, sehingga gaya pada masing-masing muatan mengarah menjauhi muatan lain. Bawah, muatan positif dan negatif saling tarik, sehingga gaya pada masing-masing muatan mengarah ke muatan lain">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .tanda { font: 700 24px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .positif { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .negatif { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Muatan sejenis ===== -->
+  <text class="judul" x="280" y="26" text-anchor="middle">Muatan sejenis: tolak-menolak</text>
+  <circle class="positif" cx="180" cy="70" r="22"/>
+  <text class="tanda" x="180" y="71" text-anchor="middle" dominant-baseline="middle">+</text>
+  <circle class="positif" cx="380" cy="70" r="22"/>
+  <text class="tanda" x="380" y="71" text-anchor="middle" dominant-baseline="middle">+</text>
+  <path class="vektor" d="M156,70 H96" marker-end="url(#panah)"/>
+  <path class="vektor" d="M404,70 H464" marker-end="url(#panah)"/>
+  <text class="label" x="110" y="58" text-anchor="middle">F</text>
+  <text class="label" x="450" y="58" text-anchor="middle">F</text>
+  <text class="label" x="180" y="115" text-anchor="middle">q₁</text>
+  <text class="label" x="380" y="115" text-anchor="middle">q₂</text>
+  <path class="ukur" d="M206,110 H354" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="280" y="104" text-anchor="middle">r</text>
+
+  <!-- ===== Muatan berbeda jenis ===== -->
+  <text class="judul" x="280" y="154" text-anchor="middle">Muatan berbeda jenis: tarik-menarik</text>
+  <circle class="positif" cx="180" cy="198" r="22"/>
+  <text class="tanda" x="180" y="199" text-anchor="middle" dominant-baseline="middle">+</text>
+  <circle class="negatif" cx="380" cy="198" r="22"/>
+  <text class="tanda" x="380" y="197" text-anchor="middle" dominant-baseline="middle">−</text>
+  <path class="vektor" d="M204,198 H262" marker-end="url(#panah)"/>
+  <path class="vektor" d="M356,198 H298" marker-end="url(#panah)"/>
+  <text class="label" x="234" y="186" text-anchor="middle">F</text>
+  <text class="label" x="326" y="186" text-anchor="middle">F</text>
+  <text class="label" x="180" y="243" text-anchor="middle">q₁</text>
+  <text class="label" x="380" y="243" text-anchor="middle">q₂</text>
+  <path class="ukur" d="M206,238 H354" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="280" y="254" text-anchor="middle">r</text>
+</svg>

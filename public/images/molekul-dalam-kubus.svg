@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Wadah berbentuk kubus dengan rusuk L berisi banyak molekul gas yang bergerak acak. Satu molekul bermassa m bergerak dengan kecepatan v x menuju dinding A di sebelah kanan, lalu memantul kembali dengan kecepatan minus v x. Tumbukan molekul-molekul dengan dinding inilah yang menimbulkan tekanan gas">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rusuk { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .rusuk-belakang { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+      .dinding { fill: #FF6B00; fill-opacity: 0.25; stroke: #1A1A1A; stroke-width: 2.5; }
+      .molekul { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2; }
+      .utama { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .gerak { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .pantul { stroke: #1A1A1A; stroke-width: 3; stroke-dasharray: 6 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Rusuk belakang -->
+  <path class="rusuk-belakang" d="M190,210 V30 M190,210 H370 M190,210 L130,260"/>
+
+  <!-- Dinding A -->
+  <polygon class="dinding" points="310,80 370,30 370,210 310,260"/>
+
+  <!-- Rusuk depan dan atas -->
+  <rect class="rusuk" x="130" y="80" width="180" height="180"/>
+  <path class="rusuk" d="M130,80 L190,30 H370 L310,80"/>
+
+  <!-- Molekul acak -->
+  <circle class="molekul" cx="170" cy="200" r="7"/><path class="gerak" d="M176,196 L194,184" marker-end="url(#panah)"/>
+  <circle class="molekul" cx="205" cy="105" r="7"/><path class="gerak" d="M199,110 L184,124" marker-end="url(#panah)"/>
+  <circle class="molekul" cx="235" cy="235" r="7"/><path class="gerak" d="M242,235 H262" marker-end="url(#panah)"/>
+  <circle class="molekul" cx="290" cy="205" r="7"/><path class="gerak" d="M290,198 V178" marker-end="url(#panah)"/>
+  <circle class="molekul" cx="165" cy="140" r="7"/><path class="gerak" d="M169,146 L178,164" marker-end="url(#panah)"/>
+  <circle class="molekul" cx="340" cy="228" r="7"/><path class="gerak" d="M334,224 L318,212" marker-end="url(#panah)"/>
+
+  <!-- Molekul utama -->
+  <circle class="utama" cx="250" cy="130" r="10"/>
+  <text class="label" x="250" y="112" text-anchor="middle">m</text>
+  <path class="vektor" d="M262,130 H333" marker-end="url(#panah)"/>
+  <text class="label" x="290" y="122" text-anchor="middle">v<tspan class="sub" dy="5">x</tspan></text>
+  <path class="pantul" d="M333,148 H264" marker-end="url(#panah)"/>
+  <text class="label" x="300" y="170" text-anchor="middle">−v<tspan class="sub" dy="5">x</tspan></text>
+
+  <!-- Label -->
+  <path class="ukur" d="M118,82 V258" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="108" y="175" text-anchor="end">L</text>
+  <path class="ukur" d="M366,120 H396"/>
+  <text class="label" x="400" y="125">dinding A</text>
+</svg>

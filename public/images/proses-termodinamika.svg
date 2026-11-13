@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" role="img" aria-label="Kiri, grafik tekanan P terhadap volume V untuk empat proses yang berawal dari titik A. Isobarik berupa garis mendatar, isokhorik berupa garis tegak, isotermal berupa kurva hiperbola yang turun, dan adiabatik berupa kurva yang turun lebih curam daripada isotermal. Kanan, proses isobarik dari volume V1 ke V2 pada tekanan P. Luas daerah di bawah garis sama dengan usaha W sama dengan P kali V2 dikurangi V1">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .proses { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .kurva { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .adiabatik { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .luas { fill: #FF6B00; fill-opacity: 0.3; stroke: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Kiri: empat proses ===== -->
+  <text class="judul" x="160" y="18" text-anchor="middle">Empat proses dari titik A</text>
+  <path class="sumbu" d="M40,220 H280" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M40,220 V28" marker-end="url(#panah)"/>
+  <text class="label" x="30" y="40" text-anchor="end">P</text>
+  <text class="label" x="280" y="244" text-anchor="end">V</text>
+
+  <path class="kurva" d="M120.0,110.0 H240" marker-end="url(#panah)"/>
+  <path class="kurva" d="M120.0,110.0 V40" marker-end="url(#panah)"/>
+  <polyline class="kurva" points="120.0,110.0 122.0,112.7 124.0,115.2 126.0,117.7 128.0,120.0 130.0,122.2 132.0,124.3 134.0,126.4 136.0,128.3 138.0,130.2 140.0,132.0 142.0,133.7 144.0,135.4 146.0,137.0 148.0,138.5 150.0,140.0 152.0,141.4 154.0,142.8 156.0,144.1 158.0,145.4 160.0,146.7 162.0,147.9 164.0,149.0 166.0,150.2 168.0,151.2 170.0,152.3 172.0,153.3 174.0,154.3 176.0,155.3 178.0,156.2 180.0,157.1 182.0,158.0 184.0,158.9 186.0,159.7 188.0,160.5 190.0,161.3 192.0,162.1 194.0,162.9 196.0,163.6 198.0,164.3 200.0,165.0 202.0,165.7 204.0,166.3 206.0,167.0 208.0,167.6 210.0,168.2 212.0,168.8 214.0,169.4 216.0,170.0 218.0,170.6 220.0,171.1 222.0,171.6 224.0,172.2 226.0,172.7 228.0,173.2 230.0,173.7 232.0,174.2 234.0,174.6 236.0,175.1 238.0,175.6 240.0,176.0"/>
+  <polyline class="adiabatik" points="120.0,110.0 122.0,114.4 124.0,118.6 126.0,122.5 128.0,126.2 130.0,129.6 132.0,132.9 134.0,135.9 136.0,138.8 138.0,141.6 140.0,144.2 142.0,146.6 144.0,149.0 146.0,151.2 148.0,153.3 150.0,155.3 152.0,157.2 154.0,159.0 156.0,160.8 158.0,162.4 160.0,164.0 162.0,165.6 164.0,167.0 166.0,168.4 168.0,169.7 170.0,171.0 172.0,172.3 174.0,173.4 176.0,174.6 178.0,175.7 180.0,176.7 182.0,177.7 184.0,178.7 186.0,179.6 188.0,180.5 190.0,181.4 192.0,182.3 194.0,183.1 196.0,183.9 198.0,184.6 200.0,185.4 202.0,186.1 204.0,186.7 206.0,187.4 208.0,188.1 210.0,188.7 212.0,189.3 214.0,189.9 216.0,190.4 218.0,191.0 220.0,191.5 222.0,192.0 224.0,192.6 226.0,193.0 228.0,193.5 230.0,194.0 232.0,194.4 234.0,194.9 236.0,195.3 238.0,195.7 240.0,196.1"/>
+  <circle cx="120" cy="110" r="5" fill="#1A1A1A"/>
+  <text class="label" x="112" y="104" text-anchor="end">A</text>
+
+  <text class="proses" x="244" y="114">isobarik</text>
+  <text class="proses" x="128" y="50">isokhorik</text>
+  <text class="proses" x="244" y="180">isotermal</text>
+  <text class="proses" x="244" y="204">adiabatik</text>
+
+  <!-- ===== Kanan: usaha = luas ===== -->
+  <text class="judul" x="460" y="18" text-anchor="middle">Usaha = luas di bawah kurva</text>
+  <rect class="luas" x="410" y="110" width="140" height="110"/>
+  <path class="sumbu" d="M350,220 H590" marker-end="url(#panah)"/>
+  <path class="sumbu" d="M350,220 V28" marker-end="url(#panah)"/>
+  <text class="label" x="340" y="40" text-anchor="end">P</text>
+  <text class="label" x="590" y="244" text-anchor="end">V</text>
+  <path class="kurva" d="M410,110 H550" marker-end="url(#panah)"/>
+  <path class="bantu" d="M350,110 H410"/>
+  <path class="bantu" d="M550,110 V220"/>
+  <text class="label" x="340" y="115" text-anchor="end">P</text>
+  <text class="label" x="410" y="242" text-anchor="middle">V<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="550" y="242" text-anchor="middle">V<tspan class="sub" dy="5">2</tspan></text>
+  <text class="proses" x="480" y="170" text-anchor="middle">W = P(V₂ − V₁)</text>
+</svg>

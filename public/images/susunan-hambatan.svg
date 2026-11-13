@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" role="img" aria-label="Kiri, susunan seri: hambatan R1, R2, dan R3 disambung berurutan dalam satu jalur, sehingga arus yang melewati setiap hambatan sama. Kanan, susunan paralel: hambatan R1, R2, dan R3 dipasang pada tiga cabang di antara dua titik yang sama, sehingga tegangan pada setiap hambatan sama">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .hambatan { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2.5; }
+      .titik { fill: #1A1A1A; }
+    </style>
+  </defs>
+
+  <!-- ===== Seri ===== -->
+  <text class="judul" x="140" y="28" text-anchor="middle">Seri</text>
+  <path class="kabel" d="M20,110 H40 M84,110 H108 M152,110 H176 M220,110 H260"/>
+  <rect class="hambatan" x="40" y="102" width="44" height="16"/>
+  <rect class="hambatan" x="108" y="102" width="44" height="16"/>
+  <rect class="hambatan" x="176" y="102" width="44" height="16"/>
+  <circle class="titik" cx="20" cy="110" r="4"/>
+  <circle class="titik" cx="260" cy="110" r="4"/>
+  <text class="label" x="62" y="92" text-anchor="middle">R<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="130" y="92" text-anchor="middle">R<tspan class="sub" dy="5">2</tspan></text>
+  <text class="label" x="198" y="92" text-anchor="middle">R<tspan class="sub" dy="5">3</tspan></text>
+  <text class="kecil" x="140" y="160" text-anchor="middle">arus sama di setiap hambatan</text>
+  <text class="kecil" x="140" y="180" text-anchor="middle">tegangan terbagi</text>
+
+  <!-- ===== Paralel ===== -->
+  <text class="judul" x="420" y="28" text-anchor="middle">Paralel</text>
+  <path class="kabel" d="M300,110 H330 M330,60 V160 M510,60 V160 M510,110 H540"/>
+  <path class="kabel" d="M330,60 H398 M442,60 H510"/>
+  <path class="kabel" d="M330,110 H398 M442,110 H510"/>
+  <path class="kabel" d="M330,160 H398 M442,160 H510"/>
+  <rect class="hambatan" x="398" y="52" width="44" height="16"/>
+  <rect class="hambatan" x="398" y="102" width="44" height="16"/>
+  <rect class="hambatan" x="398" y="152" width="44" height="16"/>
+  <circle class="titik" cx="300" cy="110" r="4"/>
+  <circle class="titik" cx="540" cy="110" r="4"/>
+  <circle class="titik" cx="330" cy="110" r="3.5"/>
+  <circle class="titik" cx="510" cy="110" r="3.5"/>
+  <text class="label" x="420" y="45" text-anchor="middle">R<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="420" y="95" text-anchor="middle">R<tspan class="sub" dy="5">2</tspan></text>
+  <text class="label" x="420" y="145" text-anchor="middle">R<tspan class="sub" dy="5">3</tspan></text>
+  <text class="kecil" x="420" y="194" text-anchor="middle">tegangan sama di setiap cabang</text>
+  <text class="kecil" x="420" y="214" text-anchor="middle">arus terbagi</text>
+</svg>

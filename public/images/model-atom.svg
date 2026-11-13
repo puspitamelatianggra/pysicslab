@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 210" role="img" aria-label="Empat model atom. Dalton: atom berupa bola pejal. Thomson: bola bermuatan positif dengan elektron tersebar di dalamnya seperti kismis pada roti. Rutherford: inti positif yang sangat kecil di pusat, dikelilingi elektron yang beredar. Bohr: elektron beredar pada lintasan-lintasan tertentu berbentuk lingkaran dengan bilangan kuantum n sama dengan 1, 2, dan 3">
+  <defs>
+    <style>
+      .nama { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .mini { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .pejal { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .positif { fill: #FF6B00; fill-opacity: 0.3; stroke: #1A1A1A; stroke-width: 2.5; }
+      .inti { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .orbit { fill: none; stroke: #1A1A1A; stroke-width: 1.5; }
+      .elektron { fill: #1A1A1A; }
+      .plus { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+    </style>
+  </defs>
+
+  <!-- ===== Dalton ===== -->
+  <circle class="pejal" cx="75" cy="90" r="45"/>
+  <text class="nama" x="75" y="170" text-anchor="middle">Dalton (1803)</text>
+  <text class="kecil" x="75" y="190" text-anchor="middle">bola pejal</text>
+
+  <!-- ===== Thomson ===== -->
+  <circle class="positif" cx="225" cy="90" r="45"/>
+  <text class="plus" x="205" y="72">+</text><text class="plus" x="238" y="66">+</text>
+  <text class="plus" x="192" y="100">+</text><text class="plus" x="250" y="100">+</text>
+  <text class="plus" x="214" y="124">+</text><text class="plus" x="240" y="122">+</text>
+  <circle class="elektron" cx="222" cy="68" r="4"/><circle class="elektron" cx="204" cy="86" r="4"/>
+  <circle class="elektron" cx="226" cy="94" r="4"/><circle class="elektron" cx="248" cy="80" r="4"/>
+  <circle class="elektron" cx="208" cy="112" r="4"/><circle class="elektron" cx="236" cy="110" r="4"/>
+  <text class="nama" x="225" y="170" text-anchor="middle">Thomson (1897)</text>
+  <text class="kecil" x="225" y="190" text-anchor="middle">roti kismis</text>
+
+  <!-- ===== Rutherford ===== -->
+  <ellipse class="orbit" cx="375" cy="90" rx="50" ry="18" transform="rotate(30 375 90)"/>
+  <ellipse class="orbit" cx="375" cy="90" rx="50" ry="18" transform="rotate(-30 375 90)"/>
+  <ellipse class="orbit" cx="375" cy="90" rx="50" ry="18" transform="rotate(90 375 90)"/>
+  <circle class="inti" cx="375" cy="90" r="7"/>
+  <circle class="elektron" cx="418" cy="115" r="4"/>
+  <circle class="elektron" cx="332" cy="115" r="4"/>
+  <circle class="elektron" cx="375" cy="40" r="4"/>
+  <text class="nama" x="375" y="170" text-anchor="middle">Rutherford (1911)</text>
+  <text class="kecil" x="375" y="190" text-anchor="middle">inti kecil di pusat</text>
+
+  <!-- ===== Bohr ===== -->
+  <circle class="orbit" cx="525" cy="90" r="18"/>
+  <circle class="orbit" cx="525" cy="90" r="32"/>
+  <circle class="orbit" cx="525" cy="90" r="46"/>
+  <circle class="inti" cx="525" cy="90" r="7"/>
+  <circle class="elektron" cx="543" cy="90" r="4"/>
+  <circle class="elektron" cx="525" cy="58" r="4"/>
+  <circle class="elektron" cx="492" cy="122" r="4"/>
+  <text class="mini" x="525" y="79" text-anchor="middle">1</text>
+  <text class="mini" x="503" y="72" text-anchor="middle">2</text>
+  <text class="mini" x="487" y="58" text-anchor="middle">3</text>
+  <text class="nama" x="525" y="170" text-anchor="middle">Bohr (1913)</text>
+  <text class="kecil" x="525" y="190" text-anchor="middle">lintasan tertentu</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Magnet batang dengan kutub utara menghadap kumparan digerakkan mendekati kumparan. Kumparan dihubungkan ke galvanometer G yang jarumnya menyimpang. Arus induksi membuat ujung kiri kumparan menjadi kutub utara, sehingga kumparan menolak magnet yang mendekat">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kutub { font: 700 20px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .magnet-u { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .magnet-s { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .lilitan { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .galvano { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .induksi { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <text class="kecil" x="350" y="30" text-anchor="middle">Ujung kiri kumparan menjadi kutub U, sehingga menolak magnet</text>
+
+  <!-- Magnet batang -->
+  <rect class="magnet-s" x="30" y="90" width="70" height="40"/>
+  <rect class="magnet-u" x="100" y="90" width="70" height="40"/>
+  <text class="kutub" x="65" y="117" text-anchor="middle">S</text>
+  <text class="kutub" x="135" y="117" text-anchor="middle">U</text>
+  <path class="vektor" d="M50,160 H150" marker-end="url(#panah)"/>
+  <text class="label" x="100" y="184" text-anchor="middle">mendekat</text>
+
+  <!-- Kutub induksi -->
+  <rect class="induksi" x="214" y="94" width="30" height="32" rx="4"/>
+  <text class="kutub" x="229" y="117" text-anchor="middle">U</text>
+
+  <!-- Kumparan -->
+  <ellipse class="lilitan" cx="270" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="298" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="326" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="354" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="382" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="410" cy="110" rx="10" ry="40"/>
+  <ellipse class="lilitan" cx="438" cy="110" rx="10" ry="40"/>
+  <path class="lilitan" d="M270,70 H438 M270,150 H438" stroke-dasharray="4 4" stroke-width="1.5"/>
+
+  <!-- Galvanometer -->
+  <path class="kabel" d="M270,150 V215 H333 M377,215 H438 V150"/>
+  <circle class="galvano" cx="355" cy="215" r="22"/>
+  <path class="vektor" d="M355,228 L366,203" stroke-width="2.5"/>
+  <text class="label" x="355" y="252" text-anchor="middle">G</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Percobaan efek fotolistrik. Di dalam tabung hampa udara terdapat katode logam di kiri dan anode di kanan. Cahaya berfrekuensi f menyinari katode sehingga elektron foto terlepas dan bergerak menuju anode. Katode dan anode dihubungkan ke sumber tegangan V dan amperemeter A yang mencatat arus foto">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .tabung { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .katode { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; }
+      .anode { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .cahaya { stroke: #FF6B00; stroke-width: 4; fill: none; }
+      .elektron { fill: #1A1A1A; }
+      .gerak { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .meter { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Tabung hampa -->
+  <rect class="tabung" x="120" y="40" width="320" height="130" rx="50"/>
+  <text class="kecil" x="280" y="160" text-anchor="middle">tabung hampa</text>
+
+  <!-- Cahaya -->
+  <text class="label" x="20" y="28">cahaya (f)</text>
+  <path class="cahaya" d="M36,42 L144,82" marker-end="url(#panah-oranye)"/>
+  <path class="cahaya" d="M36,72 L144,102" marker-end="url(#panah-oranye)"/>
+  <path class="cahaya" d="M36,102 L144,122" marker-end="url(#panah-oranye)"/>
+
+  <!-- Elektrode -->
+  <rect class="katode" x="150" y="70" width="12" height="70"/>
+  <rect class="anode" x="398" y="70" width="12" height="70"/>
+
+  <!-- Elektron foto -->
+  <text class="kecil" x="280" y="72" text-anchor="middle">elektron foto</text>
+  <circle class="elektron" cx="210" cy="92" r="5"/><path class="gerak" d="M218,92 H246" marker-end="url(#panah)"/>
+  <circle class="elektron" cx="275" cy="112" r="5"/><path class="gerak" d="M283,112 H311" marker-end="url(#panah)"/>
+  <circle class="elektron" cx="340" cy="96" r="5"/><path class="gerak" d="M348,96 H376" marker-end="url(#panah)"/>
+
+  <!-- Rangkaian -->
+  <path class="kabel" d="M156,140 V240 H240 M254,240 H324 M356,240 H404 V140"/>
+  <path class="kabel" d="M240,230 V250" stroke-width="5"/>
+  <path class="kabel" d="M254,222 V258"/>
+  <text class="label" x="247" y="214" text-anchor="middle">V</text>
+  <circle class="meter" cx="340" cy="240" r="16"/>
+  <text class="label" x="340" y="246" text-anchor="middle">A</text>
+  <text class="label" x="148" y="205" text-anchor="end">katode</text>
+  <text class="label" x="412" y="205">anode</text>
+</svg>

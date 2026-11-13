@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Grafik energi ikat per nukleon terhadap nomor massa A. Grafik naik tajam pada inti ringan, dengan helium-4 sekitar 7,1 MeV, mencapai puncak sekitar 8,8 MeV di sekitar besi-56, lalu turun perlahan sampai sekitar 7,6 MeV untuk uranium-235. Inti ringan melepas energi jika bergabung (fusi), dan inti berat melepas energi jika membelah (fisi), karena keduanya bergerak ke arah puncak">
+  <defs>
+    <style>
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .abu { font: 600 12px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumbu { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kurva { stroke: #1A1A1A; stroke-width: 3.5; fill: none; stroke-linejoin: round; }
+      .arah { stroke: #FF6B00; stroke-width: 5; fill: none; }
+      .titik { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Sumbu -->
+  <path class="sumbu" d="M70,230 H525" marker-end="url(#panah)" stroke-width="2.5"/>
+  <path class="sumbu" d="M70,230 V22" marker-end="url(#panah)" stroke-width="2.5"/>
+  <text class="label" x="76" y="24">E ikat/nukleon (MeV)</text>
+  <text class="label" x="525" y="270" text-anchor="end">nomor massa A</text>
+  <path class="sumbu" d="M158.0,230 v5"/><text class="abu" x="158.0" y="250" text-anchor="middle">50</text><path class="sumbu" d="M246.0,230 v5"/><text class="abu" x="246.0" y="250" text-anchor="middle">100</text><path class="sumbu" d="M334.0,230 v5"/><text class="abu" x="334.0" y="250" text-anchor="middle">150</text><path class="sumbu" d="M422.0,230 v5"/><text class="abu" x="422.0" y="250" text-anchor="middle">200</text>
+  <path class="sumbu" d="M70,187.8 h-5"/><text class="abu" x="61" y="191.8" text-anchor="end">2</text><path class="sumbu" d="M70,145.6 h-5"/><text class="abu" x="61" y="149.6" text-anchor="end">4</text><path class="sumbu" d="M70,103.3 h-5"/><text class="abu" x="61" y="107.3" text-anchor="end">6</text><path class="sumbu" d="M70,61.1 h-5"/><text class="abu" x="61" y="65.1" text-anchor="end">8</text>
+
+  <!-- Kurva -->
+  <polyline class="kurva" points="73.5,206.6 75.3,175.7 77.0,80.7 80.6,117.5 82.3,111.6 85.8,93.6 91.1,67.9 98.2,61.5 105.2,60.5 112.2,57.4 119.3,53.8 126.3,51.2 133.4,49.2 140.4,47.8 147.4,46.8 154.5,46.0 161.5,45.5 168.6,45.2 175.6,45.1 182.6,45.0 189.7,45.1 196.7,45.3 203.8,45.5 210.8,45.8 217.8,46.1 224.9,46.5 231.9,47.0 239.0,47.4 246.0,47.9 253.0,48.4 260.1,49.0 267.1,49.5 274.2,50.1 281.2,50.7 288.2,51.3 295.3,51.9 302.3,52.5 309.4,53.2 316.4,53.8 323.4,54.4 330.5,55.1 337.5,55.7 344.6,56.4 351.6,57.0 358.6,57.7 365.7,58.3 372.7,59.0 379.8,59.6 386.8,60.3 393.8,60.9 400.9,61.6 407.9,62.2 415.0,62.9 422.0,63.5 429.0,64.2 436.1,64.8 443.1,65.4 450.2,66.1 457.2,66.7 464.2,67.4 471.3,68.0 478.3,68.6 485.4,69.2 492.4,69.9"/>
+
+  <!-- Titik penting -->
+  <circle class="titik" cx="77.0" cy="80.7" r="5"/>
+  <path class="sumbu" d="M82,86 L98,98" stroke-width="1.5"/><text class="kecil" x="100" y="106">⁴He</text>
+  <circle class="titik" cx="168.6" cy="44.4" r="5"/>
+  <text class="kecil" x="168.6" y="70" text-anchor="middle">⁵⁶Fe (paling stabil)</text>
+  <circle class="titik" cx="483.6" cy="69.8" r="5"/>
+  <text class="kecil" x="483.6" y="57.8" text-anchor="middle">²³⁵U</text>
+
+  <!-- Arah fusi dan fisi -->
+  <path class="arah" d="M94.6,132.9 L147.4,90.7" marker-end="url(#panah-oranye)"/>
+  <text class="kecil" x="122.8" y="162.4">fusi</text>
+  <path class="arah" d="M466.0,97.0 L334.0,80.1" marker-end="url(#panah-oranye)"/>
+  <text class="kecil" x="404.4" y="116.0" text-anchor="middle">fisi</text>
+</svg>

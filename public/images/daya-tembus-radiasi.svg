@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Daya tembus tiga jenis radiasi dari sebuah sumber radioaktif. Sinar alfa sudah tertahan oleh selembar kertas. Sinar beta menembus kertas tetapi tertahan oleh lempeng aluminium setebal beberapa milimeter. Sinar gamma menembus kertas dan aluminium, lalu sangat dilemahkan oleh lapisan timbal yang tebal">
+  <defs>
+    <style>
+      .label { font: 700 18px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .sumber { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .alfa { stroke: #FF6B00; stroke-width: 6; fill: none; }
+      .beta { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .gamma { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .gamma-lemah { stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+      .kertas { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2; }
+      .aluminium { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2; }
+      .timbal { fill: #94A3B8; stroke: #1A1A1A; stroke-width: 2; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Sumber -->
+  <rect class="sumber" x="30" y="50" width="50" height="160" rx="4"/>
+  <text class="kecil" x="55" y="234" text-anchor="middle">sumber</text>
+
+  <!-- Sinar -->
+  <path class="alfa" d="M82,80 H196"/>
+  <text class="label" x="110" y="70">α</text>
+  <path class="beta" d="M82,130 H294"/>
+  <text class="label" x="110" y="120">β</text>
+  <path class="gamma" d="M82,180 q8,-10 16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0 t16,0"/>
+  <text class="label" x="110" y="166">γ</text>
+  <path class="gamma-lemah" d="M432,180 q8,-6 16,0 t16,0 t16,0 t16,0 t16,0 t16,0" marker-end="url(#panah)"/>
+
+  <!-- Penghalang -->
+  <rect class="kertas" x="198" y="40" width="6" height="175"/>
+  <rect class="aluminium" x="296" y="40" width="14" height="175"/>
+  <rect class="timbal" x="396" y="40" width="34" height="175"/>
+  <text class="kecil" x="201" y="234" text-anchor="middle">kertas</text>
+  <text class="kecil" x="303" y="234" text-anchor="middle">aluminium</text>
+  <text class="kecil" x="413" y="234" text-anchor="middle">timbal</text>
+</svg>

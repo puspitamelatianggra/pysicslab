@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-label="Transformator step-down. Inti besi lunak berbentuk bingkai persegi. Kumparan primer dengan lilitan Np di sisi kiri dihubungkan ke sumber tegangan bolak-balik Vp. Kumparan sekunder dengan lilitan Ns yang lebih sedikit di sisi kanan dihubungkan ke lampu dan menghasilkan tegangan Vs yang lebih kecil">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .inti { fill: #FFE8D6; stroke: #1A1A1A; stroke-width: 2.5; fill-rule: evenodd; }
+      .lilitan { stroke: #FF6B00; stroke-width: 5; fill: none; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .komponen { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <text class="kecil" x="280" y="28" text-anchor="middle">inti besi lunak</text>
+  <path class="inti" d="M170,40 H390 V220 H170 Z M210,80 V180 H350 V80 Z"/>
+
+  <!-- Kumparan primer (7 lilitan) -->
+  <path class="lilitan" d="M160,85 H220 M160,100 H220 M160,115 H220 M160,130 H220 M160,145 H220 M160,160 H220 M160,175 H220"/>
+  <path class="kabel" d="M160,85 H90 V110 M160,175 H90 V150"/>
+  <circle class="komponen" cx="90" cy="130" r="20"/>
+  <text class="label" x="90" y="136" text-anchor="middle">~</text>
+  <text class="label" x="58" y="135" text-anchor="end">V<tspan class="sub" dy="5">p</tspan></text>
+  <text class="label" x="135" y="135" text-anchor="middle">N<tspan class="sub" dy="5">p</tspan></text>
+
+  <!-- Kumparan sekunder (4 lilitan) -->
+  <path class="lilitan" d="M340,105 H400 M340,122 H400 M340,139 H400 M340,156 H400"/>
+  <path class="kabel" d="M400,105 H470 V112 M400,156 H470 V148"/>
+  <circle class="komponen" cx="470" cy="130" r="18"/>
+  <path class="kabel" d="M457,117 L483,143 M483,117 L457,143" stroke-width="2"/>
+  <text class="label" x="500" y="135">V<tspan class="sub" dy="5">s</tspan></text>
+  <text class="label" x="425" y="135" text-anchor="middle">N<tspan class="sub" dy="5">s</tspan></text>
+
+  <text class="kecil" x="190" y="246" text-anchor="middle">kumparan primer</text>
+  <text class="kecil" x="370" y="246" text-anchor="middle">kumparan sekunder</text>
+</svg>

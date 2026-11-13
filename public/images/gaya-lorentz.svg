@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Medan magnet B masuk bidang gambar, ditandai silang. Kiri, kawat berarus I ke kanan mengalami gaya Lorentz F ke atas. Kanan, muatan positif yang bergerak ke kanan dengan kecepatan v mengalami gaya F ke atas yang selalu tegak lurus kecepatan, sehingga lintasannya berbentuk lingkaran berjari-jari r">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .silang { stroke: #94A3B8; stroke-width: 2; }
+      .kawat { stroke: #1A1A1A; stroke-width: 6; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .gaya { stroke: #FF6B00; stroke-width: 5; fill: none; }
+      .lintasan { stroke: #1A1A1A; stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .positif { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .tanda { font: 700 18px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+    <g id="x"><path class="silang" d="M-6,-6 L6,6 M6,-6 L-6,6"/></g>
+  </defs>
+
+  <!-- ===== Kiri: kawat berarus ===== -->
+  <text class="judul" x="145" y="22" text-anchor="middle">Kawat berarus</text>
+  <use href="#x" x="45" y="60"/><use href="#x" x="95" y="60"/><use href="#x" x="195" y="60"/><use href="#x" x="245" y="60"/>
+  <use href="#x" x="45" y="110"/><use href="#x" x="95" y="110"/><use href="#x" x="195" y="110"/><use href="#x" x="245" y="110"/>
+  <use href="#x" x="45" y="200"/><use href="#x" x="95" y="200"/><use href="#x" x="145" y="200"/><use href="#x" x="195" y="200"/><use href="#x" x="245" y="200"/>
+  <use href="#x" x="45" y="240"/><use href="#x" x="95" y="240"/><use href="#x" x="145" y="240"/><use href="#x" x="195" y="240"/><use href="#x" x="245" y="240"/>
+  <path class="kawat" d="M25,155 H262" marker-end="url(#panah)"/>
+  <text class="label" x="250" y="180">I</text>
+  <path class="gaya" d="M145,148 V62" marker-end="url(#panah-oranye)"/>
+  <text class="label" x="160" y="80">F</text>
+
+  <!-- ===== Kanan: muatan bergerak ===== -->
+  <text class="judul" x="420" y="22" text-anchor="middle">Muatan bergerak</text>
+  <use href="#x" x="315" y="60"/><use href="#x" x="485" y="60"/><use href="#x" x="530" y="60"/>
+  <use href="#x" x="485" y="160"/><use href="#x" x="530" y="160"/>
+  <use href="#x" x="375" y="80"/><use href="#x" x="375" y="140"/>
+  <use href="#x" x="315" y="240"/><use href="#x" x="430" y="240"/><use href="#x" x="530" y="240"/>
+  <path class="lintasan" d="M340,205 A85,85 0 0 0 340,35"/>
+  <circle cx="340" cy="120" r="4" fill="#1A1A1A"/>
+  <path class="ukur" d="M340,120 H425"/>
+  <text class="label" x="382" y="114" text-anchor="middle">r</text>
+  <path class="vektor" d="M352,205 H412" marker-end="url(#panah)"/>
+  <text class="label" x="404" y="228">v</text>
+  <path class="gaya" d="M340,192 V140" marker-end="url(#panah-oranye)"/>
+  <text class="label" x="326" y="172" text-anchor="end">F</text>
+  <circle class="positif" cx="340" cy="205" r="12"/>
+  <text class="tanda" x="340" y="206" text-anchor="middle" dominant-baseline="middle">+</text>
+
+  <text class="kecil" x="280" y="274" text-anchor="middle">× medan magnet B masuk bidang gambar</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Kiri, hukum I Kirchhoff: arus I1 dan I2 masuk ke sebuah titik cabang, sedangkan arus I3 dan I4 keluar, sehingga I1 ditambah I2 sama dengan I3 ditambah I4. Kanan, hukum II Kirchhoff: rangkaian tertutup berisi sumber tegangan E dengan hambatan dalam r dan hambatan luar R. Arus I mengalir searah jarum jam, dan arah loop juga dipilih searah jarum jam">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .hambatan { fill: #FFF7ED; stroke: #1A1A1A; stroke-width: 2.5; }
+      .loop { stroke: #FF6B00; stroke-width: 4; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Hukum I ===== -->
+  <text class="judul" x="130" y="26" text-anchor="middle">Hukum I: titik cabang</text>
+  <path class="vektor" d="M40,135 H120" marker-end="url(#panah)"/>
+  <path class="vektor" d="M130,50 V125" marker-end="url(#panah)"/>
+  <path class="vektor" d="M140,135 H220" marker-end="url(#panah)"/>
+  <path class="vektor" d="M130,145 V215" marker-end="url(#panah)"/>
+  <circle cx="130" cy="135" r="6" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2"/>
+  <text class="label" x="70" y="124" text-anchor="middle">I<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="146" y="80">I<tspan class="sub" dy="5">2</tspan></text>
+  <text class="label" x="195" y="124" text-anchor="middle">I<tspan class="sub" dy="5">3</tspan></text>
+  <text class="label" x="146" y="200">I<tspan class="sub" dy="5">4</tspan></text>
+  <text class="rumus" x="130" y="252" text-anchor="middle">I₁ + I₂ = I₃ + I₄</text>
+
+  <!-- ===== Hukum II ===== -->
+  <text class="judul" x="410" y="26" text-anchor="middle">Hukum II: rangkaian tertutup</text>
+  <path class="kabel" d="M300,128 V60 H388 M432,60 H520 V220 H300 V142"/>
+  <rect class="hambatan" x="388" y="52" width="44" height="16"/>
+  <text class="label" x="410" y="44" text-anchor="middle">R</text>
+  <!-- Sumber tegangan: garis panjang = kutub positif -->
+  <path class="kabel" d="M282,128 H318"/>
+  <path class="kabel" d="M292,142 H308" stroke-width="5"/>
+  <text class="label" x="276" y="132" text-anchor="end">E</text>
+  <text class="kecil" x="276" y="152" text-anchor="end">r</text>
+  <text class="kecil" x="324" y="124">+</text>
+  <!-- Arah arus -->
+  <path class="vektor" d="M540,110 V170" marker-end="url(#panah)"/>
+  <text class="label" x="550" y="145">I</text>
+  <!-- Arah loop -->
+  <path class="loop" d="M382,118 A34,34 0 1 1 384,165" marker-end="url(#panah-oranye)"/>
+  <text class="kecil" x="412" y="145" text-anchor="middle">loop</text>
+  <text class="rumus" x="410" y="252" text-anchor="middle">ΣE + ΣIR = 0</text>
+</svg>

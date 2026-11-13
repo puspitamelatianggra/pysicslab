@@ -21,10 +21,25 @@
    │   ├── fluida-statis.ts                      (Bab 1-12)
    │   └── fluida-dinamis.ts                     (Bab 1-13)
    ├── listrik-magnet/
-   │   └── listrik-statis.ts                     (Bab 2-1)
-   └── termodinamika/
-       ├── suhu-pemuaian.ts                      (Bab 3-1)
-       └── kalor-perubahan-wujud.ts              (Bab 3-2)
+   │   ├── listrik-statis.ts                     (Bab 2-1)
+   │   ├── rangkaian-arus-searah.ts              (Bab 2-2)
+   │   ├── medan-magnet.ts                       (Bab 2-3)
+   │   ├── induksi-elektromagnetik.ts            (Bab 2-4)
+   │   └── arus-bolak-balik.ts                   (Bab 2-5)
+   ├── termodinamika/
+   │   ├── suhu-pemuaian.ts                      (Bab 3-1)
+   │   ├── kalor-perubahan-wujud.ts              (Bab 3-2)
+   │   ├── perpindahan-kalor.ts                  (Bab 3-3)
+   │   ├── teori-kinetik-gas.ts                  (Bab 3-4)
+   │   └── hukum-termodinamika.ts                (Bab 3-5)
+   ├── fisika-modern/
+   │   ├── relativitas-khusus.ts                 (Bab 4-1)
+   │   ├── radiasi-benda-hitam.ts                (Bab 4-2)
+   │   └── dualisme-gelombang-partikel.ts        (Bab 4-3)
+   └── fisika-atom/
+       ├── model-atom.ts                         (Bab 5-1)
+       ├── inti-atom.ts                          (Bab 5-2)
+       └── radioaktivitas.ts                     (Bab 5-3)
 
    Menambah bab baru:
    1. Salin salah satu file bab, ganti nama file & nama variabelnya.
@@ -52,10 +67,27 @@ import { fluidaDinamis } from './physics/mekanika/fluida-dinamis';
 
 // ====== Listrik & Magnet ======
 import { listrikStatis } from './physics/listrik-magnet/listrik-statis';
+import { rangkaianArusSearah } from './physics/listrik-magnet/rangkaian-arus-searah';
+import { medanMagnet } from './physics/listrik-magnet/medan-magnet';
+import { induksiElektromagnetik } from './physics/listrik-magnet/induksi-elektromagnetik';
+import { arusBolakBalik } from './physics/listrik-magnet/arus-bolak-balik';
 
 // ====== Termodinamika ======
 import { suhuPemuaian } from './physics/termodinamika/suhu-pemuaian';
 import { kalorPerubahanWujud } from './physics/termodinamika/kalor-perubahan-wujud';
+import { perpindahanKalor } from './physics/termodinamika/perpindahan-kalor';
+import { teoriKinetikGas } from './physics/termodinamika/teori-kinetik-gas';
+import { hukumTermodinamika } from './physics/termodinamika/hukum-termodinamika';
+
+// ====== Fisika Modern ======
+import { relativitasKhusus } from './physics/fisika-modern/relativitas-khusus';
+import { radiasiBendaHitam } from './physics/fisika-modern/radiasi-benda-hitam';
+import { dualismeGelombangPartikel } from './physics/fisika-modern/dualisme-gelombang-partikel';
+
+// ====== Fisika Atom dan Inti ======
+import { modelAtom } from './physics/fisika-atom/model-atom';
+import { intiAtom } from './physics/fisika-atom/inti-atom';
+import { radioaktivitas } from './physics/fisika-atom/radioaktivitas';
 
 export const physicsMaterials: Material[] = [
   {
@@ -83,22 +115,53 @@ export const physicsMaterials: Material[] = [
   {
     id: 2,
     title: "Listrik & Magnet",
-    description: "Pelajari muatan listrik, arus, tegangan, rangkaian, dan medan magnet.",
+    description: "Pelajari listrik statis, rangkaian arus searah, medan magnet, induksi elektromagnetik, dan listrik arus bolak-balik.",
     icon: "⚡",
     color: "bg-main",
     chapters: [
       listrikStatis,
+      rangkaianArusSearah,
+      medanMagnet,
+      induksiElektromagnetik,
+      arusBolakBalik,
     ]
   },
   {
     id: 3,
     title: "Termodinamika",
-    description: "Pelajari suhu, pemuaian, kalor, perubahan wujud zat, hingga teori kinetik gas dan hukum termodinamika.",
+    description: "Pelajari suhu, pemuaian, kalor, perpindahan kalor, teori kinetik gas, dan hukum termodinamika pada mesin kalor.",
     icon: "🌡️",
     color: "bg-main",
     chapters: [
       suhuPemuaian,
       kalorPerubahanWujud,
+      perpindahanKalor,
+      teoriKinetikGas,
+      hukumTermodinamika,
+    ]
+  },
+  {
+    id: 4,
+    title: "Fisika Modern",
+    description: "Pelajari teori relativitas khusus, radiasi benda hitam, dan gejala kuantum seperti efek fotolistrik dan gelombang de Broglie.",
+    icon: "💡",
+    color: "bg-main",
+    chapters: [
+      relativitasKhusus,
+      radiasiBendaHitam,
+      dualismeGelombangPartikel,
+    ]
+  },
+  {
+    id: 5,
+    title: "Fisika Atom dan Inti",
+    description: "Pelajari perkembangan model atom, spektrum hidrogen, inti atom, reaksi fisi dan fusi, serta radioaktivitas dan pemanfaatannya.",
+    icon: "⚛️",
+    color: "bg-main",
+    chapters: [
+      modelAtom,
+      intiAtom,
+      radioaktivitas,
     ]
   }
 ];

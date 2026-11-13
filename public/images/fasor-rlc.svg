@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 250" role="img" aria-label="Diagram fasor tegangan V dan arus I pada tiga komponen. Resistor: V dan I searah atau sefase. Induktor: fasor V tegak lurus ke atas, mendahului I sebesar 90 derajat. Kapasitor: fasor V tegak lurus ke bawah, sehingga I mendahului V sebesar 90 derajat">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .arus { stroke: #1A1A1A; stroke-width: 3; fill: none; }
+      .tegangan { stroke: #FF6B00; stroke-width: 5; fill: none; }
+      .siku { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Resistor ===== -->
+  <text class="judul" x="95" y="28" text-anchor="middle">Resistor</text>
+  <path class="tegangan" d="M30,130 H160" marker-end="url(#panah-oranye)"/>
+  <path class="arus" d="M30,130 H105" marker-end="url(#panah)"/>
+  <text class="label" x="158" y="116" text-anchor="middle">V</text>
+  <text class="label" x="102" y="154" text-anchor="middle">I</text>
+  <text class="kecil" x="95" y="210" text-anchor="middle">V dan I sefase</text>
+  <text class="kecil" x="95" y="230" text-anchor="middle">hambatan R</text>
+
+  <!-- ===== Induktor ===== -->
+  <text class="judul" x="285" y="28" text-anchor="middle">Induktor</text>
+  <path class="arus" d="M235,170 H335" marker-end="url(#panah)"/>
+  <path class="tegangan" d="M235,170 V58" marker-end="url(#panah-oranye)"/>
+  <path class="siku" d="M235,156 H249 V170"/>
+  <text class="label" x="252" y="70">V</text>
+  <text class="label" x="332" y="192" text-anchor="middle">I</text>
+  <text class="kecil" x="285" y="210" text-anchor="middle">V mendahului I 90°</text>
+  <text class="kecil" x="285" y="230" text-anchor="middle">X<tspan dy="4" font-size="10">L</tspan><tspan dy="-4"> = ωL</tspan></text>
+
+  <!-- ===== Kapasitor ===== -->
+  <text class="judul" x="475" y="28" text-anchor="middle">Kapasitor</text>
+  <path class="arus" d="M425,70 H525" marker-end="url(#panah)"/>
+  <path class="tegangan" d="M425,70 V178" marker-end="url(#panah-oranye)"/>
+  <path class="siku" d="M425,84 H439 V70"/>
+  <text class="label" x="442" y="176">V</text>
+  <text class="label" x="522" y="60" text-anchor="middle">I</text>
+  <text class="kecil" x="475" y="210" text-anchor="middle">I mendahului V 90°</text>
+  <text class="kecil" x="475" y="230" text-anchor="middle">X<tspan dy="4" font-size="10">C</tspan><tspan dy="-4"> = 1/(ωC)</tspan></text>
+</svg>

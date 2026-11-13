@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" role="img" aria-label="Reaksi fisi uranium-235. Sebuah neutron lambat ditangkap inti uranium-235 sehingga terbentuk inti uranium-236 yang tidak stabil. Inti ini membelah menjadi barium-141 dan kripton-92, sambil melepaskan tiga neutron baru dan energi sekitar 200 MeV. Neutron-neutron baru dapat memicu fisi berikutnya">
+  <defs>
+    <style>
+      .label { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 700 12px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .abu { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .neutron { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2; }
+      .berat { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .goyang { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; stroke-dasharray: 6 3; }
+      .pecahan { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .gerak { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Neutron datang -->
+  <circle class="neutron" cx="34" cy="115" r="10"/>
+  <text class="kecil" x="34" y="119" text-anchor="middle">n</text>
+  <path class="gerak" d="M46,115 H98" marker-end="url(#panah)"/>
+
+  <!-- U-235 -->
+  <circle class="berat" cx="140" cy="115" r="34"/>
+  <text class="label" x="140" y="120" text-anchor="middle">²³⁵U</text>
+  <path class="gerak" d="M180,115 H226" marker-end="url(#panah)"/>
+
+  <!-- U-236 tidak stabil -->
+  <ellipse class="goyang" cx="272" cy="115" rx="40" ry="30"/>
+  <text class="label" x="272" y="120" text-anchor="middle">²³⁶U*</text>
+  <text class="abu" x="272" y="168" text-anchor="middle">tidak stabil</text>
+
+  <!-- Pecahan -->
+  <path class="gerak" d="M308,98 L396,70" marker-end="url(#panah)"/>
+  <path class="gerak" d="M308,132 L400,164" marker-end="url(#panah)"/>
+  <circle class="pecahan" cx="428" cy="60" r="28"/>
+  <text class="label" x="428" y="65" text-anchor="middle">¹⁴¹Ba</text>
+  <circle class="pecahan" cx="428" cy="172" r="24"/>
+  <text class="label" x="428" y="177" text-anchor="middle">⁹²Kr</text>
+
+  <!-- Tiga neutron baru -->
+  <path class="gerak" d="M314,110 L494,96" marker-end="url(#panah)"/>
+  <path class="gerak" d="M314,116 L494,118" marker-end="url(#panah)"/>
+  <path class="gerak" d="M314,122 L494,140" marker-end="url(#panah)"/>
+  <circle class="neutron" cx="512" cy="94" r="10"/><text class="kecil" x="512" y="98" text-anchor="middle">n</text>
+  <circle class="neutron" cx="512" cy="118" r="10"/><text class="kecil" x="512" y="122" text-anchor="middle">n</text>
+  <circle class="neutron" cx="512" cy="142" r="10"/><text class="kecil" x="512" y="146" text-anchor="middle">n</text>
+
+  <text class="label" x="280" y="214" text-anchor="middle">energi yang dilepaskan ≈ 200 MeV</text>
+</svg>

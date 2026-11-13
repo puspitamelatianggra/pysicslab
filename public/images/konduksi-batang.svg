@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" role="img" aria-label="Batang logam sepanjang L dengan luas penampang A menghubungkan sumber panas bersuhu T1 di kiri dan benda dingin bersuhu T2 di kanan. Kalor mengalir secara konduksi melalui batang dari ujung panas ke ujung dingin dengan laju H">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .panas { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .dingin { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .batang { fill: url(#gradasi); stroke: #1A1A1A; stroke-width: 2.5; }
+      .penampang { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .vektor { stroke: #1A1A1A; stroke-width: 4; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <linearGradient id="gradasi" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#FF6B00" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Sumber panas dan benda dingin -->
+  <rect class="panas" x="30" y="50" width="60" height="120"/>
+  <rect class="dingin" x="470" y="50" width="60" height="120"/>
+  <text class="label" x="60" y="38" text-anchor="middle">T<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="500" y="38" text-anchor="middle">T<tspan class="sub" dy="5">2</tspan></text>
+  <text class="kecil" x="60" y="192" text-anchor="middle">panas</text>
+  <text class="kecil" x="500" y="192" text-anchor="middle">dingin</text>
+
+  <!-- Batang -->
+  <rect class="batang" x="90" y="95" width="380" height="30"/>
+  <ellipse class="penampang" cx="96" cy="110" rx="6" ry="15"/>
+  <path class="ukur" d="M100,124 L130,150"/>
+  <text class="label" x="134" y="162">A</text>
+
+  <!-- Aliran kalor -->
+  <path class="vektor" d="M180,72 H380" marker-end="url(#panah)"/>
+  <text class="label" x="280" y="62" text-anchor="middle">H = Q/t</text>
+
+  <!-- Panjang batang -->
+  <path class="ukur" d="M92,178 H468" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="280" y="200" text-anchor="middle">L</text>
+</svg>

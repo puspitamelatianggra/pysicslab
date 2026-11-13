@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" role="img" aria-label="Jam cahaya berupa dua cermin sejajar berjarak L. Kiri, jam diam: cahaya bergerak lurus naik-turun, sehingga satu detak memerlukan waktu delta t nol sama dengan 2L per c. Kanan, jam yang sama bergerak ke kanan dengan kecepatan v menurut pengamat di tanah: cahaya menempuh lintasan miring yang lebih panjang, sehingga satu detak memerlukan waktu delta t yang lebih lama">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 600 14px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .rumus { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .cermin { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2; }
+      .cermin-lalu { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 1.5; stroke-dasharray: 4 3; }
+      .cahaya { stroke: #FF6B00; stroke-width: 4; fill: none; }
+      .vektor { stroke: #1A1A1A; stroke-width: 3.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Jam diam ===== -->
+  <text class="judul" x="105" y="20" text-anchor="middle">Jam diam</text>
+  <rect class="cermin" x="65" y="46" width="80" height="8"/>
+  <rect class="cermin" x="65" y="210" width="80" height="8"/>
+  <path class="cahaya" d="M98,208 V60" marker-end="url(#panah-oranye)"/>
+  <path class="cahaya" d="M112,56 V204" marker-end="url(#panah-oranye)"/>
+  <path class="ukur" d="M45,56 V208" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="36" y="137" text-anchor="end">L</text>
+  <text class="rumus" x="105" y="250" text-anchor="middle">Δt₀ = 2L/c</text>
+
+  <!-- ===== Jam bergerak ===== -->
+  <text class="judul" x="380" y="20" text-anchor="middle">Jam bergerak, dilihat dari tanah</text>
+  <path class="vektor" d="M410,36 H470" marker-end="url(#panah)"/>
+  <text class="label" x="478" y="41">v</text>
+  <!-- posisi awal dan tengah (bayangan) -->
+  <rect class="cermin-lalu" x="230" y="46" width="60" height="8"/>
+  <rect class="cermin-lalu" x="230" y="210" width="60" height="8"/>
+  <rect class="cermin-lalu" x="350" y="46" width="60" height="8"/>
+  <rect class="cermin-lalu" x="350" y="210" width="60" height="8"/>
+  <!-- posisi akhir -->
+  <rect class="cermin" x="470" y="46" width="60" height="8"/>
+  <rect class="cermin" x="470" y="210" width="60" height="8"/>
+  <!-- lintasan cahaya -->
+  <path class="cahaya" d="M260,208 L377,60" marker-end="url(#panah-oranye)"/>
+  <path class="cahaya" d="M383,60 L497,204" marker-end="url(#panah-oranye)"/>
+  <text class="label" x="300" y="122" text-anchor="end">c·Δt/2</text>
+  <path class="ukur" d="M262,234 H498" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="rumus" x="380" y="256" text-anchor="middle">v·Δt</text>
+</svg>

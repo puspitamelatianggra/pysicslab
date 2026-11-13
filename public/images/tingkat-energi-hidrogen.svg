@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="Diagram tingkat energi atom hidrogen, tidak berskala. Tingkat n sama dengan 1 berenergi minus 13,6 eV, n sama dengan 2 minus 3,4 eV, n sama dengan 3 minus 1,51 eV, n sama dengan 4 minus 0,85 eV, dan n tak hingga 0 eV. Deret Lyman adalah transisi ke n sama dengan 1 dan berada di daerah ultraungu. Deret Balmer adalah transisi ke n sama dengan 2 dan berada di daerah cahaya tampak. Deret Paschen adalah transisi ke n sama dengan 3 dan berada di daerah inframerah">
+  <defs>
+    <style>
+      .label { font: 700 14px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .energi { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .deret { font: 700 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .tingkat { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .tingkat-tipis { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+      .lyman { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .balmer { stroke: #FF6B00; stroke-width: 3.5; fill: none; }
+      .paschen { stroke: #475569; stroke-width: 2.5; stroke-dasharray: 5 3; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+    <marker id="panah-oranye" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF6B00" stroke="#1A1A1A" stroke-width="1"/>
+    </marker>
+    <marker id="panah-abu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Tingkat energi -->
+  <path class="tingkat-tipis" d="M110,35 H450" stroke-dasharray="6 4"/>
+  <path class="tingkat-tipis" d="M110,52 H450 M110,64 H450"/>
+  <path class="tingkat" d="M110,80 H450 M110,105 H450 M110,150 H450 M110,250 H450"/>
+  <text class="label" x="100" y="40" text-anchor="end">n = ∞</text>
+  <text class="label" x="100" y="85" text-anchor="end">n = 4</text>
+  <text class="label" x="100" y="110" text-anchor="end">n = 3</text>
+  <text class="label" x="100" y="155" text-anchor="end">n = 2</text>
+  <text class="label" x="100" y="255" text-anchor="end">n = 1</text>
+  <text class="energi" x="458" y="40">0 eV</text>
+  <text class="energi" x="458" y="85">−0,85 eV</text>
+  <text class="energi" x="458" y="110">−1,51 eV</text>
+  <text class="energi" x="458" y="155">−3,4 eV</text>
+  <text class="energi" x="458" y="255">−13,6 eV</text>
+
+  <!-- Lyman: ke n = 1 -->
+  <path class="lyman" d="M140,150 V246" marker-end="url(#panah)"/>
+  <path class="lyman" d="M160,105 V246" marker-end="url(#panah)"/>
+  <path class="lyman" d="M180,80 V246" marker-end="url(#panah)"/>
+  <text class="deret" x="192" y="210">Lyman</text>
+  <text class="energi" x="192" y="228">ultraungu</text>
+
+  <!-- Balmer: ke n = 2 -->
+  <path class="balmer" d="M265,105 V145" marker-end="url(#panah-oranye)"/>
+  <path class="balmer" d="M287,80 V145" marker-end="url(#panah-oranye)"/>
+  <path class="balmer" d="M309,64 V145" marker-end="url(#panah-oranye)"/>
+  <text class="deret" x="287" y="178" text-anchor="middle">Balmer</text>
+  <text class="energi" x="287" y="196" text-anchor="middle">cahaya tampak</text>
+
+  <!-- Paschen: ke n = 3 -->
+  <path class="paschen" d="M385,80 V101" marker-end="url(#panah-abu)"/>
+  <path class="paschen" d="M405,64 V101" marker-end="url(#panah-abu)"/>
+  <text class="deret" x="395" y="128" text-anchor="middle">Paschen</text>
+  <text class="energi" x="395" y="144" text-anchor="middle">inframerah</text>
+</svg>

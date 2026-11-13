@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-label="Kiri, mesin kalor: mesin menyerap kalor Q1 dari reservoir panas bersuhu T1, menghasilkan usaha W, dan membuang sisa kalor Q2 ke reservoir dingin bersuhu T2. Kanan, mesin pendingin: dengan usaha W dari luar, mesin menyerap kalor Q2 dari reservoir dingin dan membuang kalor Q1 ke reservoir panas">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .sub { font: 700 11px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .judul { font: 700 15px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .panas { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .dingin { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .mesin { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .aliran { stroke: #1A1A1A; stroke-width: 5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Mesin kalor ===== -->
+  <text class="judul" x="140" y="20" text-anchor="middle">Mesin kalor</text>
+  <rect class="panas" x="50" y="34" width="180" height="46" rx="4"/>
+  <text class="kecil" x="140" y="62" text-anchor="middle">reservoir panas T₁</text>
+  <circle class="mesin" cx="140" cy="160" r="34"/>
+  <text class="kecil" x="140" y="165" text-anchor="middle">mesin</text>
+  <rect class="dingin" x="50" y="240" width="180" height="46" rx="4"/>
+  <text class="kecil" x="140" y="268" text-anchor="middle">reservoir dingin T₂</text>
+  <path class="aliran" d="M140,82 V120" marker-end="url(#panah)"/>
+  <path class="aliran" d="M140,196 V234" marker-end="url(#panah)"/>
+  <path class="aliran" d="M176,160 H236" marker-end="url(#panah)"/>
+  <text class="label" x="154" y="108">Q<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="154" y="222">Q<tspan class="sub" dy="5">2</tspan></text>
+  <text class="label" x="206" y="148" text-anchor="middle">W</text>
+
+  <!-- ===== Mesin pendingin ===== -->
+  <text class="judul" x="410" y="20" text-anchor="middle">Mesin pendingin</text>
+  <rect class="panas" x="320" y="34" width="180" height="46" rx="4"/>
+  <text class="kecil" x="410" y="62" text-anchor="middle">reservoir panas T₁</text>
+  <circle class="mesin" cx="410" cy="160" r="34"/>
+  <text class="kecil" x="410" y="165" text-anchor="middle">mesin</text>
+  <rect class="dingin" x="320" y="240" width="180" height="46" rx="4"/>
+  <text class="kecil" x="410" y="268" text-anchor="middle">reservoir dingin T₂</text>
+  <path class="aliran" d="M410,124 V86" marker-end="url(#panah)"/>
+  <path class="aliran" d="M410,238 V200" marker-end="url(#panah)"/>
+  <path class="aliran" d="M510,160 H450" marker-end="url(#panah)"/>
+  <text class="label" x="424" y="110">Q<tspan class="sub" dy="5">1</tspan></text>
+  <text class="label" x="424" y="224">Q<tspan class="sub" dy="5">2</tspan></text>
+  <text class="label" x="482" y="148" text-anchor="middle">W</text>
+</svg>

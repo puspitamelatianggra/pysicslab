@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" role="img" aria-label="Panci berisi air dipanaskan di atas kompor. Konduksi: kalor merambat melalui dasar dan pegangan panci yang terbuat dari logam. Konveksi: air yang panas di dasar naik di bagian tengah, lalu air yang lebih dingin turun di bagian tepi, membentuk arus melingkar. Radiasi: api memancarkan panas ke samping tanpa perantara">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .panci { fill: none; stroke: #1A1A1A; stroke-width: 4; }
+      .air { fill: #FFE8D6; stroke: none; }
+      .pegangan { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .kompor { fill: #FFFFFF; stroke: #1A1A1A; stroke-width: 2.5; }
+      .api { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2; }
+      .konveksi { stroke: #1A1A1A; stroke-width: 2.5; stroke-dasharray: 7 4; fill: none; }
+      .radiasi { stroke: #FF6B00; stroke-width: 3; fill: none; }
+      .bantu { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <!-- Air dan panci -->
+  <rect class="air" x="172" y="110" width="216" height="98"/>
+  <path class="panci" d="M170,80 V210 H390 V80"/>
+  <rect class="pegangan" x="390" y="98" width="82" height="14" rx="4"/>
+
+  <!-- Arus konveksi -->
+  <path class="konveksi" d="M275,195 V132 Q275,122 262,122 H208 Q196,122 196,134 V182 Q196,195 208,195 H258" marker-end="url(#panah)"/>
+  <path class="konveksi" d="M285,195 V132 Q285,122 298,122 H352 Q364,122 364,134 V182 Q364,195 352,195 H302" marker-end="url(#panah)"/>
+
+  <!-- Api dan kompor -->
+  <path class="api" d="M225,238 C214,228 218,220 225,212 C232,220 236,228 225,238 Z"/>
+  <path class="api" d="M255,238 C244,228 248,220 255,212 C262,220 266,228 255,238 Z"/>
+  <path class="api" d="M285,238 C274,228 278,220 285,212 C292,220 296,228 285,238 Z"/>
+  <path class="api" d="M315,238 C304,228 308,220 315,212 C322,220 326,228 315,238 Z"/>
+  <path class="api" d="M345,238 C334,228 338,220 345,212 C352,220 356,228 345,238 Z"/>
+  <rect class="kompor" x="200" y="238" width="170" height="16"/>
+
+  <!-- Radiasi -->
+  <path class="radiasi" d="M195,214 q-8,-9 -16,0 t-16,0 t-16,0 t-16,0 t-16,0" marker-end="url(#panah)"/>
+  <path class="radiasi" d="M195,232 q-8,-9 -16,0 t-16,0 t-16,0 t-16,0 t-16,0" marker-end="url(#panah)"/>
+  <path class="radiasi" d="M195,250 q-8,-9 -16,0 t-16,0 t-16,0 t-16,0 t-16,0" marker-end="url(#panah)"/>
+  <text class="label" x="60" y="232" text-anchor="middle">radiasi</text>
+  <text class="kecil" x="60" y="250" text-anchor="middle">pancaran</text>
+
+  <!-- Label konduksi -->
+  <text class="label" x="478" y="111">konduksi</text>
+  <text class="kecil" x="478" y="129">lewat logam</text>
+
+  <!-- Label konveksi -->
+  <path class="bantu" d="M438,165 H368"/>
+  <text class="label" x="442" y="170">konveksi</text>
+  <text class="kecil" x="442" y="188">aliran air</text>
+</svg>

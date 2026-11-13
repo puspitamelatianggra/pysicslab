@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Kapasitor keping sejajar yang dihubungkan ke baterai bertegangan V. Keping kiri bermuatan positif dan keping kanan bermuatan negatif. Di antara kedua keping yang berjarak d terdapat medan listrik homogen E yang arahnya dari keping positif ke keping negatif. Setiap keping memiliki luas A">
+  <defs>
+    <style>
+      .label { font: 700 16px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .kecil { font: 600 13px "Space Grotesk", Arial, sans-serif; fill: #475569; }
+      .tanda { font: 700 18px "Space Grotesk", Arial, sans-serif; fill: #1A1A1A; }
+      .keping-pos { fill: #FF6B00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .keping-neg { fill: #C5FA00; stroke: #1A1A1A; stroke-width: 2.5; }
+      .medan { stroke: #1A1A1A; stroke-width: 2; fill: none; }
+      .kabel { stroke: #1A1A1A; stroke-width: 2.5; fill: none; }
+      .ukur { stroke: #1A1A1A; stroke-width: 1.5; fill: none; }
+    </style>
+    <marker id="panah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1A1A1A"/>
+    </marker>
+  </defs>
+
+  <text class="label" x="157" y="28" text-anchor="middle">A</text>
+  <text class="kecil" x="157" y="44" text-anchor="middle">(luas keping)</text>
+  <text class="label" x="247" y="40" text-anchor="middle">E</text>
+
+  <!-- Keping -->
+  <rect class="keping-pos" x="150" y="55" width="14" height="150"/>
+  <rect class="keping-neg" x="330" y="55" width="14" height="150"/>
+  <text class="tanda" x="134" y="80" text-anchor="middle">+</text>
+  <text class="tanda" x="134" y="120" text-anchor="middle">+</text>
+  <text class="tanda" x="134" y="160" text-anchor="middle">+</text>
+  <text class="tanda" x="134" y="200" text-anchor="middle">+</text>
+  <text class="tanda" x="360" y="80" text-anchor="middle">−</text>
+  <text class="tanda" x="360" y="120" text-anchor="middle">−</text>
+  <text class="tanda" x="360" y="160" text-anchor="middle">−</text>
+  <text class="tanda" x="360" y="200" text-anchor="middle">−</text>
+
+  <!-- Medan listrik homogen -->
+  <path class="medan" d="M168,72 H324" marker-end="url(#panah)"/>
+  <path class="medan" d="M168,104 H324" marker-end="url(#panah)"/>
+  <path class="medan" d="M168,136 H324" marker-end="url(#panah)"/>
+  <path class="medan" d="M168,168 H324" marker-end="url(#panah)"/>
+  <path class="medan" d="M168,196 H324" marker-end="url(#panah)"/>
+
+  <!-- Jarak keping -->
+  <path class="ukur" d="M166,222 H328" marker-start="url(#panah)" marker-end="url(#panah)"/>
+  <text class="label" x="247" y="216" text-anchor="middle">d</text>
+
+  <!-- Kabel dan baterai -->
+  <path class="kabel" d="M150,130 H70 V265 H240"/>
+  <path class="kabel" d="M254,265 H424 V130 H344"/>
+  <path class="kabel" d="M240,248 V282" stroke-width="2.5"/>
+  <path class="kabel" d="M254,256 V274" stroke-width="5"/>
+  <text class="label" x="247" y="242" text-anchor="middle">V</text>
+</svg>
