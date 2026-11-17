@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Benda panas dicelupkan ke air dingin dalam kalorimeter, kalor mengalir keluar dari benda ke air">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi sebagai penggaris -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M40,30 V170 M100,30 V170 M160,30 V170 M220,30 V170 M280,30 V170"/>
+    <path d="M20,60 H300 M20,110 H300 M20,160 H300"/>
+  </g>
+  <!-- selubung kalorimeter -->
+  <rect x="86" y="58" width="148" height="112" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="96" y="64" width="128" height="100" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- air dingin -->
+  <rect x="97" y="106" width="126" height="57" fill="#BFD1F7"/>
+  <path d="M97,106 H223" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- benda panas tergantung -->
+  <path d="M160,14 V92" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="136" y="92" width="48" height="52" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- panah kalor dari benda ke air -->
+  <path d="M192,118 H206" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M214,118 l-10,-7 v14 z" fill="#FF6B00"/>
+  <path d="M128,118 H114" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M106,118 l10,-7 v14 z" fill="#FF6B00"/>
+  <!-- termometer panas dan dingin -->
+  <rect x="34" y="50" width="14" height="96" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="38" y="62" width="6" height="86" fill="#FF6B00"/>
+  <circle cx="41" cy="156" r="10" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="272" y="50" width="14" height="96" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="276" y="112" width="6" height="36" fill="#2563EB"/>
+  <circle cx="279" cy="156" r="10" fill="#2563EB" stroke="#1A1A1A" stroke-width="2.5"/>
+</svg>

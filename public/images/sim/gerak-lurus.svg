@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Mobil bergerak lurus di lintasan bergaris meter dengan cap posisi yang jaraknya makin lebar">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi sebagai penggaris -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M40,40 V150 M90,40 V150 M140,40 V150 M190,40 V150 M240,40 V150 M290,40 V150"/>
+  </g>
+  <!-- lintasan -->
+  <path d="M20,120 H305" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- penggaris meter -->
+  <path d="M20,150 H305" stroke="#1A1A1A" stroke-width="2"/>
+  <path d="M40,150 v8 M90,150 v8 M140,150 v8 M190,150 v8 M240,150 v8 M290,150 v8" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- cap posisi tiap detik, jaraknya melebar -->
+  <g stroke="#1A1A1A" stroke-width="2">
+    <path d="M46,113 v14 M66,113 v14 M96,113 v14 M136,113 v14 M186,113 v14"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5">
+    <circle cx="46" cy="120" r="3.5"/><circle cx="66" cy="120" r="3.5"/><circle cx="96" cy="120" r="3.5"/>
+    <circle cx="136" cy="120" r="3.5"/><circle cx="186" cy="120" r="3.5"/>
+  </g>
+  <!-- mobil -->
+  <rect x="222" y="99" width="48" height="14" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="236" y="88" width="24" height="11" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <circle cx="234" cy="115" r="7" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <circle cx="258" cy="115" r="7" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- panah kecepatan (gelap) dan percepatan (oranye) -->
+  <path d="M246,70 H292" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M300,70 l-11,-6 v12 z" fill="#1A1A1A"/>
+  <path d="M246,50 H274" stroke="#FF6B00" stroke-width="3.5"/>
+  <path d="M282,50 l-11,-6 v12 z" fill="#FF6B00"/>
+</svg>

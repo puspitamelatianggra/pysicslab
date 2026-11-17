@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Muatan positif dan negatif dengan garis medan di antaranya dan panah gaya tarik-menarik">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M40,20 V180 M100,20 V180 M160,20 V180 M220,20 V180 M280,20 V180"/>
+    <path d="M20,40 H300 M20,100 H300 M20,160 H300"/>
+  </g>
+  <!-- garis medan dari + ke - -->
+  <g fill="none" stroke="#475569" stroke-width="2">
+    <path d="M110,100 H210"/>
+    <path d="M106,90 Q160,50 214,90"/>
+    <path d="M106,110 Q160,150 214,110"/>
+    <path d="M100,80 Q160,10 220,80"/>
+    <path d="M100,120 Q160,190 220,120"/>
+  </g>
+  <!-- panah medan kecil -->
+  <g fill="#1A1A1A">
+    <path d="M166,100 l-9,-5 v10 z"/>
+    <path d="M166,64 l-9,-4 l1,9 z" transform="rotate(8 166 64)"/>
+    <path d="M166,136 l-9,4 l1,-9 z" transform="rotate(-8 166 136)"/>
+  </g>
+  <!-- panah gaya: tarik-menarik -->
+  <path d="M82,54 H122" stroke="#1A1A1A" stroke-width="4"/>
+  <path d="M134,54 l-14,-8 v16 z" fill="#1A1A1A"/>
+  <path d="M238,146 H198" stroke="#1A1A1A" stroke-width="4"/>
+  <path d="M186,146 l14,-8 v16 z" fill="#1A1A1A"/>
+  <!-- muatan -->
+  <circle cx="80" cy="100" r="24" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M68,100 H92 M80,88 V112" stroke="#1A1A1A" stroke-width="4"/>
+  <circle cx="240" cy="100" r="24" fill="#2563EB" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M228,100 H252" stroke="#FFFFFF" stroke-width="4"/>
+  <!-- muatan uji -->
+  <circle cx="160" cy="168" r="8" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M160,168 V148" stroke="#1A1A1A" stroke-width="3"/>
+</svg>

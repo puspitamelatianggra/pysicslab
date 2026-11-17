@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Jam cahaya diam dengan foton naik turun tegak, dan jam di kereta yang melaju dengan foton menempuh jalur zigzag">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- jam diam -->
+  <rect x="48" y="18" width="36" height="7" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="48" y="72" width="36" height="7" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M66,70 V30" stroke="#FF6B00" stroke-width="3.5" stroke-dasharray="5 4"/>
+  <circle cx="66" cy="46" r="7" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- peron -->
+  <rect x="0" y="92" width="320" height="7" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- jam di kereta -->
+  <rect x="150" y="110" width="36" height="7" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="150" y="160" width="36" height="7" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- jejak zigzag -->
+  <path d="M30,160 L72,114 L114,160 L156,114 L198,160" fill="none" stroke="#FF6B00" stroke-width="3"/>
+  <circle cx="198" cy="160" r="7" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- kereta: panjang diam putus-putus, panjang teramati padat -->
+  <rect x="80" y="174" width="190" height="16" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="124" y="174" width="106" height="16" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M14,195 H306" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- panah kecepatan -->
+  <path d="M236,142 H284" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M294,142 l-12,-7 v14 z" fill="#1A1A1A"/>
+</svg>

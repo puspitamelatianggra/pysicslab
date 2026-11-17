@@ -19,6 +19,10 @@
     --accent: #FF6B00;
     --accent-soft: #FFE8D6;
     --muted: #475569;
+
+    /* Khusus panggung simulasi (src/simulations): biru = dingin / muatan negatif, abu = garis kisi */
+    --sim-biru: #2563EB;
+    --sim-abu: #DDD8CF;
 }
 
 @theme inline {
@@ -33,6 +37,8 @@
     --color-accent: var(--accent);
     --color-accent-soft: var(--accent-soft);
     --color-muted: var(--muted);
+    --color-sim-biru: var(--sim-biru);
+    --color-sim-abu: var(--sim-abu);
 
     --spacing-boxShadowX: 4px;
     --spacing-boxShadowY: 4px;
@@ -177,6 +183,90 @@ h6 {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Semua kontrol yang bisa ditekan memakai kursor tangan; yang nonaktif memakai kursor larangan */
+button,
+[role="button"],
+[role="switch"],
+summary,
+select,
+label[for] {
+    cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+    cursor: not-allowed;
+}
+
+/* ============ SIMULASI (src/simulations) ============ */
+
+/* Slider pengatur besaran: rel tebal bergaris gelap, tombol geser kotak oranye */
+.sim-slider {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 44px; /* area sentuh minimum */
+    background: transparent;
+    cursor: pointer;
+    touch-action: pan-y;
+}
+
+.sim-slider::-webkit-slider-runnable-track {
+    height: 10px;
+    background: var(--background);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-base);
+}
+
+.sim-slider::-moz-range-track {
+    height: 6px;
+    background: var(--background);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-base);
+}
+
+.sim-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 26px;
+    margin-top: -10px;
+    background: var(--accent);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-base);
+    box-shadow: 2px 2px 0 0 var(--border);
+}
+
+.sim-slider::-moz-range-thumb {
+    width: 18px;
+    height: 22px;
+    background: var(--accent);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-base);
+    box-shadow: 2px 2px 0 0 var(--border);
+}
+
+.sim-slider:active::-webkit-slider-thumb {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.sim-slider:active::-moz-range-thumb {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.sim-slider:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+/* Rumus hidup di panel simulasi */
+.sim-rumus math {
+    font-size: 1.05rem;
+    margin: 0.35rem 0;
+    text-align: left;
 }
 
 /* ============ MATERI CONTENT STYLES ============ */

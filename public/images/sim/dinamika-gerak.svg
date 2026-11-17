@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Balok di bidang miring dengan diagram gaya: berat, gaya normal, gaya tarik, dan gaya gesek">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- tanah dan bidang miring -->
+  <path d="M0,170 H320 V200 H0 Z" fill="#FFF7ED"/>
+  <path d="M40,170 L250,170 L250,70 Z" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="miter"/>
+  <path d="M0,170 H320" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- balok, miring mengikuti bidang -->
+  <g transform="translate(140 108) rotate(-25.46)">
+    <rect x="-24" y="-17" width="48" height="34" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  </g>
+  <!-- berat w: lurus ke bawah -->
+  <g transform="translate(140 108) rotate(90)">
+    <path d="M0,0 H46" stroke="#1A1A1A" stroke-width="3.5"/>
+    <path d="M56,0 L44,-7 V7 Z" fill="#1A1A1A"/>
+  </g>
+  <!-- normal N: tegak lurus bidang -->
+  <g transform="translate(140 108) rotate(-115.46)">
+    <path d="M0,0 H50" stroke="#1A1A1A" stroke-width="3.5"/>
+    <path d="M60,0 L48,-7 V7 Z" fill="#1A1A1A"/>
+  </g>
+  <!-- tarik F: sejajar bidang, ke atas -->
+  <g transform="translate(140 108) rotate(-25.46)">
+    <path d="M0,0 H62" stroke="#FF6B00" stroke-width="3.5"/>
+    <path d="M72,0 L60,-7 V7 Z" fill="#FF6B00"/>
+  </g>
+  <!-- gesek f: melawan gerak, bekerja di permukaan -->
+  <g transform="translate(147 123) rotate(154.54)">
+    <path d="M0,0 H34" stroke="#2563EB" stroke-width="3.5"/>
+    <path d="M44,0 L32,-7 V7 Z" fill="#2563EB"/>
+  </g>
+</svg>

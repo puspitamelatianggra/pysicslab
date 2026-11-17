@@ -9,6 +9,7 @@ import PhysicsMaterials from './pages/PhysicsMaterials';
 import MathMaterials from './pages/MathMaterials';
 import MaterialDetail from './pages/MaterialDetail';
 import Lab from './pages/Lab';
+import LabSimulasi from './pages/LabSimulasi';
 import Quiz from './pages/Quiz';
 import Leaderboard from './pages/Leaderboard';
 import Login from './pages/Login';
@@ -88,6 +89,7 @@ function App() {
                             <Route path="/materials/physics/:id" element={<MaterialDetail />} />
                             <Route path="/materials/math/:id" element={<MaterialDetail />} />
                             <Route path="/lab" element={<Lab />} />
+                            <Route path="/lab/:slug" element={<LabSimulasi />} />
                             <Route path="/quiz" element={<Quiz />} />
                             <Route path="/leaderboard" element={<Leaderboard />} />
                             <Route path="/artikel" element={<ComingSoon title="Artikel" description="Artikel belajar sedang disiapkan. Segera hadir!" />} />
@@ -121,6 +123,7 @@ function App() {
                         <Route path="/materials/physics/:id" element={<MaterialDetail />} />
                         <Route path="/materials/math/:id" element={<MaterialDetail />} />
                         <Route path="/lab" element={<Lab />} />
+                        <Route path="/lab/:slug" element={<LabSimulasi />} />
                         <Route path="/quiz" element={
                             isLoggedIn ? <Quiz /> : <Navigate to="/login" replace />
                         } />

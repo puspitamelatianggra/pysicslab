@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Magnet batang bergerak masuk kumparan yang dihubungkan ke galvanometer dengan jarum menyimpang">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M40,20 V180 M100,20 V180 M160,20 V180 M220,20 V180 M280,20 V180"/>
+    <path d="M20,50 H300 M20,100 H300 M20,150 H300"/>
+  </g>
+  <!-- kawat ke galvanometer -->
+  <g fill="none" stroke="#1A1A1A" stroke-width="3">
+    <path d="M190,124 V142 H132 V168 H150"/>
+    <path d="M270,124 V142 H298 V168 H270"/>
+  </g>
+  <!-- magnet -->
+  <rect x="40" y="62" width="50" height="30" fill="#2563EB" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="90" y="62" width="50" height="30" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- panah gerak magnet -->
+  <path d="M60,44 H118" stroke="#1A1A1A" stroke-width="4"/>
+  <path d="M132,44 l-16,-8 v16 z" fill="#1A1A1A"/>
+  <!-- kumparan -->
+  <g fill="none" stroke="#1A1A1A" stroke-width="2.5">
+    <ellipse cx="190" cy="77" rx="7" ry="42"/>
+    <ellipse cx="206" cy="77" rx="7" ry="42"/>
+    <ellipse cx="222" cy="77" rx="7" ry="42"/>
+    <ellipse cx="238" cy="77" rx="7" ry="42"/>
+    <ellipse cx="254" cy="77" rx="7" ry="42"/>
+    <ellipse cx="270" cy="77" rx="7" ry="42"/>
+  </g>
+  <!-- galvanometer -->
+  <circle cx="210" cy="168" r="26" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M210,168 L226,148" stroke="#1A1A1A" stroke-width="3.5"/>
+  <circle cx="210" cy="168" r="5" fill="#1A1A1A"/>
+  <!-- panah arus -->
+  <path d="M132,150 V160" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M132,170 l-6,-11 h12 z" fill="#FF6B00"/>
+</svg>

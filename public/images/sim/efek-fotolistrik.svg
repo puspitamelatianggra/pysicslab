@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Cahaya menyinari pelat logam dalam tabung hampa, elektron lepas menuju pelat di seberang">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- tabung hampa -->
+  <rect x="30" y="60" width="260" height="90" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- katode dan anode -->
+  <rect x="60" y="76" width="12" height="58" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="248" y="76" width="12" height="58" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- rangkaian luar -->
+  <path d="M66,134 V176 H140 M180,176 H254 V134" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+  <circle cx="160" cy="176" r="16" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M160,176 l7,-8" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- sumber cahaya -->
+  <rect x="104" y="10" width="40" height="22" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="108" y="25" width="32" height="5" fill="#2563EB"/>
+  <!-- foton -->
+  <path d="M118,36 q4,-4 8,0 t8,0 t8,0 t8,0" fill="none" stroke="#1A1A1A" stroke-width="4.5" transform="rotate(62 118 36) translate(-12 4)"/>
+  <path d="M118,36 q4,-4 8,0 t8,0 t8,0 t8,0" fill="none" stroke="#2563EB" stroke-width="2.5" transform="rotate(62 118 36) translate(-12 4)"/>
+  <!-- elektron -->
+  <circle cx="96" cy="94" r="5" fill="#2563EB" stroke="#1A1A1A" stroke-width="2"/>
+  <circle cx="132" cy="110" r="5" fill="#2563EB" stroke="#1A1A1A" stroke-width="2"/>
+  <circle cx="176" cy="92" r="5" fill="#2563EB" stroke="#1A1A1A" stroke-width="2"/>
+  <circle cx="214" cy="116" r="5" fill="#2563EB" stroke="#1A1A1A" stroke-width="2"/>
+  <path d="M104,96 H118 M140,112 H158 M184,94 H200 M222,118 H236" stroke="#FF6B00" stroke-width="3.5"/>
+</svg>

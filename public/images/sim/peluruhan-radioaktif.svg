@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Kisi inti, sebagian oranye belum meluruh dan sebagian krem sudah meluruh, dengan kurva eksponensial menurun">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi inti 6 x 6 -->
+  <g stroke="#1A1A1A" stroke-width="1.5">
+    <g fill="#FF6B00">
+      <rect x="20" y="30" width="20" height="20"/><rect x="44" y="30" width="20" height="20"/><rect x="92" y="30" width="20" height="20"/>
+      <rect x="116" y="30" width="20" height="20"/>
+      <rect x="20" y="54" width="20" height="20"/><rect x="68" y="54" width="20" height="20"/><rect x="116" y="54" width="20" height="20"/>
+      <rect x="44" y="78" width="20" height="20"/><rect x="92" y="78" width="20" height="20"/>
+      <rect x="20" y="102" width="20" height="20"/><rect x="116" y="102" width="20" height="20"/>
+      <rect x="68" y="126" width="20" height="20"/>
+    </g>
+    <g fill="#FFF7ED" stroke="#475569">
+      <rect x="68" y="30" width="20" height="20"/>
+      <rect x="44" y="54" width="20" height="20"/><rect x="92" y="54" width="20" height="20"/>
+      <rect x="20" y="78" width="20" height="20"/><rect x="68" y="78" width="20" height="20"/><rect x="116" y="78" width="20" height="20"/>
+      <rect x="44" y="102" width="20" height="20"/><rect x="68" y="102" width="20" height="20"/><rect x="92" y="102" width="20" height="20"/>
+      <rect x="20" y="126" width="20" height="20"/><rect x="44" y="126" width="20" height="20"/><rect x="92" y="126" width="20" height="20"/><rect x="116" y="126" width="20" height="20"/>
+    </g>
+  </g>
+  <!-- grafik N terhadap t -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M200,60 H300 M200,100 H300 M200,140 H300"/>
+  </g>
+  <path d="M170,30 V170 H304" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <path d="M236,44 V170 M272,44 V170" stroke="#DDD8CF" stroke-width="2"/>
+  <path d="M170,44 C200,70 215,118 236,107 C252,100 262,138 272,140 C285,143 295,152 304,158" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 5" transform="translate(0 0)"/>
+  <path d="M170,44 L176,50 L182,55 L188,62 L194,64 L200,76 L206,80 L212,92 L218,96 L224,104 L230,112 L236,110 L242,124 L248,128 L254,134 L260,138 L266,140 L272,144 L280,150 L290,155 L304,160" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <circle cx="236" cy="110" r="6" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="20" y="162" width="46" height="18" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2"/>
+</svg>

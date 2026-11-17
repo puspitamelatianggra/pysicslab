@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link, useLocation, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, BookOpen, Lightbulb, Calculator, Play, CheckCircle, ArrowLeft, ExternalLink } from 'lucide-react';
 import { physicsMaterials } from '../data/physics-materials';
@@ -7,6 +7,7 @@ import { mathMaterials } from '../data/math-materials';
 import { completeChapter, getProgress } from '../utils/storage';
 import { completeChapterCloud, getCompletedChapters, isSupabaseConfigured } from '../utils/supabaseStorage';
 import { supabase } from '../lib/supabase';
+import { BIDANG, gambarSim, simUntukBab } from '../simulations/registry';
 
 export default function MaterialDetail() {
     const { id } = useParams();
@@ -17,7 +18,12 @@ export default function MaterialDetail() {
     const subjectPath = isPhysics ? '/materials/physics' : '/materials/math';
 
     const material = materials.find(m => m.id === Number(id));
-    const [activeChapter, setActiveChapter] = useState(0);
+    // Alamat boleh menyebut bab tujuan, misalnya #/materials/physics/1?bab=1-3 (dipakai tautan dari halaman simulasi)
+    const [searchParams] = useSearchParams();
+    const [activeChapter, setActiveChapter] = useState(() => {
+        const indeks = material?.chapters.findIndex(c => c.chapterId === searchParams.get('bab')) ?? -1;
+        return indeks >= 0 ? indeks : 0;
+    });
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
     const [completedChapters, setCompletedChapters] = useState<string[]>([]);
     const [showCompleteMessage, setShowCompleteMessage] = useState(false);
@@ -186,6 +192,32 @@ export default function MaterialDetail() {
                             }}
                             dangerouslySetInnerHTML={{ __html: chapter.content }}
                         />
+
+                        {/* Simulasi yang terkait dengan bab ini */}
+                        {simUntukBab(chapter.chapterId).map(sim => (
+                            <Link
+                                key={sim.slug}
+                                to={`/lab/${sim.slug}`}
+                                className="flex flex-col sm:flex-row items-stretch mb-6 bg-secondary-background border-2 border-border rounded-base overflow-hidden shadow-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-shadow-sm transition-all"
+                            >
+                                <img
+                                    src={gambarSim(sim.slug)}
+                                    alt=""
+                                    width={320}
+                                    height={200}
+                                    loading="lazy"
+                                    className="w-full sm:w-52 aspect-[16/10] object-cover border-b-2 sm:border-b-0 sm:border-r-2 border-border"
+                                />
+                                <div className="p-4 flex-1">
+                                    <p className="text-xs font-bold text-foreground mb-1">
+                                        <span className="bg-accent border-2 border-border rounded-base px-2 py-0.5">Coba simulasinya</span>
+                                        <span className="ml-2 text-muted font-semibold">{BIDANG[sim.bidang].label}</span>
+                                    </p>
+                                    <h3 className="text-lg font-bold text-foreground mt-2">{sim.judul}</h3>
+                                    <p className="text-sm text-muted">{sim.deskripsi}</p>
+                                </div>
+                            </Link>
+                        ))}
 
                         {/* Formula Box */}
                         {chapter.formula && (

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Bongkah es dalam bejana di atas pemanas, dengan grafik suhu terhadap kalor yang punya dua ruas mendatar">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi sebagai penggaris -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M180,40 V150 M210,40 V150 M240,40 V150 M270,40 V150 M300,40 V150"/>
+    <path d="M170,150 H305 M170,120 H305 M170,90 H305 M170,60 H305"/>
+  </g>
+  <!-- air dan es dalam bejana -->
+  <rect x="31" y="100" width="98" height="48" fill="#BFD1F7"/>
+  <path d="M31,100 H129" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="58" y="78" width="44" height="32" fill="#DCE6FB" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- bejana -->
+  <path d="M30,50 V150 H130 V50" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- pemanas dan api -->
+  <rect x="22" y="154" width="116" height="16" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <g fill="#FF6B00" stroke="#1A1A1A" stroke-width="2">
+    <path d="M48,170 L58,188 L68,170 Z"/>
+    <path d="M72,170 L82,188 L92,170 Z"/>
+    <path d="M96,170 L106,188 L116,170 Z"/>
+  </g>
+  <!-- grafik: tiga ruas miring dan dua ruas mendatar -->
+  <path d="M170,40 V150 H305" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M180,142 L198,126 M224,126 L256,88 M286,88 L304,76" fill="none" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M198,126 H224 M256,88 H286" fill="none" stroke="#FF6B00" stroke-width="4.5"/>
+  <circle cx="256" cy="88" r="6" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+</svg>

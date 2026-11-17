@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Dua kurva spektrum benda hitam: suhu tinggi puncaknya tinggi dan di kiri, suhu rendah puncaknya rendah dan di kanan">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M70,24 V160 M120,24 V160 M170,24 V160 M220,24 V160 M270,24 V160"/>
+    <path d="M30,120 H300 M30,80 H300 M30,40 H300"/>
+  </g>
+  <!-- luas di bawah kurva panas -->
+  <path d="M30,160 C50,160 62,100 85,40 C108,70 140,130 300,152 V160 Z" fill="#FFE8D6"/>
+  <!-- pita cahaya tampak -->
+  <g>
+    <rect x="52" y="150" width="9" height="10" fill="#7C3AED"/>
+    <rect x="61" y="150" width="9" height="10" fill="#2563EB"/>
+    <rect x="70" y="150" width="9" height="10" fill="#22C55E"/>
+    <rect x="79" y="150" width="9" height="10" fill="#EAB308"/>
+    <rect x="88" y="150" width="9" height="10" fill="#F97316"/>
+    <rect x="97" y="150" width="9" height="10" fill="#DC2626"/>
+  </g>
+  <!-- kurva pembanding dingin -->
+  <path d="M30,160 C90,160 130,110 175,106 C220,104 250,130 300,142" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-dasharray="8 5"/>
+  <!-- kurva panas -->
+  <path d="M30,160 C50,160 62,100 85,40 C108,70 140,130 300,152" fill="none" stroke="#1A1A1A" stroke-width="3.5"/>
+  <!-- puncak -->
+  <path d="M85,40 V150" stroke="#1A1A1A" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="62" y="12" width="46" height="18" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- sumbu -->
+  <path d="M30,20 V160 H304" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- benda berpijar -->
+  <circle cx="262" cy="52" r="22" fill="#FFF3C8" stroke="#1A1A1A" stroke-width="2.5"/>
+  <circle cx="262" cy="104" r="12" fill="#7A1212" stroke="#1A1A1A" stroke-width="2.5"/>
+</svg>

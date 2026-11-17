@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Silinder berpiston berisi partikel gas yang memantul, dipanaskan dari bawah, dengan diagram tekanan terhadap volume berarsir di sampingnya">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi sebagai penggaris -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M190,30 V150 M220,30 V150 M250,30 V150 M280,30 V150"/>
+    <path d="M180,150 H300 M180,120 H300 M180,90 H300 M180,60 H300"/>
+  </g>
+  <!-- gas -->
+  <rect x="31" y="92" width="98" height="64" fill="#FFE8D6"/>
+  <!-- partikel -->
+  <g fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2">
+    <circle cx="48" cy="140" r="5"/>
+    <circle cx="74" cy="112" r="5"/>
+    <circle cx="96" cy="140" r="5"/>
+    <circle cx="112" cy="108" r="5"/>
+    <circle cx="62" cy="128" r="5"/>
+    <circle cx="104" cy="124" r="5"/>
+  </g>
+  <!-- silinder -->
+  <path d="M30,24 V156 H130 V24" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- piston dan batang -->
+  <path d="M80,84 V16" stroke="#1A1A1A" stroke-width="3.5"/>
+  <rect x="64" y="12" width="32" height="7" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="31" y="84" width="98" height="9" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- pemanas dan panah kalor masuk -->
+  <rect x="22" y="160" width="116" height="16" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M56,150 V134" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M56,126 l-7,11 h14 z" fill="#FF6B00"/>
+  <path d="M104,150 V134" stroke="#FF6B00" stroke-width="4"/>
+  <path d="M104,126 l-7,11 h14 z" fill="#FF6B00"/>
+  <!-- diagram P-V: arsiran usaha dan lintasan -->
+  <path d="M190,150 L190,70 Q215,100 270,118 L270,150 Z" fill="#C5FA00"/>
+  <path d="M180,30 V150 H300" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+  <path d="M190,70 Q215,100 270,118" fill="none" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M190,50 Q240,60 296,118" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 5"/>
+  <circle cx="190" cy="70" r="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2.5"/>
+  <circle cx="270" cy="118" r="6" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+</svg>

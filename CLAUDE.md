@@ -12,7 +12,7 @@ npm run typecheck  # tsc --noEmit (the only automated check; there are no tests 
 
 ## Stack
 
-React 18 + TypeScript (strict), Vite 6, Tailwind CSS v4 (via `@tailwindcss/vite`, configured in CSS rather than a config file), react-router-dom v6 with **`HashRouter`** (URLs look like `#/materials/physics/1`), framer-motion, lucide-react icons, recharts, date-fns (`id` locale), and Supabase for auth and cloud data.
+React 18 + TypeScript (strict), Vite 6, Tailwind CSS v4 (via `@tailwindcss/vite`, configured in CSS rather than a config file), react-router-dom v6 with **`HashRouter`** (URLs look like `#/materials/physics/1`), framer-motion, lucide-react icons (plus `@tabler/icons-react` in the Lab and simulations, for its science glyphs), recharts, date-fns (`id` locale), and Supabase for auth and cloud data.
 
 ## Architecture
 
@@ -58,7 +58,21 @@ Older or stub chapters (for example [listrik-statis.ts](src/data/physics/listrik
 
 ### Other data
 - [quizzes.ts](src/data/quizzes.ts): `Quiz { id, title, materialId, questions }`. `correctAnswer` is a 0-based index, and `difficulty` is `"mudah" | "sedang" | "sulit"`.
-- [simulations.ts](src/data/simulations.ts): Lab entries with `iframeUrl` (mostly PhET), plus a `fallbackUrl` for sites that block embedding.
+- [simulations.ts](src/data/simulations.ts): external (PhET) simulations only, shown in an iframe modal in the lower section of the Lab page. `icon` is a key (`"target"`, `"kotak"`, …) mapped to a Tabler icon in [Lab.tsx](src/pages/Lab.tsx), not an emoji.
+
+## Simulations ([src/simulations/](src/simulations/))
+
+The Lab's own simulations. Each one exists so a student can find **how quantities relate** (raise X, watch Y rise, fall, or stay the same), so every simulation has a "Selidiki hubungan" panel and auto-checked challenges, not just an animation.
+
+- [registry.ts](src/simulations/registry.ts) lists every simulation (`slug`, `bidang`, `chapterIds`, `siap`, lazy `komponen`) and has the Indonesian how-to header with the file tree. Keep it accurate. `siap: false` shows a "Segera hadir" card that cannot be opened.
+- Routes: `/lab` (list, [Lab.tsx](src/pages/Lab.tsx)) and `/lab/:slug` ([LabSimulasi.tsx](src/pages/LabSimulasi.tsx)). A chapter whose `chapterId` is in a simulation's `chapterIds` shows a "Coba simulasinya" card in MaterialDetail, and the simulation page links back with `?bab=<chapterId>`.
+- One file per simulation at `src/simulations/sims/<bidang>/<slug>.tsx` (default export), plus a card image at `public/images/sim/<slug>.svg` (viewBox `0 0 320 200`). **Copy [gerak-parabola.tsx](src/simulations/sims/mekanika/gerak-parabola.tsx)**: it is the reference for file layout, physics-first structure, and tone.
+- Import only from the two barrels: `../../engine` (loop, canvas drawing helpers, number formatting, colors) and `../../ui` (`SimShell`, `Panggung`, `PlayBar`, `Slider`, `Pilihan`, `Sakelar`, `Bacaan`, `GrafikHidup`, `RumusHidup`, `SelidikiHubungan`, `Tantangan`). Don't hand-roll controls or layout in a simulation file.
+- State pattern: slider values in `useState`; anything that changes every step in `useRef`, advanced inside `useSimLoop`'s fixed-`DT` callback; the `gambar` function passed to `<Panggung>` runs every frame and must read time from the ref (not from render state, which only refreshes about 12 times a second through `loop.denyut`).
+- Physics lives in plain exported functions above the component so it can be checked against known answers. Use closed-form results where they exist, and `g = 10 m/s²`.
+- Stage look: white stage, flat fills (lime, orange, cream, `--sim-biru` for cold/negative), dark 2–2.5px outlines, no gradients, glows, soft shadows, or emoji. The grid is a ruler with numbered axes, never decoration. Orange is never a text color on the stage either: use `label(..., { latar })` to put a lime/orange block behind dark text.
+- Numbers use `angka()` / `angkaTetap()` (Indonesian decimal comma). Icons come from `@tabler/icons-react`.
+- Simulations do not give XP and store nothing.
 
 ## Styling
 

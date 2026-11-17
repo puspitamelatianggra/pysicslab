@@ -1,11 +1,19 @@
 /* ============================================================
-   ====== TEMPAT INPUT SIMULASI/LAB VIRTUAL DISINI ======
+   ====== TEMPAT INPUT SIMULASI DARI SITUS LAIN (PhET) ======
    ============================================================
 
+   File ini berisi simulasi dari situs lain yang ditampilkan lewat iframe
+   di bagian bawah halaman Lab Virtual ("Simulasi dari PhET").
+
+   Simulasi buatan sendiri (yang tampil di bagian atas halaman Lab)
+   TIDAK diatur di sini, melainkan di src/simulations/registry.ts
+
    PANDUAN UNTUK PENGGUNA AWAM:
-   - Setiap simulasi memiliki: id, title, description, iframeUrl, icon
+   - Setiap simulasi memiliki: id, title, description, iframeUrl, fallbackUrl, icon, category
    - Untuk MENGGANTI link simulasi: edit bagian iframeUrl: "..."
    - Untuk MENAMBAH simulasi baru: copy satu blok { ... } dan paste
+   - icon diisi salah satu nama ini (bukan emoji):
+     "target", "kotak", "rangkaian", "gelombang", "api", "cahaya"
 
    CONTOH LINK SIMULASI GRATIS:
    - PhET Simulations: https://phet.colorado.edu/en/simulations/filter?subjects=physics
@@ -13,8 +21,10 @@
 
    CATATAN:
    - Beberapa website tidak mengizinkan embed iframe. Jika simulasi tidak muncul,
-     gunakan tombol "Buka di Tab Baru" sebagai alternatif.
+     gunakan tombol "Buka di tab baru" sebagai alternatif.
    ============================================================ */
+
+export type IkonSimulasi = "target" | "kotak" | "rangkaian" | "gelombang" | "api" | "cahaya";
 
 export interface Simulation {
     id: number;
@@ -22,7 +32,7 @@ export interface Simulation {
     description: string;
     iframeUrl: string;
     fallbackUrl: string;
-    icon: string;
+    icon: IkonSimulasi;
     category: string;
 }
 
@@ -34,7 +44,7 @@ export const simulations: Simulation[] = [
         description: "Simulasikan gerak parabola dengan mengubah sudut dan kecepatan awal peluncuran.",
         iframeUrl: "https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/projectile-motion",
-        icon: "🎯",
+        icon: "target",
         category: "Mekanika"
     },
     {
@@ -43,7 +53,7 @@ export const simulations: Simulation[] = [
         description: "Eksperimen interaktif untuk memahami hubungan gaya, massa, dan percepatan.",
         iframeUrl: "https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics",
-        icon: "📦",
+        icon: "kotak",
         category: "Mekanika"
     },
     {
@@ -52,7 +62,7 @@ export const simulations: Simulation[] = [
         description: "Bangun rangkaian listrik sederhana dan amati aliran arus, tegangan, dan hambatan.",
         iframeUrl: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc",
-        icon: "🔌",
+        icon: "rangkaian",
         category: "Listrik"
     },
     {
@@ -61,7 +71,7 @@ export const simulations: Simulation[] = [
         description: "Visualisasikan gelombang transversal dan longitudinal dengan parameter yang dapat diubah.",
         iframeUrl: "https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/wave-on-a-string",
-        icon: "🌊",
+        icon: "gelombang",
         category: "Gelombang"
     },
     {
@@ -70,7 +80,7 @@ export const simulations: Simulation[] = [
         description: "Amati hubungan antara tekanan, volume, dan suhu pada gas ideal.",
         iframeUrl: "https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/gas-properties",
-        icon: "🔥",
+        icon: "api",
         category: "Termodinamika"
     },
     {
@@ -79,7 +89,7 @@ export const simulations: Simulation[] = [
         description: "Eksperimen virtual untuk memahami efek fotolistrik dan dualisme gelombang-partikel.",
         iframeUrl: "https://phet.colorado.edu/sims/html/photoelectric-effect/latest/photoelectric-effect_en.html",
         fallbackUrl: "https://phet.colorado.edu/en/simulations/photoelectric-effect",
-        icon: "💡",
+        icon: "cahaya",
         category: "Fisika Modern"
     }
 ];

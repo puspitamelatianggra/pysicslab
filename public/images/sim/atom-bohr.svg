@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Elektron melompat dari orbit luar ke orbit dalam atom hidrogen dan memancarkan foton">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- orbit -->
+  <g fill="none" stroke="#475569" stroke-width="2">
+    <circle cx="105" cy="100" r="20"/>
+    <circle cx="105" cy="100" r="46"/>
+    <circle cx="105" cy="100" r="74"/>
+  </g>
+  <circle cx="105" cy="100" r="46" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <circle cx="105" cy="100" r="74" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- inti -->
+  <circle cx="105" cy="100" r="10" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- elektron di orbit dalam dan jejak lompatan -->
+  <path d="M168,54 L141,72" stroke="#1A1A1A" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <circle cx="168" cy="54" r="8" fill="#FFFFFF" stroke="#475569" stroke-width="2.5" stroke-dasharray="3 3"/>
+  <circle cx="129" cy="70" r="8" fill="#2563EB" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- foton merah keluar -->
+  <path d="M138,52 q5,-9 10,0 t10,0 t10,0 t10,0 t10,0" fill="none" stroke="#1A1A1A" stroke-width="6" transform="translate(20 -30) rotate(-20 138 52)"/>
+  <path d="M138,52 q5,-9 10,0 t10,0 t10,0 t10,0 t10,0" fill="none" stroke="#E11D1D" stroke-width="3" transform="translate(20 -30) rotate(-20 138 52)"/>
+  <!-- diagram tingkat energi -->
+  <path d="M232,28 V168" stroke="#1A1A1A" stroke-width="2.5"/>
+  <g stroke="#475569" stroke-width="2.5">
+    <path d="M232,40 H296 M232,46 H296 M232,56 H296"/>
+  </g>
+  <path d="M232,76 H296" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M232,126 H296" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M232,166 H296" stroke="#475569" stroke-width="2.5"/>
+  <path d="M272,80 V118" stroke="#1A1A1A" stroke-width="3.5"/>
+  <path d="M272,124 l-7,-12 h14 z" fill="#1A1A1A"/>
+  <rect x="236" y="92" width="26" height="16" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2"/>
+  <circle cx="272" cy="76" r="6" fill="#2563EB" stroke="#1A1A1A" stroke-width="2"/>
+</svg>

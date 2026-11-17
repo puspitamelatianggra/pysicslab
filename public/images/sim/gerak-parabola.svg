@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Tiga lintasan parabola dari satu meriam dengan sudut tembak berbeda">
+  <rect width="320" height="200" fill="#FFFFFF"/>
+  <!-- kisi sebagai penggaris -->
+  <g stroke="#DDD8CF" stroke-width="1">
+    <path d="M40,30 V160 M90,30 V160 M140,30 V160 M190,30 V160 M240,30 V160 M290,30 V160"/>
+    <path d="M30,120 H300 M30,80 H300 M30,40 H300"/>
+  </g>
+  <!-- jejak tembakan lama -->
+  <path d="M40,160 Q115,-20 190,160" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M40,160 Q165,110 290,160" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 5"/>
+  <!-- tembakan sekarang -->
+  <path d="M40,160 Q140,20 240,160" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- vektor kecepatan di bola -->
+  <path d="M176,82 H212" stroke="#FF6B00" stroke-width="3.5"/>
+  <path d="M220,82 l-11,-6 v12 z" fill="#FF6B00"/>
+  <path d="M176,82 V104" stroke="#FF6B00" stroke-width="3.5"/>
+  <path d="M176,112 l-6,-11 h12 z" fill="#FF6B00"/>
+  <circle cx="176" cy="82" r="10" fill="#FF6B00" stroke="#1A1A1A" stroke-width="2.5"/>
+  <!-- tanah -->
+  <path d="M20,160 H305" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- titik mendarat -->
+  <circle cx="190" cy="160" r="4.5" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+  <circle cx="290" cy="160" r="4.5" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+  <rect x="222" y="168" width="36" height="18" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2"/>
+  <!-- meriam -->
+  <g transform="translate(40 160) rotate(-55)">
+    <rect x="-6" y="-9" width="44" height="18" fill="#C5FA00" stroke="#1A1A1A" stroke-width="2.5"/>
+  </g>
+  <circle cx="40" cy="160" r="10" fill="#FFF7ED" stroke="#1A1A1A" stroke-width="2.5"/>
+</svg>
